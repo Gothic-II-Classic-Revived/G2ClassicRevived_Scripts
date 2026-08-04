@@ -2,7 +2,7 @@
 instance VLK_4008_Buerger (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= NAME_Buerger; 
+	name 		= NAME_Buerger; // Bartired
 	guild 		= GIL_VLK;
 	id 			= 4008;
 	voice 		= 1;
@@ -22,7 +22,7 @@ instance VLK_4008_Buerger (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Hum_Normal35, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_Vlk_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_W_Bartired, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_Vlk_H);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 
