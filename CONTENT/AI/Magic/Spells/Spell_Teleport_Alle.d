@@ -177,15 +177,7 @@ func void Spell_Cast_TeleportPassOW()
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
 	};
 
-	var int random;	random = Hlp_Random (2);
-	if (random == 0)
-	{
-		AI_Teleport		(self, "OW_PATH_ORETRAIL_2_DJGCAMP_03");
-	}
-	else if (random == 1)
-	{
-		AI_Teleport		(self, "SPAWN_MOLERAT02_SPAWN01");
-	};
+	AI_Teleport		(self, "OW_PASS_RUINS_TELEPORT");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 
