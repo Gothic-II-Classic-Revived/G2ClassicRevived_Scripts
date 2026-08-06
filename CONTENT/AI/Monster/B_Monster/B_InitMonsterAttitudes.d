@@ -1676,7 +1676,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_MOLERAT					);	
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_FRIENDLY,	GIL_ORC						);	// Ork-Krieger / Ork-Shamane / Ork-Elite
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_FRIENDLY,	GIL_FRIENDLY_ORC			);	
-	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_UNDEADORC				);	// Ork-Sklave / Ur-Shak	
+	B_SetMonsterAttitude	(GIL_ORC,	ATT_FRIENDLY,	GIL_UNDEADORC				);	// Ork-Sklave / Ur-Shak	
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_FRIENDLY,	GIL_DRACONIAN				);
 	B_SetMonsterAttitude	(GIL_ORC, 	ATT_NEUTRAL, 	GIL_ALLIGATOR				);
 	B_SetMonsterAttitude	(GIL_ORC, 	ATT_NEUTRAL, 	GIL_SWAMPGOLEM				);
@@ -1737,50 +1737,50 @@ func void B_InitMonsterAttitudes ()
 	
 	// ------ Untote Orks zu allen anderen ------
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SEPERATOR_HUM			);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_DMT						);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_DMT						);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_MEATBUG					);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SHEEP					);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_GOBBO					);	// Green Goblin / Black Goblin
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_GOBBO_SKELETON			);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SHEEP					);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_GOBBO					);	// Green Goblin / Black Goblin
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_GOBBO_SKELETON			);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SUMMONED_GOBBO_SKELETON	);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SCAVENGER				);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_GIANT_RAT				);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_GIANT_BUG				);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_BLOODFLY				);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_WARAN					);	// Waren / Feuerwaran	
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_WOLF					);	// Wolf / Warg	
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SUMMONED_WOLF			);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_MINECRAWLER				);	// Minecrawler / Minecrawler Warrior
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_LURKER					);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_SKELETON				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SCAVENGER				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_GIANT_RAT				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_GIANT_BUG				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_BLOODFLY				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_WARAN					);	// Waren / Feuerwaran	
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_WOLF					);	// Wolf / Warg	
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SUMMONED_WOLF			);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_MINECRAWLER				);	// Minecrawler / Minecrawler Warrior
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_LURKER					);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SKELETON				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SUMMONED_SKELETON		);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_SKELETON_MAGE			);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_ZOMBIE					);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SNAPPER					);	// Snapper / Dragon Snapper
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SHADOWBEAST				);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_SHADOWBEAST_SKELETON	);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_HARPY					);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SKELETON_MAGE			);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_ZOMBIE					);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SNAPPER					);	// Snapper / Dragon Snapper
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SHADOWBEAST				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SHADOWBEAST_SKELETON	);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_HARPY					);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_STONEGOLEM				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_FIREGOLEM				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_ICEGOLEM				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SUMMONED_GOLEM			);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_DEMON					);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_DEMON					);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SUMMONED_DEMON			);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_TROLL					);	// Troll / Schwarzer Troll
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_SWAMPSHARK				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_TROLL					);	// Troll / Schwarzer Troll
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_SWAMPSHARK				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_DRAGON					);	// Feuerdrache / Eisdrache / Felsdrache / Sumpfdrache / Untoter Drache
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_MOLERAT					);	
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_ORC						);	// Ork-Krieger / Ork-Shamane / Ork-Elite
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_FRIENDLY_ORC			);	
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL,	GIL_MOLERAT					);	
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_ORC						);	// Ork-Krieger / Ork-Shamane / Ork-Elite
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_FRIENDLY_ORC			);	
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_UNDEADORC				);	// Ork-Sklave / Ur-Shak	
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE,	GIL_DRACONIAN				);
-	B_SetMonsterAttitude	(GIL_UNDEADORC, ATT_HOSTILE, 	GIL_ALLIGATOR				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY,	GIL_DRACONIAN				);
+	B_SetMonsterAttitude	(GIL_UNDEADORC, ATT_NEUTRAL, 	GIL_ALLIGATOR				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC, ATT_NEUTRAL, 	GIL_SWAMPGOLEM				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC, ATT_NEUTRAL, 	GIL_STONEGUARDIAN			);
 	B_SetMonsterAttitude	(GIL_UNDEADORC, ATT_NEUTRAL, 	GIL_GARGOYLE				);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE, 	GIL_SummonedGuardian		);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE, 	GIL_SummonedZombie			);
-	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_FRIENDLY, 	GIL_FANATIC					);
+	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_NEUTRAL, 	GIL_FANATIC					);
 	B_SetMonsterAttitude	(GIL_UNDEADORC,	ATT_HOSTILE, 	GIL_BOUNT					);
 
 	// ------ Drakonier zu allen anderen ------
