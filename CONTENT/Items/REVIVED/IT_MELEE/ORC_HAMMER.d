@@ -29,6 +29,7 @@ INSTANCE ITMW_REVIVED_ORC_MACE_01 (C_Item)
 
 	description			= 	name;
 	TEXT[0]				= 	NAME_CreatureDamageBonus;		COUNT[0]	= REV_Damage_OrcWeapon_Creature_02;
+	TEXT[1]				= 	NAME_ADDON_MALUS_2H;			COUNT[1]	= Waffenbonus_10;
 	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
