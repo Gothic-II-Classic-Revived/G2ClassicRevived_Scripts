@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_OrcScout(C_Npc)
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
 
-	fight_tactic	=	FAI_ORC;
+	fight_tactic	=	FAI_ORC_SCOUT;
 
 	//----- Senses & Ranges ----
 	senses			= SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
@@ -42,7 +42,7 @@ func void B_SetVisuals_OrcScout()
 {
 	Mdl_SetVisual			(self,	"Orc.mds");
 	//								Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Orc_Body",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Orc_Scout",	DEFAULT,	DEFAULT,	"Orc_Head",	DEFAULT,  	DEFAULT,	-1);
 };
 
 

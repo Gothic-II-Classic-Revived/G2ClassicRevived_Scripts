@@ -1,23 +1,6 @@
-// ******************************
-// Kampf - AI Monster Coward (10)
-// ------------------------------
-// Für die ersten 10 Minuten 
-// des Spiels
-// ******************************
-
-/*
-MOVE_RUN				
-MOVE_RUNBACK			
-MOVE_JUMPBACK			
-MOVE_TURN				
-MOVE_STRAFE				
-
-MOVE_ATTACK				
-
-MOVE_PARADE			
-MOVE_STANDUP		
-MOVE_WAIT				200 ms
-*/
+// ***********************
+// Kampf - AI Orc Dog (13)
+// ***********************
 
 
 // ************************************
@@ -25,15 +8,21 @@ MOVE_WAIT				200 ms
 // ************************************
 
 // ------ Gegner attackiert mich ------
-INSTANCE FA_ENEMY_PREHIT_10 (C_FightAI)
+INSTANCE FA_ENEMY_PREHIT_13 (C_FightAI)
 {
-	move[0] = MOVE_WAIT;
+	// 0.94b: Orc Dogs always retreat instead of mixing retreat and strafe.
+	move[0] = MOVE_JUMPBACK;
+	move[1] = MOVE_JUMPBACK;
+	move[2] = MOVE_JUMPBACK;
+	move[3] = MOVE_JUMPBACK;
+	move[4] = MOVE_JUMPBACK;
+	move[5] = MOVE_JUMPBACK;
 };
 
 // ------ Gegner macht Sturmattacke ------
-INSTANCE FA_ENEMY_STORMPREHIT_10 (C_FightAI)
+INSTANCE FA_ENEMY_STORMPREHIT_13 (C_FightAI)
 {
-	move[0] = MOVE_WAIT;
+	move[0] = MOVE_STRAFE;
 };
 
 
@@ -41,46 +30,37 @@ INSTANCE FA_ENEMY_STORMPREHIT_10 (C_FightAI)
 // Gegner in W-Reichweite (Treffer-Reichweite)
 // *******************************************
 
-// ------ Ich bin im Combo-Fenster ------
-INSTANCE FA_MY_W_COMBO_10 (C_FightAI)
-{
-	// --- Wird nie erreicht (Neue FAI-Bewertung erst wenn Ani zuende gespielt) ---
-};
-
 // ------ Ich renne auf den Gegner zu ------
-INSTANCE FA_MY_W_RUNTO_10 (C_FightAI)
+INSTANCE FA_MY_W_RUNTO_13 (C_FightAI)
 {
-	move[0] = MOVE_WAIT;
+	// 0.94b Orc Dog difference.
+	move[0] = MOVE_ATTACK;
+	move[1] = MOVE_RUN;
+	move[2] = MOVE_RUN;
 };
 
 // ------- Ich Strafe gerade ------
-INSTANCE FA_MY_W_STRAFE_10 (C_FightAI)
+INSTANCE FA_MY_W_STRAFE_13 (C_FightAI)
 {
-	move[0] = MOVE_TURN;
-	move[1] = MOVE_WAIT;
-	move[2] = MOVE_WAIT;
+	move[0] = MOVE_STRAFE; // --- STANDARDEINTRAG ---
 };
 
 // ------- Ich habe Gegner im Fokus (kann treffen) -------
-INSTANCE FA_MY_W_FOCUS_10 (C_FightAI)
+INSTANCE FA_MY_W_FOCUS_13 (C_FightAI)
 {
-	move[0] = MOVE_STRAFE;
+	// 0.94b Orc Dog difference: more waiting, fewer direct attacks than Wolf.
+	move[0] = MOVE_WAIT;
 	move[1] = MOVE_STRAFE;
-	move[2] = MOVE_STRAFE;
+	move[2] = MOVE_WAIT;
 	move[3] = MOVE_WAIT;
-	move[4] = MOVE_WAIT;
+	move[4] = MOVE_ATTACK;
 	move[5] = MOVE_ATTACK;
 };
 
 // ------- Ich habe Gegner NICHT im Fokus -------
-INSTANCE FA_MY_W_NOFOCUS_10 (C_FightAI)
+INSTANCE FA_MY_W_NOFOCUS_13 (C_FightAI)
 {
-	move[0] = MOVE_STRAFE;
-	move[1] = MOVE_WAIT;
-	move[2] = MOVE_WAIT;
-	move[3] = MOVE_WAIT;
-	move[4] = MOVE_WAIT;
-	move[5] = MOVE_TURN;
+	move[0] = MOVE_TURN; // --- STANDARDEINTRAG ---
 };
 
 
@@ -88,32 +68,24 @@ INSTANCE FA_MY_W_NOFOCUS_10 (C_FightAI)
 // Gegner in G-Reichweite (Sturmattacken-Reichweite)
 // *************************************************
 
-// ------ Ich bin im Combo-Fenster ------
-INSTANCE FA_MY_G_COMBO_10 (C_FightAI)
+// ------ Ich renne auf den Gegner zu (kann treffen) ------
+INSTANCE FA_MY_G_RUNTO_13 (C_FightAI)
 {
-	// --- Wird nie erreicht (Neue FAI-Bewertung erst wenn Ani zuende gespielt) ---
-};
-
-// ------ Ich renne auf den Gegner zu (kann Sturmattacke machen) ------
-INSTANCE FA_MY_G_RUNTO_10 (C_FightAI)
-{
-	//move[0] = MOVE_ATTACK; //Sturmattacke
-	move[0] = MOVE_RUN;
+	move[0] = MOVE_ATTACK; // Sturmattacke
 };
 
 // ------- Ich Strafe gerade ------
-INSTANCE FA_MY_G_STRAFE_10 (C_FightAI)
+INSTANCE FA_MY_G_STRAFE_13 (C_FightAI)
 {
+	// 0.94b Orc Dog difference.
 	move[0] = MOVE_TURN;
+	move[1] = MOVE_ATTACK;
 };
 
 // ------- Ich habe Gegner im Fokus -------
-INSTANCE FA_MY_G_FOCUS_10 (C_FightAI)
+INSTANCE FA_MY_G_FOCUS_13 (C_FightAI)
 {
-	move[0] = MOVE_WAIT;
-	move[1] = MOVE_WAIT;
-	move[2] = MOVE_WAIT;
-	move[3] = MOVE_RUN;
+	move[0] = MOVE_RUN; // --- STANDARDEINTRAG ---
 };
 
 
@@ -122,45 +94,45 @@ INSTANCE FA_MY_G_FOCUS_10 (C_FightAI)
 // ***************************************
 
 // ------- Ich habe Gegner im Fokus -------
-INSTANCE FA_MY_FK_FOCUS_10 (C_FightAI)
+INSTANCE FA_MY_FK_FOCUS_13 (C_FightAI)
 {
 	move[0] = MOVE_RUN; // --- STANDARDEINTRAG ---
 };
 
-// ------- Ich habe Gegner NICHT im Fokus (gilt auch für G-Distanz!) -------
-INSTANCE FA_MY_G_FK_NOFOCUS_10 (C_FightAI)
+// ------- Ich habe Gegner NICHT im Fokus (gilt auch fuer G-Distanz!) -------
+INSTANCE FA_MY_G_FK_NOFOCUS_13 (C_FightAI)
 {
 	move[0] = MOVE_TURN; // --- STANDARDEINTRAG ---
 };
 
 
 // ***********************************
-// FAI für Fernkampf 
+// FAI fuer Fernkampf und Magie
 // ---------------------------
 // (wird bei jeder Entfernung benutzt)
 // ***********************************
 
 // ------ Gegner im Fokus ------
-INSTANCE FA_MY_FK_FOCUS_FAR_10 (C_FightAI)
+INSTANCE FA_MY_FK_FOCUS_FAR_13 (C_FightAI)
 {
 	move[0] = MOVE_ATTACK; // --- STANDARDEINTRAG ---
 };
 
 // ------ Gegner NICHT im Fokus ------
-INSTANCE FA_MY_FK_NOFOCUS_FAR_10 (C_FightAI)
+INSTANCE FA_MY_FK_NOFOCUS_FAR_13 (C_FightAI)
 {
 	move[0] = MOVE_TURN; // --- STANDARDEINTRAG ---
 };
 
 
 // ***********************************
-// FAI für Magie
+// FAI fuer Magie
 // ---------------------------
 // (wird bei jeder Entfernung benutzt)
 // ***********************************
 
 // ------ Gegner im Fokus ------
-INSTANCE FA_MY_FK_FOCUS_MAG_10 (C_FightAI)
+INSTANCE FA_MY_FK_FOCUS_MAG_13 (C_FightAI)
 {
 	move[0] = MOVE_ATTACK; // --- STANDARDEINTRAG ---
 	move[1] = MOVE_WAIT_LONGER;
@@ -171,8 +143,7 @@ INSTANCE FA_MY_FK_FOCUS_MAG_10 (C_FightAI)
 };
 
 // ------ Gegner NICHT im Fokus -------
-INSTANCE FA_MY_FK_NOFOCUS_MAG_10 (C_FightAI)
+INSTANCE FA_MY_FK_NOFOCUS_MAG_13 (C_FightAI)
 {
 	move[0] = MOVE_TURN; // --- STANDARDEINTRAG ---
 };
-

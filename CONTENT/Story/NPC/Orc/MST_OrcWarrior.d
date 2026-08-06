@@ -45,6 +45,12 @@ func void B_SetVisuals_OrcWarrior()
 	Mdl_SetVisualBody		(self,	"Orc_BodyWarrior",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_OrcWarriorOther()
+{
+	Mdl_SetVisual			(self,	"Orc.mds");
+	//								Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Orc_BodyWarrior",	1,	DEFAULT,	"Orc_HeadWarrior",	1,  	DEFAULT,	-1);
+};
 
 //******************
 //	Orc Warrior Roam    														
@@ -108,7 +114,7 @@ INSTANCE OrcWarrior_Sit (Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior_Lobart1 (Mst_Default_OrcWarrior)
 {
 	//-------- visual --------
-	B_SetVisuals_OrcWarrior();
+	B_SetVisuals_OrcWarriorOther();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
@@ -122,7 +128,7 @@ INSTANCE OrcWarrior_Lobart1 (Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior_Lobart2 (Mst_Default_OrcWarrior)
 {
 	//-------- visual --------
-	B_SetVisuals_OrcWarrior();
+	B_SetVisuals_OrcWarriorOther();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
@@ -136,7 +142,7 @@ INSTANCE OrcWarrior_Lobart2 (Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior_Lobart3 (Mst_Default_OrcWarrior)
 {
 	//-------- visual --------
-	B_SetVisuals_OrcWarrior();
+	B_SetVisuals_OrcWarriorOther();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
@@ -150,7 +156,7 @@ INSTANCE OrcWarrior_Lobart3 (Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior_Lobart4 (Mst_Default_OrcWarrior)
 {
 	//-------- visual --------
-	B_SetVisuals_OrcWarrior();
+	B_SetVisuals_OrcWarriorOther();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
@@ -164,7 +170,7 @@ INSTANCE OrcWarrior_Lobart4 (Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior_Lobart5 (Mst_Default_OrcWarrior)
 {
 	//-------- visual --------
-	B_SetVisuals_OrcWarrior();
+	B_SetVisuals_OrcWarriorOther();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
@@ -178,7 +184,7 @@ INSTANCE OrcWarrior_Lobart5 (Mst_Default_OrcWarrior)
 INSTANCE OrcWarrior_Lobart6 (Mst_Default_OrcWarrior)
 {
 	//-------- visual --------
-	B_SetVisuals_OrcWarrior();
+	B_SetVisuals_OrcWarriorOther();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);

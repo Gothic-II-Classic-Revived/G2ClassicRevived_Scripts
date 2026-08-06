@@ -104,7 +104,7 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	protection	[PROT_FIRE]			=	80;
 	protection	[PROT_FLY]			=	80;
 	
-	fight_tactic	=	FAI_HUMAN_NORMAL;
+	fight_tactic	=	FAI_SKELETON;
 	
 	// ------ visual ------
 	B_SetVisuals_Lesser_Skeleton();

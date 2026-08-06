@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_OrcDog(C_Npc)
 	damagetype 						=	DAM_EDGE;
 
 	//----- Kampf-Taktik ----
-	fight_tactic	=	FAI_WOLF;
+	fight_tactic	=	FAI_ORCDOG;
 	
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;

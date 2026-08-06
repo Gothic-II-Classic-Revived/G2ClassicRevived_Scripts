@@ -24,7 +24,7 @@ PROTOTYPE Mst_Default_OrcElite(C_Npc)
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
 
-	fight_tactic	= 	FAI_ORC;
+	fight_tactic	= 	FAI_ORC_ELITE;
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE;
@@ -42,9 +42,15 @@ func void B_SetVisuals_OrcElite()
 {
 	Mdl_SetVisual		(self,	"Orc.mds");
 	//							Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody	(self,	"Orc_BodyElite",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody	(self,	"Orc_BodyElite",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	1,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_OrcEliteAntiPaladin()
+{
+	Mdl_SetVisual		(self,	"Orc.mds");
+	//							Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody	(self,	"ORC_ELITE",	DEFAULT,	DEFAULT,	"Orc_HeadWarrior",	2,  	DEFAULT,	-1);
+};
 
 //*************************
 //	Orc Elite      														
@@ -117,7 +123,7 @@ INSTANCE OrkElite_AntiPaladinOrkOberst (Mst_Default_OrcElite)
 	attribute	[ATR_HITPOINTS]		=	400;
 
 	// ------ visuals ------
-	B_SetVisuals_OrcElite();
+	B_SetVisuals_OrcEliteAntiPaladin();
 
 	//-------- inventory --------
 	EquipItem (self, ItMw_Schlachtaxt);
@@ -138,7 +144,7 @@ INSTANCE OrcElite_AntiPaladin (Mst_Default_OrcElite)
 {
 	name		=	NAME_Antipaldin;
 	// ------ visuals ------
-	B_SetVisuals_OrcElite();
+	B_SetVisuals_OrcEliteAntiPaladin();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
@@ -167,7 +173,7 @@ INSTANCE OrcElite_AntiPaladin1 (Mst_Default_OrcElite)
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	// ------ visuals ------
-	B_SetVisuals_OrcElite();
+	B_SetVisuals_OrcEliteAntiPaladin();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
@@ -191,7 +197,7 @@ INSTANCE OrcElite_AntiPaladin2 (Mst_Default_OrcElite)
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	// ------ visuals ------
-	B_SetVisuals_OrcElite();
+	B_SetVisuals_OrcEliteAntiPaladin();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
@@ -214,7 +220,7 @@ INSTANCE OrcElite_AntiPaladin3 (Mst_Default_OrcElite)
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 	// ------ visuals ------
-	B_SetVisuals_OrcElite();
+	B_SetVisuals_OrcEliteAntiPaladin();
 
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
@@ -239,7 +245,7 @@ INSTANCE OrkElite_AntiPaladinOrkOberst_DI (Mst_Default_OrcElite)
 	attribute	[ATR_HITPOINTS]		=	450;
 
 	// ------ visuals ------
-	B_SetVisuals_OrcElite();
+	B_SetVisuals_OrcEliteAntiPaladin();
 
 	aivar[AIV_EnemyOverride] = TRUE;
 
