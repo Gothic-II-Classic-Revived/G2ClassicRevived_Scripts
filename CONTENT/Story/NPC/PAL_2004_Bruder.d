@@ -32,6 +32,6 @@ instance PAL_2004_Bruder  (Npc_Default)
 
 FUNC VOID Rtn_Start_2004 ()
 {	
-	TA_Stand_Guarding		(08,00,23,00,"OW_SPAWN_BRUDER");
-    TA_Stand_Guarding		(23,00,08,00,"OW_SPAWN_BRUDER");
+	TA_Stand_Guarding		(08,00,23,00,"OW_PASS_RUINS_006");
+    TA_Stand_Guarding		(23,00,08,00,"OW_PASS_RUINS_006");
 };

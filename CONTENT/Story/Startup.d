@@ -913,15 +913,14 @@ func void STARTUP_SURFACE ()
 
 
 	// Oretrail
-	Wld_InsertNpc		(DragonSnapper,"FP_ROAM_TOTURIAL_CHICKEN_3"); 	
+	Wld_InsertNpc		(Scavenger,"FP_ROAM_TOTURIAL_CHICKEN_3"); 	
 	Wld_InsertNpc		(Scavenger, "FP_ROAM_TOTURIAL_CHICKEN_1");  
 	Wld_InsertNpc		(Scavenger, "FP_ROAM_INTRO_CHICKEN_1");  
 	Wld_InsertNpc		(Scavenger, "FP_ROAM_INTRO_CHICKEN_2");  
 	
 	Wld_InsertNpc		(DragonSnapper, "FP_ROAM_OW_MAETBUG_ROOT_01"); 
 
-	Wld_InsertNpc		(OUT_4110_JERGAN,"OW_SPAWN_SCOUT");		
-	Wld_InsertNpc		(PAL_2004_Bruder,"OW_SPAWN_BRUDER");	
+	Wld_InsertNpc		(OUT_4110_JERGAN,"OW_SPAWN_SCOUT");
 
 
 	// Oretrail (Drax und Ratford)
@@ -2055,6 +2054,23 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_08");
 	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_06");
 	Wld_InsertNpc   (OrcElite_Sit,"OW_HOSHPAK_TENT");	
+
+
+	// Pass to Khorinis
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_001");
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_001");
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_001");
+
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+
+	Wld_InsertNpc	(PAL_2004_Bruder,"OW_PASS_RUINS_006");
+	Wld_InsertNpc	(DragonSnapper, "OW_PASS_RUINS_006");
 };
 
 	func void INIT_SUB_SURFACE ()
@@ -2070,6 +2086,22 @@ func void STARTUP_SURFACE ()
 		Wld_AssignRoomToGuild("OWORC06", GIL_ORC);
 	
 	// ------ OBJECTROUTINE ------
+		// Valley of Mines Pass to Khorinis
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_31");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_32");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_33");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_34");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_35");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_36");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_37");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_38");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_39");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_40");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_41");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_42");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_43");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_44");
+
 		// Fajeth's mine
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_02");
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_03");
@@ -3167,8 +3199,6 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	// Monster
 	//***************************************************************************************
 
-	Wld_InsertNpc 	(Scavenger_Demon,	"NW_TAVERNE_TROLLAREA_MONSTER_01_01"); 
-
 
  	Wld_InsertNpc 	(Zombie02,	"NW_FARM2_TAVERNCAVE1_09"); 
 	Wld_InsertNpc 	(Zombie03,	"NW_FARM2_TAVERNCAVE1_10"); 
@@ -3485,8 +3515,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
  		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_HILL");
  		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_HILL");
 
- 		Wld_InsertNpc 	(Scavenger_Demon, 	"NW_FARM3_VALLEY_002");
- 		Wld_InsertNpc 	(Scavenger_Demon, 	"NW_FARM3_VALLEY_002");
+ 		Wld_InsertNpc 	(Bloodfly, 	"NW_FARM3_VALLEY_002");
+ 		Wld_InsertNpc 	(Bloodfly, 	"NW_FARM3_VALLEY_002");
 
  		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");
  		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");

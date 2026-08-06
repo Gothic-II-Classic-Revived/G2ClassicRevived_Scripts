@@ -96,6 +96,7 @@ INSTANCE Piss_End     			    	(C_SFX_DEF) {file= "piss_end.wav";			vol = 10;			}
 				INSTANCE Ravens_Earthquake3				(C_SFX_DEF) {file= "CS_Prayer_MineCollide01.wav";	vol = 90;			};//ADDON
 				INSTANCE Ravens_Earthquake4				(C_SFX_DEF) {file= "CS_Prayer_MineCollide02.wav";	vol = 90;			};//ADDON
 				INSTANCE TELEPORTSTATIONSOUND			(C_SFX_DEF) {file= "magic_deep02.wav";			vol = 20;			};//ADDON
+				INSTANCE TELEPORTCIRCLESOUND			(C_SFX_DEF) {file= "magic_deep01.wav";			vol = 20;			};//revived
 		
 				INSTANCE MFX_BeliarWeap					(C_SFX_DEF) {file= "MFX_BeliarWeap_01.wav";	vol = 80;			};
 				INSTANCE MFX_BeliarWeap_A1				(C_SFX_DEF) {file= "MFX_BeliarWeap_02.wav";	vol = 80;			};
