@@ -1193,7 +1193,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_02 (C_Item)
 	visual 				=	"REV_1H_SWORD_LONG_04_PAL_02.3DS";
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_UndeadDamageBonus;			COUNT[1]	= REV_Damage_Undead_Blessed;
+	TEXT[0]				= 	NAME_UndeadDamageBonus;			COUNT[0]	= REV_Damage_Undead_Blessed;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_BlessedWeapon1H;
@@ -1220,7 +1220,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_PALADIN_03 (C_Item)
 	visual 				=	"REV_1H_SWORD_LONG_04_PAL_02.3DS";
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_UndeadDamageBonus;			COUNT[1]	= REV_Damage_Undead_Holy;
+	TEXT[0]				= 	NAME_UndeadDamageBonus;			COUNT[0]	= REV_Damage_Undead_Holy;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_HolyWeapon1H;
@@ -1246,6 +1246,7 @@ INSTANCE ITMW_REVIVED_1H_DEMONSLAYER (C_Item)
 	visual 				=	"REV_1H_CRIMSONBLADE.3DS";
 
 	description			= 	name;
+	TEXT[0]				= 	NAME_DemonHealthSteal;			COUNT[0]	= REV_HealthSteal_Demonslayer_1H;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;

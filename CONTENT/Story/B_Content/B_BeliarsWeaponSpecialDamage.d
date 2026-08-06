@@ -89,6 +89,9 @@ var int RavenBlitz;
 
 func void B_BeliarsWeaponSpecialDamage (var C_NPC oth, var C_NPC slf) //other ist angreifer, slf ist victim
 {
+	// This function is the universal weapon-damage hook used by both human and monster victims.
+	REV_DemonslayerHealthSteal(oth, slf);
+
 	/* if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Raven)) //HACK: egal, welche Waffe Raven hat
 	{
 		//Ambient Pfx

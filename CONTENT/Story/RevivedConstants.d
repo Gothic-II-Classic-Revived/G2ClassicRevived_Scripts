@@ -148,6 +148,7 @@ const string NAME_Damage_Fire			=	"Fire Damage";
 
 const string NAME_UndeadDamageBonus		= 	"Undead Damage Bonus";
 const string NAME_CreatureDamageBonus	= 	"Creature Damage Bonus";
+const string NAME_DemonHealthSteal		= 	"Health Drained from Demons";
 
 
 const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
@@ -965,6 +966,11 @@ const int ID_BLACKWOLF				=	67;
 const int ID_ORCDOG					=	68;
 const int ID_HELLHOUND				=	69;
 
+const int FAI_ORCDOG				= 	13;
+const int FAI_SKELETON				= 	17;
+const int FAI_ORC_SCOUT				= 	48;
+const int FAI_ORC_ELITE				= 	49;
+
 const int ID_FANATIC				=	70;
 
 
@@ -1488,6 +1494,9 @@ const int NPC_TALENT_TOBACCO			= 21;
 
 const int REV_Damage_Undead_Blessed		= 	20;
 const int REV_Damage_Undead_Holy		= 	40;
+
+const int REV_HealthSteal_Demonslayer_1H	= 	10;
+const int REV_HealthSteal_Demonslayer_2H	= 	15;
 
 const int REV_Damage_OrcWeapon_Creature_01	= 	20;
 const int REV_Damage_OrcWeapon_Creature_02	= 	40;

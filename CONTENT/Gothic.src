@@ -77,6 +77,7 @@ ITEMS\REVIVED\*.d
 
 AI\MAGIC\B_MagicHurtNpc.d
 
+STORY\B_Content\B_DemonslayerHealthSteal.d
 STORY\B_Content\B_BeliarsWeaponSpecialDamage.d
 STORY\B_Content\B_InnosWeaponSpecialDamage.d
 STORY\B_Content\B_OrcWeaponSpecialDamage.d
