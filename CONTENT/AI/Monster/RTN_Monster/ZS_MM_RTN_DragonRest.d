@@ -5,6 +5,8 @@ func void ZS_MM_Rtn_DragonRest()
 	Npc_SetPercTime	(self,	1);
 	self.aivar[AIV_MM_PRIORITY] = PRIO_EAT;
 	
+	Perception_Set_Monster_Rtn();
+	Npc_PercEnable	(self, 	PERC_ASSESSPLAYER		,	B_MM_AssessPlayer);
 	Npc_PercEnable	(self, 	PERC_ASSESSTALK			,	B_AssessTalk);
 	
 	AI_SetWalkmode 	(self, NPC_WALK);
@@ -23,7 +25,7 @@ func void ZS_MM_Rtn_DragonRest()
 		AI_AlignToWP(self);
 	};
 	
-	self.aivar[AIV_TAPOSITION] = 0; //für Regeneration;
+	self.aivar[AIV_TAPOSITION] = 0; //fï¿½r Regeneration;
 };
 
 func int ZS_MM_Rtn_DragonRest_Loop ()
