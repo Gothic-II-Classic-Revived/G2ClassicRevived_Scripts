@@ -63,6 +63,7 @@ func int ZS_MM_Attack_Loop ()
 	};
 	// ------ Regeneration ------
 	if (self.guild == GIL_DRAGON)
+	&& (!C_DragonFight_IsValleyDragon(self))
 	{
 		self.aivar[AIV_TAPOSITION] += 1;
 		if (self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])

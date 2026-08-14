@@ -32,7 +32,7 @@ FUNC VOID DIA_Dragon_Ice_Exit_Info()
 
 	AI_StopProcessInfos	(self);
 	DragonTalk_Exit_Free  = FALSE;
-	self.flags =  0;
+	B_DragonFight_Begin(self);
 
 	if (DJG_Biff_Stay == TRUE)
 	{

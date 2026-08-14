@@ -90,11 +90,9 @@ INSTANCE UndeadWolf	(Mst_Default_Wolf)
 //	Schwarzer Wolf  (MIS)
 //*********************************************
 
-INSTANCE BlackWolf	(Mst_Default_Warg)
+INSTANCE BlackWolf_MIS	(Mst_Default_Warg)
 {
 	name							=	"Black Wolf";
-	level							=	 10;		
-	//für Inventory
 	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKWOLF;
 
 	//----- Attribute ----
@@ -106,6 +104,29 @@ INSTANCE BlackWolf	(Mst_Default_Warg)
 	protection	[PROT_POINT]		=	40;
 	protection	[PROT_FIRE]			=	20;
 	protection	[PROT_FLY]			=	20;
+	protection	[PROT_MAGIC]		=	0;
+	
+	B_SetVisuals_BlackWolf();
+	Npc_SetToFistMode(self);
+	CreateInvItems (self, ItFoMuttonRaw, 1);
+};
+
+INSTANCE BlackWolf	(Mst_Default_Warg)
+{
+	name							=	"Black Wolf";
+	level							=	 10;		
+	//für Inventory
+	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKWOLF;
+
+	//----- Attribute ----
+	B_SetMonsterAttributesForLevel(self, 10);
+
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	60;
+	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_POINT]		=	60;
+	protection	[PROT_FIRE]			=	40;
+	protection	[PROT_FLY]			=	40;
 	protection	[PROT_MAGIC]		=	0;
 	
 	B_SetVisuals_BlackWolf();

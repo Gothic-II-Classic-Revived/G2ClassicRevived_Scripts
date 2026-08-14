@@ -26,6 +26,7 @@ PROTOTYPE Mst_Default_Dragon_Rock(C_Npc)
 	//----- Damage Types ----
 	damagetype 						=	DAM_MAGIC|DAM_FIRE/* |DAM_FLY */;
 	damage		[DAM_INDEX_FIRE]	=	150;
+	damage		[DAM_INDEX_FLY]		=	1; //Opfer fliegt für Fire+Fly
 	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//------ Kampf-Taktik -----	
@@ -35,10 +36,10 @@ PROTOTYPE Mst_Default_Dragon_Rock(C_Npc)
 	senses			=	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
 	senses_range	=	PERC_DIST_DRAGON_ACTIVE_MAX;
 
-	aivar[AIV_MM_FollowTime]	= FOLLOWTIME_MEDIUM;
+	aivar[AIV_MM_FollowTime]	= FOLLOWTIME_LONG;
 	aivar[AIV_MM_FollowInWater] = FALSE;
 
-	aivar[AIV_MaxDistToWp]			= 1000;
+	aivar[AIV_MaxDistToWp]			= 10000;
 	aivar[AIV_OriginalFightTactic] 	= FAI_DRAGON;
 
 	//----- Daily Routine ----

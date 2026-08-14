@@ -46,7 +46,7 @@ func void Spell_Cast_SummonGuardian()
 	}
 	else
 	{
-		Wld_SpawnNpcRange	(self,	Stoneguardian,			1,	500);
+		Wld_SpawnNpcRange	(self,	StoneGuardian,			1,	500);
 	};
 	
 	self.aivar[AIV_SelectSpell] += 1;

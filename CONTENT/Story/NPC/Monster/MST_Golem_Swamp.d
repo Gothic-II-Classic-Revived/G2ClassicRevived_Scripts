@@ -51,10 +51,21 @@ func void B_SetVisuals_Swampgolem()
 
 
 //******************
-//	Swampgolem
+//	Swamp Golem
 //******************
 
 INSTANCE SwampGolem	(Mst_Default_Addon_SwampGolem)
+{
+	B_SetVisuals_Swampgolem();
+	Npc_SetToFistMode	(self);
+};
+
+
+//******************
+//	Swamp Golem Dragon support
+//******************
+
+INSTANCE SwampGolem_Dragon	(Mst_Default_Addon_SwampGolem)
 {
 	B_SetVisuals_Swampgolem();
 	Npc_SetToFistMode	(self);

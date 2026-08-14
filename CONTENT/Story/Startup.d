@@ -2057,17 +2057,23 @@ func void STARTUP_SURFACE ()
 
 
 	// Pass to Khorinis
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_001");
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_001");
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_001");
+	Wld_InsertNpc	(Shadowbeast, "SPAWN_FOREST_PASS_001");
 
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(Wolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(Wolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(Wolf, "SPAWN_FOREST_PASS_002");
 
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
-	Wld_InsertNpc	(BlackWolf, "SPAWN_FOREST_PASS_002");
+	Wld_InsertNpc	(Giant_Bug, "SPAWN_FOREST_PASS_003");
+	Wld_InsertNpc	(Giant_Bug, "SPAWN_FOREST_PASS_003");
+	Wld_InsertNpc	(Giant_Bug, "SPAWN_FOREST_PASS_003");
+
+	Wld_InsertNpc	(Wolf, "SPAWN_FOREST_PASS_004");
+	Wld_InsertNpc	(Wolf, "SPAWN_FOREST_PASS_004");
+	Wld_InsertNpc	(Wolf, "SPAWN_FOREST_PASS_004");
+
+	Wld_InsertNpc	(Giant_Bug, "SPAWN_FOREST_PASS_005");
+	Wld_InsertNpc	(Giant_Bug, "SPAWN_FOREST_PASS_005");
+	Wld_InsertNpc	(Giant_Bug, "SPAWN_FOREST_PASS_005");
 
 	Wld_InsertNpc	(PAL_2004_Bruder,"OW_PASS_RUINS_006");
 	Wld_InsertNpc	(DragonSnapper, "OW_PASS_RUINS_006");

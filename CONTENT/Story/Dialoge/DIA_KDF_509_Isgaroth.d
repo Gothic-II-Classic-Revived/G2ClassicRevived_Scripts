@@ -113,7 +113,7 @@ INSTANCE DIA_Isgaroth_tot   (C_INFO)
 };
 FUNC INT DIA_Isgaroth_tot_Condition()
 {	
-	Wolfi = Hlp_GetNpc (BlackWolf);
+	Wolfi = Hlp_GetNpc (BlackWolf_MIS);
 	
 	if (MIS_IsgarothWolf == LOG_RUNNING)
 	&& Npc_IsDead (Wolfi)

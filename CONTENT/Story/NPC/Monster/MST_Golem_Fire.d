@@ -57,11 +57,19 @@ func void B_SetVisuals_FireGolem()
 
 
 //***************
-//	FireGolem   
+//	Fire Golem   
 //***************
 
 INSTANCE FireGolem	(Mst_Default_FireGolem)
 {
 	B_SetVisuals_FireGolem();
 	Npc_SetToFistMode(self);
+};
+
+//***************
+//	Fire Golem Dragon support   
+//***************
+INSTANCE FireGolem_Dragon	(Mst_Default_FireGolem)
+{
+	B_SetVisuals_FireGolem();
 };

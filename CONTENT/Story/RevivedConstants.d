@@ -404,7 +404,7 @@ var int KnowsRecipe_OldStew;
 
 
 // ***************
-// AI Constants
+// Visual Constants
 // ***************
 
 // Teeth Texture
@@ -958,20 +958,31 @@ const int Face_B_Vanja        = 43;
 
 
 
+
+// ***************
+// AI Constants
+// ***************
+
 const int ID_MINECRAWLERQUEEN		=	65;
-const int FAI_MINECRAWLERQUEEN		=	47;
 
 const int ID_PANTHER				=	66;
 const int ID_BLACKWOLF				=	67;
 const int ID_ORCDOG					=	68;
 const int ID_HELLHOUND				=	69;
+const int ID_FANATIC				=	70;
 
 const int FAI_ORCDOG				= 	13;
 const int FAI_SKELETON				= 	17;
+const int FAI_MINECRAWLERQUEEN		=	47;
 const int FAI_ORC_SCOUT				= 	48;
 const int FAI_ORC_ELITE				= 	49;
 
-const int ID_FANATIC				=	70;
+// ------ staged fights against the four dragons in the Valley of Mines ------
+const int AIV_DragonFightStage		= 91;
+const int DRAGON_STAGE_DORMANT		= 0;
+const int DRAGON_STAGE_ONE			= 1;
+const int DRAGON_STAGE_SUMMONS		= 2;
+const int DRAGON_STAGE_FINAL		= 3;
 
 
 // ***************

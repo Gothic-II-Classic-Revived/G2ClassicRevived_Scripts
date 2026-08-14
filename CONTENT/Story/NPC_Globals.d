@@ -485,7 +485,7 @@ func void  B_InitNpcGlobals ()
 	Feger3 			= Hlp_GetNpc (NOV_609_Novize);	//Beter
 	Isgaroth		= Hlp_GetNpc (KDF_509_Isgaroth);
 	Sergio			= Hlp_GetNpc (PAL_299_Sergio);	
-	Wolfi		 	= Hlp_GetNpc (BlackWolf);	
+	Wolfi		 	= Hlp_GetNpc (BlackWolf_MIS);	
 	Ulf				= Hlp_GetNpc (NOV_602_Ulf);	
 	
 	Fed		 		= Hlp_GetNpc (STRF_1106_Fed);	

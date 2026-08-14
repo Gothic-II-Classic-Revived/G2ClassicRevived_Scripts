@@ -92,7 +92,7 @@ INSTANCE Summoned_Guardian	(Mst_Addon_Stoneguardian)
 //**************************************************************
 
 
-INSTANCE Stoneguardian	(Mst_Addon_Stoneguardian)
+INSTANCE StoneGuardian	(Mst_Addon_Stoneguardian)
 {
 	B_SetVisuals_Stoneguardian ();
 };

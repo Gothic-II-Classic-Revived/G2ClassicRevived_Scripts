@@ -241,6 +241,7 @@ STORY\Npc_Scripts\Npc_Default.d
 STORY\NPC\*.d
 STORY\NPC\Monster\*.d
 STORY\NPC\Orc\*.d
+STORY\DragonEncounter.d
 
 STORY\B_Story\B_ClearDeadTrader.d
 STORY\B_GiveTradeInv\B_ClearRuneInv.d

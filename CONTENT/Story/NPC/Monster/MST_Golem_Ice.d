@@ -39,6 +39,8 @@ PROTOTYPE Mst_Default_IceGolem(C_Npc)
 	start_aistate				= ZS_MM_AllScheduler;
 
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
+
+	Npc_SetToFistMode(self);
 };
 
 
@@ -62,7 +64,14 @@ func void B_SetVisuals_IceGolem()
 INSTANCE IceGolem	(Mst_Default_IceGolem)
 {
 	B_SetVisuals_IceGolem();
-	Npc_SetToFistMode(self);
+};
+
+//***************
+//	Ice Golem Dragon support
+//***************
+INSTANCE IceGolem_Dragon	(Mst_Default_IceGolem)
+{
+	B_SetVisuals_IceGolem();
 };
 
 //*******************
@@ -71,11 +80,9 @@ INSTANCE IceGolem	(Mst_Default_IceGolem)
 INSTANCE IceGolem_Sylvio1	(Mst_Default_IceGolem)
 {
 	B_SetVisuals_IceGolem();
-	Npc_SetToFistMode(self);
 };
 
 INSTANCE IceGolem_Sylvio2	(Mst_Default_IceGolem)
 {
 	B_SetVisuals_IceGolem();
-	Npc_SetToFistMode(self);
 };

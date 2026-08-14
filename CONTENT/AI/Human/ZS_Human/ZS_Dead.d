@@ -118,6 +118,7 @@ func int ZS_Dead_loop ()
 	// Drachen 
 	if (self.aivar[AIV_TAPOSITION] == FALSE)
 	{
+		B_DragonFight_OnSupportDeath(self);
 		B_DragonKillCounter (self);
 		self.aivar[AIV_TAPOSITION] = TRUE;
 	};

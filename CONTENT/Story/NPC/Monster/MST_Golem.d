@@ -39,6 +39,8 @@ PROTOTYPE Mst_Default_StoneGolem(C_Npc)
 	start_aistate				= ZS_MM_AllScheduler;
 
 	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
+
+	Npc_SetToFistMode	(self);
 };
 
 //-------------------------------------------------------------
@@ -57,7 +59,15 @@ func void B_SetVisuals_StoneGolem()
 INSTANCE StoneGolem	(Mst_Default_StoneGolem)
 {
 	B_SetVisuals_StoneGolem();
-	Npc_SetToFistMode	(self);
+};
+
+//******************
+//	Stone Golem Dragon support
+//******************
+
+INSTANCE StoneGolem_Dragon (Mst_Default_StoneGolem)
+{
+	B_SetVisuals_StoneGolem();
 };
 
 
@@ -78,7 +88,6 @@ INSTANCE Summoned_Golem (Mst_Default_StoneGolem)
 	start_aistate = ZS_MM_Rtn_Summoned;
 	
 	B_SetVisuals_StoneGolem();
-	Npc_SetToFistMode	(self);
 };
 
 //###########################
@@ -152,7 +161,6 @@ INSTANCE Shattered_Golem (Mst_Default_StoneGolem)
 	bodyStateInterruptableOverride = TRUE;
 	
 	B_SetVisuals_StoneGolem();
-	Npc_SetToFistMode	(self);
 	
 	start_aistate				= ZS_GolemDown;
 	
@@ -181,5 +189,4 @@ INSTANCE MagicGolem	(Mst_Default_StoneGolem)
 	protection	[PROT_MAGIC]		=	IMMUNE;
 	
 	B_SetVisuals_StoneGolem();
-	Npc_SetToFistMode	(self);
 };

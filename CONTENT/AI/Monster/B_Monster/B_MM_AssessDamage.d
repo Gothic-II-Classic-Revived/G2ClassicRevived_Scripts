@@ -10,6 +10,11 @@ func void B_MM_AssessDamage ()
 	REV_PalWeaponUndeadDamage (other, self);
 	REV_OrcWeaponCreatureDamage (other, self);
 
+	if (B_DragonFight_AssessDamage(self))
+	{
+		return;
+	};
+
 	// EXIT IF
 	
 	// ------ SONDERFALL: Magic Golem ------ 				//JUUUUNGEEEEE!!!
@@ -90,5 +95,4 @@ func void B_MM_AssessDamage ()
 	AI_StartState		(self, ZS_MM_Attack, 0, "");
 	return;
 };
-
 

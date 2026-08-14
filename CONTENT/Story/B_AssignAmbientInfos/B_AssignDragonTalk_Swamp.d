@@ -32,7 +32,7 @@ FUNC VOID DIA_Dragon_Swamp_Exit_Info()
 
 	Swampdragon = Hlp_GetNpc (dragon_swamp);
 
-	Swampdragon.flags = 0;
+	B_DragonFight_Begin(Swampdragon);
 
 	AI_StopProcessInfos	(self);
 	DragonTalk_Exit_Free  = FALSE;

@@ -35,7 +35,9 @@ INSTANCE FA_ENEMY_PREHIT_39 (C_FightAI)
 INSTANCE FA_ENEMY_STORMPREHIT_39 (C_FightAI)
 {
 	move[0] = MOVE_STRAFE;
-	move[1] = MOVE_ATTACK;
+	move[1] = MOVE_JUMPBACK;
+	move[2] = MOVE_ATTACK;
+	move[3] = MOVE_ATTACK;
 };
 
 
@@ -52,7 +54,7 @@ INSTANCE FA_MY_W_COMBO_39 (C_FightAI)
 // ------ Ich renne auf den Gegner zu ------
 INSTANCE FA_MY_W_RUNTO_39 (C_FightAI)
 {
-	move[0] = MOVE_TURN; // --- STANDARDEINTRAG (Stehenbleiben) ---
+	move[0] = MOVE_ATTACK;
 };
 
 // ------- Ich Strafe gerade ------
@@ -65,9 +67,10 @@ INSTANCE FA_MY_W_STRAFE_39 (C_FightAI)
 INSTANCE FA_MY_W_FOCUS_39 (C_FightAI)
 {
 	move[0] = MOVE_STRAFE;
-	move[1] = MOVE_ATTACK;
+	move[1] = MOVE_JUMPBACK;
 	move[2] = MOVE_ATTACK;
 	move[3] = MOVE_ATTACK;
+	move[4] = MOVE_ATTACK;
 };
 
 // ------- Ich habe Gegner NICHT im Fokus -------
@@ -103,11 +106,11 @@ INSTANCE FA_MY_G_STRAFE_39 (C_FightAI)
 // ------- Ich habe Gegner im Fokus -------
 INSTANCE FA_MY_G_FOCUS_39 (C_FightAI)
 {
-	//move[0] = MOVE_RUN; // --- STANDARDEINTRAG ---
 	move[0] = MOVE_STRAFE;
-	move[1] = MOVE_ATTACK;
+	move[1] = MOVE_JUMPBACK;
 	move[2] = MOVE_ATTACK;
 	move[3] = MOVE_ATTACK;
+	move[4] = MOVE_ATTACK;
 };
 
 // ***************************************
@@ -166,6 +169,5 @@ INSTANCE FA_MY_FK_NOFOCUS_MAG_39 (C_FightAI)
 {
 	move[0] = MOVE_TURN; // --- STANDARDEINTRAG ---
 };
-
 
 
