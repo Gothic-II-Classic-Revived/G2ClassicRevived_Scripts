@@ -20,6 +20,7 @@ func void INIT_GLOBAL()
 {
 	// wird fuer jede Welt aufgerufen (vor INIT_<LevelName>)
 	Game_InitGerman();
+	AreaMusic_Init();
 };
 
 
@@ -772,8 +773,13 @@ func void STARTUP_DEMONTOWER ()
 	func void INIT_SUB_DEMONTOWER ()
 	{
 	// ------ ROOMS ------
-		Wld_AssignRoomToGuild("DT1", GIL_DMT);
-		Wld_AssignRoomToGuild("DT2", GIL_DMT); //wichtig, damit Diego nicht folgt
+		Wld_AssignRoomToGuild("DTOWER01", GIL_DMT);
+		Wld_AssignRoomToGuild("DTOWER02", GIL_DMT);
+		Wld_AssignRoomToGuild("DTOWER03", GIL_DMT);
+		Wld_AssignRoomToGuild("DTOWER04", GIL_DMT);
+		Wld_AssignRoomToGuild("DTOWER05", GIL_DMT);
+		Wld_AssignRoomToGuild("DTOWER06", GIL_DMT);
+		Wld_AssignRoomToGuild("DTOWER07", GIL_DMT);
 	};
 
 	func void INIT_DEMONTOWER ()
@@ -2189,6 +2195,7 @@ FUNC VOID INIT_OLDWORLD ()
 		B_InitNpcGlobals ();    
 
 		B_ENTER_OLDWORLD();
+		OldWorld_CreateAreas();
 
 	if (MIS_ReadyForChapter4  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter4_OneTime == FALSE)
@@ -4363,6 +4370,7 @@ FUNC VOID INIT_NewWorld()
 	B_InitNpcGlobals ();
 	
 	B_ENTER_NEWWORLD ();
+	NewWorld_CreateAreas();
 	
 	// ------- Diebesgilde abtöten ------ 
 	if (Diebesgilde_Verraten)

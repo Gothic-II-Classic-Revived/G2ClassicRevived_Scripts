@@ -213,6 +213,16 @@ INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldWorld_Night.mp3";		
 
 
 
+// Old Camp
+INSTANCE OC_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "OldCamp_Day.mp3";		};
+
+
+
+// Old Camp Castle
+INSTANCE OCC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldCamp_Castle_Day.mp3";	};
+
+
+
 // Demon Tower
 INSTANCE DT_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "DemonTower.mp3";			};
 

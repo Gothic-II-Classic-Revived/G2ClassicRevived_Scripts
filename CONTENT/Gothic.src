@@ -333,6 +333,8 @@ AI\MONSTER\ZS_Monster\ZS_MM_*.d
 
 STORY\B_Story\B_MAGECAVETRIGGER.d
 STORY\Events\*.d
+STORY\Areas\Intern\AreaMusic.d
+STORY\Areas\*.d
 AI\Test_Skripts\*.d
 
 STORY\B_Story\B_ENTER_DRAGONISLAND.d
