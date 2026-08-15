@@ -71,6 +71,21 @@ INSTANCE IceGolem	(Mst_Default_IceGolem)
 //***************
 INSTANCE IceGolem_Dragon	(Mst_Default_IceGolem)
 {
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
+	B_SetVisuals_IceGolem();
+};
+
+INSTANCE IceGolem_Dragon2	(Mst_Default_IceGolem)
+{
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
 	B_SetVisuals_IceGolem();
 };
 

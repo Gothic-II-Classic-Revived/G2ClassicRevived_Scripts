@@ -71,5 +71,22 @@ INSTANCE FireGolem	(Mst_Default_FireGolem)
 //***************
 INSTANCE FireGolem_Dragon	(Mst_Default_FireGolem)
 {
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
 	B_SetVisuals_FireGolem();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE FireGolem_Dragon2	(Mst_Default_FireGolem)
+{
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
+	B_SetVisuals_FireGolem();
+	Npc_SetToFistMode(self);
 };

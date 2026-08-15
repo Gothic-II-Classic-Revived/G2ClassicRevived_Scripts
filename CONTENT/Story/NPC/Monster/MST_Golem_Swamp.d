@@ -67,6 +67,22 @@ INSTANCE SwampGolem	(Mst_Default_Addon_SwampGolem)
 
 INSTANCE SwampGolem_Dragon	(Mst_Default_Addon_SwampGolem)
 {
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
+	B_SetVisuals_Swampgolem();
+	Npc_SetToFistMode	(self);
+};
+
+INSTANCE SwampGolem_Dragon2	(Mst_Default_Addon_SwampGolem)
+{
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
 	B_SetVisuals_Swampgolem();
 	Npc_SetToFistMode	(self);
 };

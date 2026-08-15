@@ -979,10 +979,23 @@ const int FAI_ORC_ELITE				= 	49;
 
 // ------ staged fights against the four dragons in the Valley of Mines ------
 const int AIV_DragonFightStage		= 91;
+const int AIV_DragonSpecialCooldown	= 92;
+const int AIV_DragonSpecialLastSecond	= 93;
+const int AIV_DragonSpecialPhase		= 94;
+
 const int DRAGON_STAGE_DORMANT		= 0;
 const int DRAGON_STAGE_ONE			= 1;
 const int DRAGON_STAGE_SUMMONS		= 2;
 const int DRAGON_STAGE_FINAL		= 3;
+
+const int DRAGON_SCREAM_RANGE			= 1200;
+const int DRAGON_SCREAM_MAX_HEIGHT		= 600;
+const int DRAGON_SCREAM_DAMAGE_ONE		= 35;
+const int DRAGON_SCREAM_DAMAGE_FINAL		= 50;
+const int DRAGON_SCREAM_INITIAL_COOLDOWN	= 7;
+const int DRAGON_SCREAM_COOLDOWN_ONE		= 14;
+const int DRAGON_SCREAM_COOLDOWN_FINAL	= 9;
+const int DRAGON_SCREAM_TRIGGER_CHANCE	= 50;
 
 
 // ***************

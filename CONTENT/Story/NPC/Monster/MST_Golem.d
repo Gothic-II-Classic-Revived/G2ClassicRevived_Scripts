@@ -67,6 +67,21 @@ INSTANCE StoneGolem	(Mst_Default_StoneGolem)
 
 INSTANCE StoneGolem_Dragon (Mst_Default_StoneGolem)
 {
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
+	B_SetVisuals_StoneGolem();
+};
+
+INSTANCE StoneGolem_Dragon2 (Mst_Default_StoneGolem)
+{
+	NoFocus = TRUE;
+	flags = NPC_FLAG_IMMORTAL;
+	bodyStateInterruptableOverride = TRUE;
+	start_aistate = ZS_DragonGolemRise;
+
 	B_SetVisuals_StoneGolem();
 };
 

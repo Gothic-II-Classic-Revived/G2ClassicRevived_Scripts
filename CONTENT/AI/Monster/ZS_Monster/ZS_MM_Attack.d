@@ -51,6 +51,11 @@ func void ZS_MM_Attack ()
 	self.aivar[AIV_HitByOtherNpc] = 0;
 	self.aivar[AIV_SelectSpell] = 0; //Für Magier
 	self.aivar[AIV_TAPOSITION] = 0; //für Regeneration
+
+	if (C_DragonFight_IsValleyDragon(self))
+	{
+		self.aivar[AIV_DragonSpecialLastSecond] = 0;
+	};
 };
 
 func int ZS_MM_Attack_Loop ()
@@ -106,7 +111,8 @@ func int ZS_MM_Attack_Loop ()
 	};
 	
 	// ------ Gegner wird schon zu lange verfolgt ------
-	if (Npc_GetStateTime (self) > self.aivar[AIV_MM_FollowTime]) 
+	if (!C_DragonFight_IsValleyDragon(self))
+	&& (Npc_GetStateTime (self) > self.aivar[AIV_MM_FollowTime])
 	&& (self.aivar[AIV_PursuitEnd] == FALSE)
 	{
 		Npc_ClearAIQueue(self);
@@ -168,6 +174,12 @@ func int ZS_MM_Attack_Loop ()
 		AI_Wait (self, 0.8);
 		self.aivar[AIV_WaitBeforeAttack] = 0;
 	};
+
+	// ------ Dragon special attack ------
+	if (B_DragonFight_TryScream(self))
+	{
+		return LOOP_CONTINUE;
+	};
 	
 	// ------ Summon Time ------
 	if (self.level == 0)
@@ -188,6 +200,7 @@ func int ZS_MM_Attack_Loop ()
 	// ------ Verfolgungstimer resetten ------
 	if ( (!C_BodyStateContains(other,BS_RUN)) && (!C_BodyStateContains(other,BS_JUMP)) )
 	&& (Npc_GetStateTime (self) > 0)
+	&& (!C_DragonFight_IsValleyDragon(self))
 	{
 		Npc_SetStateTime (self, 0);
 		self.aivar[AIV_StateTime] = 0;
