@@ -34,8 +34,17 @@ const string AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_NIGHT_ID = "";
 const string AREA_MUSIC_OLDWORLD_FOG_TOWER_DAY_ID = "BMI_DAY_STD";
 const string AREA_MUSIC_OLDWORLD_FOG_TOWER_NIGHT_ID = "";
 
-const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_DAY_ID = "BMI_DAY_STD";
+const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_DAY_ID = "BAN_DAY_STD";
 const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_NIGHT_ID = "";
+
+const string AREA_MUSIC_OLDWORLD_ORC_TERRITORY_DAY_ID = "ORC_DAY_STD";
+const string AREA_MUSIC_OLDWORLD_ORC_TERRITORY_NIGHT_ID = "";
+
+const string AREA_MUSIC_OLDWORLD_SEA_MONASTERY_DAY_ID = "SEA_DAY_STD";
+const string AREA_MUSIC_OLDWORLD_SEA_MONASTERY_NIGHT_ID = "";
+
+const string AREA_MUSIC_OLDWORLD_VOLCANO_DAY_ID = "TRC_DAY_STD";
+const string AREA_MUSIC_OLDWORLD_VOLCANO_NIGHT_ID = "";
 
 var int OldCampArea;
 var int OldCampCastleArea;
@@ -49,6 +58,9 @@ var int SunkenXardasTowerArea;
 var int OldXardasTowerArea;
 var int FogTowerArea;
 var int GoblinCaveArea;
+var int OrcTerritoryArea;
+var int SeaMonasteryArea;
+var int VolcanoArea;
 
 func void OldWorld_UpdateAreaMusic()
 {
@@ -116,6 +128,20 @@ func void OldWorld_UpdateAreaMusic()
 			AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_NIGHT_ID
 		);
 	}
+	else if (AM_IsHeroIn(SeaMonasteryArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_OLDWORLD_SEA_MONASTERY_DAY_ID,
+			AREA_MUSIC_OLDWORLD_SEA_MONASTERY_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(VolcanoArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_OLDWORLD_VOLCANO_DAY_ID,
+			AREA_MUSIC_OLDWORLD_VOLCANO_NIGHT_ID
+		);
+	}
 	else if (AM_IsHeroIn(OldCampArea))
 	{
 		AreaMusic_PlayDayNight(
@@ -135,6 +161,13 @@ func void OldWorld_UpdateAreaMusic()
 		AreaMusic_PlayDayNight(
 			AREA_MUSIC_OLDWORLD_PSICAMP_DAY_ID,
 			AREA_MUSIC_OLDWORLD_PSICAMP_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(OrcTerritoryArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_OLDWORLD_ORC_TERRITORY_DAY_ID,
+			AREA_MUSIC_OLDWORLD_ORC_TERRITORY_NIGHT_ID
 		);
 	}
 	else
@@ -203,6 +236,21 @@ func void OldWorld_CreateAreas()
 	if (GoblinCaveArea != 0)
 	{
 		AM_Destroy(GoblinCaveArea);
+	};
+
+	if (OrcTerritoryArea != 0)
+	{
+		AM_Destroy(OrcTerritoryArea);
+	};
+
+	if (SeaMonasteryArea != 0)
+	{
+		AM_Destroy(SeaMonasteryArea);
+	};
+
+	if (VolcanoArea != 0)
+	{
+		AM_Destroy(VolcanoArea);
 	};
 
 	SilvestroMineArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
@@ -301,6 +349,88 @@ func void OldWorld_CreateAreas()
 	AM_AddPoint(NewCampArea, -41406.1, -24532.8);
 	AM_SetWeather(NewCampArea, 2);
 	AM_Add(NewCampArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+
+	OrcTerritoryArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPoint(OrcTerritoryArea, 10856.6, 16982.0);
+	AM_AddPoint(OrcTerritoryArea, 11900.2, 16296.5);
+	AM_AddPoint(OrcTerritoryArea, 13130.8, 15727.5);
+	AM_AddPoint(OrcTerritoryArea, 14963.8, 14678.7);
+	AM_AddPoint(OrcTerritoryArea, 15848.9, 13804.1);
+	AM_AddPoint(OrcTerritoryArea, 16945.8, 12996.9);
+	AM_AddPoint(OrcTerritoryArea, 18304.7, 11799.4);
+	AM_AddPoint(OrcTerritoryArea, 19210.4, 10923.5);
+	AM_AddPoint(OrcTerritoryArea, 20589.4, 10109.6);
+	AM_AddPoint(OrcTerritoryArea, 21110.0, 9399.92);
+	AM_AddPoint(OrcTerritoryArea, 21741.4, 8712.28);
+	AM_AddPoint(OrcTerritoryArea, 22187.6, 7514.96);
+	AM_AddPoint(OrcTerritoryArea, 22649.9, 6327.1);
+	AM_AddPoint(OrcTerritoryArea, 23444.4, 4341.43);
+	AM_AddPoint(OrcTerritoryArea, 22696.4, 3230.72);
+	AM_AddPoint(OrcTerritoryArea, 22320.2, 2531.62);
+	AM_AddPoint(OrcTerritoryArea, 21719.9, 1731.81);
+	AM_AddPoint(OrcTerritoryArea, 20601.0, 1212.92);
+	AM_AddPoint(OrcTerritoryArea, 19433.6, 557.653);
+	AM_AddPoint(OrcTerritoryArea, 17882.3, -173.822);
+	AM_AddPoint(OrcTerritoryArea, 17200.6, -1077.63);
+	AM_AddPoint(OrcTerritoryArea, 16696.8, -2152.14);
+	AM_AddPoint(OrcTerritoryArea, 15582.9, -4010.47);
+	AM_AddPoint(OrcTerritoryArea, 15672.9, -5284.9);
+	AM_AddPoint(OrcTerritoryArea, 15993.0, -6552.03);
+	AM_AddPoint(OrcTerritoryArea, 16138.5, -8433.04);
+	AM_AddPoint(OrcTerritoryArea, 16464.2, -9661.44);
+	AM_AddPoint(OrcTerritoryArea, 17023.1, -10796.4);
+	AM_AddPoint(OrcTerritoryArea, 17781.6, -12881.8);
+	AM_AddPoint(OrcTerritoryArea, 18701.7, -13888.7);
+	AM_AddPoint(OrcTerritoryArea, 20045.0, -15640.6);
+	AM_AddPoint(OrcTerritoryArea, 21224.8, -15318.9);
+	AM_AddPoint(OrcTerritoryArea, 22533.1, -14880.3);
+	AM_AddPoint(OrcTerritoryArea, 24270.1, -14432.5);
+	AM_AddPoint(OrcTerritoryArea, 25348.1, -14323.3);
+	AM_AddPoint(OrcTerritoryArea, 29069.9, -14283.5);
+	AM_AddPoint(OrcTerritoryArea, 30571.0, -16679.4);
+	AM_AddPoint(OrcTerritoryArea, 30438.4, -18022.0);
+	AM_AddPoint(OrcTerritoryArea, 29535.7, -25435.3);
+	AM_AddPoint(OrcTerritoryArea, 33529.6, -36736.0);
+	AM_AddPoint(OrcTerritoryArea, 50671.8, -42813.4);
+	AM_AddPoint(OrcTerritoryArea, 67767.4, -36358.0);
+	AM_AddPoint(OrcTerritoryArea, 84661.7, -34403.1);
+	AM_AddPoint(OrcTerritoryArea, 57773.5, 60455.6);
+	AM_AddPoint(OrcTerritoryArea, 20032.6, 38888.0);
+	AM_AddPoint(OrcTerritoryArea, 11891.4, 29347.0);
+	AM_AddPoint(OrcTerritoryArea, 11163.9, 22763.5);
+	AM_AddPoint(OrcTerritoryArea, 11932.4, 17680.6);
+	AM_Add(OrcTerritoryArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+
+	SeaMonasteryArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPoint(SeaMonasteryArea, 20905.0, 19149.5);
+	AM_AddPoint(SeaMonasteryArea, 21489.6, 19481.5);
+	AM_AddPoint(SeaMonasteryArea, 22158.6, 19973.9);
+	AM_AddPoint(SeaMonasteryArea, 26190.1, 25067.2);
+	AM_AddPoint(SeaMonasteryArea, 27609.9, 27700.0);
+	AM_AddPoint(SeaMonasteryArea, 27931.1, 31307.1);
+	AM_AddPoint(SeaMonasteryArea, 19205.5, 34710.6);
+	AM_AddPoint(SeaMonasteryArea, 12433.4, 32107.8);
+	AM_AddPoint(SeaMonasteryArea, 15111.4, 20573.2);
+	AM_AddPoint(SeaMonasteryArea, 15710.7, 20513.3);
+	AM_AddPoint(SeaMonasteryArea, 17275.2, 20469.3);
+	AM_AddPoint(SeaMonasteryArea, 18522.5, 20308.2);
+	AM_SetMinHeight(SeaMonasteryArea, -400.0);
+	AM_SetMaxHeight(SeaMonasteryArea, 6360.0);
+	AM_Add(SeaMonasteryArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+
+	VolcanoArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPoint(VolcanoArea, -15750.8, 32134.9);
+	AM_AddPoint(VolcanoArea, -14650.4, 34238.5);
+	AM_AddPoint(VolcanoArea, -15058.9, 35976.4);
+	AM_AddPoint(VolcanoArea, -16683.0, 38134.7);
+	AM_AddPoint(VolcanoArea, -19865.5, 37135.3);
+	AM_AddPoint(VolcanoArea, -21567.5, 34875.3);
+	AM_AddPoint(VolcanoArea, -21135.4, 32077.8);
+	AM_AddPoint(VolcanoArea, -20803.7, 27594.5);
+	AM_Add(VolcanoArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
 
 	OldCampArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
 

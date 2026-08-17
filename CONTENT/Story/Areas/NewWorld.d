@@ -58,6 +58,27 @@ const string AREA_MUSIC_NEWWORLD_FARM_LOBART_NIGHT_ID = "LOB_NGT_STD";
 const string AREA_MUSIC_NEWWORLD_FARM_AKIL_DAY_ID = "LOB_DAY_STD";
 const string AREA_MUSIC_NEWWORLD_FARM_AKIL_NIGHT_ID = "LOB_NGT_STD";
 
+const string AREA_MUSIC_NEWWORLD_FOREST_DAY_ID = "WOO_DAY_STD";
+const string AREA_MUSIC_NEWWORLD_FOREST_NIGHT_ID = "";
+
+const string AREA_MUSIC_NEWWORLD_DARK_FOREST_DAY_ID = "DFR_DAY_STD";
+const string AREA_MUSIC_NEWWORLD_DARK_FOREST_NIGHT_ID = "";
+
+const string AREA_MUSIC_NEWWORLD_SUN_CIRCLE_DAY_ID = "SUN_DAY_STD";
+const string AREA_MUSIC_NEWWORLD_SUN_CIRCLE_NIGHT_ID = "";
+
+const string AREA_MUSIC_NEWWORLD_FARM_BENGAR_DAY_ID = "LOB_DAY_STD";
+const string AREA_MUSIC_NEWWORLD_FARM_BENGAR_NIGHT_ID = "LOB_NGT_STD";
+
+const string AREA_MUSIC_NEWWORLD_FARM_SEKOB_DAY_ID = "LOB_DAY_STD";
+const string AREA_MUSIC_NEWWORLD_FARM_SEKOB_NIGHT_ID = "LOB_NGT_STD";
+
+const string AREA_MUSIC_NEWWORLD_BANDIT_CAMP_DAY_ID = "";
+const string AREA_MUSIC_NEWWORLD_BANDIT_CAMP_NIGHT_ID = "";
+
+const string AREA_MUSIC_NEWWORLD_FARM_ONAR_DAY_ID = "HOF_DAY_STD";
+const string AREA_MUSIC_NEWWORLD_FARM_ONAR_NIGHT_ID = "HOF_NGT_STD";
+
 var int KhorinisArea;
 var int KhorinisUpperQuarterArea;
 var int KhorinisGarrisonArea;
@@ -77,6 +98,13 @@ var int TavernArea;
 var int LighthouseArea;
 var int FarmLobartArea;
 var int FarmAkilArea;
+var int ForestArea;
+var int DarkForestArea;
+var int SunCircleArea;
+var int FarmBengarArea;
+var int FarmSekobArea;
+var int BanditCampArea;
+var int FarmOnarArea;
 
 func void NewWorld_UpdateAreaMusic()
 {
@@ -151,11 +179,60 @@ func void NewWorld_UpdateAreaMusic()
 			AREA_MUSIC_NEWWORLD_FARM_AKIL_NIGHT_ID
 		);
 	}
+	else if (AM_IsHeroIn(BanditCampArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_NEWWORLD_BANDIT_CAMP_DAY_ID,
+			AREA_MUSIC_NEWWORLD_BANDIT_CAMP_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(FarmBengarArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_NEWWORLD_FARM_BENGAR_DAY_ID,
+			AREA_MUSIC_NEWWORLD_FARM_BENGAR_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(FarmSekobArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_NEWWORLD_FARM_SEKOB_DAY_ID,
+			AREA_MUSIC_NEWWORLD_FARM_SEKOB_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(FarmOnarArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_NEWWORLD_FARM_ONAR_DAY_ID,
+			AREA_MUSIC_NEWWORLD_FARM_ONAR_NIGHT_ID
+		);
+	}
 	else if (AM_IsHeroIn(LighthouseArea))
 	{
 		AreaMusic_PlayDayNight(
 			AREA_MUSIC_NEWWORLD_LIGHTHOUSE_DAY_ID,
 			AREA_MUSIC_NEWWORLD_LIGHTHOUSE_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(SunCircleArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_NEWWORLD_SUN_CIRCLE_DAY_ID,
+			AREA_MUSIC_NEWWORLD_SUN_CIRCLE_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(DarkForestArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_NEWWORLD_DARK_FOREST_DAY_ID,
+			AREA_MUSIC_NEWWORLD_DARK_FOREST_NIGHT_ID
+		);
+	}
+	else if (AM_IsHeroIn(ForestArea))
+	{
+		AreaMusic_PlayDayNight(
+			AREA_MUSIC_NEWWORLD_FOREST_DAY_ID,
+			AREA_MUSIC_NEWWORLD_FOREST_NIGHT_ID
 		);
 	}
 	else if (AM_IsHeroIn(MonasteryRoadArea))
@@ -317,6 +394,41 @@ func void NewWorld_CreateAreas()
 		AM_Destroy(FarmAkilArea);
 	};
 
+	if (ForestArea != 0)
+	{
+		AM_Destroy(ForestArea);
+	};
+
+	if (DarkForestArea != 0)
+	{
+		AM_Destroy(DarkForestArea);
+	};
+
+	if (SunCircleArea != 0)
+	{
+		AM_Destroy(SunCircleArea);
+	};
+
+	if (FarmBengarArea != 0)
+	{
+		AM_Destroy(FarmBengarArea);
+	};
+
+	if (FarmSekobArea != 0)
+	{
+		AM_Destroy(FarmSekobArea);
+	};
+
+	if (BanditCampArea != 0)
+	{
+		AM_Destroy(BanditCampArea);
+	};
+
+	if (FarmOnarArea != 0)
+	{
+		AM_Destroy(FarmOnarArea);
+	};
+
 	MonasteryDungeonArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
 
 	AM_AddPortalRoom(MonasteryDungeonArea, "KLOSTER118");
@@ -443,7 +555,6 @@ func void NewWorld_CreateAreas()
 	AM_AddPortalRoom(CavesArea, "GRPCAVE04");
 	AM_AddPortalRoom(CavesArea, "GRPCAVE05");
 	AM_AddPortalRoom(CavesArea, "GRPCAVE03");
-	AM_AddPortalRoom(CavesArea, "NWFORRESTCAVE06");
 	AM_AddPortalRoom(CavesArea, "NWFORRESTCAVE04");
 	AM_AddPortalRoom(CavesArea, "NWFORRESTCAVE03");
 	AM_AddPortalRoom(CavesArea, "NWFORRESTCAVE01");
@@ -529,6 +640,141 @@ func void NewWorld_CreateAreas()
 	AM_AddPoint(FarmLobartArea, 18852.8, -14250.9);
 	AM_AddPoint(FarmLobartArea, 18758.7, -14650.7);
 	AM_Add(FarmLobartArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
+
+	ForestArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
+
+	AM_AddPoint(ForestArea, 30353.8, 1967.15);
+	AM_AddPoint(ForestArea, 26505.2, 3708.07);
+	AM_AddPoint(ForestArea, 22579.8, 3330.33);
+	AM_AddPoint(ForestArea, 21621.9, 2618.44);
+	AM_AddPoint(ForestArea, 19601.1, 674.217);
+	AM_AddPoint(ForestArea, 19823.1, -1063.23);
+	AM_AddPoint(ForestArea, 18545.1, -6109.32);
+	AM_AddPoint(ForestArea, 21834.8, -6852.92);
+	AM_AddPoint(ForestArea, 29901.0, -1652.42);
+	AM_AddPoint(ForestArea, 31385.6, 1239.7);
+	AM_AddPortalRoom(ForestArea, "NWFORRESTCAVE06");
+	AM_SetMaxHeight(ForestArea, 0.0);
+	AM_Add(ForestArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
+
+	DarkForestArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
+
+	AM_AddPoint(DarkForestArea, 18558.6, 11893.0);
+	AM_AddPoint(DarkForestArea, 21133.2, 10476.5);
+	AM_AddPoint(DarkForestArea, 23900.7, 11015.9);
+	AM_AddPoint(DarkForestArea, 25588.5, 9651.23);
+	AM_AddPoint(DarkForestArea, 26046.0, 11150.4);
+	AM_AddPoint(DarkForestArea, 28258.7, 13268.5);
+	AM_AddPoint(DarkForestArea, 30420.9, 13653.2);
+	AM_AddPoint(DarkForestArea, 31269.4, 13971.5);
+	AM_AddPoint(DarkForestArea, 32484.5, 17278.6);
+	AM_AddPoint(DarkForestArea, 32385.5, 21479.7);
+	AM_AddPoint(DarkForestArea, 32326.4, 25292.3);
+	AM_AddPoint(DarkForestArea, 31214.9, 28197.4);
+	AM_AddPoint(DarkForestArea, 29306.2, 31116.8);
+	AM_AddPoint(DarkForestArea, 22908.7, 29968.0);
+	AM_AddPoint(DarkForestArea, 20228.4, 29636.5);
+	AM_AddPoint(DarkForestArea, 16879.1, 28551.2);
+	AM_AddPoint(DarkForestArea, 13224.0, 27098.6);
+	AM_AddPoint(DarkForestArea, 10587.4, 25920.1);
+	AM_AddPoint(DarkForestArea, 7958.79, 24881.3);
+	AM_AddPoint(DarkForestArea, 7235.74, 23905.9);
+	AM_AddPoint(DarkForestArea, 5890.33, 22289.1);
+	AM_AddPoint(DarkForestArea, 5440.68, 21000.7);
+	AM_AddPoint(DarkForestArea, 5148.68, 19613.3);
+	AM_AddPoint(DarkForestArea, 5078.76, 18178.5);
+	AM_AddPoint(DarkForestArea, 9470.59, 15832.7);
+	AM_AddPoint(DarkForestArea, 11046.2, 14685.8);
+	AM_AddPoint(DarkForestArea, 16525.0, 12028.3);
+	AM_Add(DarkForestArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
+
+	SunCircleArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
+
+	AM_AddPoint(SunCircleArea, 41288.7, 29487.6);
+	AM_AddPoint(SunCircleArea, 41435.2, 31216.7);
+	AM_AddPoint(SunCircleArea, 40540.9, 34288.9);
+	AM_AddPoint(SunCircleArea, 40037.9, 34556.1);
+	AM_AddPoint(SunCircleArea, 38623.4, 34762.7);
+	AM_AddPoint(SunCircleArea, 35669.3, 35743.4);
+	AM_AddPoint(SunCircleArea, 35256.0, 35718.2);
+	AM_AddPoint(SunCircleArea, 34382.0, 34465.0);
+	AM_AddPoint(SunCircleArea, 31835.2, 31528.9);
+	AM_AddPoint(SunCircleArea, 33584.5, 29390.3);
+	AM_AddPoint(SunCircleArea, 38017.8, 28090.8);
+	AM_AddPoint(SunCircleArea, 39647.9, 27011.8);
+	AM_AddPoint(SunCircleArea, 40963.4, 27276.6);
+	AM_SetMinHeight(SunCircleArea, 6190.0);
+	AM_Add(SunCircleArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
+
+	FarmBengarArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
+
+	AM_AddPoint(FarmBengarArea, 52639.5, -13418.7);
+	AM_AddPoint(FarmBengarArea, 50084.6, -13309.0);
+	AM_AddPoint(FarmBengarArea, 48460.3, -14354.5);
+	AM_AddPoint(FarmBengarArea, 48191.3, -15421.4);
+	AM_AddPoint(FarmBengarArea, 47016.3, -16698.3);
+	AM_AddPoint(FarmBengarArea, 46790.9, -18025.1);
+	AM_AddPoint(FarmBengarArea, 45753.9, -19056.4);
+	AM_AddPoint(FarmBengarArea, 46932.7, -21293.8);
+	AM_AddPoint(FarmBengarArea, 48742.5, -24039.6);
+	AM_AddPoint(FarmBengarArea, 49396.2, -25046.9);
+	AM_AddPoint(FarmBengarArea, 53013.3, -24633.7);
+	AM_AddPoint(FarmBengarArea, 53476.5, -18979.5);
+	AM_SetMinHeight(FarmBengarArea, 2900.0);
+	AM_Add(FarmBengarArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
+
+	FarmSekobArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
+
+	AM_AddPoint(FarmSekobArea, 55261.5, -11801.8);
+	AM_AddPoint(FarmSekobArea, 60920.3, -11428.6);
+	AM_AddPoint(FarmSekobArea, 61491.1, -10471.1);
+	AM_AddPoint(FarmSekobArea, 61467.3, -4661.29);
+	AM_AddPoint(FarmSekobArea, 61994.3, -2140.54);
+	AM_AddPoint(FarmSekobArea, 59634.8, 892.484);
+	AM_AddPoint(FarmSekobArea, 56045.3, 1455.09);
+	AM_AddPoint(FarmSekobArea, 54913.9, -1373.28);
+	AM_AddPoint(FarmSekobArea, 54803.8, -3839.24);
+	AM_Add(FarmSekobArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
+
+	BanditCampArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
+
+	AM_AddPoint(BanditCampArea, 66850.3, -20437.2);
+	AM_AddPoint(BanditCampArea, 64108.3, -20752.7);
+	AM_AddPoint(BanditCampArea, 63589.1, -21527.4);
+	AM_AddPoint(BanditCampArea, 62621.3, -23059.4);
+	AM_AddPoint(BanditCampArea, 62813.0, -23800.0);
+	AM_AddPoint(BanditCampArea, 63434.9, -24870.9);
+	AM_AddPoint(BanditCampArea, 63969.5, -25932.3);
+	AM_AddPoint(BanditCampArea, 64771.6, -26499.6);
+	AM_AddPoint(BanditCampArea, 65255.4, -26538.2);
+	AM_AddPoint(BanditCampArea, 66498.6, -25599.2);
+	AM_AddPoint(BanditCampArea, 68142.4, -23890.3);
+	AM_AddPoint(BanditCampArea, 68659.9, -22215.7);
+	AM_AddPoint(BanditCampArea, 68892.2, -21124.8);
+	AM_AddPoint(BanditCampArea, 69003.3, -20339.6);
+	AM_SetMinHeight(BanditCampArea, 3877.0);
+	AM_Add(BanditCampArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
+
+	FarmOnarArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
+
+	AM_AddPoint(FarmOnarArea, 68759.7, -11759.8);
+	AM_AddPoint(FarmOnarArea, 69296.4, -14683.2);
+	AM_AddPoint(FarmOnarArea, 71987.8, -16970.5);
+	AM_AddPoint(FarmOnarArea, 75930.1, -18083.5);
+	AM_AddPoint(FarmOnarArea, 78477.9, -17271.7);
+	AM_AddPoint(FarmOnarArea, 78276.2, -15093.2);
+	AM_AddPoint(FarmOnarArea, 78247.3, -13540.2);
+	AM_AddPoint(FarmOnarArea, 80114.1, -12681.5);
+	AM_AddPoint(FarmOnarArea, 80723.5, -12203.6);
+	AM_AddPoint(FarmOnarArea, 81149.9, -9111.16);
+	AM_AddPoint(FarmOnarArea, 80579.4, -8256.26);
+	AM_AddPoint(FarmOnarArea, 78147.3, -6811.72);
+	AM_AddPoint(FarmOnarArea, 76455.0, -4713.65);
+	AM_AddPoint(FarmOnarArea, 74256.8, -3888.17);
+	AM_AddPoint(FarmOnarArea, 72995.9, -3709.3);
+	AM_AddPoint(FarmOnarArea, 69507.2, -3882.83);
+	AM_AddPoint(FarmOnarArea, 68370.8, -6970.9);
+	AM_Add(FarmOnarArea, NewWorld_UpdateAreaMusic, NewWorld_UpdateAreaMusic);
 
 	KhorinisUpperQuarterArea = AM_Create("NEWWORLD\\NEWWORLD.ZEN");
 

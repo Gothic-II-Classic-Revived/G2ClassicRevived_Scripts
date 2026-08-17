@@ -179,10 +179,17 @@ INSTANCE LOB_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Farm_Night.mp3";			};
 // Lighthouse
 INSTANCE LEU_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Lighthouse.mp3";			};
 
+// Dark Forest
+INSTANCE DFR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DarkForest.mp3";			};
+
 // Dexter's Camp
 
 
 // Troll Lair
+
+
+// Sun Circle
+INSTANCE SUN_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "SunCircle.mp3";			};
 
 
 // Graveyard
@@ -210,6 +217,10 @@ INSTANCE OWD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldWorld_Day.mp3";		};
 INSTANCE OWD_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "OldWorld_Threat.mp3";	};
 INSTANCE OWD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "OldWorld_Fight.mp3";		};
 INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldWorld_Night.mp3";		};
+
+
+// Orc Territory
+INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OrcTerritory.mp3";			};
 
 
 
@@ -269,25 +280,6 @@ INSTANCE PSI_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3"
 // ################################################################################################
 // ################################################################################################
 // ###############                                                          #######################
-// ###############                 PASSAGE            MUSIC                 #######################
-// ###############                                                          #######################
-// ################################################################################################
-// ################################################################################################
-// ################################################################################################
-
-// Default
-INSTANCE PAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Pass.mp3";			};
-INSTANCE PAS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "Pass.mp3";			};
-INSTANCE PAS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Pass.mp3";			};
-INSTANCE PAS_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Pass.mp3";			};
-
-
-
-
-// ################################################################################################
-// ################################################################################################
-// ################################################################################################
-// ###############                                                          #######################
 // ###############                 DUNGEON            MUSIC                 #######################
 // ###############                                                          #######################
 // ################################################################################################
@@ -311,8 +303,8 @@ INSTANCE OGY_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";			};
 INSTANCE OGY_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Dungeon_Fight.mp3";	};
 
 // Orc City
-INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";			};
-INSTANCE ORC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Dungeon_Fight.mp3";	};
+INSTANCE OCI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";			};
+INSTANCE OCI_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Dungeon_Fight.mp3";	};
 
 // Orc Temple
 INSTANCE TPL_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";			};

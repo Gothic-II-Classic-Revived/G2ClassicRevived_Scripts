@@ -66,7 +66,7 @@ func void AreaMusic_PlayDefault()
 
 func void AreaMusic_Init()
 {
-	AM_ClearProcessCallback();
+	AM_SetProcessCallback(DragonIsland_TryInitAreaMusic);
 	//AM_SetDebug(TRUE);
 	AreaMusic_CurrentThemeID = AREA_MUSIC_NO_THEME;
 	AreaMusic_DefaultDayThemeID = AREA_MUSIC_NO_THEME;

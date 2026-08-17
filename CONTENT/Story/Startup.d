@@ -4488,6 +4488,9 @@ func void INIT_AbandonedMine()
 	B_InitGuildAttitudes ();
 	B_InitNpcGlobals ();
 	B_Enter_AbandonedMine();
+	AreaMusic_SetDefaultThemes(AREA_MUSIC_UNDERGROUND_ABANDONED_MINE_DEFAULT_ID, AREA_MUSIC_UNDERGROUND_ABANDONED_MINE_DEFAULT_ID);
+	AM_SetProcessCallback(AreaMusic_PlayDefault);
+	AreaMusic_PlayDefault();
 };
 
 
@@ -4543,6 +4546,9 @@ FUNC VOID INIT_FREEMINE ()
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();
 	B_Enter_FreeMine();
+	AreaMusic_SetDefaultThemes(AREA_MUSIC_UNDERGROUND_FREE_MINE_DEFAULT_ID, AREA_MUSIC_UNDERGROUND_FREE_MINE_DEFAULT_ID);
+	AM_SetProcessCallback(AreaMusic_PlayDefault);
+	AreaMusic_PlayDefault();
 };
 
 
@@ -4607,4 +4613,28 @@ FUNC VOID INIT_ORCGRAVEYARD ()
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();
 	B_Enter_OrcGraveyard();
+	AreaMusic_SetDefaultThemes(AREA_MUSIC_UNDERGROUND_ORC_GRAVEYARD_DEFAULT_ID, AREA_MUSIC_UNDERGROUND_ORC_GRAVEYARD_DEFAULT_ID);
+	AM_SetProcessCallback(AreaMusic_PlayDefault);
+	AreaMusic_PlayDefault();
+};
+
+FUNC VOID INIT_OLDMINE()
+{
+	AreaMusic_SetDefaultThemes(AREA_MUSIC_UNDERGROUND_OLD_MINE_DEFAULT_ID, AREA_MUSIC_UNDERGROUND_OLD_MINE_DEFAULT_ID);
+	AM_SetProcessCallback(AreaMusic_PlayDefault);
+	AreaMusic_PlayDefault();
+};
+
+FUNC VOID INIT_ORCCITY()
+{
+	AreaMusic_SetDefaultThemes(AREA_MUSIC_UNDERGROUND_ORC_CITY_DEFAULT_ID, AREA_MUSIC_UNDERGROUND_ORC_CITY_DEFAULT_ID);
+	AM_SetProcessCallback(AreaMusic_PlayDefault);
+	AreaMusic_PlayDefault();
+};
+
+FUNC VOID INIT_ORCTEMPEL()
+{
+	AreaMusic_SetDefaultThemes(AREA_MUSIC_UNDERGROUND_ORC_TEMPLE_DEFAULT_ID, AREA_MUSIC_UNDERGROUND_ORC_TEMPLE_DEFAULT_ID);
+	AM_SetProcessCallback(AreaMusic_PlayDefault);
+	AreaMusic_PlayDefault();
 };
