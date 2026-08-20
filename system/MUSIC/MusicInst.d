@@ -189,7 +189,8 @@ INSTANCE DFR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DarkForest.mp3";			};
 
 
 // Sun Circle
-INSTANCE SUN_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "SunCircle.mp3";			};
+INSTANCE SUN_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "SunCircle_Day.mp3";			};
+INSTANCE SUN_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "SunCircle_Night.mp3";			};
 
 
 // Graveyard
@@ -220,12 +221,15 @@ INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldWorld_Night.mp3";		
 
 
 // Orc Territory
-INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OrcTerritory.mp3";			};
-
+INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OrcTerritory.mp3";	volume = 1.5;	};
 
 
 // Old Camp
 INSTANCE OC_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "OldCamp_Day.mp3";		};
+
+
+// Psi Camp / Swamp
+INSTANCE SWA_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Swamp.mp3";		};
 
 
 
@@ -252,6 +256,7 @@ INSTANCE BMI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Mine_Fortress.mp3";		}
 
 // Silvestro Mine
 INSTANCE SIL_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Mine_Silvestro.mp3";		};
+
 
 
 // XXXXX XXXXXXXXXXXXXXXX XXXXX //

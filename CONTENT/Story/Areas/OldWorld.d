@@ -2,49 +2,49 @@ const string AREA_MUSIC_OLDWORLD_DEFAULT_DAY_ID = "OWD_DAY_STD";
 const string AREA_MUSIC_OLDWORLD_DEFAULT_NIGHT_ID = "OWD_NGT_STD";
 
 const string AREA_MUSIC_OLDWORLD_OLDCAMP_DAY_ID = "OC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_OLDCAMP_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_OLDCAMP_NIGHT_ID = "OC_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_OLDCAMP_CASTLE_DAY_ID = "OCC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_OLDCAMP_CASTLE_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_OLDCAMP_CASTLE_NIGHT_ID = "OCC_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_NEW_CAMP_DAY_ID = "NCI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_NEW_CAMP_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_NEW_CAMP_NIGHT_ID = "NCI_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_DAY_ID = "FOR_DAY_STD";
 const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_NIGHT_ID = "";
 
 const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_TEMPLE_DAY_ID = "BMI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_TEMPLE_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_TEMPLE_NIGHT_ID = "BMI_DAY_STD";
 
-const string AREA_MUSIC_OLDWORLD_PSICAMP_DAY_ID = "";
-const string AREA_MUSIC_OLDWORLD_PSICAMP_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_PSICAMP_DAY_ID = "SWA_DAY_STD";
+const string AREA_MUSIC_OLDWORLD_PSICAMP_NIGHT_ID = "SWA_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_DAY_ID = "PSI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_NIGHT_ID = "PSI_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_SILVESTRO_MINE_DAY_ID = "SIL_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_SILVESTRO_MINE_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_SILVESTRO_MINE_NIGHT_ID = "SIL_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_SUNKEN_XARDAS_TOWER_DAY_ID = "DT_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_SUNKEN_XARDAS_TOWER_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_SUNKEN_XARDAS_TOWER_NIGHT_ID = "DT_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_DAY_ID = "DT_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_NIGHT_ID = "DT_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_FOG_TOWER_DAY_ID = "BMI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_FOG_TOWER_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_FOG_TOWER_NIGHT_ID = "BMI_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_DAY_ID = "BAN_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_NIGHT_ID = "BAN_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_ORC_TERRITORY_DAY_ID = "ORC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_ORC_TERRITORY_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_ORC_TERRITORY_NIGHT_ID = "ORC_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_SEA_MONASTERY_DAY_ID = "SEA_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_SEA_MONASTERY_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_SEA_MONASTERY_NIGHT_ID = "SEA_DAY_STD";
 
 const string AREA_MUSIC_OLDWORLD_VOLCANO_DAY_ID = "TRC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_VOLCANO_NIGHT_ID = "";
+const string AREA_MUSIC_OLDWORLD_VOLCANO_NIGHT_ID = "TRC_DAY_STD";
 
 var int OldCampArea;
 var int OldCampCastleArea;
@@ -550,56 +550,35 @@ func void OldWorld_CreateAreas()
 
 	PsiCampArea = AM_Create("ValleyOfMines\\OLDWORLD.ZEN");
 
-	AM_AddPoint(PsiCampArea, 42325.4, -6258.53);
-	AM_AddPoint(PsiCampArea, 44248.9, -4769.32);
-	AM_AddPoint(PsiCampArea, 42537.9, -1317.9);
-	AM_AddPoint(PsiCampArea, 41076.8, 2167.85);
-	AM_AddPoint(PsiCampArea, 43209.7, 3609.08);
-	AM_AddPoint(PsiCampArea, 45001.7, 6993.6);
-	AM_AddPoint(PsiCampArea, 51000.7, 6322.49);
-	AM_AddPoint(PsiCampArea, 53599.3, 5499.9);
-	AM_AddPoint(PsiCampArea, 62654.2, -6753.81);
-	AM_AddPoint(PsiCampArea, 63813.9, -11368.2);
-	AM_AddPoint(PsiCampArea, 64120.5, -16190.4);
-	AM_AddPoint(PsiCampArea, 61373.8, -17145.1);
-	AM_AddPoint(PsiCampArea, 56869.4, -18344.6);
-	AM_AddPoint(PsiCampArea, 51489.3, -20417.9);
-	AM_AddPoint(PsiCampArea, 50150.4, -20003.2);
-	AM_AddPoint(PsiCampArea, 44935.2, -16285.8);
-	AM_AddPoint(PsiCampArea, 44383.9, -16031.4);
-	AM_AddPoint(PsiCampArea, 42401.0, -11969.2);
-	AM_AddPoint(PsiCampArea, 41996.7, -8123.84);
-	AM_AddPoint(PsiCampArea, 42057.2, -6512.31);
-	AM_SetMaxHeight(PsiCampArea, -1663.31);
+	AM_AddPoint(PsiCampArea, 44248.8, -4768.57);
+	AM_AddPoint(PsiCampArea, 42330.6, -6256.46);
+	AM_AddPoint(PsiCampArea, 42059.1, -6507.81);
+	AM_AddPoint(PsiCampArea, 40033.4, -16065.0);
+	AM_AddPoint(PsiCampArea, 40130.6, -40790.8);
+	AM_AddPoint(PsiCampArea, 77034.1, -34464.2);
+	AM_AddPoint(PsiCampArea, 65559.9, 2966.63);
+	AM_AddPoint(PsiCampArea, 50297.5, 4759.91);
+	AM_AddPoint(PsiCampArea, 43111.2, 4913.57);
+	AM_AddPoint(PsiCampArea, 40128.4, 433.446);
+	AM_SetMaxHeight(PsiCampArea, -1500.0);
 	AM_SetWeather(PsiCampArea, 1);
 	AM_Add(PsiCampArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
 
 	PsiCampTempleArea = AM_Create("ValleyOfMines\\OLDWORLD.ZEN");
 
-	AM_AddPoint(PsiCampTempleArea, 45457.3, -3968.58);
-	AM_AddPoint(PsiCampTempleArea, 42513.6, 1151.61);
-	AM_AddPoint(PsiCampTempleArea, 42607.7, 2138.6);
-	AM_AddPoint(PsiCampTempleArea, 43384.9, 2777.7);
-	AM_AddPoint(PsiCampTempleArea, 46206.5, 4554.2);
-	AM_AddPoint(PsiCampTempleArea, 47762.3, 5765.55);
-	AM_AddPoint(PsiCampTempleArea, 51524.3, 2254.06);
-	AM_AddPoint(PsiCampTempleArea, 49534.4, -554.822);
-	AM_AddPoint(PsiCampTempleArea, 50382.5, -961.046);
-	AM_AddPoint(PsiCampTempleArea, 50857.0, -1372.01);
-	AM_AddPoint(PsiCampTempleArea, 51139.9, -2103.35);
-	AM_AddPoint(PsiCampTempleArea, 51275.2, -2843.1);
-	AM_AddPoint(PsiCampTempleArea, 51136.2, -3693.85);
-	AM_AddPoint(PsiCampTempleArea, 50914.2, -4422.29);
-	AM_AddPoint(PsiCampTempleArea, 50540.9, -4902.56);
-	AM_AddPoint(PsiCampTempleArea, 49244.2, -5790.22);
-	AM_AddPoint(PsiCampTempleArea, 48522.4, -6175.5);
-	AM_AddPoint(PsiCampTempleArea, 47892.1, -6359.3);
-	AM_AddPoint(PsiCampTempleArea, 47260.6, -6299.27);
-	AM_AddPoint(PsiCampTempleArea, 46961.8, -6249.22);
-	AM_AddPoint(PsiCampTempleArea, 46307.3, -6053.96);
-	AM_AddPoint(PsiCampTempleArea, 45801.7, -5713.26);
-	AM_AddPoint(PsiCampTempleArea, 45473.1, -5152.41);
-	AM_SetMaxHeight(PsiCampTempleArea, -1663.31);
+	AM_AddPoint(PsiCampTempleArea, 50044.5, -465.232);
+	AM_AddPoint(PsiCampTempleArea, 51700.9, -1097.84);
+	AM_AddPoint(PsiCampTempleArea, 52099.2, -1999.21);
+	AM_AddPoint(PsiCampTempleArea, 51399.2, -3598.88);
+	AM_AddPoint(PsiCampTempleArea, 50849.9, -4501.98);
+	AM_AddPoint(PsiCampTempleArea, 48543.7, -6539.4);
+	AM_AddPoint(PsiCampTempleArea, 47660.4, -6702.83);
+	AM_AddPoint(PsiCampTempleArea, 45949.3, -6451.57);
+	AM_AddPoint(PsiCampTempleArea, 45430.4, -4050.65);
+	AM_AddPoint(PsiCampTempleArea, 45138.2, -4366.96);
+	AM_AddPoint(PsiCampTempleArea, 45580.3, -696.749);
+	AM_AddPortalRoom(PsiCampTempleArea, "PSIT01");
+	AM_SetMaxHeight(PsiCampTempleArea, -1500.0);
 	AM_SetWeather(PsiCampArea, 1);
 	AM_Add(PsiCampTempleArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
 
