@@ -125,7 +125,7 @@ INSTANCE KHO_Fgt_Std	(C_MUSICTHEME_FIGHT)		{	file			= "Khorinis_Fight.mp3";		};
 INSTANCE KHO_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Night.mp3";		};
 
 // Upper City
-INSTANCE OBS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Paladins.mp3";	};
+INSTANCE OBS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Paladins.mp3";	vol	= 0.7;	};
 
 // Garrison
 INSTANCE KAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Garrison.mp3";	};
@@ -146,7 +146,7 @@ INSTANCE MOD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Monastery_Dungeon.mp3"
 // XXXXX XXXXXXXXXXXXXXXX XXXXX //
 // XXXXX       Onar       XXXXX //
 // XXXXX XXXXXXXXXXXXXXXX XXXXX //
-INSTANCE HOF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BigFarm.mp3";			};
+INSTANCE HOF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BigFarm.mp3";			vol	= 0.75;	};
 INSTANCE HOF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BigFarm_Night.mp3";		};
 
 
@@ -221,7 +221,7 @@ INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldWorld_Night.mp3";		
 
 
 // Orc Territory
-INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OrcTerritory.mp3";	volume = 1.5;	};
+INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OrcTerritory.mp3";	vol = 2.0;	};
 
 
 // Old Camp
@@ -244,7 +244,7 @@ INSTANCE DT_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "DemonTower.mp3";			};
 
 
 // New Camp
-INSTANCE NCI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "NewCamp.mp3";			};
+INSTANCE NCI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "NewCamp.mp3";			vol	= 0.65;	};
 
 
 
