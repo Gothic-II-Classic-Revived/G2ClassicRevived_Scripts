@@ -33,6 +33,15 @@ const int	REV_Change_ITAM_Prot_Total_01			=	15;
 //******************************************************************//
 //******************************************************************//
 //******************************************************************//
+const int	REV_Change_ITAM_InnosEye				=	1;
+const int	REV_Protection_ITAM_InnosEye			=	5;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Change_ITAM_InnosEye_DISCHARGED		=	10;
+const int	REV_Protection_ITAM_InnosEye_DISCHARGED	=	30;
+//******************************************************************//
+//******************************************************************//
+//******************************************************************//
 
 
 //****************************************************************************
@@ -894,4 +903,164 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 		};
 	};
 
+
+//****************************************************************************
+//			MISSION
+//****************************************************************************
+
+INSTANCE  ITAM_REVIVED_INNOSEYE (C_ITEM)
+{
+	name 			=	"Eye of Innos";
+
+	mainflag 		=	ITEM_KAT_MAGIC;
+	flags 			=	ITEM_AMULET|ITEM_MISSION;
+
+	value 			=	0;
+
+	visual 			=	"ItMi_InnosEye_MIS.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
+
+	visual_skin 	=	0;
+	material 		=	MAT_METAL;
+	on_equip		=	Equip_REV_EyeOfInnos;
+	on_unequip		=	UnEquip_REV_EyeOfInnos;
+
+	description		= name;
+	TEXT[5]			= "Energy pulses through the Eye.";
+	
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+};
+
+	FUNC VOID Equip_REV_EyeOfInnos()
+	{
+		if (Npc_IsPlayer(self)) 
+		{
+			Wld_PlayEffect("spellFX_Innoseye",  self, self, 0, 0, 0, FALSE );
+			Wld_PlayEffect("spellFX_LIGHTSTAR_RED",  self, self, 0, 0, 0, FALSE );
+			//Wld_PlayEffect("FX_EarthQuake",  self, self, 0, 0, 0, FALSE );
+			AI_PlayAni (self,"T_MAGRUN_2_HEASHOOT");	
+			AI_StandUp (self);
+			Snd_Play ("SFX_INNOSEYE"); 
+
+			self.protection [PROT_EDGE]   += REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_BLUNT]  += REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_POINT]  += REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_FIRE]   += REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_MAGIC]  += REV_Protection_ITAM_InnosEye;
+
+			self.attribute[ATR_HITPOINTS] 	  += REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_HITPOINTS_MAX] += REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_MANA] 		  += REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_MANA_MAX] 	  += REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_STRENGTH] 	  += REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_DEXTERITY] 	  += REV_Change_ITAM_InnosEye;
+		};
+	};
+
+	FUNC VOID UnEquip_REV_EyeOfInnos()
+	{
+		if (Npc_IsPlayer(self)) 
+		{
+			self.protection [PROT_EDGE]   -=  REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_BLUNT]  -=  REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_POINT]  -=  REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_FIRE]   -=  REV_Protection_ITAM_InnosEye;
+			self.protection [PROT_MAGIC]  -=  REV_Protection_ITAM_InnosEye;
+
+			self.attribute[ATR_HITPOINTS] 	  -= REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_HITPOINTS_MAX] -= REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_MANA] 		  -= REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_MANA_MAX] 	  -= REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_STRENGTH] 	  -= REV_Change_ITAM_InnosEye;
+			self.attribute[ATR_DEXTERITY] 	  -= REV_Change_ITAM_InnosEye;
+		};
+	};
+
 /******************************************************************************************/
+
+INSTANCE  ITAM_REVIVED_INNOSEYE_DISCHARGED (C_ITEM)
+{
+	name 			=	"Eye of Innos";
+
+	mainflag 		=	ITEM_KAT_MAGIC;
+	flags 			=	ITEM_AMULET|ITEM_MISSION;
+
+	value 			=	0;
+
+	visual 			=	"ItMi_InnosEye_MIS.3ds";
+
+	visual_skin 	=	0;
+	material 		=	MAT_METAL;
+	on_equip		=	Equip_REV_EyeOfInnos_DISCHARGED;
+	on_unequip		=	UnEquip_REV_EyeOfInnos_DISCHARGED;
+
+	description		= name;
+	TEXT[5]			= "The Eye is faded and does not shine.";
+	
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+};
+
+	FUNC VOID Equip_REV_EyeOfInnos_DISCHARGED()
+	{
+		if (Npc_IsPlayer(self)) 
+		{
+			Wld_PlayEffect("spellFX_Fear",  self, self, 0, 0, 0, FALSE );
+			Snd_Play 	("MFX_FEAR_CAST" );
+
+			self.protection [PROT_EDGE]   += REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_BLUNT]  += REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_POINT]  += REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_FIRE]   += REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_MAGIC]  += REV_Protection_ITAM_InnosEye_DISCHARGED;	
+
+			self.attribute[ATR_HITPOINTS] 	  += REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_HITPOINTS_MAX] += REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_MANA] 		  += REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_MANA_MAX] 	  += REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_STRENGTH] 	  += REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_DEXTERITY] 	  += REV_Change_ITAM_InnosEye_DISCHARGED;	
+		};
+	};
+
+	FUNC VOID UnEquip_REV_EyeOfInnos_DISCHARGED()
+	{
+		if (Npc_IsPlayer(self)) 
+		{
+			self.protection [PROT_EDGE]   -=  REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_BLUNT]  -=  REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_POINT]  -=  REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_FIRE]   -=  REV_Protection_ITAM_InnosEye_DISCHARGED;
+			self.protection [PROT_MAGIC]  -=  REV_Protection_ITAM_InnosEye_DISCHARGED;
+
+			self.attribute[ATR_HITPOINTS] 	  -= REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_HITPOINTS_MAX] -= REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_MANA] 		  -= REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_MANA_MAX] 	  -= REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_STRENGTH] 	  -= REV_Change_ITAM_InnosEye_DISCHARGED;
+			self.attribute[ATR_DEXTERITY] 	  -= REV_Change_ITAM_InnosEye_DISCHARGED;
+		};
+	};
+
+/******************************************************************************************/
+
+INSTANCE  ITAM_REVIVED_INNOSEYE_BROKEN (C_ITEM)
+{
+	name 			=	"Eye of Innos";
+
+	mainflag 		=	ITEM_KAT_MAGIC;
+	flags 			=	ITEM_AMULET|ITEM_MISSION;
+
+	value 			=	0;
+
+	visual 			=	"ItMi_InnosEye_MIS.3ds";
+
+	visual_skin 	=	0;
+	material 		=	MAT_METAL;
+
+	description		= name;
+	TEXT[4]			= TEXT_Innoseye_Setting;
+	TEXT[5]			= TEXT_Innoseye_Gem;
+	
+	INV_ZBIAS		= INVCAM_ENTF_AMULETTE_STANDARD;
+};

@@ -538,7 +538,7 @@ func int DIA_Xardas_INNOSEYEBROKEN_Condition ()
 {
 	if (Kapitel == 3)
 		&& (Npc_KnowsInfo(other, DIA_Xardas_DMTSINDDA))
-		&& ((Npc_HasItems (other,ItMi_InnosEye_Broken_MIS)) || 	(MIS_SCKnowsInnosEyeIsBroken  == TRUE))	
+		&& ((Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN)) || 	(MIS_SCKnowsInnosEyeIsBroken  == TRUE))	
 	{
 		return TRUE;
 	};

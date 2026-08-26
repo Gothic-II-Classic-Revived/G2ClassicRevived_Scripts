@@ -24,7 +24,7 @@ instance DJG_702_Rod (Npc_Default)
 	CreateInvItems (self, ITMI_REVIVED_OLDCOIN, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Rod, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_DJG_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Rod, Body_W_Hum_Naked, Body_White, Teeth_Broken, ITAR_REVIVED_DJG_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

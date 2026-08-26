@@ -876,8 +876,8 @@ func void DIA_Bennet_Present_Info ()
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_08"); //It is sturdier and lighter than traditional armor.
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_09"); //Since you're the one who saved me, I want you to have the first piece. It's a gift!
 			
-		CreateInvItems (self,ITAR_DJG_L,1);
-		B_GiveInvItems (self,other,ITAR_DJG_L,1);
+		CreateInvItems (self,ITAR_REVIVED_DJG_L,1);
+		B_GiveInvItems (self,other,ITAR_REVIVED_DJG_L,1);
 			
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_10"); //I thought you might want to be in on the fun. You're going to need the right equipment when you go down to that valley.
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_11"); //Also, I am interested in dragon scales. Genuine dragon scales. I shall pay you a good price for them.
@@ -1096,7 +1096,7 @@ instance DIA_Bennet_RepairNecklace		(C_INFO)
 func int DIA_Bennet_RepairNecklace_Condition ()
 {
 	if 	(MIS_Bennet_InnosEyeRepairedSetting   != LOG_SUCCESS)
-	&&	((Npc_HasItems (other,ItMi_InnosEye_Broken_MIS)) 
+	&&	((Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN)) 
 	||   (MIS_SCKnowsInnosEyeIsBroken  == TRUE)) 
   	{
   		return TRUE;
@@ -1136,7 +1136,7 @@ instance DIA_Bennet_ShowInnosEye		(C_INFO)
 
 func int DIA_Bennet_ShowInnosEye_Condition ()
 {
-	if (Npc_HasItems (other,ItMi_InnosEye_Broken_MIS))
+	if (Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN))
 	&& (MIS_Bennet_InnosEyeRepairedSetting   != LOG_SUCCESS)
  	{
     	return TRUE;
@@ -1181,7 +1181,7 @@ instance DIA_Bennet_GiveInnosEye		(C_INFO)
 
 func int DIA_Bennet_GiveInnosEye_Condition ()
 {
-	IF (Npc_HasItems (other,ItMi_InnosEye_Broken_Mis)	>=1)
+	IF (Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN)	>=1)
 	&& (MIS_SCKnowsInnosEyeIsBroken  == TRUE)
 	&& (MIS_REscueBennet == LOG_SUCCESS)
 	&& (MIS_Bennet_InnosEyeRepairedSetting   != LOG_SUCCESS)
@@ -1196,7 +1196,7 @@ func void DIA_Bennet_GiveInnosEye_Info ()
 	AI_Output			(self, other, "DIA_Bennet_GiveInnosEye_06_01"); //All right. I'll have finished the new setting by tomorrow.
 	AI_Output			(self, other, "DIA_Bennet_GiveInnosEye_06_02"); //You can come to me and get it then.
 	
-	Npc_RemoveInvItems	(other,	ItMi_InnosEye_Broken_Mis,1);
+	Npc_RemoveInvItems	(other,	ITAM_REVIVED_INNOSEYE_BROKEN,1);
 	AI_PrintScreen (Print_InnoseyeGiven, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 	
 	Bennet_RepairDay = Wld_GetDay ();	
@@ -1235,7 +1235,7 @@ func void DIA_Bennet_GetInnosEye_Info ()
 		AI_Output			(self, other, "DIA_Bennet_GetInnosEye_06_01"); //Yes, here.
 	
 		TEXT_Innoseye_Setting = TEXT_Innoseye_Setting_Repaired;
-		CreateInvItems (other,ItMi_InnosEye_Broken_Mis,1);
+		CreateInvItems (other,ITAM_REVIVED_INNOSEYE_BROKEN,1);
 		AI_PrintScreen (Print_InnoseyeGet, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 	
 		AI_Output			(self, other, "DIA_Bennet_GetInnosEye_06_02"); //I had to make a new setting for the stone.

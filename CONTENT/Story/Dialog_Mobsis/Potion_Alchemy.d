@@ -1201,7 +1201,7 @@ FUNC VOID PC_Charge_InnosEye_Info ()
 	
 		Npc_RemoveInvItems (hero,ItMi_InnosEye_Discharged_MIS	  ,1);
 		
-		CreateInvItems	   (hero,ItMi_InnosEye_MIS,1);  
+		CreateInvItems	   (hero,ITAM_REVIVED_INNOSEYE,1);  
 		
 		Print (PRINT_AlchemySuccessInnoseye);
 	}

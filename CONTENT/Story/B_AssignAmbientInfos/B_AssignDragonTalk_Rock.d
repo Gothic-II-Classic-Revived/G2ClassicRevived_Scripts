@@ -21,7 +21,7 @@ FUNC INT DIA_Dragon_Rock_Exit_Condition()
 
 FUNC VOID DIA_Dragon_Rock_Exit_Info()
 {	
-	Npc_RemoveInvItems (other,ItMi_InnosEye_MIS,1);
+	Npc_RemoveInvItems (other,ITAM_REVIVED_INNOSEYE,1);
 	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);
 
 	Wld_PlayEffect("spellFX_INCOVATION_GRAY",  self, self, 0, 0, 0, FALSE );
@@ -50,7 +50,7 @@ INSTANCE DIA_Dragon_Rock_Hello(C_INFO)
 
 FUNC INT DIA_Dragon_Rock_Hello_Condition()
 {
-	if (Npc_HasItems (other,ItMi_InnosEye_MIS) >= 1)
+	if (Npc_HasItems (other,ITAM_REVIVED_INNOSEYE) >= 1)
 	{
 		return 1;
 	};	

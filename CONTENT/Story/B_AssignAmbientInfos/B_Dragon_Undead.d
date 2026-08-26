@@ -51,7 +51,7 @@ INSTANCE DIA_Dragon_Undead_Hello(C_INFO)
 
 FUNC INT DIA_Dragon_Undead_Hello_Condition()
 {
-	if (Npc_HasItems (other,ItMi_InnosEye_MIS) >= 1)
+	if (Npc_HasItems (other,ITAM_REVIVED_INNOSEYE) >= 1)
 	{
 		return TRUE;
 	};	
@@ -148,7 +148,7 @@ func void DIA_Dragon_Undead_Hello_attack ()
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_01"); //(laughs) You are not yet ready to defeat me. Only one brief moment and I shall have reached my goal.
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_02"); //Your bones will serve me to let the ill winds of death blow across the world.
 		
-	Npc_RemoveInvItems (other,ItMi_InnosEye_MIS,1);
+	Npc_RemoveInvItems (other,ITAM_REVIVED_INNOSEYE,1);
 	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);	 
 	AI_StopProcessInfos	(self);
 	DragonTalk_Exit_Free  = FALSE;

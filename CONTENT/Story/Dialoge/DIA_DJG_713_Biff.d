@@ -400,7 +400,7 @@ func int DIA_Biff_ICHBLEIBHIER_Condition ()
 								||((Npc_GetDistToWP(self,"CASTLE_36")<4000)			&& (Npc_IsDead(FireDragon)== FALSE) && (FireDragon.flags != 0))
 								||((Npc_GetDistToWP(self,"OW_ICEDRAGON_01")<4000)	&& (Npc_IsDead(IceDragon)== FALSE) 	&& (IceDragon.flags != 0))
 							) 	
-							&& (Npc_HasItems (hero,ItMi_InnosEye_Mis)>=1)
+							&& (Npc_HasItems (hero,ITAM_REVIVED_INNOSEYE)>=1)
 						)
 						||(Npc_GetDistToWP(self,"OC_CENTER_GUARD_02")<4500)//Joly: Biff kommt nicht in die Burg
 					)

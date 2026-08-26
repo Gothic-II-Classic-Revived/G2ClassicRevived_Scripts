@@ -926,7 +926,7 @@ FUNC INT DIA_Lord_Hagen_EyeBroken_Condition()
 {
 	if (Kapitel == 3)
 	&& (MIS_ReadyForChapter4 == FALSE)
-	&& (((Npc_HasItems (other,ItMi_InnosEye_Broken_MIS)) || (MIS_SCKnowsInnosEyeIsBroken  == TRUE)	))
+	&& (((Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN)) || (MIS_SCKnowsInnosEyeIsBroken  == TRUE)	))
 	&& (MIS_Bennet_InnosEyeRepairedSetting != LOG_SUCCESS)
 	{
 		return TRUE;

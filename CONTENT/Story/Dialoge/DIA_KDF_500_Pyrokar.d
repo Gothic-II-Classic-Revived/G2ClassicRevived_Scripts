@@ -1065,7 +1065,7 @@ func void DIA_Pyrokar_GIVEINNOSEYE_wer ()
 	Pedro.flags = 0;	//Joly: Pedro ist nun mortal und zum Abschuß freigegeben.
 	Pedro_Traitor = TRUE;	//Joly: Pedro ist für den SC nun als Traitor bekannt. Muß hier stehen bleiben und darf nur einmal auf True gesetzt werden
 
-		Wld_InsertItem		(ItMi_InnosEye_Broken_Mis , "FP_TROLLAREA_RITUAL_ITEM"); 
+		Wld_InsertItem		(ITAM_REVIVED_INNOSEYE_BROKEN , "FP_TROLLAREA_RITUAL_ITEM"); 
 
 
 		Wld_InsertNpc 		(OUT_4250_JORGEN,"NW_MONASTERY_BRIDGE_01");
@@ -1153,7 +1153,7 @@ func int DIA_Pyrokar_FOUNDINNOSEYE_Condition ()
 {
 	if (Kapitel == 3)
 		&& 	(MIS_NovizenChase == LOG_RUNNING)
-		&& ((Npc_HasItems (other,ItMi_InnosEye_Broken_MIS)) || 	(MIS_SCKnowsInnosEyeIsBroken  == TRUE))	
+		&& ((Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN)) || 	(MIS_SCKnowsInnosEyeIsBroken  == TRUE))	
 		{
 				return TRUE;
 		};
@@ -1452,8 +1452,8 @@ func void DIA_Pyrokar_KAP3_READY_Info ()
 {
 	AI_Output			(other, self, "DIA_Pyrokar_KAP3_READY_15_00"); //What remains for me to do here?
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_01"); //Do not waste your time on trivial things. Go and vanquish the dragons. Here, take the Eye.
-	CreateInvItems (self,ItMi_InnosEye_MIS,1);
-	B_GiveInvItems (self, other, ItMi_InnosEye_MIS,1);
+	CreateInvItems (self,ITAM_REVIVED_INNOSEYE,1);
+	B_GiveInvItems (self, other, ITAM_REVIVED_INNOSEYE,1);
 	AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_02"); //Bear in mind that you need to talk to a dragon first before you can attack it.
 	//AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_03"); //Das Auge wird dir helfen, die Drachen dazu zu zwingen, mit dir zu reden.
 	//AI_Output			(self, other, "DIA_Pyrokar_KAP3_READY_11_04"); //Es bietet dir nicht nur Schutz gegen ihre Angriffe, es fügt ihnen auch unerträgliche Schmerzen zu, wenn du es bei dir trägst.

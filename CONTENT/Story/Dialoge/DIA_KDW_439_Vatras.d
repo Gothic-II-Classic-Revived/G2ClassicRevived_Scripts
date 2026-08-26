@@ -1209,7 +1209,7 @@ instance DIA_Vatras_INNOSEYEKAPUTT		(C_INFO)
 
 func int DIA_Vatras_INNOSEYEKAPUTT_Condition ()
 {
-		if 	(	(Npc_HasItems (other,ItMi_InnosEye_Broken_MIS)) || 	(MIS_SCKnowsInnosEyeIsBroken  == TRUE)	)
+		if 	(	(Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN)) || 	(MIS_SCKnowsInnosEyeIsBroken  == TRUE)	)
 		&& (Kapitel == 3)
 		{
 				return TRUE;
@@ -1413,7 +1413,7 @@ func int DIA_Vatras_BEGINN_Condition ()
 		&& (Npc_GetDistToWP(self,		"NW_TROLLAREA_RITUAL_02")<2000) 
 		&& (Npc_GetDistToWP(Xardas,		"NW_TROLLAREA_RITUAL_02")<2000) 
 		&& (Npc_GetDistToWP(Pyrokar,	"NW_TROLLAREA_RITUAL_02")<2000) 
-		&& (Npc_HasItems (other,ItMi_InnosEye_Broken_MIS))
+		&& (Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN))
 		&& (MIS_Bennet_InnosEyeRepairedSetting == LOG_SUCCESS)
 		{
 				return TRUE;
@@ -1425,8 +1425,8 @@ func void DIA_Vatras_BEGINN_Info ()
 	AI_Output			(other, self, "DIA_Vatras_BEGINN_15_00"); //I did everything you told me to do. Here's the repaired Eye.
 	B_GivePlayerXP (XP_RitualInnosEyeRuns);
 
-	B_GiveInvItems 		(other, self, ItMi_InnosEye_Broken_MIS, 1);
-	Npc_RemoveInvItem 	(self, ItMi_InnosEye_Broken_MIS);
+	B_GiveInvItems 		(other, self, ITAM_REVIVED_INNOSEYE_BROKEN, 1);
+	Npc_RemoveInvItem 	(self, ITAM_REVIVED_INNOSEYE_BROKEN);
 
 	AI_Output			(self, other, "DIA_Vatras_BEGINN_05_01"); //Indeed, there is nothing missing now for the performance of the ritual.
 	AI_Output			(other, self, "DIA_Vatras_BEGINN_15_02"); //What about the swampweed?

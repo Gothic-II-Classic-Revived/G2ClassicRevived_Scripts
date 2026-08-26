@@ -15,7 +15,7 @@ func void B_MM_AssessEnemy ()
 
 	// ------- Drache greift nicht an, wenn SC LaberAmulett hat ------
 	if (self.guild == GIL_DRAGON)
-	&& (Npc_HasItems (hero, ItMi_InnosEye_Mis) >= 1)
+	&& (Npc_HasItems (hero, ITAM_REVIVED_INNOSEYE) >= 1)
 	{
 		return;
 	}; 

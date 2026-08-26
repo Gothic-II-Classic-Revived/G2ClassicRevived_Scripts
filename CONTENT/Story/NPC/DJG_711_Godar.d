@@ -23,7 +23,7 @@ instance DJG_711_Godar (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Godar, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_DJG_L);		
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Godar, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_DJG_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

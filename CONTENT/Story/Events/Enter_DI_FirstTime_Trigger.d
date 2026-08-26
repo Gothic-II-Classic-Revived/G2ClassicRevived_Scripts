@@ -38,7 +38,7 @@ func void ENTER_DI_FIRSTTIME_TRIGGER ()
 		//##############################################################################################################
 		//##	"Auge-Innos-zu-Hause-vergessen"-NotfallPlan
 		//##############################################################################################################
-			if (Npc_HasItems (hero,ItMi_InnosEye_MIS) == FALSE)
+			if (Npc_HasItems (hero,ITAM_REVIVED_INNOSEYE) == FALSE)
 				{
 					if (Npc_HasItems (hero,ItMi_InnosEye_Discharged_Mis) == FALSE)
 					{

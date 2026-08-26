@@ -346,7 +346,7 @@ func int DIA_Brian_RepairNecklace_Condition ()
 	if 	(
 		(MIS_Bennet_InnosEyeRepairedSetting   != LOG_SUCCESS)
 		&&	 	(
-				(Npc_HasItems (other,ItMi_InnosEye_Broken_MIS)) 
+				(Npc_HasItems (other,ITAM_REVIVED_INNOSEYE_BROKEN)) 
 				|| 	(MIS_SCKnowsInnosEyeIsBroken  == TRUE)
 				)
 		) 
