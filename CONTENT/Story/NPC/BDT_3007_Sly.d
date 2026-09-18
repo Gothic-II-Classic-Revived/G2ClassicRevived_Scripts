@@ -27,7 +27,7 @@ instance BDT_3007_Sly (Npc_Default)
 	CreateInvItems		(self, ITAM_REVIVED_PROT_MELEE_02, 1);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Sly, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_STT_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Sly, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_STT_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds");
 

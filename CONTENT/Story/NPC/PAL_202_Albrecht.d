@@ -22,7 +22,7 @@ instance Pal_202_Albrecht (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_P_Albrecht, Body_P_Hum_Naked, Body_Pale, Teeth_Rotten, ITAR_REVIVED_PAL_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_P_Albrecht, Body_P_Hum_Naked, Body_Pale, Teeth_Rotten, ITAR_REVIVED_PAL_S);	
 	Mdl_SetModelFatness	(self, 1.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

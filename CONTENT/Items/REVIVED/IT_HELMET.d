@@ -85,6 +85,13 @@ INSTANCE ITHE_REVIVED_DJG_H(REVIVED_HELMET)
 	description				=	name;
 };
 // ******************************************************
+INSTANCE ITHE_REVIVED_DMT_H(REVIVED_HELMET)
+{
+	name					=	"Demontunher's Helmet";
+	visual					=	"REV_HAT_DMTH.3ds";
+	description				=	name;
+};
+// ******************************************************
 INSTANCE ITHE_REVIVED_PIR(REVIVED_HELMET)
 {
 	name					=	"Captain's hat";

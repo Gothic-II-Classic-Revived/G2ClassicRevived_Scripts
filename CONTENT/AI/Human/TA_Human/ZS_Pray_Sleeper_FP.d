@@ -1,5 +1,5 @@
 // ********************
-// NSC betet an Pray-FP
+// NSC betet an Meditate-FP
 // ********************
 
 func void ZS_Pray_Sleeper_FP ()
@@ -18,20 +18,18 @@ func void ZS_Pray_Sleeper_FP ()
 
 func int ZS_Pray_Sleeper_FP_Loop ()
 {
-	if (Npc_IsOnFP (self, "PRAY"))
+	if (Npc_IsOnFP (self, "MEDITATE"))
 	{	
 		if (!C_BodyStateContains(self, BS_SIT))
 		{
-			AI_PlayAniBS (self, "T_STAND_2_PRAY", BS_SIT);		
-		}
-		else
-		{
-			AI_PlayAniBS (self, "T_PRAY_RANDOM", BS_SIT);
+			AI_AlignToFP 	(self);
+			AI_PlayAni 	(self, "T_IDOL_STAND_2_S0");
+			AI_PlayAniBS 	(self, "T_IDOL_S0_2_S1", BS_SIT);
 		};		
 	}
-	else if (Wld_IsFPAvailable(self,"PRAY"))
+	else if (Wld_IsFPAvailable(self,"MEDITATE"))
 	{
-		AI_GotoFP 		(self, "PRAY");
+		AI_GotoFP 		(self, "MEDITATE");
 		AI_StandUp 		(self);
 		AI_AlignToFP 	(self);
 	};
@@ -40,7 +38,8 @@ func int ZS_Pray_Sleeper_FP_Loop ()
 
 func void ZS_Pray_Sleeper_FP_End ()
 {
-	AI_PlayAni (self, "T_PRAY_2_STAND");	
+	AI_PlayAni 	(self, "T_IDOL_S1_2_S0");
+	AI_PlayAniBS 	(self, "T_IDOL_S0_2_STAND", BS_STAND);
 };
 
 

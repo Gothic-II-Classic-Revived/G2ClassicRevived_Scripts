@@ -1011,13 +1011,14 @@ func void DIA_Garond_BACKINKAP4_Info ()
 	// Die Drachenjäger vom Spielstart verziehen sich in ihr Lager.
 	//-----------------------------------------
 		Ext_RemoveVobTree("OW_BANDITS_ERPRESSER");
+		Ext_RemoveVobTree("OW_DRAGONHUNTERS_PASS");
 		Ext_InsertVobTree("VOBTREE/OW_DRAGONHUNTERS_CAMP.ZEN");
 
 	B_StartOtherRoutine 	(Kjorn,	"START");
 	B_StartOtherRoutine 	(Godar,	"START");
 	B_StartOtherRoutine 	(Hokurn,"START");
 	B_StartOtherRoutine 	(PC_Fighter_DJG,"START");
-	B_StartOtherRoutine  (Kurgan,"START");
+	B_StartOtherRoutine		(Kurgan,"START");
 
 	if 	(DJG_BiffParty == FALSE)
 	{

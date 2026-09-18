@@ -39,8 +39,8 @@ FUNC VOID Rtn_PreStart_710 ()
 
 FUNC VOID Rtn_StartPass_710()
 {
-	TA_Sit_Campfire						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_005");
-    TA_Sit_Campfire						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_005");
+	TA_Sit_Campfire						(08,00,23,00,"OW_PASS_DJGCAMP_CAMPFIRE");
+    TA_Sit_Campfire						(23,00,08,00,"OW_PASS_DJGCAMP_CAMPFIRE");
 };
 
 FUNC VOID Rtn_Start_710 ()

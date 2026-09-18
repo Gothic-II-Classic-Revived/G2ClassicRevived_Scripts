@@ -83,7 +83,7 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_M) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_H) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_H_02) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_S) == TRUE))
 		{
 			return FALSE;
 		}
@@ -113,8 +113,10 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DJG_M) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DJG_H) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_CRAWLER) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_02) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_L) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_M) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_H) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_S) == TRUE))
 		{
 			return FALSE;
 		}

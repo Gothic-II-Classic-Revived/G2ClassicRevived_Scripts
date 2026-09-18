@@ -652,6 +652,7 @@ func void NewWorld_CreateAreas()
 	AM_AddPoint(ForestArea, 18545.1, -6109.32);
 	AM_AddPoint(ForestArea, 21834.8, -6852.92);
 	AM_AddPoint(ForestArea, 29901.0, -1652.42);
+	AM_AddPoint(ForestArea, 32424.8, -1694.17);
 	AM_AddPoint(ForestArea, 31385.6, 1239.7);
 	AM_AddPortalRoom(ForestArea, "NWFORRESTCAVE06");
 	AM_SetMaxHeight(ForestArea, 0.0);

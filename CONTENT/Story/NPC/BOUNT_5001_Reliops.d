@@ -5,7 +5,7 @@ instance BOUNT_5001_Reliops (Npc_Default)
 	name 		= "Reliops 'Eight Fingers'"; 
 	guild 		= GIL_BDT;
 	id 			= 5001;
-	voice 		= 2;
+	voice 		= 3;
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
 	

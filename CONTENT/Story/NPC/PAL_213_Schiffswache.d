@@ -22,7 +22,7 @@ instance Pal_213_Schiffswache (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Hum_Normal3, Body_B_Hum_Naked, Body_Black, Teeth_Yellow, ITAR_REVIVED_PAL_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Hum_Normal3, Body_B_Hum_Naked, Body_Black, Teeth_Yellow, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

@@ -39,8 +39,8 @@ FUNC VOID Rtn_PreStart_708()
 
 FUNC VOID Rtn_StartPass_708()
 {
-	TA_Stand_Guarding						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
-    TA_Stand_Guarding						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
+	TA_Stand_Drinking						(08,00,23,00,"OW_PASS_RUINS_000");
+    TA_Stand_Drinking						(23,00,08,00,"OW_PASS_RUINS_000");
 };
 
 FUNC VOID Rtn_Start_708()

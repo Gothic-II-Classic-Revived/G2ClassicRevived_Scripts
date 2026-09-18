@@ -79,13 +79,13 @@ func string REV_BuildTradeString (var int itemInstance)
 		protMagic	= IntToString(REV_Prot_Magic_DJG_H);
 		value		= IntToString(REV_Value_DJG_H);
 	}
-	else if(itemInstance == ITAR_REVIVED_DEMONHUNTER)
+	else if(itemInstance == ITAR_REVIVED_DEMONHUNTER_S)
 	{
-		armorName	= "Demon Hunter Armor";
-		protEdge	= IntToString(REV_Prot_Edge_DEMONHUNTER);
-		protPoint	= IntToString(REV_Prot_Point_DEMONHUNTER);
-		protMagic	= IntToString(REV_Prot_Magic_DEMONHUNTER);
-		value		= IntToString(REV_Value_DEMONHUNTER);
+		armorName	= "H. Demon Hunter Armor";
+		protEdge	= IntToString(REV_Prot_Edge_DEMONHUNTER_H);
+		protPoint	= IntToString(REV_Prot_Point_DEMONHUNTER_H);
+		protMagic	= IntToString(REV_Prot_Magic_DEMONHUNTER_H);
+		value		= IntToString(REV_Value_DEMONHUNTER_H);
 	};
 	
 	concatText = ConcatStrings (ConcatStrings(armorName, " (Weapon Prot. "), protEdge);

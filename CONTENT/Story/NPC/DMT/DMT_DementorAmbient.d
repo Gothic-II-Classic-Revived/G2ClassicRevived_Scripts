@@ -20,7 +20,6 @@ PROTOTYPE Default_AmbientDementor (C_NPC)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard7, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_Dementor);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 
@@ -37,6 +36,7 @@ PROTOTYPE Default_AmbientDementor (C_NPC)
 
 instance DMT_DementorAmbient (Default_AmbientDementor)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad15, Body_W_Hum_Tattoo, Body_White, Teeth_Rotten, ITAR_Dementor);
 	// ------ TA anmelden ------
 	start_aistate = ZS_Stand_Dementor;
 };
@@ -48,6 +48,7 @@ instance DMT_DementorAmbient (Default_AmbientDementor)	//Joly: greift auf Sicht 
 
 instance DMT_DementorAmbientSpeaker (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad12, Body_W_Hum_Tattoo, Body_White, Teeth_Broken, ITAR_Dementor);
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -61,6 +62,7 @@ instance DMT_DementorAmbientSpeaker (Default_AmbientDementor) //Joly: spricht de
 
 instance DMT_DementorAmbientWalker1 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad5, Body_W_Hum_Tattoo, Body_White, Teeth_Normal, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1221;
 	// ------ Aivars ------
@@ -105,6 +107,7 @@ FUNC VOID Rtn_Start_1221 ()
 
 instance DMT_DementorAmbientWalker2 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad17, Body_W_Hum_Tattoo, Body_White, Teeth_Gold, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1222;
 	// ------ Aivars ------
@@ -149,6 +152,7 @@ FUNC VOID Rtn_Start_1222 ()
 
 instance DMT_DementorAmbientWalker3 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad16, Body_W_Hum_Tattoo, Body_White, Teeth_Yellow, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1223;
 	// ------ Aivars ------
@@ -193,6 +197,7 @@ FUNC VOID Rtn_Start_1223 ()
 
 instance DMT_DementorAmbientWalker4 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad3, Body_W_Hum_Tattoo, Body_White, Teeth_Rotten, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1224;
 	// ------ Aivars ------
@@ -237,6 +242,7 @@ FUNC VOID Rtn_Start_1224 ()
 
 instance DMT_DementorAmbientWalker5 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad4, Body_W_Hum_Tattoo, Body_White, Teeth_Broken, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1225;
 	// ------ Aivars ------
@@ -281,6 +287,7 @@ FUNC VOID Rtn_Start_1225 ()
 
 instance DMT_DementorAmbientWalker6 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_P_Hum_TattooMad1, Body_P_Hum_Tattoo, Body_Pale, Teeth_Normal, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1226;
 	// ------ Aivars ------
@@ -325,6 +332,7 @@ FUNC VOID Rtn_Start_1226 ()
 
 instance DMT_DementorAmbientWalker7 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad6, Body_W_Hum_Tattoo, Body_White, Teeth_Gold, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1227;
 	// ------ Aivars ------
@@ -369,6 +377,7 @@ FUNC VOID Rtn_Start_1227 ()
 
 instance DMT_DementorAmbientWalker8 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_L_Hum_TattooMad1, Body_L_Hum_Tattoo, Body_Latino, Teeth_Yellow, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1228;
 	// ------ Aivars ------
@@ -413,6 +422,7 @@ FUNC VOID Rtn_Start_1228 ()
 
 instance DMT_DementorAmbientWalker9 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad20, Body_W_Hum_Tattoo, Body_White, Teeth_Rotten, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1229;
 	// ------ Aivars ------
@@ -457,6 +467,7 @@ FUNC VOID Rtn_Start_1229 ()
 
 instance DMT_DementorAmbientWalker10 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad8, Body_W_Hum_Tattoo, Body_White, Teeth_Broken, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1230;
 	// ------ Aivars ------
@@ -501,6 +512,7 @@ FUNC VOID Rtn_Start_1230 ()
 
 instance DMT_DementorAmbientWalker11 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_L_Hum_TattooMad2, Body_L_Hum_Tattoo, Body_Latino, Teeth_Normal, ITAR_Dementor);
 	// ------ NSC ------
 	id 			= 1231;
 	// ------ Aivars ------
@@ -554,6 +566,7 @@ FUNC VOID Rtn_Start_1231 ()
 
 instance DMT_DementorSpeakerVino1 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad21, Body_W_Hum_Tattoo, Body_White, Teeth_Gold, ITAR_Dementor);
 	id 			= 1232;
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
@@ -564,6 +577,7 @@ instance DMT_DementorSpeakerVino1 (Default_AmbientDementor) //Joly: spricht den 
 
 instance DMT_DementorSpeakerVino2 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad1, Body_W_Hum_Tattoo, Body_White, Teeth_Yellow, ITAR_Dementor);
 	id 			= 1233;
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
@@ -574,6 +588,7 @@ instance DMT_DementorSpeakerVino2 (Default_AmbientDementor) //Joly: spricht den 
 
 instance DMT_DementorSpeakerVino3 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad24, Body_W_Hum_Tattoo, Body_White, Teeth_Rotten, ITAR_Dementor);
 	id 			= 1234;
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
@@ -584,6 +599,7 @@ instance DMT_DementorSpeakerVino3 (Default_AmbientDementor) //Joly: spricht den 
 
 instance DMT_DementorSpeakerVino4 (Default_AmbientDementor) //Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_L_Hum_TattooMad3, Body_L_Hum_Tattoo, Body_Latino, Teeth_Broken, ITAR_Dementor);
 	id 			= 1235;
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
@@ -599,24 +615,28 @@ instance DMT_DementorSpeakerVino4 (Default_AmbientDementor) //Joly: spricht den 
 
 instance DMT_DementorAmbientSekob1 (Default_AmbientDementor)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad9, Body_W_Hum_Tattoo, Body_White, Teeth_Normal, ITAR_Dementor);
 	// ------ TA anmelden ------
 	start_aistate = ZS_Stand_Dementor;
 };
 
 instance DMT_DementorAmbientSekob2 (Default_AmbientDementor)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad14, Body_W_Hum_Tattoo, Body_White, Teeth_Gold, ITAR_Dementor);
 	// ------ TA anmelden ------
 	start_aistate = ZS_Stand_Dementor;
 };
 
 instance DMT_DementorAmbientSekob3 (Default_AmbientDementor)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad2, Body_W_Hum_Tattoo, Body_White, Teeth_Yellow, ITAR_Dementor);
 	// ------ TA anmelden ------
 	start_aistate = ZS_Stand_Dementor;
 };
 
 instance DMT_DementorAmbientSekob4 (Default_AmbientDementor)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad19, Body_W_Hum_Tattoo, Body_White, Teeth_Rotten, ITAR_Dementor);
 	// ------ TA anmelden ------
 	start_aistate = ZS_Stand_Dementor;
 };
@@ -627,6 +647,7 @@ instance DMT_DementorAmbientSekob4 (Default_AmbientDementor)	//Joly: greift auf 
 
 instance CastlemineDMT (Default_AmbientDementor)	//Joly: spricht den SC mit seiner Important an und greift ihn dann an!!!!!
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad22, Body_W_Hum_Tattoo, Body_White, Teeth_Broken, ITAR_Dementor);
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -636,6 +657,7 @@ instance CastlemineDMT (Default_AmbientDementor)	//Joly: spricht den SC mit sein
 
 instance CastlemineDMT01 (Default_AmbientDementor)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad11, Body_W_Hum_Tattoo, Body_White, Teeth_Normal, ITAR_Dementor);
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -644,6 +666,7 @@ instance CastlemineDMT01 (Default_AmbientDementor)
 };
 instance CastlemineDMT02 (Default_AmbientDementor)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad7, Body_W_Hum_Tattoo, Body_White, Teeth_Gold, ITAR_Dementor);
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -652,6 +675,7 @@ instance CastlemineDMT02 (Default_AmbientDementor)
 };
 instance CastlemineDMT03 (Default_AmbientDementor)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad23, Body_W_Hum_Tattoo, Body_White, Teeth_Yellow, ITAR_Dementor);
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -660,6 +684,7 @@ instance CastlemineDMT03 (Default_AmbientDementor)
 };
 instance CastlemineDMT04 (Default_AmbientDementor)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad13, Body_W_Hum_Tattoo, Body_White, Teeth_Rotten, ITAR_Dementor);
 	// ------ Aivars ------
 	aivar[AIV_EnemyOverride] = TRUE;
 
@@ -673,6 +698,7 @@ instance CastlemineDMT04 (Default_AmbientDementor)
 
 INSTANCE DragonIsle_Keymaster	(Default_AmbientDementor)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_B_Hum_TattooMad1, Body_B_Hum_Tattoo, Body_Black, Teeth_Broken, ITAR_Dementor);
 	name		=	"Key Master";
 	id 			= 	1236;
 

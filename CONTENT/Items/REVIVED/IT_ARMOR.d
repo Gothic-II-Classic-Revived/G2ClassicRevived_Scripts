@@ -54,13 +54,6 @@ const int	REV_Prot_Point_CRAWLER				=	80;
 const int	REV_Prot_Fire_CRAWLER				=	30;
 const int	REV_Prot_Magic_CRAWLER				=	5;
 //******************************************************************//
-const int	REV_Value_DEMONHUNTER				=	16000;
-const int	REV_Prot_Edge_DEMONHUNTER			=	135;
-const int	REV_Prot_Blunt_DEMONHUNTER			=	135;
-const int	REV_Prot_Point_DEMONHUNTER			=	135;
-const int	REV_Prot_Fire_DEMONHUNTER			=	90;
-const int	REV_Prot_Magic_DEMONHUNTER			=	45;
-//******************************************************************//
 const int	REV_Value_DEMONHUNTER_L			=   8000;
 const int	REV_Prot_Edge_DEMONHUNTER_L		=   100;
 const int	REV_Prot_Blunt_DEMONHUNTER_L	=   100;
@@ -74,6 +67,13 @@ const int	REV_Prot_Blunt_DEMONHUNTER_M	=   120;
 const int	REV_Prot_Point_DEMONHUNTER_M	=   120;
 const int	REV_Prot_Fire_DEMONHUNTER_M		=   75;
 const int	REV_Prot_Magic_DEMONHUNTER_M	=   35;
+//******************************************************************//
+const int	REV_Value_DEMONHUNTER_H				=	16000;
+const int	REV_Prot_Edge_DEMONHUNTER_H			=	135;
+const int	REV_Prot_Blunt_DEMONHUNTER_H		=	135;
+const int	REV_Prot_Point_DEMONHUNTER_H		=	135;
+const int	REV_Prot_Fire_DEMONHUNTER_H			=	90;
+const int	REV_Prot_Magic_DEMONHUNTER_H		=	45;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_SFB_L						=	50;
@@ -303,6 +303,13 @@ const int	REV_Prot_Fire_KDW_H					=	50;
 const int	REV_Prot_Magic_KDW_H				=	25;
 //******************************************************************//
 //******************************************************************//
+const int	REV_Value_NOV_L						=	150;
+const int	REV_Prot_Edge_NOV_L					=	20;
+const int	REV_Prot_Blunt_NOV_L				=	20;
+const int	REV_Prot_Point_NOV_L				=	20;
+const int	REV_Prot_Fire_NOV_L					=	10;
+const int	REV_Prot_Magic_NOV_L				=	0;
+//******************************************************************//
 const int	REV_Value_NOV_M						=	300;
 const int	REV_Prot_Edge_NOV_M					=	30;
 const int	REV_Prot_Blunt_NOV_M				=	30;
@@ -310,12 +317,47 @@ const int	REV_Prot_Point_NOV_M				=	30;
 const int	REV_Prot_Fire_NOV_M					=	15;
 const int	REV_Prot_Magic_NOV_M				=	0;
 //******************************************************************//
+const int	REV_Value_NOV_H						=	700;
+const int	REV_Prot_Edge_NOV_H					=	40;
+const int	REV_Prot_Blunt_NOV_H				=	40;
+const int	REV_Prot_Point_NOV_H				=	40;
+const int	REV_Prot_Fire_NOV_H					=	20;
+const int	REV_Prot_Magic_NOV_H				=	0;
+//******************************************************************//
+const int	REV_Value_NOV_S						=	1000;
+const int	REV_Prot_Edge_NOV_S					=	50;
+const int	REV_Prot_Blunt_NOV_S				=	50;
+const int	REV_Prot_Point_NOV_S				=	50;
+const int	REV_Prot_Fire_NOV_S					=	25;
+const int	REV_Prot_Magic_NOV_S				=	5;
+//******************************************************************//
+const int	REV_Value_TPL_L						=	1000;
+const int	REV_Prot_Edge_TPL_L					=	45;
+const int	REV_Prot_Blunt_TPL_L				=	45;
+const int	REV_Prot_Point_TPL_L				=	45;
+const int	REV_Prot_Fire_TPL_L					=	20;
+const int	REV_Prot_Magic_TPL_L				=	0;
+//******************************************************************//
+const int	REV_Value_TPL_M						=	1600;
+const int	REV_Prot_Edge_TPL_M					=	55;
+const int	REV_Prot_Blunt_TPL_M				=	55;
+const int	REV_Prot_Point_TPL_M				=	55;
+const int	REV_Prot_Fire_TPL_M					=	25;
+const int	REV_Prot_Magic_TPL_M				=	0;
+//******************************************************************//
 const int	REV_Value_TPL_H						=	2500;
 const int	REV_Prot_Edge_TPL_H					=	70;
 const int	REV_Prot_Blunt_TPL_H				=	70;
 const int	REV_Prot_Point_TPL_H				=	70;
 const int	REV_Prot_Fire_TPL_H					=	35;
 const int	REV_Prot_Magic_TPL_H				=	0;
+//******************************************************************//
+const int	REV_Value_TPL_SKELETON				=	2500;
+const int	REV_Prot_Edge_TPL_SKELETON			=	70;
+const int	REV_Prot_Blunt_TPL_SKELETON		=	70;
+const int	REV_Prot_Point_TPL_SKELETON		=	70;
+const int	REV_Prot_Fire_TPL_SKELETON			=	35;
+const int	REV_Prot_Magic_TPL_SKELETON		=	0;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_DMT_L						=	800;
@@ -685,8 +727,8 @@ INSTANCE ITAR_REVIVED_CRAWLER (C_Item)
 	on_equip				=	Equip_CRAWLER_ARMOR;
 	on_unequip				=	UnEquip_CRAWLER_ARMOR;
 
-	visual 					=	"ItAr_Djg_Crawler.3ds";
-	visual_change 			=	"Armor_Djg_Crawler.asc";
+	visual 					=	"REV_CRW.3ds";
+	visual_change 			=	"REV_ARMOR_CRAWLER.ASC";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
@@ -747,8 +789,8 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER_L (C_Item)
     protection [PROT_FIRE]  = REV_Prot_Fire_DEMONHUNTER_L;
     protection [PROT_MAGIC] = REV_Prot_Magic_DEMONHUNTER_L;
 
-    visual                  = "grdi.3ds";
-    visual_change           = "Hum_DHTL_ARMOR.asc";
+    visual                  = "REV_DHTL.3ds";
+    visual_change           = "REV_ARMOR_DHT_L.asc";
     visual_skin             = 0;
     wear                    = WEAR_TORSO;
 
@@ -777,8 +819,8 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER_M (C_Item)
     protection [PROT_FIRE]  = REV_Prot_Fire_DEMONHUNTER_M;
     protection [PROT_MAGIC] = REV_Prot_Magic_DEMONHUNTER_M;
 
-    visual                  = "grdi.3ds";
-    visual_change           = "Hum_DHTM_ARMOR.asc";
+    visual                  = "REV_DHTM.3ds";
+    visual_change           = "REV_ARMOR_DHT_M.asc";
     visual_skin             = 0;
     wear                    = WEAR_TORSO;
 
@@ -792,7 +834,7 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER_M (C_Item)
 };
 
 /******************************************************************************************/
-INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
+INSTANCE ITAR_REVIVED_DEMONHUNTER_H (C_Item)
 {
 	name 					=	"Demon Hunter Armor";
 
@@ -800,16 +842,16 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	REV_Value_DEMONHUNTER;
+	value 					=	REV_Value_DEMONHUNTER_H;
 
-	protection [PROT_EDGE] 	=	REV_Prot_Edge_DEMONHUNTER;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DEMONHUNTER;
-	protection [PROT_POINT] = 	REV_Prot_Point_DEMONHUNTER;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DEMONHUNTER;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_DEMONHUNTER;
+	protection [PROT_EDGE] 	=	REV_Prot_Edge_DEMONHUNTER_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DEMONHUNTER_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_DEMONHUNTER_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DEMONHUNTER_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_DEMONHUNTER_H;
 
-	visual 					=	"REV_DHT.3ds";
-	visual_change 			=	"REV_ARMOR_DHT.asc";
+	visual 					=	"REV_DHTH.3ds";
+	visual_change 			=	"REV_ARMOR_DHT_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
@@ -822,7 +864,7 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER (C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 
-INSTANCE ITAR_REVIVED_DEMONHUNTER_02(C_Item)
+INSTANCE ITAR_REVIVED_DEMONHUNTER_S (C_Item)
 {
 	name 					=	"Demonhunter Armor"; //(without helmet)
 
@@ -830,16 +872,16 @@ INSTANCE ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	REV_Value_DEMONHUNTER;
+	value 					=	REV_Value_DEMONHUNTER_H;
 
-	protection [PROT_EDGE] 	=	REV_Prot_Edge_DEMONHUNTER;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DEMONHUNTER;
-	protection [PROT_POINT] = 	REV_Prot_Point_DEMONHUNTER;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DEMONHUNTER;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_DEMONHUNTER;
+	protection [PROT_EDGE] 	=	REV_Prot_Edge_DEMONHUNTER_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DEMONHUNTER_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_DEMONHUNTER_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DEMONHUNTER_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_DEMONHUNTER_H;
 
 	visual 					=	"REV_DHTS.3ds";
-	visual_change 			=	"REV_ARMOR_DHTS.asc";
+	visual_change 			=	"REV_ARMOR_DHT_S.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
@@ -1625,7 +1667,7 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
-INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
+INSTANCE ITAR_REVIVED_PAL_S (C_Item)
 {
 	name 					=	"Heavy Paladin Armor"; //(without helmet)
 
@@ -2165,9 +2207,39 @@ INSTANCE ITAR_REVIVED_KDW_H (C_Item)
 //****************************************************************************
 //			PSIONICS
 //****************************************************************************
-INSTANCE ITAR_REVIVED_PSI_NOV (C_Item)
+INSTANCE ITAR_REVIVED_NOV_L (C_Item)
 {
-	name 					=	"Novice's Armor";
+	name 					=	"Novice's Poncho";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_LEATHER;
+
+	value 					=	REV_Value_NOV_L;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_NOV_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_NOV_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_NOV_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_NOV_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_NOV_L;
+
+	visual 					=	"REV_NOVL.3ds";
+	visual_change 			=	"REV_ARMOR_NOV_L.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_NOV_M (C_Item)
+{
+	name 					=	"Novice's Apron";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2195,7 +2267,127 @@ INSTANCE ITAR_REVIVED_PSI_NOV (C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 
-INSTANCE ITAR_REVIVED_PSI_TPL (C_Item)
+INSTANCE ITAR_REVIVED_NOV_H (C_Item)
+{
+	name 					=	"Novice's Robe";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_LEATHER;
+
+	value 					=	REV_Value_NOV_H;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_NOV_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_NOV_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_NOV_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_NOV_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_NOV_H;
+
+	visual 					=	"REV_NOVH.3ds";
+	visual_change 			=	"REV_ARMOR_NOV_H.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_NOV_S (C_Item)
+{
+	name 					=	"Novice's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_LEATHER;
+
+	value 					=	REV_Value_NOV_S;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_NOV_S;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_NOV_S;
+	protection [PROT_POINT] = 	REV_Prot_Point_NOV_S;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_NOV_S;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_NOV_S;
+
+	visual 					=	"REV_NOVS.3ds";
+	visual_change 			=	"REV_ARMOR_NOV_S.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_TPL_L (C_Item)
+{
+	name 					=	"Light Templar's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_TPL_L;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_TPL_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_TPL_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_TPL_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_TPL_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_TPL_L;
+
+	visual 					=	"REV_TPLL.3ds";
+	visual_change 			=	"REV_ARMOR_TPL_L.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_TPL_M (C_Item)
+{
+	name 					=	"Templar's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_TPL_M;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_TPL_M;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_TPL_M;
+	protection [PROT_POINT] = 	REV_Prot_Point_TPL_M;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_TPL_M;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_TPL_M;
+
+	visual 					=	"REV_TPLM.3ds";
+	visual_change 			=	"REV_ARMOR_TPL_M.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_TPL_H (C_Item)
 {
 	name 					=	"Heavy Templar's Armor";
 
@@ -2211,8 +2403,8 @@ INSTANCE ITAR_REVIVED_PSI_TPL (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_TPL_H;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_TPL_H;
 
-	visual 					=	"REV_TPLS.3ds";
-	visual_change 			=	"REV_ARMOR_TPL_S.asc";
+	visual 					=	"REV_TPLH.3ds";
+	visual_change 			=	"REV_ARMOR_TPL_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
@@ -2225,7 +2417,7 @@ INSTANCE ITAR_REVIVED_PSI_TPL (C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 
-INSTANCE ITAR_REVIVED_PSI_TPL_02 (C_Item)
+INSTANCE ITAR_REVIVED_TPL_SKELETON (C_Item)
 {
 	name 					=	"Heavy Templar's Armor (skeleton)";
 
@@ -2233,15 +2425,15 @@ INSTANCE ITAR_REVIVED_PSI_TPL_02 (C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	REV_Value_TPL_H;
+	value 					=	REV_Value_TPL_SKELETON;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_TPL_H;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_TPL_H;
-	protection [PROT_POINT] = 	REV_Prot_Point_TPL_H;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_TPL_H;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_TPL_H;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_TPL_SKELETON;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_TPL_SKELETON;
+	protection [PROT_POINT] = 	REV_Prot_Point_TPL_SKELETON;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_TPL_SKELETON;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_TPL_SKELETON;
 
-	visual 					=	"REV_TPLS.3ds";
+	visual 					=	"REV_TPLSKELETON.3ds";
 	visual_change 			=	"REV_ARMOR_TPL_SKELETON.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;

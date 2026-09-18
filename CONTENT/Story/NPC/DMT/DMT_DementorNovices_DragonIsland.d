@@ -1,41 +1,10 @@
-PROTOTYPE Default_AmbientNovice (C_NPC)			
-{
-	// ------ NSC ------
-	name 		= NAME_Dementor;	
-	guild 		= GIL_DMT;
-	voice 		= 19;
-	flags       = 0;																
-	npctype		= NPCTYPE_AMBIENT;
-	
-	// ------ Attribute ------
-	B_SetAttributesForLevel(self, 50);
-	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);					
-		
-	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	
-	// ------ Equippte Waffen ------																
-
-	// ------ Inventory ------
-	B_CreateAmbientInv 	(self);
-		
-	// ------ visuals ------
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard8, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_DMT_L);	
-	Mdl_SetModelFatness	(self, 0);
-	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	aivar[AIV_MM_FollowTime] = NPC_TIME_FOLLOW;
-	aivar[AIV_FightDistCancel] = FIGHT_DIST_CANCEL;
-	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
-
-	bodyStateInterruptableOverride = TRUE; 
-};
-
 //**************************************************************
 //	Akademie	Dragonisland
 //**************************************************************
 
 instance DMT_DementorAmbientWalker_DI_01 (Default_AmbientNovice) 
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad1, Body_W_Hum_Tattoo, Body_White, Teeth_Gold, ITAR_REVIVED_DMT_L);
 	// ------ NSC ------
 	name 		= NAME_DementorNovice;
 	id 			= 1237;
@@ -218,6 +187,7 @@ FUNC VOID Rtn_Start_1237 ()
 
 instance DMT_DementorAmbientWalker_DI_02 (Default_AmbientNovice)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad24, Body_W_Hum_Tattoo, Body_White, Teeth_Yellow, ITAR_REVIVED_DMT_L);
 	// ------ NSC ------
 	name 		= NAME_DementorNovice;
 	id 			= 1238;
@@ -399,6 +369,7 @@ FUNC VOID Rtn_Start_1238 ()
 
 instance DMT_DementorAmbientWalker_DI_03 (Default_AmbientNovice) 
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_L_Hum_TattooMad3, Body_L_Hum_Tattoo, Body_Latino, Teeth_Rotten, ITAR_REVIVED_DMT_L);
 	// ------ NSC ------
 	name 		= NAME_DementorNovice;
 	id 			= 1239;	
@@ -580,6 +551,7 @@ FUNC VOID Rtn_Start_1239 ()
 
 instance DMT_DementorAmbientWalker_DI_04 (Default_AmbientNovice)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad9, Body_W_Hum_Tattoo, Body_White, Teeth_Broken, ITAR_REVIVED_DMT_L);
 	// ------ NSC ------
 	name 		= NAME_DementorNovice;
 	id 			= 1240;
@@ -761,6 +733,7 @@ FUNC VOID Rtn_Start_1240 ()
 
 instance DMT_DementorAmbientWalker_DI_05 (Default_AmbientNovice)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad14, Body_W_Hum_Tattoo, Body_White, Teeth_Normal, ITAR_REVIVED_DMT_L);
 	// ------ NSC ------
 	name 		= NAME_DementorNovice;
 	id 			= 1242;
@@ -942,6 +915,7 @@ FUNC VOID Rtn_Start_1242 ()
 
 instance DMT_DementorAmbientWalker_DI_06 (Default_AmbientNovice)
 {
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad2, Body_W_Hum_Tattoo, Body_White, Teeth_Gold, ITAR_REVIVED_DMT_L);
 	// ------ NSC ------
 	name 		= NAME_DementorNovice;
 	id 			= 1243;

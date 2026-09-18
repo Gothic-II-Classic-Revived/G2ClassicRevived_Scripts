@@ -239,8 +239,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_CRAWLER, 1);
 	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER, 1);
-	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_S, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_H, 1);
@@ -264,7 +264,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_PAL_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_PAL_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_PAL_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_PAL_H_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_PAL_S, 1);
 	CreateInvItems(self, ITAR_REVIVED_SLD_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_SLD_L_02, 1);
 	CreateInvItems(self, ITAR_REVIVED_SLD_M, 1);
@@ -278,9 +278,14 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_KDW_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_KDW_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_KDW_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_PSI_NOV, 1);
-	CreateInvItems(self, ITAR_REVIVED_PSI_TPL, 1);
-	CreateInvItems(self, ITAR_REVIVED_PSI_TPL_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_NOV_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_NOV_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_NOV_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_NOV_S, 1);
+	CreateInvItems(self, ITAR_REVIVED_TPL_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_TPL_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_TPL_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_TPL_SKELETON, 1);
 	CreateInvItems(self, ITAR_REVIVED_DMT_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_DMT_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_DMT_H, 1);

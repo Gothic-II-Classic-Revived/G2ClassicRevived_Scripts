@@ -427,45 +427,45 @@ func void B_CreateAmbientInv_DMT (var int InventorySet)
 {
 	if 	(InventorySet == 1) 
 	{
-		CreateInvItems (self, ITPO_REVIVED_MANA_01, 1);
-		CreateInvItems (self, ItMi_Pitch, 1);
-		CreateInvItems (self, ItMi_gold, 42);
+		CreateInvItems (self, ITPO_REVIVED_MANA_02, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_GREENNOVICE, 1);
+		CreateInvItems (self, ITSC_REVIVED_TELEKINESIS, 1);
 	}
 	else if (InventorySet == 2)
 	{
 		CreateInvItems (self, ITPO_REVIVED_MANA_02, 1);
-		CreateInvItems (self, ItMi_gold, 35);
-		CreateInvItems (self, ItMi_Aquamarine, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_NORTHDARK, 1);
+		CreateInvItems (self, ITSC_REVIVED_PYROKINESIS, 1);
 	}
 	else if (InventorySet == 3)
 	{
-		CreateInvItems (self, ItMi_Sulfur, 1);
-		CreateInvItems (self, ItMi_gold, 23);
-		CreateInvItems (self, ITPO_REVIVED_MANA_01, 1);
+		CreateInvItems (self, ITPO_REVIVED_MANA_02, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_NORTHDARK, 1);
+		CreateInvItems (self, ITSC_REVIVED_TELEKINESIS, 1);
 	}
 	else if (InventorySet == 4)
 	{
-		CreateInvItems (self, ItMi_Rockcrystal, 1);
-		CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
-		CreateInvItems (self, ItMi_gold, 46);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_GREENNOVICE, 1);
+		CreateInvItems (self, ITSC_REVIVED_TELEKINESIS, 1);
 	}
 	else if (InventorySet == 5)
 	{
-		CreateInvItems (self, ItMi_Quartz, 1);
-		CreateInvItems (self, ItMi_gold, 43);
 		CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_DREAMCALL, 1);
+		CreateInvItems (self, ITSC_REVIVED_BERSERK, 1);
 	}
 	else if (InventorySet == 6)
 	{
-		CreateInvItems (self, ITPO_REVIVED_SPEED_01, 1);
-		CreateInvItems (self, ItMi_Coal, 1);
-		CreateInvItems (self, ItMi_gold, 37);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_DREAMCALL, 1);
+		CreateInvItems (self, ITSC_REVIVED_TELEKINESIS, 1);
 	}
 	else if (InventorySet == 0)
 	{
-		CreateInvItems (self, ItMi_Rockcrystal, 1);
-		CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
-		CreateInvItems (self, ItMi_gold, 40);
+		CreateInvItems (self, ITPO_REVIVED_SPEED_01, 1);
+		CreateInvItems (self, ITMI_REVIVED_JOINT_DREAMCALL_02, 1);
+		CreateInvItems (self, ITSC_REVIVED_CONTROL, 1);
 	};
 };
 func void B_CreateAmbientInv_STRF (var int InventorySet)

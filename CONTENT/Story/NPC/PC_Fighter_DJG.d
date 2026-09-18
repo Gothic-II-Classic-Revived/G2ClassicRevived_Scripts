@@ -40,8 +40,8 @@ FUNC VOID Rtn_PreStart_704 ()
 
 FUNC VOID Rtn_StartPass_704()
 {
-	TA_Stand_ArmsCrossed						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_02");
-    TA_Stand_ArmsCrossed						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_02");
+	TA_Stand_ArmsCrossed				(08,00,23,00,"OW_PASS_DJGCAMP_CART");
+    TA_Stand_ArmsCrossed				(23,00,08,00,"OW_PASS_DJGCAMP_CART");
 };
 
 FUNC VOID Rtn_Start_704 ()

@@ -38,13 +38,13 @@ FUNC VOID Rtn_PreStart_712 ()
 };
 
 FUNC VOID Rtn_StartPass_712()
-{
-	TA_Smalltalk						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_03");
-    TA_Smalltalk						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_03");
+{		
+	TA_Smalltalk						(08,00,23,00,"OW_PASS_DJGCAMP_SMALLTALK");
+    TA_Smalltalk						(23,00,08,00,"OW_PASS_DJGCAMP_SMALLTALK");
 };
 
 FUNC VOID Rtn_Start_712 ()
 {
 	TA_Smalltalk 						(08,00,23,00,"PATH_AROUND_HILL04");
-    TA_Smalltalk						(23,00,08,00,"PATH_AROUND_HILL04");		
+    TA_Smalltalk						(23,00,08,00,"PATH_AROUND_HILL04");
 };

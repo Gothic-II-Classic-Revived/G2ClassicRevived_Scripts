@@ -27,7 +27,7 @@ instance DMT_1208_Dementor (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard2, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_Dementor);	
+	B_SetNpcFullVisual(self, MALE, "Hum_Head_Bald", Face_W_Hum_TattooMad17, Body_W_Hum_Tattoo, Body_White, Teeth_Yellow, ITAR_Dementor);
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

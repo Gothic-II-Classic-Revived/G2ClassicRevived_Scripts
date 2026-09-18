@@ -239,6 +239,7 @@ STORY\Npc_Scripts\B_SetNpcVisual.d
 STORY\Npc_Scripts\Npc_Default.d
 
 STORY\NPC\*.d
+STORY\NPC\DMT\*.d
 STORY\NPC\Monster\*.d
 STORY\NPC\Orc\*.d
 STORY\DragonEncounter.d
@@ -308,7 +309,6 @@ STORY\B_Content\B_CaptainCallsAllOnBoard.d
 STORY\B_Content\C_ADDON_KNOWS_SCHNAPS.d
 
 STORY\B_Content\B_ConditionTriggers.d
-STORY\B_Content\B_DragonHunt.d
 
 STORY\DIALOGE\DIA*.d
 STORY\B_AssignAmbientInfos\B_*.d

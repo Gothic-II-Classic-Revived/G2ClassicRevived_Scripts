@@ -22,7 +22,7 @@ instance Pal_201_Ingmar (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Ingmar, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_PAL_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_W_Ingmar, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_PAL_S);	
 	Mdl_SetModelFatness	(self, 1.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
