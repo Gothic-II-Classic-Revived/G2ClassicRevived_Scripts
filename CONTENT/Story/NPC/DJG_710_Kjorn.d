@@ -28,13 +28,7 @@ instance DJG_710_Kjorn (Npc_Default)
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_PreStart_710;
-};
-
-FUNC VOID Rtn_PreStart_710 ()
-{
-	TA_Smalltalk 						(08,00,23,00,"OW_PATH_DJG_004");
-    TA_Smalltalk						(23,00,08,00,"OW_PATH_DJG_004");		
+	daily_routine 		= Rtn_StartPass_710;
 };
 
 FUNC VOID Rtn_StartPass_710()

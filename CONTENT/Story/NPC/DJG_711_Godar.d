@@ -28,13 +28,7 @@ instance DJG_711_Godar (Npc_Default)
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_PreStart_711;
-};
-
-FUNC VOID Rtn_PreStart_711 ()
-{
-	TA_Smalltalk 						(08,00,23,00,"OW_PATH_DJG_004");
-    TA_Smalltalk						(23,00,08,00,"OW_PATH_DJG_004");		
+	daily_routine 		= Rtn_StartPass_711;
 };
 
 FUNC VOID Rtn_StartPass_711()

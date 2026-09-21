@@ -957,7 +957,7 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Snapper,"SPAWN_MOLELRAT_TOTU_LEFT_PLAT4");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_GOBBO_01_01");
 
-	Wld_InsertNpc		(Molerat,"SPAWN_MOLERAT02_SPAWN01");	
+	Wld_InsertNpc		(Molerat,"SPAWN_MOLERAT01_SPAWN01");	
 	Wld_InsertNpc		(Molerat,"SPAWN_MOLERAT02_SPAWN01");	
 
 

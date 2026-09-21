@@ -38,13 +38,7 @@ instance DJG_713_Biff (Npc_Default)
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_PreStart_713;
-};
-
-FUNC VOID Rtn_PreStart_713 ()
-{
-	TA_Smalltalk						(08,00,23,00,"OW_PATH_DJG_005");
-    TA_Smalltalk						(23,00,08,00,"OW_PATH_DJG_005");		
+	daily_routine 		= Rtn_StartPass_713;
 };
 
 FUNC VOID Rtn_StartPass_713()
@@ -61,8 +55,8 @@ FUNC VOID Rtn_Start_713 ()
 
 FUNC VOID Rtn_Follow_713 ()
 {
-	TA_Follow_Player					(08,00,23,00,"OW_PATH_DJG_000");
-    TA_Follow_Player					(23,00,08,00,"OW_PATH_DJG_000");		
+	TA_Follow_Player					(08,00,23,00,"OW_PASS_RUINS_002");
+    TA_Follow_Player					(23,00,08,00,"OW_PASS_RUINS_002");		
 };
 
 FUNC VOID Rtn_Stay_Swamp_713 ()

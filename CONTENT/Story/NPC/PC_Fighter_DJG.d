@@ -29,13 +29,7 @@ INSTANCE PC_Fighter_DJG (Npc_Default)
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_PreStart_704;
-};
-
-FUNC VOID Rtn_PreStart_704 ()
-{	
-	TA_Stand_ArmsCrossed				(08,00,23,00,"OW_PATH_DJG_002");
-    TA_Stand_ArmsCrossed				(23,00,08,00,"OW_PATH_DJG_002");
+	daily_routine 		= Rtn_StartPass_704;
 };
 
 FUNC VOID Rtn_StartPass_704()

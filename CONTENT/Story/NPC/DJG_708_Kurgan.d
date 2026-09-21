@@ -28,13 +28,7 @@ instance DJG_708_Kurgan (Npc_Default)
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 
 	// ------ TA anmelden ------
-	daily_routine 		= Rtn_PreStart_708;
-};
-
-FUNC VOID Rtn_PreStart_708()
-{
-	TA_Stand_Guarding						(08,00,23,00,"OW_PATH_DJG_001");
-    TA_Stand_Guarding						(23,00,08,00,"OW_PATH_DJG_001");	
+	daily_routine 		= Rtn_StartPass_708;
 };
 
 FUNC VOID Rtn_StartPass_708()

@@ -69,7 +69,6 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_2 ()
 			B_KillNpc (Olav);
 	
 			// ------ VOBTREES ------
-				Ext_InsertVobTree("VOBTREE/OW_ABANDONEDMINE_MOLERATS.ZEN");
 				Ext_InsertVobTree("VOBTREE/OW_BANDITS_ERPRESSER.ZEN");
 				
 			ENTER_OLDWORLD_FIRSTTIME_TRIGGER_ONETIME = TRUE;
@@ -225,22 +224,11 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 			Ext_InsertVobTree("VOBTREE/OW_DRAGONHUNTERS_PASS.ZEN");
 
 			AI_Teleport(PC_Fighter_DJG, "OW_PASS_RUINS_002");
-			B_StartOtherRoutine(PC_Fighter_DJG,"StartPass");
-
 			AI_Teleport(DJG_713_Biff, "OW_PASS_RUINS_002");
-			B_StartOtherRoutine(DJG_713_Biff,"StartPass");
-
 			AI_Teleport(DJG_712_Hokurn, "OW_PASS_RUINS_002");
-			B_StartOtherRoutine(DJG_712_Hokurn,"StartPass");
-
 			AI_Teleport(DJG_711_Godar, "OW_PASS_RUINS_002");
-			B_StartOtherRoutine(DJG_711_Godar,"StartPass");
-
 			AI_Teleport(DJG_710_Kjorn, "OW_PASS_RUINS_002");
-			B_StartOtherRoutine(DJG_710_Kjorn,"StartPass");
-
 			AI_Teleport(DJG_708_Kurgan, "OW_PASS_RUINS_002");
-			B_StartOtherRoutine(DJG_708_Kurgan,"StartPass");
 
 		//Tote Drachenjäger
 		//-----------------
