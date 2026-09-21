@@ -14,26 +14,6 @@ FUNC VOID WoodCutting_S1 ()
 	};
 };
 
-FUNC INT WoodCutting_Active ()
-{
-	if (PLAYER_MOBSI_PRODUCTION == MOBSI_WOODCUTTING)
-	{
-		return TRUE;
-	};
-
-	return FALSE;
-};
-
-FUNC INT WoodCutting_HasRawWood (var int amount)
-{
-	if (WoodCutting_Active())
-	&& (Npc_HasItems (hero, ITMI_REVIVED_WOOD_RAW) >= amount)
-	{
-		return TRUE;
-	};
-
-	return FALSE;
-};
 
 FUNC INT WoodCutting_RandomSticks (var int amount)
 {
@@ -55,10 +35,12 @@ FUNC VOID WoodCutting_CutWood (var int amount)
 {
 	var int sticks;
 
-	if (Npc_HasItems (hero, ITMI_REVIVED_WOOD_RAW) >= amount)
+	if ((amount > 0)
+	&& (Npc_HasItems (hero, ITMI_REVIVED_WOOD_RAW) >= amount))
 	{
 		Npc_RemoveInvItems (hero, ITMI_REVIVED_WOOD_RAW, amount);
 		CreateInvItems (hero, ITMI_REVIVED_WOOD_CUT, amount * 2);
+		Print (PRINT_WoodcutSuccess);
 
 		sticks = WoodCutting_RandomSticks (amount);
 		if (sticks > 0)
@@ -90,12 +72,10 @@ INSTANCE PC_WoodCutting_End (C_Info)
 
 FUNC INT PC_WoodCutting_End_Condition ()
 {
-	if (WoodCutting_Active())
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_WOODCUTTING)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_WoodCutting_End_Info ()
@@ -119,12 +99,10 @@ INSTANCE PC_WoodCutting_Cut_1 (C_Info)
 
 FUNC INT PC_WoodCutting_Cut_1_Condition ()
 {
-	if (WoodCutting_HasRawWood (1))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_WOODCUTTING)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_WoodCutting_Cut_1_Info ()
@@ -144,12 +122,10 @@ INSTANCE PC_WoodCutting_Cut_2 (C_Info)
 
 FUNC INT PC_WoodCutting_Cut_2_Condition ()
 {
-	if (WoodCutting_HasRawWood (2))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_WOODCUTTING)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_WoodCutting_Cut_2_Info ()
@@ -169,12 +145,10 @@ INSTANCE PC_WoodCutting_Cut_5 (C_Info)
 
 FUNC INT PC_WoodCutting_Cut_5_Condition ()
 {
-	if (WoodCutting_HasRawWood (5))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_WOODCUTTING)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_WoodCutting_Cut_5_Info ()
@@ -194,12 +168,10 @@ INSTANCE PC_WoodCutting_Cut_10 (C_Info)
 
 FUNC INT PC_WoodCutting_Cut_10_Condition ()
 {
-	if (WoodCutting_HasRawWood (10))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_WOODCUTTING)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_WoodCutting_Cut_10_Info ()
@@ -219,12 +191,10 @@ INSTANCE PC_WoodCutting_Cut_All (C_Info)
 
 FUNC INT PC_WoodCutting_Cut_All_Condition ()
 {
-	if (WoodCutting_HasRawWood (1))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_WOODCUTTING)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_WoodCutting_Cut_All_Info ()

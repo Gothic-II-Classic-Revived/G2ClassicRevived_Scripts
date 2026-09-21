@@ -86,6 +86,27 @@ const int	REV_Condition_Bow_Fire_01			=	60;
 const int	REV_Value_Bow_Fire_01				=	1000;
 //******************************************************************//
 //******************************************************************//
+const int	REV_Damage_Bow_CRAFT_01				=	200;
+const int	REV_Condition_Bow_CRAFT_01			=	100;
+const int	REV_Value_Bow_CRAFT_01				=	800;
+//******************************************************************//
+const int	REV_Damage_Bow_CRAFT_02				=	200;
+const int	REV_Condition_Bow_CRAFT_02			=	100;
+const int	REV_Value_Bow_CRAFT_02				=	800;
+//******************************************************************//
+const int	REV_Damage_Bow_CRAFT_03				=	200;
+const int	REV_Condition_Bow_CRAFT_03			=	100;
+const int	REV_Value_Bow_CRAFT_03				=	800;
+//******************************************************************//
+const int	REV_Damage_Bow_CRAFT_04				=	200;
+const int	REV_Condition_Bow_CRAFT_04			=	100;
+const int	REV_Value_Bow_CRAFT_04				=	800;
+//******************************************************************//
+const int	REV_Damage_Bow_CRAFT_05				=	200;
+const int	REV_Condition_Bow_CRAFT_05			=	100;
+const int	REV_Value_Bow_CRAFT_05				=	800;
+//******************************************************************//
+//******************************************************************//
 const int	REV_Damage_Bow_Diego				=	70;
 const int	REV_Condition_Bow_Diego				=	45;
 const int	REV_Value_Bow_Diego					=	390;
@@ -109,7 +130,7 @@ const int	REV_Value_Bow_Bosper				=	200;
 //****************************************************************************
 INSTANCE ITRW_REVIVED_BOW_SMALL_01 (C_Item)
 {
-	name 				=	"Short Bow";
+	name 				=	"Wayfarer's Bow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -184,7 +205,7 @@ INSTANCE ITRW_REVIVED_BOW_SMALL_03 (C_Item)
 
 INSTANCE ITRW_REVIVED_BOW_SMALL_04 (C_Item)
 {
-	name 				=	"Hunting Bow";
+	name 				=	"Huntsman's Bow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -234,7 +255,7 @@ INSTANCE ITRW_REVIVED_BOW_SMALL_05 (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_BOW_LONG_01 (C_Item)
 {
-	name 				=	"Longbow";
+	name 				=	"Longshot";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -458,7 +479,7 @@ INSTANCE ITRW_REVIVED_BOW_LONG_09 (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_BOW_WAR_01 (C_Item)
 {
-	name 				=	"War Bow";
+	name 				=	"Warbringer";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_BOW;
@@ -678,6 +699,136 @@ INSTANCE ITRW_REVIVED_BOW_FIRE_01 (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
+
+
+
+//****************************************************************************
+//			CRAFTED
+//****************************************************************************
+INSTANCE ITRW_REVIVED_BOW_CRAFT_01 (C_Item)
+{
+	name 				=	NAME_BOW_REVIVED_01;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_BOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Bow_Small_01;
+
+	damageTotal			= 	REV_Damage_Bow_Small_01;
+	damagetype 			=	DAM_POINT;		
+
+	cond_atr[2]   		= 	ATR_DEXTERITY;
+	cond_value[2]  		= 	REV_Condition_Bow_Small_01;
+
+	munition			=	ITRW_ARROW;
+	visual 				=	"ItRw_Bow_Small_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_BOW_CRAFT_02 (C_Item)
+{
+	name 				=	NAME_BOW_REVIVED_02;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_BOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Bow_Small_01;
+
+	damageTotal			= 	REV_Damage_Bow_Small_01;
+	damagetype 			=	DAM_POINT;		
+
+	cond_atr[2]   		= 	ATR_DEXTERITY;
+	cond_value[2]  		= 	REV_Condition_Bow_Small_01;
+
+	munition			=	ITRW_ARROW;
+	visual 				=	"ItRw_Bow_Small_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_BOW_CRAFT_03 (C_Item)
+{
+	name 				=	NAME_BOW_REVIVED_03;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_BOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Bow_Small_01;
+
+	damageTotal			= 	REV_Damage_Bow_Small_01;
+	damagetype 			=	DAM_POINT;		
+
+	cond_atr[2]   		= 	ATR_DEXTERITY;
+	cond_value[2]  		= 	REV_Condition_Bow_Small_01;
+
+	munition			=	ITRW_ARROW;
+	visual 				=	"ItRw_Bow_Small_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_BOW_CRAFT_04 (C_Item)
+{
+	name 				=	NAME_BOW_REVIVED_04;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_BOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Bow_Small_01;
+
+	damageTotal			= 	REV_Damage_Bow_Small_01;
+	damagetype 			=	DAM_POINT;		
+
+	cond_atr[2]   		= 	ATR_DEXTERITY;
+	cond_value[2]  		= 	REV_Condition_Bow_Small_01;
+
+	munition			=	ITRW_ARROW;
+	visual 				=	"ItRw_Bow_Small_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_BOW_CRAFT_05 (C_Item)
+{
+	name 				=	NAME_BOW_REVIVED_05;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_BOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Bow_Small_01;
+
+	damageTotal			= 	REV_Damage_Bow_Small_01;
+	damagetype 			=	DAM_POINT;		
+
+	cond_atr[2]   		= 	ATR_DEXTERITY;
+	cond_value[2]  		= 	REV_Condition_Bow_Small_01;
+
+	munition			=	ITRW_ARROW;
+	visual 				=	"ItRw_Bow_Small_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Dex_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
 
 
 

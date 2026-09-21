@@ -16,9 +16,9 @@ const string	TOPIC_Tobacco						=	"Mixing tobacco";
 const string	LogText_TobaccoLearned				=	"By mixing Abuyin's apple tobacco at an alchemist's bench I can make:";
 
 const string	TOPIC_Cooking						=	"Cooking";
-
 const string	TOPIC_Booze							=	"Distilling booze";
 
+const string	TOPIC_TalentBowyer						=	"Bowmaking";
 
 const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower can sell me food and frying pans.";
 
@@ -117,6 +117,45 @@ const string LOGENTRY_RECIPE_BERRYMARMALADE  	= "Ingredients for 'Berry Marmalad
 const string LOGENTRY_RECIPE_FRUITSALAD      	= "Ingredients for 'Fruit salad':\n1 Apple\n1 Pear\n1 Berry\n1 Grape\n1 Milk bottle";
 const string LOGENTRY_RECIPE_CONVICTSTEW    	= "Ingredients for 'Convict's Stew':\n1 Hard Bread\n1 Stinky Cheese\n1 Old Beer\n1 Stale Water";
 
+const string LOGENTRY_RECIPE_REVIVED_BOW_01		= "Ingredients for 'Short Bow':\n2 Cut Wood\n1 Leather\n2 Teeth";
+const string LOGENTRY_RECIPE_REVIVED_BOW_02		= "Ingredients for 'Long Bow':\n3 Cut Wood\n2 Leather\n2 Claws";
+const string LOGENTRY_RECIPE_REVIVED_BOW_03		= "Ingredients for 'Composite Bow':\n4 Cut Wood\n2 Leather\n2 Lurker Claws";
+const string LOGENTRY_RECIPE_REVIVED_BOW_04		= "Ingredients for 'War Bow':\n5 Cut Wood\n3 Leather\n1 Shadowbeast Horn\n2 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_BOW_05		= "Ingredients for 'Tracker Bow':\n6 Cut Wood\n4 Leather\n1 Dragon Snapper Horn\n1 Dragon Blood";
+
+const string LOGENTRY_RECIPE_REVIVED_CBOW_01	= "Ingredients for 'Light Crossbow':\n3 Cut Wood\n2 Leather\n3 Teeth";
+const string LOGENTRY_RECIPE_REVIVED_CBOW_02	= "Ingredients for 'Heavy Crossbow':\n4 Cut Wood\n2 Leather\n3 Claws";
+const string LOGENTRY_RECIPE_REVIVED_CBOW_03	= "Ingredients for 'Composite Crossbow':\n5 Cut Wood\n3 Leather\n3 Minecrawler Mandibles";
+const string LOGENTRY_RECIPE_REVIVED_CBOW_04	= "Ingredients for 'War Crossbow':\n6 Cut Wood\n4 Leather\n1 Shadowbeast Horn\n3 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_CBOW_05	= "Ingredients for 'Tracker Crossbow':\n8 Cut Wood\n5 Leather\n2 Dragon Snapper Horns\n1 Dragon Blood";
+
+const string LOGENTRY_RECIPE_AMMO				= "Ingredients for 'Arrows and Bolts':\n10 Sticks\n2 Steel Bars";
+const string LOGENTRY_RECIPE_MAGICAMMO			= "Ingredients for 'Magic Arrows and Bolts':\n10 Sticks\n2 Steel Bars\n5 Ore Nuggets";
+const string LOGENTRY_RECIPE_FIREAMMO			= "Ingredients for 'Fire Arrows and Bolts':\n10 Sticks\n5 Pitch\n5 Sulfur";
+
+// Revived smithing recipes
+const string LOGENTRY_RECIPE_REVIVED_1H_COMMON_01	= "Ingredients for 'Crude Sword (One-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_1H_01	= "Ingredients for 'Short Sword (One-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_1H_02	= "Ingredients for 'Long Sword (One-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_1H_03	= "Ingredients for 'Broad Sword (One-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_1H_04	= "Ingredients for 'Sword (One-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_1H_05	= "Ingredients for 'Bastard Sword (One-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_2H_01	= "Ingredients for 'Light Sword (Two-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_2H_02	= "Ingredients for 'Heavy Sword (Two-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_2H_03	= "Ingredients for 'Broad Sword (Two-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_2H_04	= "Ingredients for 'Sword (Two-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_2H_05	= "Ingredients for 'Bastard Sword (Two-Handed)':\n1 Red Hot Steel";
+const string LOGENTRY_RECIPE_REVIVED_1H_ORE_01	= "Ingredients for 'Rough Ore Blade (One-Handed)':\n1 Red Hot Steel\n1 Ore Nugget";
+const string LOGENTRY_RECIPE_REVIVED_1H_ORE_02	= "Ingredients for 'Master Ore Blade (One-Handed)':\n1 Red Hot Steel\n2 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_1H_ORE_03	= "Ingredients for 'Ore Battle Blade (One-Handed)':\n1 Red Hot Steel\n3 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_1H_ORE_04	= "Ingredients for 'Ore Dragon Slayer (One-Handed)':\n1 Red Hot Steel\n4 Ore Nuggets\n5 Dragon Blood";
+const string LOGENTRY_RECIPE_REVIVED_1H_ORE_05	= "Ingredients for 'Ore Bastard Sword (One-Handed)':\n1 Red Hot Steel\n5 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_2H_ORE_01	= "Ingredients for 'Master Ore Sword (Two-Handed)':\n1 Red Hot Steel\n2 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_2H_ORE_02	= "Ingredients for 'Rough Ore Sword (Two-Handed)':\n1 Red Hot Steel\n3 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_2H_ORE_03	= "Ingredients for 'Ore Battle Sword (Two-Handed)':\n1 Red Hot Steel\n4 Ore Nuggets";
+const string LOGENTRY_RECIPE_REVIVED_2H_ORE_04	= "Ingredients for 'Heavy Ore Dragon Slayer (Two-Handed)':\n1 Red Hot Steel\n5 Ore Nuggets\n5 Dragon Blood";
+const string LOGENTRY_RECIPE_REVIVED_2H_ORE_05	= "Ingredients for 'Ore Bastard Sword (Two-Handed)':\n1 Red Hot Steel\n6 Ore Nuggets";
+
 
 // Items
 const string NAME_OrcWeapon				=	"Orc Weapon";
@@ -182,6 +221,8 @@ CONST STRING MOBNAME_LADDER					= "Ladder";
 
 CONST STRING MOBNAME_LATI					= "Alchemist's Lab";
 CONST STRING MOBNAME_ORB					= "Magic Orb";
+CONST STRING MOBNAME_WORKBENCH				= "Workbench";
+CONST STRING MOBNAME_LEATHERWORK			= "Tanning stump";
 
 CONST STRING MOBNAME_ADANOS_SHRINE			= "Statue of Adanos";
 
@@ -298,6 +339,9 @@ const string PRINT_CookingDesc_ConvictStew			= "Prepare a 'Convict's Stew'";
 const string PRINT_PotionMixSuccess					= "Potions mixed!";
 const string PRINT_BoozeSuccess						= "Booze mixed!";
 const string PRINT_TabakSuccessREVIVED				= "Reefer rolled!";
+const string PRINT_WoodcutSuccess					= "Wood processed!";
+const string PRINT_LeatherworkSuccess				= "Leather processed!";
+const string PRINT_ArrowSuccess						= "Ammunition created!";
 
 
 // Skills
@@ -1524,9 +1568,10 @@ const int	MOBSI_ORE_BLOOD					= 9;
 const int	MOBSI_ORE_BLACK					= 10;
 const int	MOBSI_WOODCUTTING				= 11;
 const int	MOBSI_LEATHERWORK				= 12;
-const int	MOBSI_CAULDRON					= 13;
-const int	MOBSI_PAN						= 14;	
-const int	MOBSI_PRAYADANOS				= 15;
+const int	MOBSI_BOWMAKING					= 13;
+const int	MOBSI_CAULDRON					= 14;
+const int	MOBSI_PAN						= 15;	
+const int	MOBSI_PRAYADANOS				= 16;
 
 
 
@@ -1567,6 +1612,7 @@ const int REV_Bonus_Mana_ArcaneStaff_04		= 	40;
 // Swordmaking
 // ***************
 
+const string NAME_1H_COMMON_01			= "Crude Sword";
 const string NAME_1H_COMMON_01_DESC		= "Crude Sword (One-Handed)";
 
 const int WEAPON_1H_REVIVED_01			= 13;
@@ -1584,6 +1630,7 @@ const string NAME_1H_REVIVED_04_DESC	= "Sword (One-Handed)";
 const int WEAPON_1H_REVIVED_05			= 17;
 const string NAME_1H_REVIVED_05			= "Bastard Sword";
 const string NAME_1H_REVIVED_05_DESC	= "Bastard Sword (One-Handed)";
+
 const int WEAPON_2H_REVIVED_01			= 18;
 const string NAME_2H_REVIVED_01			= "Light Sword";
 const string NAME_2H_REVIVED_01_DESC	= "Light Sword (Two-Handed)";
@@ -1615,6 +1662,7 @@ const string NAME_1H_REVIVED_ORE_04_DESC= "Ore Dragon Slayer (One-Handed)";
 const int WEAPON_1H_REVIVED_ORE_05		= 27;
 const string NAME_1H_REVIVED_ORE_05		= "Ore Bastard Sword";
 const string NAME_1H_REVIVED_ORE_05_DESC= "Ore Bastard Sword (One-Handed)";
+
 const int WEAPON_2H_REVIVED_ORE_01		= 28;
 const string NAME_2H_REVIVED_ORE_01		= "Master Ore Sword";
 const string NAME_2H_REVIVED_ORE_01_DESC= "Master Ore Sword (Two-Handed)";
@@ -1642,24 +1690,31 @@ var int PLAYER_TALENT_SMITH[MAX_WEAPONS_MELEE];
 // ***************
 
 const int WEAPON_BOW_REVIVED_01			= 1;
-const string NAME_BOW_REVIVED_01		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_01		= "Short Bow";
 const int WEAPON_BOW_REVIVED_02			= 2;
-const string NAME_BOW_REVIVED_02		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_02		= "Long Bow";
 const int WEAPON_BOW_REVIVED_03			= 3;
-const string NAME_BOW_REVIVED_03		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_03		= "Composite Bow";
 const int WEAPON_BOW_REVIVED_04			= 4;
-const string NAME_BOW_REVIVED_04		= "Ore Bastard Sword";
-const int WEAPON_CBOW_REVIVED_01		= 5;
-const string NAME_CBOW_REVIVED_01		= "Ore Bastard Sword";
-const int WEAPON_CBOW_REVIVED_02		= 6;
-const string NAME_CBOW_REVIVED_02		= "Ore Bastard Sword";
-const int WEAPON_CBOW_REVIVED_03		= 7;
-const string NAME_CBOW_REVIVED_03		= "Ore Bastard Sword";
-const int WEAPON_CBOW_REVIVED_04		= 8;
-const string NAME_CBOW_REVIVED_04		= "Ore Bastard Sword";
+const string NAME_BOW_REVIVED_04		= "War Bow";
+const int WEAPON_BOW_REVIVED_05			= 5;
+const string NAME_BOW_REVIVED_05		= "Tracker Bow";
 
+const int WEAPON_CBOW_REVIVED_01		= 6;
+const string NAME_CBOW_REVIVED_01		= "Light Crossbow";
+const int WEAPON_CBOW_REVIVED_02		= 7;
+const string NAME_CBOW_REVIVED_02		= "Heavy Crossbow";
+const int WEAPON_CBOW_REVIVED_03		= 8;
+const string NAME_CBOW_REVIVED_03		= "Compound Crossbow";
+const int WEAPON_CBOW_REVIVED_04		= 9;
+const string NAME_CBOW_REVIVED_04		= "War Crossbow";
+const int WEAPON_CBOW_REVIVED_05		= 10;
+const string NAME_CBOW_REVIVED_05		= "Tracker Crossbow";
 
-const int MAX_WEAPONS_RANGED 			= 9;
+const int WEAPON_RANGED_AMMUNITION		= 11;
+const string NAME_RANGED_AMMUNITION		= "Ammunition";
+
+const int MAX_WEAPONS_RANGED 			= 12;
 var int PLAYER_TALENT_BOWYER[MAX_WEAPONS_RANGED];
 
 

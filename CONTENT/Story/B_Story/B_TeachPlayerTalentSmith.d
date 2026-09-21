@@ -26,9 +26,6 @@ func int B_TeachPlayerTalentSmith (var C_NPC slf, var C_NPC oth, var int waffe)
 	// ------ Lernpunkte abziehen ------			
 	oth.lp = oth.lp - kosten;
 	
-	Log_CreateTopic (TOPIC_TalentSmith,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentSmith,"To forge a weapon, first of all I need a piece of raw steel. This I must heat in the fire of a smithy until it glows red-hot and then shape it on an anvil. Special weapons often require the use of certain substances that give them special characteristics.");
-	
 	// ------ Waffe schmieden lernen ------
 	//Bennet
 	if (waffe == WEAPON_Common)				{	PLAYER_TALENT_SMITH[WEAPON_Common] 			= TRUE;	
@@ -61,48 +58,160 @@ func int B_TeachPlayerTalentSmith (var C_NPC slf, var C_NPC oth, var int waffe)
 	B_LogEntry (TOPIC_TalentSmith,"Harad hat mir beigebracht, 'El Bastardo' zu schmieden - eine der besten Einhandwaffen, die es gibt!"); };
 	
 	//REVIVED
-	if (waffe == WEAPON_1H_REVIVED_01)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_01)); };
-	if (waffe == WEAPON_1H_REVIVED_02)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_02)); };
-	if (waffe == WEAPON_1H_REVIVED_03)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_03)); };
-	if (waffe == WEAPON_1H_REVIVED_04)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_04)); };
-	if (waffe == WEAPON_1H_REVIVED_05)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_05)); };
-	if (waffe == WEAPON_2H_REVIVED_01)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_01)); };
-	if (waffe == WEAPON_2H_REVIVED_02)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_02)); };
-	if (waffe == WEAPON_2H_REVIVED_03)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_03)); };
-	if (waffe == WEAPON_2H_REVIVED_04)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_04)); };
-	if (waffe == WEAPON_2H_REVIVED_05)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_05)); };
+	if (waffe == WEAPON_Common)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_Common] = TRUE;
+
+		Log_CreateTopic (TOPIC_TalentSmith, LOG_NOTE);
+		B_LogEntry (TOPIC_TalentSmith, "To forge a weapon, first of all I need a piece of raw steel. This I must heat in the fire of a smithy until it glows red-hot and then shape it on an anvil. Special weapons often require the use of certain substances that give them special characteristics.");
 	
-	if (waffe == WEAPON_1H_REVIVED_ORE_01)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_01] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_01)); };
-	if (waffe == WEAPON_1H_REVIVED_ORE_02)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_02] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_02)); };
-	if (waffe == WEAPON_1H_REVIVED_ORE_03)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_03] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_03)); };
-	if (waffe == WEAPON_1H_REVIVED_ORE_04)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_04] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_04)); };
-	if (waffe == WEAPON_1H_REVIVED_ORE_05)		{	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_05] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_05)); };
-	if (waffe == WEAPON_2H_REVIVED_ORE_01)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_01] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_01)); };
-	if (waffe == WEAPON_2H_REVIVED_ORE_02)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_02] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_02)); };
-	if (waffe == WEAPON_2H_REVIVED_ORE_03)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_03] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_03)); };
-	if (waffe == WEAPON_2H_REVIVED_ORE_04)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_04)); };
-	if (waffe == WEAPON_2H_REVIVED_ORE_05)		{	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_05] 	= TRUE;	
-	B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_05)); };
-	
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_COMMON_01));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_COMMON_01);
+	};
+
+	if (waffe == WEAPON_1H_REVIVED_01)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_01));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_01);
+	};
+	if (waffe == WEAPON_1H_REVIVED_02)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_02));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_02);
+	};
+	if (waffe == WEAPON_1H_REVIVED_03)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_03));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_03);
+	};
+	if (waffe == WEAPON_1H_REVIVED_04)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_04));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_04);
+	};
+	if (waffe == WEAPON_1H_REVIVED_05)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_05));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_05);
+	};
+
+	if (waffe == WEAPON_2H_REVIVED_01)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_01));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_01);
+	};
+	if (waffe == WEAPON_2H_REVIVED_02)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_02));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_02);
+	};
+	if (waffe == WEAPON_2H_REVIVED_03)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_03));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_03);
+	};
+	if (waffe == WEAPON_2H_REVIVED_04)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_04));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_04);
+	};
+	if (waffe == WEAPON_2H_REVIVED_05)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_05));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_05);
+	};
+
+	if (waffe == WEAPON_1H_REVIVED_ORE_01)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_01] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_01));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_ORE_01);
+	};
+	if (waffe == WEAPON_1H_REVIVED_ORE_02)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_02] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_02));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_ORE_02);
+	};
+	if (waffe == WEAPON_1H_REVIVED_ORE_03)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_03] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_03));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_ORE_03);
+	};
+	if (waffe == WEAPON_1H_REVIVED_ORE_04)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_04] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_04));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_ORE_04);
+	};
+	if (waffe == WEAPON_1H_REVIVED_ORE_05)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_05] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_1H_REVIVED_ORE_05));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_ORE_05);
+	};
+
+	if (waffe == WEAPON_2H_REVIVED_ORE_01)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_01] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_01));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_ORE_01);
+	};
+	if (waffe == WEAPON_2H_REVIVED_ORE_02)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_02] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_02));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_ORE_02);
+	};
+	if (waffe == WEAPON_2H_REVIVED_ORE_03)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_03] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_03));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_ORE_03);
+	};
+	if (waffe == WEAPON_2H_REVIVED_ORE_04)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_04));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_ORE_04);
+	};
+	if (waffe == WEAPON_2H_REVIVED_ORE_05)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_05] = TRUE;
+
+		B_LogEntry (TOPIC_TalentSmith, ConcatStrings("I can now forge a ", NAME_2H_REVIVED_ORE_05));
+		B_LogEntry (TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_ORE_05);
+	};
 	
 	PrintScreen			(PRINT_LearnSmith, -1, -1, FONT_Screen, 2);
 	

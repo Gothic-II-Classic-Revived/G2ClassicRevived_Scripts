@@ -334,9 +334,6 @@ func void DIA_Bosper_OtherMasters_Info ()
 	AI_Output (self, other, "DIA_Bosper_OtherMasters_11_04"); //And as for Thorben - everyone knows he's dead broke - he probably couldn't even pay you.
 	AI_Output (self, other, "DIA_Bosper_OtherMasters_11_05"); //I, on the other hand, am in urgent need of an apprentice - and I pay well, too.
 	AI_Output (self, other, "DIA_Bosper_OtherMasters_11_06"); //But no matter where you want to sign on - you need the approval of all other masters from the lower part of town...
-	
-	
-	
 };
 
 // ***********************************************************
@@ -614,7 +611,7 @@ func void DIA_Bosper_Trade_Info ()
 };
 
 // **************************************************************
-// 						Von Bogen gehört
+// 						Von Bogen gehï¿½rt
 // **************************************************************
 instance DIA_Bosper_BogenRunning (C_INFO)
 {
@@ -979,6 +976,253 @@ func void DIA_Bosper_SellFur_Info ()
 	};
 };
 
+///////////////////////////////////////////////////////////////////////
+//	Info TEACH
+///////////////////////////////////////////////////////////////////////
+var int Bosper_TeachDEX;
+var int Bosper_TeachBowmaking;
+// ------------------------------------------------------------
+// Dexterity
+// ------------------------------------------------------------
+instance DIA_Bosper_TEACH (C_INFO)
+{
+	npc		  	 = 	VLK_413_Bosper;
+	nr			 = 	500;
+	condition	 = 	DIA_Bosper_TEACH_Condition;
+	information	 = 	DIA_Bosper_TEACH_Info;
+	permanent	 = 	TRUE;
+	description	 = 	"I want to become more dexterous.";
+};
+func int DIA_Bosper_TEACH_Condition ()
+{	
+	if (Player_IsApprentice == APP_Bosper)
+	{
+		return TRUE;
+	};
+};
+func void DIA_Bosper_TEACH_Info ()
+{
+	AI_Output (other, self, "DIA_Cassia_TEACH_15_00"); //I want to become more dexterous.
+
+	if(Bosper_TeachDEX == FALSE)
+	{
+		Log_CreateTopic (Topic_CityTeacher, LOG_NOTE);
+		B_LogEntry (Topic_CityTeacher, "Bosper can help me raise my dexterity.");
+
+		Bosper_TeachDEX = TRUE;
+	};
+
+	Info_ClearChoices   (DIA_Bosper_TEACH);
+	Info_AddChoice 		(DIA_Bosper_TEACH, DIALOG_BACK, DIA_Bosper_TEACH_BACK);
+	Info_AddChoice		(DIA_Bosper_TEACH, B_BuildLearnString(PRINT_LearnDEX1	, B_GetLearnCostAttribute(other, ATR_DEXTERITY)),DIA_Bosper_TEACH_1);
+	Info_AddChoice		(DIA_Bosper_TEACH, B_BuildLearnString(PRINT_LearnDEX5	, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_Bosper_TEACH_5);
+};
+func void DIA_Bosper_TEACH_BACK()
+{
+	Info_ClearChoices (DIA_Bosper_TEACH);
+};
+func void DIA_Bosper_TEACH_1()
+{
+	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 1, T_HIGH);
+	
+	Info_ClearChoices   (DIA_Bosper_TEACH);
+	
+	Info_AddChoice 		(DIA_Bosper_TEACH, DIALOG_BACK, DIA_Bosper_TEACH_BACK);
+	Info_AddChoice		(DIA_Bosper_TEACH, B_BuildLearnString(PRINT_LearnDEX1	, B_GetLearnCostAttribute(other, ATR_DEXTERITY)),DIA_Bosper_TEACH_1);
+	Info_AddChoice		(DIA_Bosper_TEACH, B_BuildLearnString(PRINT_LearnDEX5	, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_Bosper_TEACH_5);
+};
+func void DIA_Bosper_TEACH_5()
+{
+	B_TeachAttributePoints (self, other, ATR_DEXTERITY, 5, T_HIGH);
+	
+	Info_ClearChoices   (DIA_Bosper_TEACH);
+	
+	Info_AddChoice 		(DIA_Bosper_TEACH, DIALOG_BACK, DIA_Bosper_TEACH_BACK);
+	Info_AddChoice		(DIA_Bosper_TEACH, B_BuildLearnString(PRINT_LearnDEX1	, B_GetLearnCostAttribute(other, ATR_DEXTERITY)),DIA_Bosper_TEACH_1);
+	Info_AddChoice		(DIA_Bosper_TEACH, B_BuildLearnString(PRINT_LearnDEX5	, B_GetLearnCostAttribute(other, ATR_DEXTERITY)*5)	,DIA_Bosper_TEACH_5);
+};
+
+// ------------------------------------------------------------
+// Bowmaking
+// ------------------------------------------------------------
+
+
+func void B_BosperCraftChoices()
+{
+	Info_ClearChoices (DIA_Bosper_Bowmaking);
+	Info_AddChoice (DIA_Bosper_Bowmaking, DIALOG_BACK, DIA_Bosper_Bowmaking_BACK);
+
+	// Crossbows
+	if (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_CBOW_REVIVED_05, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_CBOW_REVIVED_05)), DIA_Bosper_Bowmaking_CBOW05);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_CBOW_REVIVED_04, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_CBOW_REVIVED_04)), DIA_Bosper_Bowmaking_CBOW04);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_CBOW_REVIVED_03, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_CBOW_REVIVED_03)), DIA_Bosper_Bowmaking_CBOW03);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_CBOW_REVIVED_02, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_CBOW_REVIVED_02)), DIA_Bosper_Bowmaking_CBOW02);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_01] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_RANGED_AMMUNITION] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_CBOW_REVIVED_01, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_CBOW_REVIVED_01)), DIA_Bosper_Bowmaking_CBOW01);
+	};
+
+	// Bows
+	if (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_BOW_REVIVED_05, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_BOW_REVIVED_05)), DIA_Bosper_Bowmaking_BOW05);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_BOW_REVIVED_04, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_BOW_REVIVED_04)), DIA_Bosper_Bowmaking_BOW04);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_BOW_REVIVED_03, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_BOW_REVIVED_03)), DIA_Bosper_Bowmaking_BOW03);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_BOW_REVIVED_02, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_BOW_REVIVED_02)), DIA_Bosper_Bowmaking_BOW02);
+	};
+	if (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_01] == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_RANGED_AMMUNITION] == TRUE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString(NAME_BOW_REVIVED_01, B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_BOW_REVIVED_01)), DIA_Bosper_Bowmaking_BOW01);
+	};
+
+	// Ammunition is the base recipe and unlocks tier 1 bows/crossbows.
+	if (PLAYER_TALENT_BOWYER[WEAPON_RANGED_AMMUNITION] == FALSE)
+	{
+		Info_AddChoice (DIA_Bosper_Bowmaking, B_BuildLearnString("Learn to craft ammunition", B_GetLearnCostTalent(other, NPC_TALENT_BOWMAKING, WEAPON_RANGED_AMMUNITION)), DIA_Bosper_Bowmaking_AMMO);
+	};
+};
+
+// ------------------------------------------------------------
+instance DIA_Bosper_Bowmaking (C_INFO)
+{
+	npc			 = VLK_413_Bosper;
+	nr			 = 500;
+	condition	 = DIA_Bosper_Bowmaking_Condition;
+	information	 = DIA_Bosper_Bowmaking_Info;
+	permanent 	 = TRUE;
+	description	 = "Can you teach me something?";
+};
+
+func int DIA_Bosper_Bowmaking_Condition ()
+{
+	if (Player_IsApprentice == APP_Bosper)
+	{
+		if (PLAYER_TALENT_BOWYER[WEAPON_RANGED_AMMUNITION] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_01] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_02] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_03] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_04] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_05] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_01] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_02] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_03] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_04] == FALSE)
+		|| (PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_05] == FALSE)
+		{
+			return TRUE;
+		};
+	};
+};
+
+func void DIA_Bosper_Bowmaking_Info ()
+{
+	AI_Output (other, self, "DIA_Lares_DEX_15_00"); //Can you teach me something?
+	AI_Output (self, other, "DIA_Addon_DiegoOw_Teach_11_01"); //Sure, what would you like to know?
+
+	if (Bosper_TeachBowmaking == FALSE)
+	{
+		Log_CreateTopic (Topic_CityTeacher, LOG_NOTE);
+		B_LogEntry (Topic_CityTeacher, "Bosper can teach me recipes for crafting bows, crossbows and ammunition.");
+		Bosper_TeachBowmaking = TRUE;
+	};
+
+	B_BosperCraftChoices();
+};
+
+func void DIA_Bosper_Bowmaking_BACK()
+{
+	Info_ClearChoices (DIA_Bosper_Bowmaking);
+};
+
+func void DIA_Bosper_Bowmaking_AMMO ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_RANGED_AMMUNITION);
+	B_BosperCraftChoices();
+};
+
+func void DIA_Bosper_Bowmaking_BOW01 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_BOW_REVIVED_01);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_BOW02 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_BOW_REVIVED_02);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_BOW03 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_BOW_REVIVED_03);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_BOW04 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_BOW_REVIVED_04);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_BOW05 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_BOW_REVIVED_05);
+	B_BosperCraftChoices();
+};
+
+func void DIA_Bosper_Bowmaking_CBOW01 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_CBOW_REVIVED_01);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_CBOW02 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_CBOW_REVIVED_02);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_CBOW03 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_CBOW_REVIVED_03);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_CBOW04 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_CBOW_REVIVED_04);
+	B_BosperCraftChoices();
+};
+func void DIA_Bosper_Bowmaking_CBOW05 ()
+{
+	B_TeachPlayerTalentBowmaking (self, other, WEAPON_CBOW_REVIVED_05);
+	B_BosperCraftChoices();
+};
+
 // ************************************************************
 // 		Minenanteil
 // ************************************************************
@@ -1045,11 +1289,3 @@ func void DIA_Bosper_PICKPOCKET_BACK()
 {
 	Info_ClearChoices (DIA_Bosper_PICKPOCKET);
 };
-
-
-
-
-
-
-
-

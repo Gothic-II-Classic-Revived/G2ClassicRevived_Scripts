@@ -15,7 +15,6 @@ func void TA_Pick_FP			(var int start_h, var int start_m, var int stop_h, var in
 func void TA_Pick_Ore			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Pick_Ore,				waypoint);};
 func void TA_Play_Lute			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Play_Lute,				waypoint);};
 func void TA_Potion_Alchemy		(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Potion_Alchemy,			waypoint);};
-func void TA_Runemaking			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Runemaking,				waypoint);};
 func void TA_Practice_Magic		(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Practice_Magic,			waypoint);};
 func void TA_Practice_Sword		(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Practice_Sword,			waypoint);};
 func void TA_Practice_Bow		(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Practice_Bow,			waypoint);};
@@ -63,4 +62,6 @@ func void TA_Concert			(var int start_h, var int start_m, var int stop_h, var in
 func void TA_Sleep_Deep			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Sleep_Deep,				waypoint);};
 
 //REVIVED
+func void TA_Runemaking			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Runemaking,				waypoint);};
+func void TA_WoodChoppin		(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_WoodChoppin,			waypoint);};
 func void TA_Lean_Wall			(var int start_h, var int start_m, var int stop_h, var int stop_m, VAR string waypoint)	{TA_Min		(self,	start_h,start_m, stop_h, stop_m, ZS_Lean_Wall,				waypoint);};

@@ -260,39 +260,211 @@ func void DIA_Bennet_WannaSmith_Later()
 
 
 // ************************************************************
-// 			  				Teach COMMON 
+//                         Teach regular swords
 // ************************************************************
+func void B_Bennet_TeachSmithRegular()
+{
+	AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_01"); //It's quite simple: get yourself a piece of raw steel and hold it into the fire until it glows.
+	AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_02"); //Then put it on the anvil and hammer the blade into shape.
+};
+
+func void B_BennetSmithChoices()
+{
+	Info_ClearChoices (DIA_Bennet_TeachCOMMON);
+	Info_AddChoice (DIA_Bennet_TeachCOMMON, DIALOG_BACK, DIA_Bennet_TeachCOMMON_BACK);
+
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_05_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05)), DIA_Bennet_TeachCOMMON_2H05);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_04_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04)), DIA_Bennet_TeachCOMMON_2H04);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_03_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03)), DIA_Bennet_TeachCOMMON_2H03);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_02_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02)), DIA_Bennet_TeachCOMMON_2H02);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_01_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01)), DIA_Bennet_TeachCOMMON_2H01);
+	};
+
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_05_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05)), DIA_Bennet_TeachCOMMON_1H05);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_04_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04)), DIA_Bennet_TeachCOMMON_1H04);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_03_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03)), DIA_Bennet_TeachCOMMON_1H03);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_02_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02)), DIA_Bennet_TeachCOMMON_1H02);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_01_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01)), DIA_Bennet_TeachCOMMON_1H01);
+	};
+
+	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString("Learn to forge swords", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common)), DIA_Bennet_TeachCOMMON_Common);
+	};
+};
+
 instance DIA_Bennet_TeachCOMMON (C_INFO)
 {
-	npc			= SLD_809_Bennet;
+	npc         = SLD_809_Bennet;
 	nr          = 6;
-	condition	= DIA_Bennet_TeachCOMMON_Condition;
-	information	= DIA_Bennet_TeachCOMMON_Info;
-	permanent	= TRUE;
-	description	= B_BuildLearnString("Learn to forge", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common));
+	condition   = DIA_Bennet_TeachCOMMON_Condition;
+	information = DIA_Bennet_TeachCOMMON_Info;
+	permanent   = TRUE;
+	description = "Teach me how to forge a sword!";
 };
 
 func int DIA_Bennet_TeachCOMMON_Condition ()
 {
-	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
-	&& (Bennet_TeachCommon == TRUE)
-	&& ((Kapitel != 3) || (MIS_RescueBennet == LOG_SUCCESS))		//damit Bennet dir im Knast kein Schmieden beibringt
+	if (Bennet_TeachCommon == TRUE)
+	&& ((Kapitel != 3) || (MIS_RescueBennet == LOG_SUCCESS))
 	{
-		return TRUE;
+		if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == FALSE)
+		{
+			return TRUE;
+		};
 	};
 };
 
 func void DIA_Bennet_TeachCOMMON_Info ()
 {
 	AI_Output (other, self, "DIA_Bennet_TeachCOMMON_15_00"); //Teach me how to forge a sword!
-	
-	if (B_TeachPlayerTalentSmith (self, other, WEAPON_Common))
+	B_BennetSmithChoices();
+};
+
+func void DIA_Bennet_TeachCOMMON_BACK ()
+{
+	Info_ClearChoices (DIA_Bennet_TeachCOMMON);
+};
+
+func void DIA_Bennet_TeachCOMMON_Common ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_Common)
 	{
-		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_01"); //It's quite simple: get yourself a piece of raw steel and hold it into the fire until it glows.
-		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_02"); //Then put it on the anvil and hammer the blade into shape.
+		B_Bennet_TeachSmithRegular();
 		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_03"); //Most important, watch out that the blade doesn't get too cold. You only have a few minutes at a time to work on your weapon...
 		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_04"); //The rest you can find out for yourself - it's merely a matter of practice.
 	};
+	B_BennetSmithChoices();
+};
+
+func void DIA_Bennet_TeachCOMMON_1H01 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_01)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_1H02 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_02)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_1H03 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_03)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_1H04 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_04)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_1H05 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_05)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+
+func void DIA_Bennet_TeachCOMMON_2H01 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_01)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_2H02 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_02)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_2H03 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_03)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_2H04 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_04)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
+};
+func void DIA_Bennet_TeachCOMMON_2H05 ()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_05)
+	{
+		B_Bennet_TeachSmithRegular();
+	};
+	B_BennetSmithChoices();
 };
 
 // ************************************************************
@@ -352,7 +524,7 @@ func void DIA_Bennet_WannaSmithORE_Info ()
 	else //alles OK
 	{
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_12"); //Great, you brought me the ore, and you also know how to forge a decent sword.
-		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_13");//Well, fire away, then...
+		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_13"); //Well, fire away, then...
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_14"); //The most important thing is: It doesn't matter at all whether your weapon is made of magic ore throughout, or if you have only coated a simple steel blade with a layer of ore. The surface is all that matters.
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_15"); //And since the blasted stuff is so expensive, you just grab a steel billet and a few lumps of ore.
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_16"); //Naturally, it won't do to just coat a finished sword with magic ore. You'll have to forge the weapon yourself from scratch.
@@ -538,10 +710,20 @@ func void DIA_Bennet_TeachSmith_Info ()
 	{
 		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_04))		,DIA_Bennet_TeachSmith_1hSpecial4);
 	};  
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_05] == FALSE)
+	&& (Kapitel >= 5)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_05, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_05))		,DIA_Bennet_TeachSmith_1hSpecial5);
+	}; 
 	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] == FALSE)
 	&& (Kapitel >= 5)
 	{
 		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_04))		,DIA_Bennet_TeachSmith_2hSpecial4);
+	};  
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_05] == FALSE)
+	&& (Kapitel >= 5)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_05, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_05))		,DIA_Bennet_TeachSmith_2hSpecial5);
 	};
 };
 
@@ -584,10 +766,20 @@ FUNC VOID DIA_Bennet_TeachSmith_1hSpecial4 ()
 	
 	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_ORE_04);
 };
+FUNC VOID DIA_Bennet_TeachSmith_1hSpecial5 ()
+{
+	
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_ORE_05);
+};
 FUNC VOID DIA_Bennet_TeachSmith_2hSpecial4 ()
 {
 
 	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_ORE_04);
+};
+FUNC VOID DIA_Bennet_TeachSmith_2hSpecial5 ()
+{
+
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_ORE_05);
 };
 
 
@@ -765,7 +957,7 @@ func void DIA_Bennet_Evidence_Info ()
 
 
 //*********************************************************************
-//	Wer führt die Untersuchungen durch?
+//	Wer fï¿½hrt die Untersuchungen durch?
 //*********************************************************************
 instance DIA_Bennet_Investigation		(C_INFO)
 {
@@ -798,7 +990,7 @@ func void DIA_Bennet_Investigation_Info ()
 
 
 //*********************************************************************
-//	Mann, ich hatte echt schon geglaubt, dass die mich hängen! 
+//	Mann, ich hatte echt schon geglaubt, dass die mich hï¿½ngen! 
 //*********************************************************************
 instance DIA_Bennet_ThankYou		(C_INFO)
 {
@@ -837,7 +1029,7 @@ func void DIA_Bennet_ThankYou_Info ()
 };
 
 //*********************************************************************
-//	Was für ein Geschenk?
+//	Was fï¿½r ein Geschenk?
 //*********************************************************************
 
 instance DIA_Bennet_Present		(C_INFO)
@@ -997,7 +1189,7 @@ func void DIA_Bennet_DJG_ARMOR_M_Info ()
 };
 
 //*********************************************************************
-//		Ich weiss, wie man die Rüstung noch mehr verbessern kann.
+//		Ich weiss, wie man die Rï¿½stung noch mehr verbessern kann.
 //*********************************************************************
 
 instance DIA_Bennet_BetterArmor		(C_INFO)
@@ -1081,7 +1273,7 @@ func void DIA_Bennet_DJG_ARMOR_H_Info ()
 	
 };
 //*********************************************************************
-//	Kannst du auch Schmuckstücke reparieren?
+//	Kannst du auch Schmuckstï¿½cke reparieren?
 //*********************************************************************
 instance DIA_Bennet_RepairNecklace		(C_INFO)
 {
@@ -1250,7 +1442,7 @@ func void DIA_Bennet_GetInnosEye_Info ()
 	else
 	{	//Hack Mattes
 		B_SayBennetLATER();
-		//AI_Output			(self, other, "DIA_Bennet_GetInnosEye_06_04"); //Nein, noch nicht. Komm später wieder.
+		//AI_Output			(self, other, "DIA_Bennet_GetInnosEye_06_04"); //Nein, noch nicht. Komm spï¿½ter wieder.
 		AI_Output			(self, other, "DIA_Bennet_GetInnosEye_06_05"); //If you keep interrupting my work, it will take even longer.
 		
 		AI_StopProcessInfos (self);
@@ -1461,7 +1653,7 @@ func void DIA_Bennet_EierBringen_Info ()
 			AI_Output		(other, self, "DIA_Bennet_EierBringen_15_03"); //I've got some more here.
 
 			Npc_RemoveInvItems	(other,	ItAt_DragonEgg_MIS,	DragonEggCount);
-			concatText = ConcatStrings(IntToString(DragonEggCount), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
+			concatText = ConcatStrings(IntToString(DragonEggCount), PRINT_ItemsGegeben);		// "x Gegenstï¿½nde gegeben"
 			AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
 
 			XP_DJG_BringDragonEggs = (DragonEggCount * XP_DJG_BringDragonEgg);
@@ -1635,7 +1827,7 @@ func void DIA_Bennet_LeaveMyShip_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Ich habs mir überlegt!
+//	Ich habs mir ï¿½berlegt!
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Bennet_StillNeedYou		(C_INFO)
 {

@@ -703,42 +703,42 @@ func void DIA_Harad_SellBlades_Info ()
 	
 	var int anzahl_common; anzahl_common = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_01);
 	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_01) == TRUE) { anzahl_common = anzahl_common - 1; };
-	var int anzahl_1hsword1; anzahl_1hsword1 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_01);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_01) == TRUE) { anzahl_1hsword1 = anzahl_1hsword1 - 1; };
-	var int anzahl_1hsword2; anzahl_1hsword2 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_02);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_02) == TRUE) { anzahl_1hsword2 = anzahl_1hsword2 - 1; };
-	var int anzahl_1hsword3; anzahl_1hsword3 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_03);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_03) == TRUE) { anzahl_1hsword3 = anzahl_1hsword3 - 1; };
-	var int anzahl_1hsword4; anzahl_1hsword4 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_04);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_04) == TRUE) { anzahl_1hsword4 = anzahl_1hsword4 - 1; };
-	var int anzahl_1hsword5; anzahl_1hsword5 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_05);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_05) == TRUE) { anzahl_1hsword5 = anzahl_1hsword5 - 1; };
-	var int anzahl_2hsword1; anzahl_2hsword1 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_01);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_01) == TRUE) { anzahl_2hsword1 = anzahl_2hsword1 - 1; };
-	var int anzahl_2hsword2; anzahl_2hsword2 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_02);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_02) == TRUE) { anzahl_2hsword2 = anzahl_2hsword2 - 1; };
-	var int anzahl_2hsword3; anzahl_2hsword3 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_03);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_03) == TRUE) { anzahl_2hsword3 = anzahl_2hsword3 - 1; };
-	var int anzahl_2hsword4; anzahl_2hsword4 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_04);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_04) == TRUE) { anzahl_2hsword4 = anzahl_2hsword4 - 1; };
-	var int anzahl_2hsword5; anzahl_2hsword5 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_05);
-	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_05) == TRUE) { anzahl_2hsword5 = anzahl_2hsword5 - 1; };
+	var int anzahl_1hsword1; anzahl_1hsword1 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_01);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_01) == TRUE) { anzahl_1hsword1 = anzahl_1hsword1 - 1; };
+	var int anzahl_1hsword2; anzahl_1hsword2 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_02);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_02) == TRUE) { anzahl_1hsword2 = anzahl_1hsword2 - 1; };
+	var int anzahl_1hsword3; anzahl_1hsword3 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_03);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_03) == TRUE) { anzahl_1hsword3 = anzahl_1hsword3 - 1; };
+	var int anzahl_1hsword4; anzahl_1hsword4 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_04);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_04) == TRUE) { anzahl_1hsword4 = anzahl_1hsword4 - 1; };
+	var int anzahl_1hsword5; anzahl_1hsword5 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_05);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_05) == TRUE) { anzahl_1hsword5 = anzahl_1hsword5 - 1; };
+	var int anzahl_2hsword1; anzahl_2hsword1 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_01);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_01) == TRUE) { anzahl_2hsword1 = anzahl_2hsword1 - 1; };
+	var int anzahl_2hsword2; anzahl_2hsword2 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_02);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_02) == TRUE) { anzahl_2hsword2 = anzahl_2hsword2 - 1; };
+	var int anzahl_2hsword3; anzahl_2hsword3 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_03);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_03) == TRUE) { anzahl_2hsword3 = anzahl_2hsword3 - 1; };
+	var int anzahl_2hsword4; anzahl_2hsword4 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_04);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_04) == TRUE) { anzahl_2hsword4 = anzahl_2hsword4 - 1; };
+	var int anzahl_2hsword5; anzahl_2hsword5 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_05);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_05) == TRUE) { anzahl_2hsword5 = anzahl_2hsword5 - 1; };
 	
 	var int gesamt; gesamt = (anzahl_common + anzahl_1hsword1 + anzahl_1hsword2 + anzahl_1hsword3 + anzahl_1hsword4 + anzahl_1hsword5 + anzahl_2hsword1 + anzahl_2hsword2 + anzahl_2hsword3 + anzahl_2hsword4 + anzahl_2hsword5);
 	
     if (gesamt == 0)
 	{
 		if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_01) == TRUE)
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_01) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_02) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_03) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_04) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_05) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_01) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_02) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_03) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_04) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_05) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_01) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_02) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_03) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_04) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_CRAFT_05) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_01) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_02) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_03) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_04) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_CRAFT_05) == TRUE) 
 		{
 			AI_Output (self, other, "DIA_Harad_SellBlades_12_01"); //All you have is the one on your belt. You'd better keep it.
 		}
@@ -752,16 +752,16 @@ func void DIA_Harad_SellBlades_Info ()
 		AI_Output (self, other, "DIA_Harad_SellBlades_12_02"); //Good - give it here.
 		
 		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_01, anzahl_common);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_01, anzahl_1hsword1);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_02, anzahl_1hsword2);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_03, anzahl_1hsword3);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_04, anzahl_1hsword4);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_05, anzahl_1hsword5);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_01, anzahl_2hsword1);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_02, anzahl_2hsword2);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_03, anzahl_2hsword3);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_04, anzahl_2hsword4);
-		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_05, anzahl_2hsword5);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_01, anzahl_1hsword1);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_02, anzahl_1hsword2);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_03, anzahl_1hsword3);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_04, anzahl_1hsword4);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_CRAFT_05, anzahl_1hsword5);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_01, anzahl_2hsword1);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_02, anzahl_2hsword2);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_03, anzahl_2hsword3);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_04, anzahl_2hsword4);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_CRAFT_05, anzahl_2hsword5);
 		
 				var string concatText;
 				concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
@@ -770,16 +770,16 @@ func void DIA_Harad_SellBlades_Info ()
 		AI_Output (self, other, "DIA_Harad_SellBlades_12_03"); //Fine, and here's your pay.
 		var int lohn;
 		lohn 	= (anzahl_common * REV_Value_1H_Sword_01)
-				+ (anzahl_1hsword1 * REV_Value_1H_Sword_Smith_01)
-				+ (anzahl_1hsword2 * REV_Value_1H_Sword_Smith_02)
-				+ (anzahl_1hsword3 * REV_Value_1H_Sword_Smith_03)
-				+ (anzahl_1hsword4 * REV_Value_1H_Sword_Smith_04)
-				+ (anzahl_1hsword5 * REV_Value_1H_Sword_Smith_05)
-				+ (anzahl_2hsword1 * REV_Value_2H_Sword_Smith_01)
-				+ (anzahl_2hsword2 * REV_Value_2H_Sword_Smith_02)
-				+ (anzahl_2hsword3 * REV_Value_2H_Sword_Smith_03)
-				+ (anzahl_2hsword4 * REV_Value_2H_Sword_Smith_04)
-				+ (anzahl_2hsword5 * REV_Value_2H_Sword_Smith_05);
+				+ (anzahl_1hsword1 * REV_Value_1H_SWORD_CRAFT_01)
+				+ (anzahl_1hsword2 * REV_Value_1H_SWORD_CRAFT_02)
+				+ (anzahl_1hsword3 * REV_Value_1H_SWORD_CRAFT_03)
+				+ (anzahl_1hsword4 * REV_Value_1H_SWORD_CRAFT_04)
+				+ (anzahl_1hsword5 * REV_Value_1H_SWORD_CRAFT_05)
+				+ (anzahl_2hsword1 * REV_Value_2H_SWORD_CRAFT_01)
+				+ (anzahl_2hsword2 * REV_Value_2H_SWORD_CRAFT_02)
+				+ (anzahl_2hsword3 * REV_Value_2H_SWORD_CRAFT_03)
+				+ (anzahl_2hsword4 * REV_Value_2H_SWORD_CRAFT_04)
+				+ (anzahl_2hsword5 * REV_Value_2H_SWORD_CRAFT_05);
 				
 		lohn 	= (lohn / 3);
 		
@@ -876,6 +876,11 @@ func int DIA_Harad_TeachSmith_Condition ()
 		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
 		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
 		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == FALSE)
 		{
 			return TRUE;
 		};

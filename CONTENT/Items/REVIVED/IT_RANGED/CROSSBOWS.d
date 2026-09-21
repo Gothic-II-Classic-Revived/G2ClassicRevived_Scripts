@@ -46,6 +46,27 @@ const int	REV_Condition_Crossbow_Fire_01		=	100;
 const int	REV_Value_Crossbow_Fire_01			=	800;
 //******************************************************************//
 //******************************************************************//
+const int	REV_Damage_Crossbow_CRAFT_01		=	200;
+const int	REV_Condition_Crossbow_CRAFT_01		=	100;
+const int	REV_Value_Crossbow_CRAFT_01			=	800;
+//******************************************************************//
+const int	REV_Damage_Crossbow_CRAFT_02		=	200;
+const int	REV_Condition_Crossbow_CRAFT_02		=	100;
+const int	REV_Value_Crossbow_CRAFT_02			=	800;
+//******************************************************************//
+const int	REV_Damage_Crossbow_CRAFT_03		=	200;
+const int	REV_Condition_Crossbow_CRAFT_03		=	100;
+const int	REV_Value_Crossbow_CRAFT_03			=	800;
+//******************************************************************//
+const int	REV_Damage_Crossbow_CRAFT_04		=	200;
+const int	REV_Condition_Crossbow_CRAFT_04		=	100;
+const int	REV_Value_Crossbow_CRAFT_04			=	800;
+//******************************************************************//
+const int	REV_Damage_Crossbow_CRAFT_05		=	200;
+const int	REV_Condition_Crossbow_CRAFT_05		=	100;
+const int	REV_Value_Crossbow_CRAFT_05			=	800;
+//******************************************************************//
+//******************************************************************//
 const int	REV_Damage_Crossbow_Dragomir		=	60;
 const int	REV_Condition_Crossbow_Dragomir		=	20;
 const int	REV_Value_Crossbow_Dragomir			=	900;
@@ -61,7 +82,7 @@ const int	REV_Value_Crossbow_Sengrath			=	900;
 //****************************************************************************
 INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_01 (C_Item)
 {
-	name 				=	"Light Crossbow";
+	name 				=	"Scout's Crossbow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -86,7 +107,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_02 (C_Item)
 {
-	name 				=	"Hunting Crossbow";
+	name 				=	"Poacher's Crossbow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -111,7 +132,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_02 (C_Item)
 //******************************************************************//
 INSTANCE ITRW_REVIVED_CROSSBOW_01 (C_Item)
 {
-	name 				=	"War Crossbow";
+	name 				=	"Soldier's Crossbow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -136,7 +157,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_02 (C_Item)
 {
-	name 				=	"Crossbow";
+	name 				=	"Beechwood Crossbow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -161,7 +182,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_03 (C_Item)
 {
-	name 				=	"Heavy Crossbow";
+	name 				=	"Oakwood Crossbow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -186,7 +207,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_03 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_04 (C_Item)
 {
-	name 				=	"Golden Crossbow";
+	name 				=	"Gilded Crossbow";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -236,7 +257,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_01 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_02 (C_Item)
 {
-	name 				=	"Troll Killer Crossbow";
+	name 				=	"Troll Piercer";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -261,7 +282,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_02 (C_Item)
 
 INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_03 (C_Item)
 {
-	name 				=	"Dragon Hunter's Crossbow";
+	name 				=	"Dragonslayer";
 
 	mainflag 			=	ITEM_KAT_FF;
 	flags 				=	ITEM_CROSSBOW;
@@ -380,6 +401,135 @@ INSTANCE ITRW_REVIVED_CROSSBOW_FIRE_01 (C_Item)
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
+
+//****************************************************************************
+//			OWNED
+//****************************************************************************
+INSTANCE ITRW_REVIVED_CROSSBOW_CRAFT_01 (C_Item)
+{
+	name 				=	NAME_CBOW_REVIVED_01;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Crossbow_Light_01;
+
+	damageTotal			= 	REV_Damage_Crossbow_Light_01;
+	damagetype 			=	DAM_POINT;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_Crossbow_Light_01;
+
+	munition			=	ITRW_BOLT;
+	visual 				=	"ItRw_Crossbow_L_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_CROSSBOW_CRAFT_02 (C_Item)
+{
+	name 				=	NAME_CBOW_REVIVED_02;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Crossbow_Light_01;
+
+	damageTotal			= 	REV_Damage_Crossbow_Light_01;
+	damagetype 			=	DAM_POINT;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_Crossbow_Light_01;
+
+	munition			=	ITRW_BOLT;
+	visual 				=	"ItRw_Crossbow_L_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_CROSSBOW_CRAFT_03 (C_Item)
+{
+	name 				=	NAME_CBOW_REVIVED_03;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Crossbow_Light_01;
+
+	damageTotal			= 	REV_Damage_Crossbow_Light_01;
+	damagetype 			=	DAM_POINT;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_Crossbow_Light_01;
+
+	munition			=	ITRW_BOLT;
+	visual 				=	"ItRw_Crossbow_L_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_CROSSBOW_CRAFT_04 (C_Item)
+{
+	name 				=	NAME_CBOW_REVIVED_04;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Crossbow_Light_01;
+
+	damageTotal			= 	REV_Damage_Crossbow_Light_01;
+	damagetype 			=	DAM_POINT;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_Crossbow_Light_01;
+
+	munition			=	ITRW_BOLT;
+	visual 				=	"ItRw_Crossbow_L_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITRW_REVIVED_CROSSBOW_CRAFT_05 (C_Item)
+{
+	name 				=	NAME_CBOW_REVIVED_05;
+
+	mainflag 			=	ITEM_KAT_FF;
+	flags 				=	ITEM_CROSSBOW;
+	material 			=	MAT_WOOD;
+
+	value 				=	REV_Value_Crossbow_Light_01;
+
+	damageTotal			= 	REV_Damage_Crossbow_Light_01;
+	damagetype 			=	DAM_POINT;
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_Crossbow_Light_01;
+
+	munition			=	ITRW_BOLT;
+	visual 				=	"ItRw_Crossbow_L_01.mms";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
 
 
 //****************************************************************************

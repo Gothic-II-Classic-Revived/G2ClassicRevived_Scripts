@@ -130,6 +130,23 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == WEAPON_2H_REVIVED_ORE_04)		{	kosten = (10);	}
 		else if (skill == WEAPON_2H_REVIVED_ORE_05)		{	kosten = (12);	};
 	};
+		
+	// ------ Kosten für Schmieden ------
+	if (talent == NPC_TALENT_BOWMAKING)
+	{
+		if 		(skill == WEAPON_RANGED_AMMUNITION) 	{	kosten = (2);	}
+
+		else if (skill == WEAPON_BOW_REVIVED_01)		{	kosten = (2);	}
+		else if (skill == WEAPON_BOW_REVIVED_02)		{	kosten = (4);	}
+		else if (skill == WEAPON_BOW_REVIVED_03)		{	kosten = (6);	}
+		else if (skill == WEAPON_BOW_REVIVED_04)		{	kosten = (8);	}
+		else if (skill == WEAPON_BOW_REVIVED_05)		{	kosten = (10);	}
+		else if (skill == WEAPON_CBOW_REVIVED_01)		{	kosten = (2);	}
+		else if (skill == WEAPON_CBOW_REVIVED_02)		{	kosten = (4);	}
+		else if (skill == WEAPON_CBOW_REVIVED_03)		{	kosten = (6);	}
+		else if (skill == WEAPON_CBOW_REVIVED_04)		{	kosten = (8);	}
+		else if (skill == WEAPON_CBOW_REVIVED_05)		{	kosten = (10);	};
+	};
 
 	// ------ Kosten für Alchemie ------
 	if (talent == NPC_TALENT_ALCHEMY)

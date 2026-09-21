@@ -162,30 +162,30 @@ const int	REV_Range_2H_Sword_Rod				=	130;
 const int	REV_Value_2H_Sword_Rod				=	100;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Smith_01		=	105;
-const int	REV_Condition_2H_Sword_Smith_01		=	105;
-const int	REV_Range_2H_Sword_Smith_01			=	100;
-const int	REV_Value_2H_Sword_Smith_01			=	3000;
+const int	REV_Damage_2H_Sword_CRAFT_01		=	105;
+const int	REV_Condition_2H_Sword_CRAFT_01		=	105;
+const int	REV_Range_2H_Sword_CRAFT_01			=	100;
+const int	REV_Value_2H_Sword_CRAFT_01			=	3000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Smith_02		=	180;
-const int	REV_Condition_2H_Sword_Smith_02		=	160;
-const int	REV_Range_2H_Sword_Smith_02			=	120;
-const int	REV_Value_2H_Sword_Smith_02			=	5000;
+const int	REV_Damage_2H_Sword_CRAFT_02		=	180;
+const int	REV_Condition_2H_Sword_CRAFT_02		=	160;
+const int	REV_Range_2H_Sword_CRAFT_02			=	120;
+const int	REV_Value_2H_Sword_CRAFT_02			=	5000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Smith_03		=	190;
-const int	REV_Condition_2H_Sword_Smith_03		=	160;
-const int	REV_Range_2H_Sword_Smith_03			=	100;
-const int	REV_Value_2H_Sword_Smith_03			=	4000;
+const int	REV_Damage_2H_Sword_CRAFT_03		=	190;
+const int	REV_Condition_2H_Sword_CRAFT_03		=	160;
+const int	REV_Range_2H_Sword_CRAFT_03			=	100;
+const int	REV_Value_2H_Sword_CRAFT_03			=	4000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Smith_04		=	140;
-const int	REV_Condition_2H_Sword_Smith_04		=	120;
-const int	REV_Range_2H_Sword_Smith_04			=	140;
-const int	REV_Value_2H_Sword_Smith_04			=	4000;
+const int	REV_Damage_2H_Sword_CRAFT_04		=	140;
+const int	REV_Condition_2H_Sword_CRAFT_04		=	120;
+const int	REV_Range_2H_Sword_CRAFT_04			=	140;
+const int	REV_Value_2H_Sword_CRAFT_04			=	4000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Smith_05		=	170;
-const int	REV_Condition_2H_Sword_Smith_05		=	150;
-const int	REV_Range_2H_Sword_Smith_05			=	130;
-const int	REV_Value_2H_Sword_Smith_05			=	4800;
+const int	REV_Damage_2H_Sword_CRAFT_05		=	170;
+const int	REV_Condition_2H_Sword_CRAFT_05		=	150;
+const int	REV_Range_2H_Sword_CRAFT_05			=	130;
+const int	REV_Value_2H_Sword_CRAFT_05			=	4800;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Ore_01			=	140;
@@ -949,9 +949,9 @@ INSTANCE ITMW_REVIVED_2H_BIG_01 (C_Item)
 
 
 //****************************************************************************
-//			SMITHING
+//			CRAFTING
 //****************************************************************************
-INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_01 (C_Item)
+INSTANCE ITMW_REVIVED_2H_SWORD_CRAFT_01 (C_Item)
 {	
 	name 				=	NAME_2H_REVIVED_01;
 
@@ -962,14 +962,14 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_01 (C_Item)
 	on_equip			= 	Equip_2H_02;
 	on_unequip			= 	UnEquip_2H_02;
 
-	value 				=	REV_Value_2H_Sword_Smith_01;
+	value 				=	REV_Value_2H_Sword_CRAFT_01;
 
-	damageTotal			= 	REV_Damage_2H_Sword_Smith_01;
+	damageTotal			= 	REV_Damage_2H_Sword_CRAFT_01;
 	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_2H_Sword_Smith_01;		
+	range    			=  	REV_Range_2H_Sword_CRAFT_01;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_01;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_CRAFT_01;
 	visual 				=	"REV_2H_SWORD_SMITH_01.3DS";
 
 	description			= 	name;
@@ -980,7 +980,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_01 (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_02 (C_Item)
+INSTANCE ITMW_REVIVED_2H_SWORD_CRAFT_02 (C_Item)
 {	
 	name 				=	NAME_2H_REVIVED_02;
 
@@ -991,14 +991,14 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_02 (C_Item)
 	on_equip			= 	Equip_2H_03;
 	on_unequip			= 	UnEquip_2H_03;
 
-	value 				=	REV_Value_2H_Sword_Smith_02;
+	value 				=	REV_Value_2H_Sword_CRAFT_02;
 
-	damageTotal			= 	REV_Damage_2H_Sword_Smith_02;
+	damageTotal			= 	REV_Damage_2H_Sword_CRAFT_02;
 	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_2H_Sword_Smith_02;		
+	range    			=  	REV_Range_2H_Sword_CRAFT_02;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_02;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_CRAFT_02;
 	visual 				=	"REV_2H_SWORD_SMITH_02.3DS";
 
 	description			= 	name;
@@ -1009,7 +1009,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_02 (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_03 (C_Item)
+INSTANCE ITMW_REVIVED_2H_SWORD_CRAFT_03 (C_Item)
 {	
 	name 				=	NAME_2H_REVIVED_03;
 
@@ -1020,14 +1020,14 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_03 (C_Item)
 	on_equip			= 	Equip_2H_04;
 	on_unequip			= 	UnEquip_2H_04;
 
-	value 				=	REV_Value_2H_Sword_Smith_03;
+	value 				=	REV_Value_2H_Sword_CRAFT_03;
 
-	damageTotal			= 	REV_Damage_2H_Sword_Smith_03;
+	damageTotal			= 	REV_Damage_2H_Sword_CRAFT_03;
 	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_2H_Sword_Smith_03;		
+	range    			=  	REV_Range_2H_Sword_CRAFT_03;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_03;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_CRAFT_03;
 	visual 				=	"REV_2H_SWORD_SMITH_03.3DS";
 
 	description			= 	name;
@@ -1038,7 +1038,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_03 (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_04 (C_Item)
+INSTANCE ITMW_REVIVED_2H_SWORD_CRAFT_04 (C_Item)
 {	
 	name 				=	NAME_2H_REVIVED_04;
 
@@ -1049,14 +1049,14 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_04 (C_Item)
 	on_equip			= 	Equip_2H_05;
 	on_unequip			= 	UnEquip_2H_05;
 
-	value 				=	REV_Value_2H_Sword_Smith_04;
+	value 				=	REV_Value_2H_Sword_CRAFT_04;
 
-	damageTotal			= 	REV_Damage_2H_Sword_Smith_04;
+	damageTotal			= 	REV_Damage_2H_Sword_CRAFT_04;
 	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_2H_Sword_Smith_04;		
+	range    			=  	REV_Range_2H_Sword_CRAFT_04;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_04;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_CRAFT_04;
 	visual 				=	"REV_2H_SWORD_SMITH_04.3DS";
 
 	description			= 	name;
@@ -1067,7 +1067,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_04 (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_05 (C_Item)
+INSTANCE ITMW_REVIVED_2H_SWORD_CRAFT_05 (C_Item)
 {	
 	name 				=	NAME_2H_REVIVED_05;
 
@@ -1078,14 +1078,14 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_05 (C_Item)
 	on_equip			= 	Equip_2H_06;
 	on_unequip			= 	UnEquip_2H_06;
 
-	value 				=	REV_Value_2H_Sword_Smith_05;
+	value 				=	REV_Value_2H_Sword_CRAFT_05;
 
-	damageTotal			= 	REV_Damage_2H_Sword_Smith_05;
+	damageTotal			= 	REV_Damage_2H_Sword_CRAFT_05;
 	damagetype 			=	DAM_EDGE;		
-	range    			=  	REV_Range_2H_Sword_Smith_05;		
+	range    			=  	REV_Range_2H_Sword_CRAFT_05;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
-	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_05;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_CRAFT_05;
 	visual 				=	"REV_2H_SWORD_SMITH_05.3DS";
 
 	description			= 	name;
@@ -1099,7 +1099,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_05 (C_Item)
 
 
 //****************************************************************************
-//			SMITHING ORE
+//			CRAFTING ORE
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_SWORD_ORE_01 (C_Item)
 {	

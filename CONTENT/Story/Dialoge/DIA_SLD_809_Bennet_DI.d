@@ -88,126 +88,135 @@ func void DIA_Bennet_DI_TRADE_Info ()
 };
   
 ///////////////////////////////////////////////////////////////////////
-//	Info Smith
+//  Info Smith
 ///////////////////////////////////////////////////////////////////////
-instance DIA_Bennet_DI_Smith		(C_INFO)
+instance DIA_Bennet_DI_Smith (C_INFO)
 {
-	npc		 = 	SLD_809_Bennet_DI;
+	npc         = SLD_809_Bennet_DI;
 	nr          = 7;
-	condition	 = 	DIA_Bennet_DI_Smith_Condition;
-	information	 = 	DIA_Bennet_DI_Smith_Info;
-	permanent	 = 	TRUE;
-	description	 = 	"Can you teach me your craft?";
+	condition   = DIA_Bennet_DI_Smith_Condition;
+	information = DIA_Bennet_DI_Smith_Info;
+	permanent   = TRUE;
+	description = "Can you teach me your craft?";
 };
 
 func int DIA_Bennet_DI_Smith_Condition ()
 {
-		if (Bennet_TeachSmith == TRUE)
-		&& (Npc_IsDead(UndeadDragon) == FALSE)
-		{
-				return TRUE;
-		};
+	if (Bennet_TeachSmith == TRUE)
+	&& (Npc_IsDead(UndeadDragon) == FALSE)
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Bennet_DI_Smith_Info ()
 {
-	AI_Output			(other, self, "DIA_Bennet_DI_Smith_15_00"); //Can you teach me your craft?
-	AI_Output			(self, other, "DIA_Bennet_DI_Smith_06_01"); //Depends on what you want to make.
+	AI_Output (other, self, "DIA_Bennet_DI_Smith_15_00"); //Can you teach me your craft?
+	AI_Output (self, other, "DIA_Bennet_DI_Smith_06_01"); //Depends on what you want to make.
 
 	Info_ClearChoices (DIA_Bennet_DI_Smith);
-	Info_AddChoice	    (DIA_Bennet_DI_Smith, DIALOG_BACK, DIA_Bennet_DI_Smith_BACK);
-	
-	if ( PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
+	Info_AddChoice (DIA_Bennet_DI_Smith, DIALOG_BACK, DIA_Bennet_TeachCOMMON_BACK);
+
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == TRUE)
 	{
-		Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString("Learn to forge"	   , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common))			,DIA_Bennet_DI_Smith_Common);
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_04))		,DIA_Bennet_TeachSmith_2hSpecial4);
 	};
-	if ( PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == TRUE)
 	{
-		if ( PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_1H_Special_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_01))		,DIA_Bennet_DI_Smith_1hSpecial1);
-		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_2H_Special_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_01))		,DIA_Bennet_DI_Smith_2hSpecial1);
-		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_1H_Special_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_02))		,DIA_Bennet_DI_Smith_1hSpecial2);
-		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_2H_Special_02] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_2H_Special_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_02))		,DIA_Bennet_DI_Smith_2hSpecial2);
-		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_1H_Special_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_03))		,DIA_Bennet_DI_Smith_1hSpecial3);
-		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_2H_Special_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_03))		,DIA_Bennet_DI_Smith_2hSpecial3);
-		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_1H_Special_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_04))		,DIA_Bennet_DI_Smith_1hSpecial4);
-		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] == FALSE)
-		{
-			Info_AddChoice		(DIA_Bennet_DI_Smith, B_BuildLearnString(NAME_ItMw_2H_Special_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_04))		,DIA_Bennet_DI_Smith_2hSpecial4);
-		};
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_03))		,DIA_Bennet_TeachSmith_2hSpecial3);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_02))		,DIA_Bennet_TeachSmith_2hSpecial2);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_01] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_2H_REVIVED_ORE_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_ORE_01))		,DIA_Bennet_TeachSmith_2hSpecial1);
+	};
+
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_04))		,DIA_Bennet_TeachSmith_1hSpecial4);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_03))		,DIA_Bennet_TeachSmith_1hSpecial3);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_02))		,DIA_Bennet_TeachSmith_1hSpecial2);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_01] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice		(DIA_Bennet_TeachSmith, B_BuildLearnString(NAME_1H_REVIVED_ORE_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_ORE_01))		,DIA_Bennet_TeachSmith_1hSpecial1);
+	};
+
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_05_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05)), DIA_Bennet_TeachCOMMON_2H05);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_04_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04)), DIA_Bennet_TeachCOMMON_2H04);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_03_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03)), DIA_Bennet_TeachCOMMON_2H03);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_02_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02)), DIA_Bennet_TeachCOMMON_2H02);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_2H_REVIVED_01_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01)), DIA_Bennet_TeachCOMMON_2H01);
+	};
+
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_05_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05)), DIA_Bennet_TeachCOMMON_1H05);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_04_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04)), DIA_Bennet_TeachCOMMON_1H04);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_03_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03)), DIA_Bennet_TeachCOMMON_1H03);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_02_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02)), DIA_Bennet_TeachCOMMON_1H02);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString(NAME_1H_REVIVED_01_DESC, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01)), DIA_Bennet_TeachCOMMON_1H01);
+	};
+
+	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
+	{
+		Info_AddChoice (DIA_Bennet_TeachCOMMON, B_BuildLearnString("Learn to forge swords", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common)), DIA_Bennet_TeachCOMMON_Common);
 	};
 };
 
-// ------ Back ------
-func void DIA_Bennet_DI_Smith_BACK ()
-{
-	Info_ClearChoices (DIA_Bennet_DI_Smith);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_Common ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_Common);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_1hSpecial1 ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_01);	
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_2hSpecial1 ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_01);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_1hSpecial2 ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_02);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_2hSpecial2 ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_02);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_1hSpecial3 ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_03);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_2hSpecial3 ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_03);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_1hSpecial4 ()
-{
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_04);
-};
-
-FUNC VOID DIA_Bennet_DI_Smith_2hSpecial4 ()
-{
-	B_TeachPlayerTalentSmith(self, other, WEAPON_2H_Special_04);
-};
 
 //*******************************************
 //	TechPlayerSTR

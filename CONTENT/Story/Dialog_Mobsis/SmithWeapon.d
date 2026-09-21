@@ -18,9 +18,7 @@ FUNC VOID SMITHWEAPON_S1 ()
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_SMITHWEAPON;
 		Ai_ProcessInfos (her);
 	};
-}; 
-
-
+};
 
 //*******************************************************
 //	SmithWeapon Dialog abbrechen
@@ -45,10 +43,13 @@ FUNC INT PC_SmithWeapon_End_Condition ()
 
 FUNC VOID PC_SmithWeapon_End_Info()
 {
-	CreateInvItems (self, ItMiSwordRaw,1);
+	// The anvil has already taken one ItMiSwordrawhot.
+	// Return it as raw steel when the player cancels, matching Gothic II.
+	CreateInvItems (self, ItMiSwordRaw, 1);
+
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
-	NormalWaffen = FALSE;
+	Normalwaffen = FALSE;
 };
 //*******************************************************
 
@@ -182,9 +183,8 @@ FUNC INT PC_ITMW_1H_SWORD_01_Condition()
 
 FUNC VOID PC_ITMW_1H_SWORD_01_Info ()
 {
-	CreateInvItems 	    (hero, ITMW_REVIVED_1H_SWORD_01,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_01, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -214,9 +214,8 @@ FUNC INT PC_WEAPON_1H_REVIVED_01_Condition()
 
 FUNC VOID PC_WEAPON_1H_REVIVED_01_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_01 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_CRAFT_01, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -242,9 +241,8 @@ FUNC INT PC_WEAPON_1H_REVIVED_02_Condition()
 
 FUNC VOID PC_WEAPON_1H_REVIVED_02_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_02 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_CRAFT_02, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -270,9 +268,8 @@ FUNC INT PC_WEAPON_1H_REVIVED_03_Condition()
 
 FUNC VOID PC_WEAPON_1H_REVIVED_03_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_03 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_CRAFT_03, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -298,9 +295,8 @@ FUNC INT PC_WEAPON_1H_REVIVED_04_Condition()
 
 FUNC VOID PC_WEAPON_1H_REVIVED_04_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_04 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_CRAFT_04, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -326,9 +322,8 @@ FUNC INT PC_WEAPON_1H_REVIVED_05_Condition()
 
 FUNC VOID PC_WEAPON_1H_REVIVED_05_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_05 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_CRAFT_05, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -359,9 +354,8 @@ FUNC INT PC_WEAPON_2H_REVIVED_01_Condition()
 
 FUNC VOID PC_WEAPON_2H_REVIVED_01_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_01 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_CRAFT_01, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -387,9 +381,8 @@ FUNC INT PC_WEAPON_2H_REVIVED_02_Condition()
 
 FUNC VOID PC_WEAPON_2H_REVIVED_02_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_02 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_CRAFT_02, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -415,9 +408,8 @@ FUNC INT PC_WEAPON_2H_REVIVED_03_Condition()
 
 FUNC VOID PC_WEAPON_2H_REVIVED_03_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_03 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_CRAFT_03, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -443,9 +435,8 @@ FUNC INT PC_WEAPON_2H_REVIVED_04_Condition()
 
 FUNC VOID PC_WEAPON_2H_REVIVED_04_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_04 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_CRAFT_04, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -471,9 +462,8 @@ FUNC INT PC_WEAPON_2H_REVIVED_05_Condition()
 
 FUNC VOID PC_WEAPON_2H_REVIVED_05_Info ()
 {
-	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_05 ,  1); 
+	CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_CRAFT_05, 1);
 	Print (PRINT_SmithSuccess);
-	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
@@ -506,15 +496,14 @@ FUNC VOID PC_WEAPON_1H_REVIVED_ORE_01_Info ()
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 1)
 	{
 		Npc_RemoveInvItems (hero, ItMi_Nugget, 1);
-		
-		CreateInvItems 	   (hero, ITMW_REVIVED_1H_SWORD_ORE_01,1); 
+		CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_ORE_01, 1);
 		Print (PRINT_SmithSuccess);
 	}
 	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
@@ -543,16 +532,15 @@ FUNC VOID PC_WEAPON_1H_REVIVED_ORE_02_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 2)
 	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,2);
-		
-		CreateInvItems 	   (hero,ITMW_REVIVED_1H_SWORD_ORE_02,1); 
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 2);
+		CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_ORE_02, 1);
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
@@ -580,16 +568,15 @@ FUNC VOID PC_WEAPON_1H_REVIVED_ORE_03_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 3)
 	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,3);
-		
-		CreateInvItems 	   (hero,ITMW_REVIVED_1H_SWORD_ORE_03,1); 
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 3);
+		CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_ORE_03, 1);
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
@@ -619,17 +606,51 @@ FUNC VOID PC_WEAPON_1H_REVIVED_ORE_04_Info ()
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 4)
 	&& (Npc_HasItems (hero, ItAt_DragonBlood) >= 5)
 	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,4);
-		Npc_RemoveInvItems  (hero,ItAt_DragonBlood,5);
-		
-		CreateInvItems 	   (hero,ITMW_REVIVED_1H_SWORD_ORE_04,1); 
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 4);
+		Npc_RemoveInvItems (hero, ItAt_DragonBlood, 5);
+		CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_ORE_04, 1);
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
+	B_ENDPRODUCTIONDIALOG ();
+	Erzwaffen = FALSE;
+};
+INSTANCE PC_WEAPON_1H_REVIVED_ORE_05 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_1H_REVIVED_ORE_05_Condition;
+	information	= PC_WEAPON_1H_REVIVED_ORE_05_Info;
+	permanent		= TRUE;
+	description		= NAME_1H_REVIVED_ORE_05_DESC;
+};
+
+FUNC INT PC_WEAPON_1H_REVIVED_ORE_05_Condition()
+{
+	if ((PLAYER_MOBSI_PRODUCTION == MOBSI_SMITHWEAPON)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_05] == TRUE))
+	&& (Erzwaffen == TRUE)
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_1H_REVIVED_ORE_05_Info ()
+{
+	if (Npc_HasItems (hero, ItMi_Nugget) >= 5)
+	{
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 5);
+		CreateInvItems (hero, ITMW_REVIVED_1H_SWORD_ORE_05, 1);
+		Print (PRINT_SmithSuccess);
+	}
+	else
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
@@ -658,16 +679,15 @@ FUNC VOID PC_WEAPON_2H_REVIVED_ORE_01_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 2)
 	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,2);
-		
-		CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_ORE_01,1); 
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 2);
+		CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_ORE_01, 1);
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
@@ -696,16 +716,15 @@ FUNC VOID PC_WEAPON_2H_REVIVED_ORE_02_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 3)
 	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,3);
-		
-		CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_ORE_02,1); 
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 3);
+		CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_ORE_02, 1);
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
@@ -734,16 +753,15 @@ FUNC VOID PC_WEAPON_2H_REVIVED_ORE_03_Info ()
 {
 	if (Npc_HasItems (hero, ItMi_Nugget) >= 4)
 	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,4);
-		
-		CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_ORE_03,1); 
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 4);
+		CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_ORE_03, 1);
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
@@ -770,20 +788,56 @@ FUNC INT PC_WEAPON_2H_REVIVED_ORE_04_Condition()
 
 FUNC VOID PC_WEAPON_2H_REVIVED_ORE_04_Info ()
 {
-	if (Npc_HasItems  (hero, ItMi_Nugget) >= 5)
-	&& (Npc_HasItems  (hero, ItAt_DragonBlood) >= 5)
+	if (Npc_HasItems (hero, ItMi_Nugget) >= 5)
+	&& (Npc_HasItems (hero, ItAt_DragonBlood) >= 5)
 	{
-		Npc_RemoveInvItems  (hero,ItMi_Nugget,5);
-		Npc_RemoveInvItems  (hero,ItAt_DragonBlood,5);
-		
-		CreateInvItems 	   (hero,ITMW_REVIVED_2H_SWORD_ORE_04,1); 
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 5);
+		Npc_RemoveInvItems (hero, ItAt_DragonBlood, 5);
+		CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_ORE_04, 1);
 		Print (PRINT_SmithSuccess);
 	}
-	else 
+	else
 	{
 		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMiSwordRaw,1);
-	};	
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
+//*******************************************************
+INSTANCE PC_WEAPON_2H_REVIVED_ORE_05 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_ORE_05_Condition;
+	information	= PC_WEAPON_2H_REVIVED_ORE_05_Info;
+	permanent		= TRUE;
+	description		= NAME_2H_REVIVED_ORE_05_DESC;
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_ORE_05_Condition()
+{
+	if ((PLAYER_MOBSI_PRODUCTION == MOBSI_SMITHWEAPON)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_05] == TRUE))
+	&& (Erzwaffen == TRUE)
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_ORE_05_Info ()
+{
+	if (Npc_HasItems (hero, ItMi_Nugget) >= 6)
+	{
+		Npc_RemoveInvItems (hero, ItMi_Nugget, 6);
+		CreateInvItems (hero, ITMW_REVIVED_2H_SWORD_ORE_05, 1);
+		Print (PRINT_SmithSuccess);
+	}
+	else
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (hero, ItMiSwordRaw, 1);
+	};
+	B_ENDPRODUCTIONDIALOG ();
+	Erzwaffen = FALSE;
+};
+//*******************************************************

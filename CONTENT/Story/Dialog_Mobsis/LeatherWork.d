@@ -2,7 +2,7 @@
 // LeatherWork
 // ****************************************************
 
-FUNC VOID LeatherWork ()
+FUNC VOID LeatherWork_S1 ()
 {
 	var C_NPC her; her = Hlp_GetNpc(PC_Hero);
 
@@ -14,38 +14,13 @@ FUNC VOID LeatherWork ()
 	};
 };
 
-FUNC VOID LeatherWork_S1 ()
-{
-	LeatherWork ();
-};
-
-FUNC INT LeatherWork_Active ()
-{
-	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
-	{
-		return TRUE;
-	};
-
-	return FALSE;
-};
-
-FUNC INT LeatherWork_HasLeatherSource (var int itemInstance)
-{
-	if (LeatherWork_Active())
-	&& (Npc_HasItems (hero, itemInstance) >= 1)
-	{
-		return TRUE;
-	};
-
-	return FALSE;
-};
-
 FUNC VOID LeatherWork_MakeLeather (var int itemInstance, var int leatherAmount)
 {
 	if (Npc_HasItems (hero, itemInstance) >= 1)
 	{
 		Npc_RemoveInvItems (hero, itemInstance, 1);
 		CreateInvItems (hero, ITMI_REVIVED_LEATHER, leatherAmount);
+		Print (PRINT_LeatherworkSuccess);
 	}
 	else
 	{
@@ -71,12 +46,10 @@ INSTANCE PC_LeatherWork_End (C_Info)
 
 FUNC INT PC_LeatherWork_End_Condition ()
 {
-	if (LeatherWork_Active())
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_End_Info ()
@@ -100,12 +73,10 @@ INSTANCE PC_LeatherWork_SheepFur (C_Info)
 
 FUNC INT PC_LeatherWork_SheepFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_SheepFur))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_SheepFur_Info ()
@@ -125,12 +96,10 @@ INSTANCE PC_LeatherWork_WolfFur (C_Info)
 
 FUNC INT PC_LeatherWork_WolfFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_WolfFur))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_WolfFur_Info ()
@@ -150,12 +119,10 @@ INSTANCE PC_LeatherWork_LurkerSkin (C_Info)
 
 FUNC INT PC_LeatherWork_LurkerSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (itat_LurkerSkin))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_LurkerSkin_Info ()
@@ -175,12 +142,10 @@ INSTANCE PC_LeatherWork_WargFur (C_Info)
 
 FUNC INT PC_LeatherWork_WargFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_WargFur))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_WargFur_Info ()
@@ -200,12 +165,10 @@ INSTANCE PC_LeatherWork_KeilerFur (C_Info)
 
 FUNC INT PC_LeatherWork_KeilerFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_Addon_KeilerFur))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_KeilerFur_Info ()
@@ -225,12 +188,10 @@ INSTANCE PC_LeatherWork_ShadowFur (C_Info)
 
 FUNC INT PC_LeatherWork_ShadowFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_ShadowFur))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_ShadowFur_Info ()
@@ -250,12 +211,10 @@ INSTANCE PC_LeatherWork_SharkSkin (C_Info)
 
 FUNC INT PC_LeatherWork_SharkSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_SharkSkin))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_SharkSkin_Info ()
@@ -275,12 +234,10 @@ INSTANCE PC_LeatherWork_TrollFur (C_Info)
 
 FUNC INT PC_LeatherWork_TrollFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_TrollFur))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_TrollFur_Info ()
@@ -300,12 +257,10 @@ INSTANCE PC_LeatherWork_TrollBlackFur (C_Info)
 
 FUNC INT PC_LeatherWork_TrollBlackFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ItAt_TrollBlackFur))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_TrollBlackFur_Info ()
@@ -325,12 +280,10 @@ INSTANCE PC_LeatherWork_HellhoundFur (C_Info)
 
 FUNC INT PC_LeatherWork_HellhoundFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_FUR_HELLHOUND))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_HellhoundFur_Info ()
@@ -350,12 +303,10 @@ INSTANCE PC_LeatherWork_OrcDogFur (C_Info)
 
 FUNC INT PC_LeatherWork_OrcDogFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_FUR_ORCDOG))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_OrcDogFur_Info ()
@@ -375,12 +326,10 @@ INSTANCE PC_LeatherWork_IceWolfFur (C_Info)
 
 FUNC INT PC_LeatherWork_IceWolfFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_FUR_ICEWOLF))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_IceWolfFur_Info ()
@@ -400,12 +349,10 @@ INSTANCE PC_LeatherWork_BlackWolfFur (C_Info)
 
 FUNC INT PC_LeatherWork_BlackWolfFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_FUR_BLACKWOLF))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_BlackWolfFur_Info ()
@@ -425,12 +372,10 @@ INSTANCE PC_LeatherWork_PantherFur (C_Info)
 
 FUNC INT PC_LeatherWork_PantherFur_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_FUR_PANTHER))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_PantherFur_Info ()
@@ -450,12 +395,10 @@ INSTANCE PC_LeatherWork_SnapperSkin (C_Info)
 
 FUNC INT PC_LeatherWork_SnapperSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_SKIN_SNAPPER))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_SnapperSkin_Info ()
@@ -475,12 +418,10 @@ INSTANCE PC_LeatherWork_DragonSnapperSkin (C_Info)
 
 FUNC INT PC_LeatherWork_DragonSnapperSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_SKIN_DRAGONSNAPPER))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_DragonSnapperSkin_Info ()
@@ -500,12 +441,10 @@ INSTANCE PC_LeatherWork_RazorSkin (C_Info)
 
 FUNC INT PC_LeatherWork_RazorSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_SKIN_RAZOR))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_RazorSkin_Info ()
@@ -525,12 +464,10 @@ INSTANCE PC_LeatherWork_BiterSkin (C_Info)
 
 FUNC INT PC_LeatherWork_BiterSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_SKIN_BITER))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_BiterSkin_Info ()
@@ -550,12 +487,10 @@ INSTANCE PC_LeatherWork_WaranSkin (C_Info)
 
 FUNC INT PC_LeatherWork_WaranSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_SKIN_WARAN))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_WaranSkin_Info ()
@@ -575,12 +510,10 @@ INSTANCE PC_LeatherWork_FireWaranSkin (C_Info)
 
 FUNC INT PC_LeatherWork_FireWaranSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_SKIN_FIREWARAN))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_FireWaranSkin_Info ()
@@ -600,12 +533,10 @@ INSTANCE PC_LeatherWork_AlligatorSkin (C_Info)
 
 FUNC INT PC_LeatherWork_AlligatorSkin_Condition ()
 {
-	if (LeatherWork_HasLeatherSource (ITAT_REVIVED_SKIN_ALLIGATOR))
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_LEATHERWORK)
 	{
 		return TRUE;
 	};
-
-	return FALSE;
 };
 
 FUNC VOID PC_LeatherWork_AlligatorSkin_Info ()

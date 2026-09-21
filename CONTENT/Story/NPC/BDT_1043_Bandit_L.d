@@ -33,6 +33,6 @@ instance BDT_1043_Bandit_L (Npc_Default)
 	// ------ TA ------
 	FUNC VOID RTn_Start_1043()
 	{
-		TA_Saw (00,00,12,00,"NW_CASTLEMINE_TOWER__MOBSI");
-		TA_Saw (12,00,00,00,"NW_CASTLEMINE_TOWER__MOBSI");
+		TA_WoodChoppin (00,00,12,00,"NW_CASTLEMINE_TOWER__MOBSI");
+		TA_WoodChoppin (12,00,00,00,"NW_CASTLEMINE_TOWER__MOBSI");
 	};
