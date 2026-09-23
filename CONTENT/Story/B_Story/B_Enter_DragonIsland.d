@@ -373,6 +373,7 @@ FUNC VOID INIT_DRAGONISLAND ()
 	B_InitNpcGlobals ();
 	CurrentLevel = DRAGONISLAND_ZEN;
 	
+	DragonIsland_CreateAreas();
 
 	//----- Levelchange verbarrikadieren --------
 	if (Npc_HasItems (hero,ITKE_SHIP_LEVELCHANGE_MIS))

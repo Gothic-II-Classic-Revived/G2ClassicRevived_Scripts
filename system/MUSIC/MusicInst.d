@@ -328,11 +328,11 @@ INSTANCE TPL_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Dungeon_Fight.mp3";	};
 // ################################################################################################
 
 // Default
-INSTANCE INS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";			};
-INSTANCE INS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Temple_Fight.mp3";	};
+INSTANCE INS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Irdorath.mp3";		};
 
 // Temple
-INSTANCE TMP_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Irdorath.mp3";		};
+INSTANCE TMP_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";			};
+INSTANCE TMP_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Temple_Fight.mp3";	};
 
 // Cathedral
 INSTANCE CAT_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Cathedral.mp3";		};
