@@ -47,8 +47,8 @@ FUNC VOID B_SCGetTreasure_S1()
 	
 	//OLDWORLD_ZEN
 				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_WATERFALL_CAVE"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[6]==FALSE)){
-				Wld_InsertItem 		(ITKE_REVIVED_GORDONRAMSAY, 		"OW_TREASURE_WATERFALL_CAVE"	); 							 			 RAKEPLACE[6]=TRUE;
-				RakeTreasureSuccess (ITKE_REVIVED_GORDONRAMSAY);}
+				Wld_InsertItem 		(ITAM_REVIVED_KDW, 					"OW_TREASURE_WATERFALL_CAVE"	); 							 			 RAKEPLACE[6]=TRUE;
+				RakeTreasureSuccess (ITAM_REVIVED_KDW);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_ORCTERRAIN_WATCHTOWER"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[7]==FALSE)){
 				Wld_InsertItem 		(ITPO_REVIVED_BOOST_MASTER_01,		"OW_TREASURE_ORCTERRAIN_WATCHTOWER"	); 							 			 RAKEPLACE[7]=TRUE; 						 			 

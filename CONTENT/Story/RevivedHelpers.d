@@ -25,7 +25,7 @@ func string REV_BuildTradeString (var int itemInstance)
 	}
 	else if(itemInstance == ITAR_REVIVED_LEATHER_H)
 	{
-		armorName	= "Demon Hunter Armor";
+		armorName	= "H. Leather Armor";
 		protEdge	= IntToString(REV_Prot_Edge_LEATHER_H);
 		protPoint	= IntToString(REV_Prot_Point_LEATHER_H);
 		protMagic	= IntToString(REV_Prot_Magic_LEATHER_H);
@@ -65,7 +65,7 @@ func string REV_BuildTradeString (var int itemInstance)
 	}
 	else if(itemInstance == ITAR_REVIVED_DJG_M)
 	{
-		armorName	= "M. Dragon Hunter's Armor";
+		armorName	= "Dragon Hunter's Armor";
 		protEdge	= IntToString(REV_Prot_Edge_DJG_M);
 		protPoint	= IntToString(REV_Prot_Point_DJG_M);
 		protMagic	= IntToString(REV_Prot_Magic_DJG_M);

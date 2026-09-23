@@ -785,9 +785,9 @@ func void STARTUP_DEMONTOWER ()
 	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_02_01");
 	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_02_01");
 	
-	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_01");
-	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_01");
-	Wld_InsertNpc		(Bloodhound,"SPAWN_OW_WARAN_DEMON_01");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_143");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_143");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_143");
 	
 	Wld_InsertNpc		(OrcDog,"OW_PATH_3047");
 	Wld_InsertNpc		(OrcDog,"OW_PATH_3047");
@@ -1541,10 +1541,14 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03");
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03");
 	
-	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
-	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
-	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
-	Wld_InsertNpc		(OrcDog,"OW_PATH_099_007");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_099_007");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_099_007");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_099_007");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_099_007");
+
+	Wld_InsertNpc		(Snapper,"OW_ORC_LOOKOUT_2_02");
+	Wld_InsertNpc		(Snapper,"OW_ORC_LOOKOUT_2_02");
+	Wld_InsertNpc		(Snapper,"OW_ORC_LOOKOUT_2_02");
 
 
 	// Orc Territory (Orc City)
@@ -1839,13 +1843,18 @@ func void STARTUP_SURFACE ()
 
 
 	// Orc Graveyard (Outside)
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_198_ORCGRAVEYARD4");
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_198_ORCGRAVEYARD4");
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_198_ORCGRAVEYARD4");
+	Wld_InsertNpc		(OrcBiter,"OW_PATH_198_ORCGRAVEYARD4");
+	Wld_InsertNpc		(OrcBiter,"OW_PATH_198_ORCGRAVEYARD4");
+	Wld_InsertNpc		(OrcBiter,"OW_PATH_198_ORCGRAVEYARD4");
 
-	Wld_InsertNpc		(OrcElite_Rest,"OW_PATH_198_ORCGRAVEYARD6");
+	Wld_InsertNpc		(OrcElite_Sit,"MOVEMENT_ORCGRAVEYARD3");
 
-	Wld_InsertNpc		(OrcShaman_Sit,"OW_PATH_198_ORCGRAVEYARD8");
+	Wld_InsertNpc		(OrcShaman_Sit,"OW_PATH_198_ORCGRAVEYARD10_004");
+		
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_PATH_198_ORCGRAVEYARD5_MOVEMENT2");
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_PATH_198_ORCGRAVEYARD5_MOVEMENT");
+	Wld_InsertNpc   	(OrcElite_Roam,"OW_PATH_198_ORCGRAVEYARD5");
+	Wld_InsertNpc   	(OrcElite_Roam,"OW_PATH_198_ORCGRAVEYARD");
 
 
 	// Forest (West)

@@ -1530,6 +1530,7 @@ const string NAME_SPL_Extricate	= "Extricate";
 const int	SPL_Cost_Extricate	= 20;
 const int	SPL_Damage_Extricate	= 80;
 
+
 const int	SPL_Cost_Earthquake		= 5;
 const int	SPL_Damage_Earthquake	= 100;
 

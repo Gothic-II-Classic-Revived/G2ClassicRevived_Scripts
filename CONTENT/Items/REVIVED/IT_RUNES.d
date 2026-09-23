@@ -20,7 +20,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_OC (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_TeleportOC;
+	description			= 	name;
 	
 	
 	TEXT	[1]			=	NAME_Manakosten;			
@@ -47,7 +47,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_NC (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_TeleportNC;
+	description			= 	name;
 	
 	
 	TEXT	[1]			=	NAME_Manakosten;			
@@ -74,7 +74,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_PSI (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_TeleportPsi;
+	description			= 	name;
 	
 	
 	TEXT	[1]			=	NAME_Manakosten;			
@@ -101,7 +101,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_DT (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_TeleportOWDemonTower;
+	description			= 	name;
 	
 	
 	TEXT	[1]			=	NAME_Manakosten;			
@@ -135,7 +135,7 @@ INSTANCE ITRU_REVIVED_PYROKINESIS (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_Pyrokinesis;
+	description			= 	name;
 
 	TEXT	[1]			= 	NAME_DamagePerSec;
 	COUNT	[1]			= 	SPL_PYRO_DAMAGE_PER_SEC;
@@ -164,7 +164,7 @@ INSTANCE ITRU_REVIVED_TELEKINESIS (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_Telekinesis;
+	description			= 	name;
 
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
@@ -193,7 +193,7 @@ INSTANCE ITRU_REVIVED_CONTROL (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_Control;
+	description			= 	name;
 
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
@@ -220,7 +220,7 @@ INSTANCE ITRU_REVIVED_BERSERK (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_Berserk;
+	description			= 	name;
 
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
@@ -238,7 +238,7 @@ const int REV_Value_ZP_RUNE = 1500;
 
 INSTANCE ITRU_REVIVED_HEALOTHER (C_Item)
 {
-	name 				= 	NAME_Rune;
+	name 				= 	NAME_SPL_HealOther;
 
 	mainflag 			= 	ITEM_KAT_RUNE;
 	flags 				= 	0;
@@ -254,7 +254,7 @@ INSTANCE ITRU_REVIVED_HEALOTHER (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_HealOther;
+	description			= 	name;
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
 	TEXT	[1]			= 	NAME_HealingPerCast;
@@ -267,7 +267,7 @@ INSTANCE ITRU_REVIVED_HEALOTHER (C_Item)
 
 INSTANCE ITRU_REVIVED_EXPLODE (C_Item)
 {
-	name 				= 	NAME_Rune;
+	name 				= 	NAME_SPL_Explode;
 
 	mainflag 			= 	ITEM_KAT_RUNE;
 	flags 				= 	0;
@@ -283,7 +283,7 @@ INSTANCE ITRU_REVIVED_EXPLODE (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER_YELLOW";
 
-	description			= 	NAME_SPL_Explode;
+	description			= 	name;
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
 	TEXT	[1]			= 	NAME_Damage;
@@ -296,7 +296,7 @@ INSTANCE ITRU_REVIVED_EXPLODE (C_Item)
 
 INSTANCE ITRU_REVIVED_EXTRICATE (C_Item)
 {
-	name 				= 	NAME_Rune;
+	name 				= 	NAME_SPL_Extricate;
 
 	mainflag 			= 	ITEM_KAT_RUNE;
 	flags 				= 	0;
@@ -312,7 +312,7 @@ INSTANCE ITRU_REVIVED_EXTRICATE (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER_RED";
 
-	description			= 	NAME_SPL_Extricate;
+	description			= 	name;
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
 	TEXT	[1]			= 	NAME_Damage;
@@ -325,7 +325,7 @@ INSTANCE ITRU_REVIVED_EXTRICATE (C_Item)
 
 INSTANCE ITRU_REVIVED_EARTHQUAKE (C_Item)
 {
-	name 				= 	NAME_Rune;
+	name 				= 	NAME_SPL_Earthquake;
 
 	mainflag 			= 	ITEM_KAT_RUNE;
 	flags 				= 	0;
@@ -341,7 +341,7 @@ INSTANCE ITRU_REVIVED_EARTHQUAKE (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
 
-	description			= 	NAME_SPL_Earthquake;
+	description			= 	name;
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
 	TEXT	[1]			= 	NAME_Damage;
@@ -354,7 +354,7 @@ INSTANCE ITRU_REVIVED_EARTHQUAKE (C_Item)
 
 INSTANCE ITRU_REVIVED_MANARECOVERY (C_Item)
 {
-	name 				= 	NAME_Rune;
+	name 				= 	NAME_SPL_ManaRecovery;
 
 	mainflag 			= 	ITEM_KAT_RUNE;
 	flags 				= 	0;
@@ -370,7 +370,7 @@ INSTANCE ITRU_REVIVED_MANARECOVERY (C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER_RED";
 
-	description			= 	NAME_SPL_ManaRecovery;
+	description			= 	name;
 	TEXT	[0]			= 	NAME_Mag_Circle;
 	COUNT	[0]			= 	mag_circle;
 	TEXT	[1]			= 	NAME_Spell_Invest;
@@ -408,7 +408,7 @@ INSTANCE ITRU_REVIVED_FIREFIST (C_Item)
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER_YELLOW";
 
-    description         =   NAME_SPL_FireFist;
+    description         =   name;
     TEXT    [0]         =   NAME_Mag_Circle;
     COUNT   [0]         =   mag_circle;
     TEXT    [1]         =   NAME_MinManakosten;
@@ -441,7 +441,7 @@ INSTANCE ITRU_REVIVED_FIREWAVE (C_Item)
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER_YELLOW";
 
-    description         =   NAME_SPL_FireWave;
+    description         =   name;
     TEXT    [0]         =   NAME_Mag_Circle;
     COUNT   [0]         =   mag_circle;
     TEXT    [1]         =   NAME_Manakosten;
@@ -470,7 +470,7 @@ INSTANCE ITRU_REVIVED_CONCUSSIONBOLT (C_Item)
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER";
 
-    description         =   NAME_SPL_ConcussionBolt;
+    description         =   name;
     TEXT    [0]         =   NAME_Mag_Circle;
     COUNT   [0]         =   mag_circle;
     TEXT    [1]         =   NAME_Manakosten;
@@ -499,7 +499,7 @@ INSTANCE ITRU_REVIVED_INFLATE (C_Item)
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER_BLUE";
 
-    description         =   NAME_SPL_Inflate;
+    description         =   name;
     TEXT    [0]         =   NAME_Mag_Circle;
     COUNT   [0]         =   mag_circle;
     TEXT    [1]         =   NAME_Manakosten;
@@ -528,7 +528,7 @@ INSTANCE ITRU_REVIVED_SUMMONSKELETONS (C_Item)
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER";
 
-    description         =   NAME_SPL_SummonSkeletons;
+    description         =   name;
     TEXT    [0]         =   NAME_Mag_Circle;
     COUNT   [0]         =   mag_circle;
     TEXT    [1]         =   NAME_Manakosten;

@@ -17,7 +17,7 @@ const int	REV_Value_StinkyCheese		=	 8;		const int	REV_HP_StinkyCheese		=	5;
 
 const int	REV_Value_StaleWater		=	 3;		const int	REV_HP_StaleWater		=	2;
 const int	REV_Value_OldBeer			=	 6;		const int	REV_HP_OldBeer			=	3;
-const int	REV_Value_OldWine			=	 8;		const int	REV_HP_OldWine			=	3;
+const int	REV_Value_OldWine			=	 8;		const int	REV_HP_OldWine			=	3;		const int	REV_Time_OldWine		=	10000;
 
 const int	REV_Value_TurnipBooze		=	16;		const int	REV_HP_TurnipBooze		=	5;
 const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	10;
@@ -489,6 +489,8 @@ INSTANCE ITFO_REVIVED_WINE (C_Item)
 				
 				OldWine_Bonus = OldWine_Bonus + 1;
 			};
+
+		Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_DRUNKEN.MDS", REV_Time_OldWine);
 	};
 
 
@@ -630,7 +632,7 @@ INSTANCE ITFO_REVIVED_MONSTERDRINK (C_Item)
 	{
 		B_Say_Overlay (hero, hero , "$COUGH");
 		REV_ChangeStatPercent (ATR_HITPOINTS,	REV_HP_MonsterDrink);
-		Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_SPRINT.MDS", REV_Time_MonsterDrink);
+		Mdl_ApplyOverlayMDSTimed	(self, "HUMANS_FLEE.MDS", REV_Time_MonsterDrink);
 	};
 
 /******************************************************************************************/
