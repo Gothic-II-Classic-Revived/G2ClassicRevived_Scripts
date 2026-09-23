@@ -799,10 +799,10 @@ func void STARTUP_DEMONTOWER ()
 	// Demon Tower
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_04");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_05");
-	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_06");
-	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_07");
-	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_08");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_09");
+	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_008");
+	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_08B");
+	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_09B");
 
 	Wld_InsertNpc				(Demon,"DT_E2_04");
 	Wld_InsertNpc				(DemonLord,"DT_E2_06");
@@ -1260,9 +1260,9 @@ func void STARTUP_SURFACE ()
 
 
 	// Second Exchange Place
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_ORETRAIL_2_017");
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_ORETRAIL_2_017"); 
-	Wld_InsertNpc		(DragonSnapper,"OW_PATH_ORETRAIL_2_017");
+	Wld_InsertNpc		(DragonSnapper,"OW_PATH_ORETRAIL_2_006");
+	Wld_InsertNpc		(DragonSnapper,"OW_PATH_ORETRAIL_2_007"); 
+	Wld_InsertNpc		(DragonSnapper,"OW_PATH_ORETRAIL_2_016");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_ORETRAIL_2_017");
 
 
@@ -2172,6 +2172,13 @@ func void STARTUP_SURFACE ()
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_42");
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_43");
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_44");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_45");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_46");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_47");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_48");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_49");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_50");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_51");
 
 		// Fajeth's mine
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_02");
