@@ -24,7 +24,7 @@ instance PAL_2002_Silvestro  (Npc_Default)
 	CreateInvItems (self,ITPO_REVIVED_HEALTH_02,2);
 	
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard15, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_PAL_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Hum_Beard15, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_PAL_S);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

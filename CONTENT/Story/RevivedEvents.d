@@ -8,7 +8,6 @@ func event GameLoop()
 
 		if (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L))
 		|| (Hlp_IsItem(itm, ITAR_REVIVED_PAL_M))
-		|| (Hlp_IsItem(itm, ITAR_REVIVED_PAL_S))
 		{
 			if (!Npc_HasItems (hero,ITHE_REVIVED_PAL))
 			{
@@ -16,7 +15,7 @@ func event GameLoop()
 			};
 
 			Npc_PlayAni(hero, "R_SCRATCHHEAD");
-			Npc_EquipItem(hero, ITHE_REVIVED_PAL);
+			zDExt_Npc_EquipItem(hero, ITHE_REVIVED_PAL);
 		};
 
 		if (Hlp_IsItem(itm, ITAR_REVIVED_DJG_L))
@@ -28,7 +27,7 @@ func event GameLoop()
 			};
 
 			Npc_PlayAni(hero, "R_SCRATCHHEAD");
-			Npc_EquipItem(hero, ITHE_REVIVED_DJG_M);
+			zDExt_Npc_EquipItem(hero, ITHE_REVIVED_DJG_M);
 		};
 
 		if (Hlp_IsItem(itm, ITAR_REVIVED_DJG_H))
@@ -39,7 +38,7 @@ func event GameLoop()
 			};
 
 			Npc_PlayAni(hero, "R_SCRATCHHEAD");
-			Npc_EquipItem(hero, ITHE_REVIVED_DJG_H);
+			zDExt_Npc_EquipItem(hero, ITHE_REVIVED_DJG_H);
 		};
 
 		if (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_L))
@@ -52,7 +51,7 @@ func event GameLoop()
 			};
 
 			Npc_PlayAni(hero, "R_SCRATCHHEAD");
-			Npc_EquipItem(hero, ITHE_REVIVED_DMT_H);
+			zDExt_Npc_EquipItem(hero, ITHE_REVIVED_DMT_H);
 		};
 	};
 };

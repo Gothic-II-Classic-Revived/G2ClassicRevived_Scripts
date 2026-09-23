@@ -22,7 +22,7 @@ instance Pal_289_Ritter (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Hum_Bald1, Body_B_Hum_Naked, Body_Black, Teeth_Normal, ITAR_REVIVED_PAL_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_B_Hum_Bald1, Body_B_Hum_Naked, Body_Black, Teeth_Normal, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

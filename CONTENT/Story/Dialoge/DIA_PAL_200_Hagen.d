@@ -762,8 +762,8 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_06"); //I hereby appoint you a warrior of Innos.
 	//AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_07"); //I give to you the weapons and armor of a knight. Bear them with pride, knight!
 
-	CreateInvItems (self,ITAR_REVIVED_PAL_M,1);
-	B_GiveInvItems (self,other,ITAR_REVIVED_PAL_M,1);
+	CreateInvItems (self,ITAR_REVIVED_PAL_H,1);
+	B_GiveInvItems (self,other,ITAR_REVIVED_PAL_H,1);
 
 	/* if ((other.HitChance[NPC_TALENT_2H]) >= (other.HitChance[NPC_TALENT_1H])) //Damit der SC auch seine Lieblingswaffe bekommt ;-)
 	{
@@ -777,7 +777,7 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 	};	 */	 
 	
 	AI_UnequipArmor (other);
-	AI_EquipArmor 	(other,ITAR_REVIVED_PAL_M);
+	AI_EquipArmor 	(other,ITAR_REVIVED_PAL_H);
 
 	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_08"); //Henceforth, by virtue of your rank, you shall have access to the monastery.
 

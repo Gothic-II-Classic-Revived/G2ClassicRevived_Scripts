@@ -141,6 +141,7 @@ func void DIA_Engor_Ruestung_Info ()
 	AI_Output (self, other, "DIA_Engor_Ruestung_13_01"); //I can get you better armor - heavy militia armor, if you're interested.
 	AI_Output (self, other, "DIA_Engor_Ruestung_13_02"); //It's not cheap, of course. So go get the gold, and I'll give you the armor.
 };
+
 ///////////////////////////////////////////////////////////////////////
 //	Info RSkaufen
 ///////////////////////////////////////////////////////////////////////

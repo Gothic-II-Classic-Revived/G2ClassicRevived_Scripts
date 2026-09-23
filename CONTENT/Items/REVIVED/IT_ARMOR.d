@@ -1592,8 +1592,8 @@ INSTANCE ITAR_REVIVED_PAL_L (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_PAL_ARMOR;
+	on_unequip				=	UnEquip_PAL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1605,7 +1605,7 @@ INSTANCE ITAR_REVIVED_PAL_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 {
-	name 					=	"Paladin's Armor";
+	name 					=	"Heavy Royal Guard Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1624,8 +1624,8 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_PAL_ARMOR;
+	on_unequip				=	UnEquip_PAL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1637,7 +1637,7 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 {
-	name 					=	"Heavy Paladin Armor";
+	name 					=	"Paladin's Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1656,8 +1656,8 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_PAL_ARMOR;
+	on_unequip				=	UnEquip_PAL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1669,7 +1669,7 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 };
 INSTANCE ITAR_REVIVED_PAL_S (C_Item)
 {
-	name 					=	"Heavy Paladin Armor"; //(without helmet)
+	name 					=	"Heavy Paladin Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1688,8 +1688,8 @@ INSTANCE ITAR_REVIVED_PAL_S (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_PAL_ARMOR;
+	on_unequip				=	UnEquip_PAL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1698,6 +1698,39 @@ INSTANCE ITAR_REVIVED_PAL_S (C_Item)
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+FUNC VOID Equip_PAL_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		MILArmor_Equipped = TRUE;
+		
+		if (MIL01_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	+= BA_Bonus01;
+			self.protection[PROT_BLUNT] += BA_Bonus01;
+			self.protection[PROT_POINT] += BA_Bonus01;
+			self.protection[PROT_MAGIC] += BA_Bonus01;
+			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+		};
+	};
+};
+FUNC VOID UnEquip_PAL_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		MILArmor_Equipped = FALSE;
+		
+		if (MIL01_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	-= BA_Bonus01;
+			self.protection[PROT_BLUNT] -= BA_Bonus01;
+			self.protection[PROT_POINT] -= BA_Bonus01;
+			self.protection[PROT_MAGIC] -= BA_Bonus01;
+			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+		};
+	};
 };
 
 

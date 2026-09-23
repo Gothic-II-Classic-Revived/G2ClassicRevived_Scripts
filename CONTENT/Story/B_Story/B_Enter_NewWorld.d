@@ -764,7 +764,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 	//***********GILDEN*****************************************
 	if (hero.guild == GIL_PAL)
 	{
-		Wld_InsertItem		(ITAR_REVIVED_PAL_H 	, 	"FP_ITEM_PALFINALARMOR");
+		Wld_InsertItem		(ITAR_REVIVED_PAL_S 	, 	"FP_ITEM_PALFINALARMOR");
 		Wld_InsertItem		(ItMi_RuneBlank 	, 	"FP_NW_ITEM_LIBRARY_SEAMAP"); 	
 	};
 	if (hero.guild == GIL_DJG)

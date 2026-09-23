@@ -22,7 +22,7 @@ instance Pal_209_Paladin (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_P_Hum_Normal5, Body_P_Hum_Naked, Body_Pale, Teeth_Normal, ITAR_REVIVED_PAL_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fighter", Face_P_Hum_Normal5, Body_P_Hum_Naked, Body_Pale, Teeth_Normal, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
