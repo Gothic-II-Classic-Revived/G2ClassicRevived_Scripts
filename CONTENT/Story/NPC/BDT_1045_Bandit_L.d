@@ -15,7 +15,7 @@ instance BDT_1045_Bandit_L (Npc_Default)
 	B_SetAttributesForLevel(self, 15);																	
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);

@@ -14,7 +14,7 @@ instance BAU_940_Akil (Npc_Default)
 	B_SetAttributesForLevel(self, 7);	
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_NORMAL;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);

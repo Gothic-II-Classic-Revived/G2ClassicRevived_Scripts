@@ -13,7 +13,7 @@ INSTANCE PC_Mage_OW (Npc_Default)
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 4);															
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_2H_STAFF_NOVICE_01);

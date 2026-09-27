@@ -13,7 +13,7 @@ instance Mil_332_Stadtwache (Npc_Default)
 	B_SetAttributesForLevel(self, 60);																	
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_03);
@@ -22,7 +22,7 @@ instance Mil_332_Stadtwache (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Hum_Normal20, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_GRD_S);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Hum_Normal20, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_MIL_S);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

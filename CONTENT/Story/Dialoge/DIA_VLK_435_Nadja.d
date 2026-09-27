@@ -226,8 +226,8 @@ func void DIA_Nadja_BUYHERB_Info ()
 	
 	if  (Npc_GetDistToWP (self,"NW_CITY_HABOUR_PUFF_NADJA") < 500) 
 	{	
-		if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
-		|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
+		if (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_L) == TRUE) 
+		|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_M) == TRUE)
 		{
 			AI_Output (self, other, "DIA_Nadja_BUYHERB_16_01"); //How would I know? Even if I knew, I'd certainly not tell the city guard.
 			Undercover_Failed = TRUE;
@@ -271,8 +271,8 @@ func void DIA_Nadja_WANT_HERB_Info ()
 	var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
 	AI_Output (other, self, "DIA_Nadja_WANT_HERB_15_00"); //Now tell me where I can buy weed.
 	
-	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
-	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
+	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_L) == TRUE) 
+	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_M) == TRUE)
 	{
 		AI_Output (self, other, "DIA_Nadja_WANT_HERB_16_01"); //Sorry, I simply can't remember.
 	}

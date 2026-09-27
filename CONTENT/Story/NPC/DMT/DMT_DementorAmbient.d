@@ -13,7 +13,7 @@ PROTOTYPE Default_AmbientDementor (C_NPC)
 														
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	// ------ Equippte Waffen ------																
 
 	// ------ Inventory ------

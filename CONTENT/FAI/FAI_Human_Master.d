@@ -71,11 +71,15 @@ INSTANCE FA_MY_W_STRAFE_4 (C_FightAI)
 // ------- Ich habe Gegner im Fokus (kann treffen) -------
 INSTANCE FA_MY_W_FOCUS_4 (C_FightAI)
 {
-	/* move[0] = MOVE_FRONTATTACK;
+	/*
+	move[0] = MOVE_FRONTATTACK;
 	move[1] = MOVE_ATTACK;
-	move[2] = MOVE_WAIT;		// --- Wait sorgt für besseres Parade-Fenster --- */
+	move[2] = MOVE_WAIT;		// --- Wait sorgt für besseres Parade-Fenster --- 
+	*/
 	move[0] = MOVE_MASTERATTACK;
-    move[1] = MOVE_WAIT; // --- Wait sorgt für besseres Parade-Fenster ---
+	move[1] = MOVE_ATTACK;
+    move[2] = MOVE_FRONTATTACK;
+	move[3] = MOVE_JUMPBACK;
 };
 
 // ------- Ich habe Gegner NICHT im Fokus -------

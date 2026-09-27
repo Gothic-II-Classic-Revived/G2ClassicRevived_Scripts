@@ -16,7 +16,7 @@ instance VLK_488_Buergerin (Npc_Default)
 	B_SetAttributesForLevel(self, 15);															
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																	
 	

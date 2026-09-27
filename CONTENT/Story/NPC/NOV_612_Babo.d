@@ -14,7 +14,7 @@ INSTANCE NOV_612_Babo (Npc_Default)
 	self.HitChance [NPC_TALENT_2H] = 60; 
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_2H_STAFF_NOVICE_01); 															

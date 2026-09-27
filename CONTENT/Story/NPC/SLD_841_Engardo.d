@@ -16,7 +16,7 @@ instance SLD_841_Engardo (Npc_Default)
 	aivar[AIV_DropDeadAndKill] = TRUE;
 
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;
+	fight_tactic		= FAI_HUMAN_STRONG;
 
 	//--------Aivars-----------------------
 	aivar[AIV_EnemyOverride] = TRUE;

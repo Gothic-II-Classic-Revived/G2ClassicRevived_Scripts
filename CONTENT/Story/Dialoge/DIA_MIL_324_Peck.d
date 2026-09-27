@@ -85,7 +85,7 @@ INSTANCE DIA_Peck_BUYARMOR (C_INFO)
 	condition	= DIA_Peck_BUYARMOR_Condition;
 	information	= DIA_Peck_BUYARMOR_Info;
 	permanent	= TRUE;
-	description	 =  REV_BuildTradeString(ITAR_REVIVED_GRD_M);
+	description	 =  REV_BuildTradeString(ITAR_REVIVED_MIL_M);
 }; 
 
 FUNC INT DIA_Peck_BUYARMOR_Condition()
@@ -101,13 +101,13 @@ FUNC INT DIA_Peck_BUYARMOR_Condition()
  
 FUNC VOID DIA_Peck_BUYARMOR_Info()
 {	
-	if (B_GiveInvItems (other, self, Itmi_Gold, REV_Value_GRD_M))
+	if (B_GiveInvItems (other, self, Itmi_Gold, REV_Value_MIL_M))
 	{
 		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
 		AI_Output (self, other,	"DIA_Peck_Add_12_05"); //Here, take it.
-		CreateInvItems (self, ITAR_REVIVED_GRD_M, 1);
-		B_GiveInvItems (self, other, ITAR_REVIVED_GRD_M, 1);
-		AI_EquipArmor (other, ITAR_REVIVED_GRD_M);
+		CreateInvItems (self, ITAR_REVIVED_MIL_M, 1);
+		B_GiveInvItems (self, other, ITAR_REVIVED_MIL_M, 1);
+		AI_EquipArmor (other, ITAR_REVIVED_MIL_M);
 		DIA_Peck_BUYARMOR_perm = TRUE;
 	}
 	else

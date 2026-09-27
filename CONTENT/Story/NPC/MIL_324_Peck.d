@@ -13,7 +13,7 @@ instance Mil_324_Peck (Npc_Default)
 	B_SetAttributesForLevel(self, 60);																		
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic = FAI_HUMAN_STRONG;	
+	fight_tactic = FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ITMW_REVIVED_1H_SWORD_06);
@@ -23,7 +23,7 @@ instance Mil_324_Peck (Npc_Default)
 	CreateInvItems (self,ItKe_City_Tower_05,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_B_Peck, Body_B_Hum_Naked, Body_Black, Teeth_Rotten, ITAR_REVIVED_GRD_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_B_Peck, Body_B_Hum_Naked, Body_Black, Teeth_Rotten, ITAR_REVIVED_MIL_L);	
 	Mdl_SetModelFatness	(self,2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

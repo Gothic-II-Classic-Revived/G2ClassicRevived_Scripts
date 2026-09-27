@@ -20,7 +20,7 @@ instance BDT_448_JOE (Npc_Default)
 	B_SetAttributesForLevel(self, 10);															
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_NORMAL;
 	
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITMW_REVIVED_1H_SWORD_07); 

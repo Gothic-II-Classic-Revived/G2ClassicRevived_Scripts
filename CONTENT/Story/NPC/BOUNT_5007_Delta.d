@@ -17,7 +17,7 @@ instance BOUNT_5007_Delta (Npc_Default)
 
 	// ------ Kampf-Taktik ------
 	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
-	fight_tactic		= FAI_HUMAN_NORMAL;
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_2H_STAFF_03);
@@ -32,7 +32,7 @@ instance BOUNT_5007_Delta (Npc_Default)
 	CreateInvItems 		(self, ItSc_SumSkel, 3);
 
 	// ------ visuals ------
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_P_Delta, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_REVIVED_SHM_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_P_Delta, Body_P_Hum_Naked, Body_Pale, Teeth_Broken, ITAR_REVIVED_KDF_L_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 

@@ -13,7 +13,7 @@ instance VLK_4006_Bote (Npc_Default)
 	B_SetAttributesForLevel(self, 20);
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITMW_REVIVED_1H_AXE_01); 

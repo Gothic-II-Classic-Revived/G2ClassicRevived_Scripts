@@ -13,7 +13,7 @@ instance VLK_418_Gritta (Npc_Default)
 	B_SetAttributesForLevel(self, 15);															
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_MASTER;	
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------
 	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);															

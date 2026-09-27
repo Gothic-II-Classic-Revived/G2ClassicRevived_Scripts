@@ -13,7 +13,7 @@ instance STRF_4111_Grimes (Npc_Default)
 	B_SetAttributesForLevel(self, 5);
 
 	// ------ Kampf-Taktik ------
-	fight_tactic	= FAI_HUMAN_STRONG;	
+	fight_tactic	= FAI_HUMAN_NORMAL;
 	
 	// ------ Equippte Waffen ------			
 	EquipItem (self, ITMW_REVIVED_2H_PICKAXE);

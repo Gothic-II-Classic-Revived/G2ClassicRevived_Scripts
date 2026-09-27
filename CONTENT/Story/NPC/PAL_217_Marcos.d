@@ -13,7 +13,7 @@ instance PAL_217_Marcos  (Npc_Default)
 	B_SetAttributesForLevel(self, 80);													
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic = FAI_HUMAN_STRONG;	
+	fight_tactic = FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_PALADIN_02);

@@ -16,7 +16,7 @@ instance VLK_415_Meldor (Npc_Default)
 	B_SetAttributesForLevel(self, 15);																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic = FAI_HUMAN_NORMAL;	// MASTER / STRONG / COWARD
+	fight_tactic = FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_1H_CLUB_02);

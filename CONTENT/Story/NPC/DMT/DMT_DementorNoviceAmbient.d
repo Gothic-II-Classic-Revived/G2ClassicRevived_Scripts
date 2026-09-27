@@ -8,7 +8,7 @@ PROTOTYPE Default_AmbientNovice (C_NPC)
 
 	B_SetAttributesForLevel(self, 50);
 	Npc_SetTalentSkill(self, NPC_TALENT_MAGE, 6);
-	fight_tactic = FAI_HUMAN_NORMAL;
+	fight_tactic = FAI_HUMAN_MASTER;
 
 	B_CreateAmbientInv(self);
 

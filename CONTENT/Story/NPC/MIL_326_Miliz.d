@@ -13,7 +13,7 @@ instance Mil_326_Miliz (Npc_Default)
 	B_SetAttributesForLevel(self, 60);																	
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
@@ -22,7 +22,7 @@ instance Mil_326_Miliz (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Hum_Normal15, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_GRD_H);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Hum_Normal15, Body_W_Hum_Naked, Body_White, Teeth_Yellow, ITAR_REVIVED_MIL_H);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

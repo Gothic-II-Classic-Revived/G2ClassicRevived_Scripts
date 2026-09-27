@@ -17,7 +17,7 @@ instance BDT_445_RAMIREZ (Npc_Default)
 	B_SetAttributesForLevel(self, 50);														
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BANDIT_02); 

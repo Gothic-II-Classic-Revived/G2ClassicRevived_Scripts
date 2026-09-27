@@ -6,7 +6,7 @@ PROTOTYPE Default_AmbientTemplar (C_NPC)
 	flags       = 0;
 	npctype		= NPCTYPE_AMBIENT;
 
-	fight_tactic = FAI_HUMAN_NORMAL;
+	fight_tactic = FAI_HUMAN_MASTER;
 	damagetype   = DAM_EDGE;
 
 	B_CreateAmbientInv(self);

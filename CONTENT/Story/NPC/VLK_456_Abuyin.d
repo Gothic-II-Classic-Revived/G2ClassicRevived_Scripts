@@ -13,7 +13,7 @@ instance VLK_456_Abuyin (Npc_Default)
 	B_SetAttributesForLevel(self, 15);														
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITMW_REVIVED_2H_STAFF_01);

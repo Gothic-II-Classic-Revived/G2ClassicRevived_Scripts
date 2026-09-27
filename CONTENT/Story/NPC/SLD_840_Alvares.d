@@ -17,7 +17,7 @@ instance SLD_840_Alvares (Npc_Default)
     aivar[AIV_DropDeadAndKill] = TRUE;
 
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;
+	fight_tactic		= FAI_HUMAN_STRONG;
 
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_2H_AXE_LIGHT_01);

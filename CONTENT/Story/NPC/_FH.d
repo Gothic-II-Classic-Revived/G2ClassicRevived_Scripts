@@ -25,7 +25,7 @@ INSTANCE FH (NPC_DEFAULT)
 	//							Body-Mesh			Body-Tex	Skin-Color	Head-MMS			Head-Tex	Teeth-Tex
 	Mdl_SetVisualBody (self,				"hum_body_Naked0", 		1,		0,		"Hum_Head_Bald", 		0, 		0,			NO_ARMOR);
 
-    fight_tactic	=	FAI_HUMAN_STRONG;
+    fight_tactic	=	FAI_HUMAN_NORMAL;
 		
 	//-------- inventory --------
 	

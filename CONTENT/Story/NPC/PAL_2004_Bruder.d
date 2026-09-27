@@ -12,7 +12,7 @@ instance PAL_2004_Bruder  (Npc_Default)
 	B_SetAttributesForLevel(self, 80);								
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic = FAI_HUMAN_STRONG;	
+	fight_tactic = FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	B_CreateAmbientInv 	(self);

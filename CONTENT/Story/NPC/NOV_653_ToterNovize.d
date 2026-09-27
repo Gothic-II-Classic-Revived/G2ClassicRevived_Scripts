@@ -13,7 +13,7 @@ INSTANCE NOV_653_ToterNovize (Npc_Default)
 	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 1);
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_2H_STAFF_NOVICE_01); 

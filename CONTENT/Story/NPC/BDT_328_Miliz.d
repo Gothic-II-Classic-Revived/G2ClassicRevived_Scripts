@@ -19,7 +19,7 @@ instance BDT_328_Miliz (Npc_Default)
 	B_SetAttributesForLevel(self, 13);																		
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic = FAI_HUMAN_STRONG;	
+	fight_tactic = FAI_HUMAN_NORMAL;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ITMW_REVIVED_1H_SWORD_01);

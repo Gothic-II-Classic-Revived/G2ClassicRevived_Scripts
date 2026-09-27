@@ -17,14 +17,14 @@ instance VLK_438_Alrik (Npc_Default)
 	aivar[AIV_FightDistCancel] = 600;
 
 	aivar[AIV_MaxDistToWp]			= 300;
-	aivar[AIV_OriginalFightTactic] 	= FAI_HUMAN_NORMAL;
+	aivar[AIV_OriginalFightTactic] 	= FAI_HUMAN_STRONG;
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 15);
 	Alrik_LevelUpCount = 0;
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																
 	EquipItem(self, ITMW_REVIVED_1H_CLUB_01);

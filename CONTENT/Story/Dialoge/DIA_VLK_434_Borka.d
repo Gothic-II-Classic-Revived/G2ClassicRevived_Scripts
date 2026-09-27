@@ -168,8 +168,8 @@ func void DIA_Borka_BUYHERB_Info ()
 	
 	AI_Output (other, self, "DIA_Borka_BUYHERB_15_00"); //I've heard you're selling weed.
 	
-	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
-	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
+	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_L) == TRUE) 
+	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_M) == TRUE)
 	{
 		AI_Output (self, other, "DIA_Borka_BUYHERB_11_01"); //I'm sorry, Mr. City Guard, sir. There must have been a mistake. I know nothing about weed.
 	}
@@ -226,8 +226,8 @@ func int DIA_Borka_SECOND_CHANCE_Condition ()
 	
 	if 	(Borka_Deal == TRUE)
 	&&  (Npc_HasItems (other, ItmI_Gold) >= 50)
-	&&  (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == FALSE) 
-	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == FALSE)
+	&&  (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_L) == FALSE) 
+	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_M) == FALSE)
 	{
 		return TRUE;
 	};

@@ -12,7 +12,7 @@ instance PIR_1397_Pirate_L (Npc_Default)
 	B_SetAttributesForLevel(self, 60);																		
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ItMw_Addon_PIR1hSword);

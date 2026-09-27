@@ -13,7 +13,7 @@ instance Mil_317_Ruga (Npc_Default)
 	B_SetAttributesForLevel(self, 60);																
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
@@ -24,7 +24,7 @@ instance Mil_317_Ruga (Npc_Default)
 	CreateInvItems (self,ItKe_City_Tower_03,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_P_Ruga, Body_P_Hum_Naked, Body_Pale, Teeth_Yellow, ITAR_REVIVED_GRD_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Thief", Face_P_Ruga, Body_P_Hum_Naked, Body_Pale, Teeth_Yellow, ITAR_REVIVED_MIL_M);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

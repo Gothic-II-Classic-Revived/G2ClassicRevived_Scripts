@@ -656,7 +656,7 @@ instance DIA_Jan_DJG_ARMOR_M		(C_INFO)
 	condition	 = 	DIA_Jan_DJG_ARMOR_M_Condition;
 	information	 = 	DIA_Jan_DJG_ARMOR_M_Info;
 	permanent	 = 	TRUE;
-	description	 =	REV_BuildTradeString(ITAR_REVIVED_DEMONHUNTER_S);
+	description	 =	REV_BuildTradeString(ITAR_REVIVED_DHT_S);
 };
 
 func int DIA_Jan_DJG_ARMOR_M_Condition ()
@@ -677,9 +677,9 @@ func void DIA_Jan_DJG_ARMOR_M_Info ()
 	{
 		AI_Output 	(self ,other,"DIA_Jan_DJG_ARMOR_M_10_01"); //You can see that it's worth every gold piece.
 		
-		CreateInvItems (self,ITAR_REVIVED_DEMONHUNTER_S,1);
-		B_GiveInvItems (self,other,ITAR_REVIVED_DEMONHUNTER_S,1);
-		AI_EquipArmor (other, ITAR_REVIVED_DEMONHUNTER_S);
+		CreateInvItems (self,ITAR_REVIVED_DHT_S,1);
+		B_GiveInvItems (self,other,ITAR_REVIVED_DHT_S,1);
+		AI_EquipArmor (other, ITAR_REVIVED_DHT_S);
 		
 		Jan_DIA_Jan_DJG_ARMOR_M_permanent = TRUE;
 	}

@@ -215,8 +215,8 @@ func void DIA_Meldor_Smoke_Info ()
 	
 	AI_Output (other, self, "DIA_Meldor_Smoke_15_00"); //Do you know where I can buy some weed?
 	
-	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
-	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
+	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_L) == TRUE) 
+	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_M) == TRUE)
 	{
 		AI_Output (self, other, "DIA_Meldor_Smoke_07_01"); //(appraisingly) Nope, no idea.
 	}

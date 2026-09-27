@@ -1266,7 +1266,7 @@ func void DIA_Andre_JOIN_Yes()
 	Npc_ExchangeRoutine (Lothar, "START");
 	
 	AI_Output (self, other, "DIA_Andre_JOIN_Yes_08_02"); //Here is your armor.
-	B_GiveInvItems (self,other, ITAR_REVIVED_GRD_L,1);
+	B_GiveInvItems (self,other, ITAR_REVIVED_MIL_L,1);
 	AI_Output (self, other, "DIA_Andre_JOIN_Yes_08_03"); //Wear it with pride and dignity.
 	
 	SLD_Aufnahme = LOG_OBSOLETE;

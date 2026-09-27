@@ -13,7 +13,7 @@ instance MIL_319_Pablo (Npc_Default)
 	B_SetAttributesForLevel(self, 60);																		
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
@@ -23,7 +23,7 @@ instance MIL_319_Pablo (Npc_Default)
 	CreateInvItems (self,ItKe_City_Tower_01,1);
 		
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Pablo, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_GRD_M);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Pablo, Body_W_Hum_Naked, Body_White, Teeth_Gold, ITAR_REVIVED_MIL_M);	
 	Mdl_SetModelFatness	(self,1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

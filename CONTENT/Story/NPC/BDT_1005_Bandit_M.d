@@ -13,7 +13,7 @@ instance BDT_1005_Bandit_M (Npc_Default)
 	B_SetAttributesForLevel(self, 25);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	// MASTER / STRONG / COWARD
+	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_AXE_01);

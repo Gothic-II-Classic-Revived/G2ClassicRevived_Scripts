@@ -13,7 +13,7 @@ instance SLD_802_Buster (Npc_Default)
 	B_SetAttributesForLevel(self, 25);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	// MASTER / STRONG / NORMAL / COWARD
+	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / NORMAL / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_MACE_03);

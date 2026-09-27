@@ -15,7 +15,7 @@ instance BDT_1061_Wache (Npc_Default)
 	B_SetAttributesForLevel(self, 25);																
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_01);

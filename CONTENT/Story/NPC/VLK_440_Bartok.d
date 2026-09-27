@@ -13,7 +13,7 @@ instance VLK_440_Bartok (Npc_Default)
 	B_SetMonsterAttributesForLevel(self, 30);
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITRW_REVIVED_BOW_LONG_03); 

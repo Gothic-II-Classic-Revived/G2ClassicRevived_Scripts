@@ -12,7 +12,7 @@ instance Pal_219_Ritter (Npc_Default)
 	B_SetAttributesForLevel(self, 80);																	
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_NORMAL;	
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_PALADIN_02);

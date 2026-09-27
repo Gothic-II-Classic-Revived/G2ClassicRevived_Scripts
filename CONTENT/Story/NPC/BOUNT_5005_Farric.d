@@ -15,7 +15,7 @@ instance BOUNT_5005_Farric (Npc_Default)
 	B_SetAttributesForLevel(self, 50);
 
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;
+	fight_tactic		= FAI_HUMAN_MASTER;
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_2H_SWORD_HEAVY_02);
@@ -24,7 +24,7 @@ instance BOUNT_5005_Farric (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Farric, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_GRD_M_02);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_FatBald", Face_W_Farric, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_MIL_M_02);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 

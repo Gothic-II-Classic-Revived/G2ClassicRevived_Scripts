@@ -16,7 +16,7 @@ instance Mil_336_Rick (Npc_Default)
 	B_SetAttributesForLevel(self, 20);																	
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
@@ -25,7 +25,7 @@ instance Mil_336_Rick (Npc_Default)
 	B_CreateAmbientInv 	(self);
 
 	// ------ visuals ------																			
-	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fatbald", Face_W_Hum_Normal26, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_GRD_L);	
+	B_SetNpcFullVisual (self, MALE, "Hum_Head_Fatbald", Face_W_Hum_Normal26, Body_W_Hum_Naked, Body_White, Teeth_Normal, ITAR_REVIVED_MIL_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

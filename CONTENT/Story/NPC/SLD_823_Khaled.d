@@ -13,7 +13,7 @@ instance SLD_823_Khaled (Npc_Default)
 	B_SetAttributesForLevel(self, 60);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
+	fight_tactic		= FAI_HUMAN_MASTER;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_2H_AXE_LIGHT_03);

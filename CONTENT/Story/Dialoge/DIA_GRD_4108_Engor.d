@@ -152,7 +152,7 @@ instance DIA_Engor_RSkaufen		(C_INFO)
 	condition	 = 	DIA_Engor_RSkaufen_Condition;
 	information	 = 	DIA_Engor_RSkaufen_Info;
 	permanent 	 =  TRUE;
-	description	 =  REV_BuildTradeString(ITAR_REVIVED_GRD_H);
+	description	 =  REV_BuildTradeString(ITAR_REVIVED_MIL_H);
 };
 //--------------------------------------
 var int DIA_Engor_RSkaufen_perm;
@@ -168,14 +168,14 @@ func int DIA_Engor_RSkaufen_Condition ()
 };
 func void DIA_Engor_RSkaufen_Info ()
 {
-	if (B_GiveInvItems (other, self, Itmi_Gold, REV_Value_GRD_H))
+	if (B_GiveInvItems (other, self, Itmi_Gold, REV_Value_MIL_H))
 	{
 		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
 		AI_Output (self, other, "DIA_Engor_RSkaufen_13_01"); //Here you are, it'll protect you well - it's a damn good piece of work.
 
-		CreateInvItems (self, ITAR_REVIVED_GRD_H, 1);
-		B_GiveInvItems (self, other, ITAR_REVIVED_GRD_H, 1);
-		AI_EquipArmor (other, ITAR_REVIVED_GRD_H);
+		CreateInvItems (self, ITAR_REVIVED_MIL_H, 1);
+		B_GiveInvItems (self, other, ITAR_REVIVED_MIL_H, 1);
+		AI_EquipArmor (other, ITAR_REVIVED_MIL_H);
 		DIA_Engor_RSkaufen_perm = TRUE;
 	}
 	else

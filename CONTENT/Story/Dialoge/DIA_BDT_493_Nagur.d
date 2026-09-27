@@ -98,9 +98,9 @@ FUNC VOID DIA_Nagur_Hallo_Info()
 	func void B_Nagur_Abfertigen()
 	{
 		var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
-		if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == FALSE)
-		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == FALSE)
-		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == FALSE)
+		if (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_L) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_M) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_MIL_M) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_PAL_L) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_PAL_M) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_PAL_H) == FALSE)
