@@ -673,7 +673,7 @@ func void DIA_Jan_DJG_ARMOR_M_Info ()
 {	
 	AI_Output	(other,self ,"DIA_Jan_DJG_ARMOR_M_15_00"); //I want to buy the armor.
 	
-	if (B_GiveInvItems (other,self,ItMi_Gold,REV_Value_DEMONHUNTER_H))
+	if (B_GiveInvItems (other,self,ItMi_Gold,REV_Value_DHT_H))
 	{
 		AI_Output 	(self ,other,"DIA_Jan_DJG_ARMOR_M_10_01"); //You can see that it's worth every gold piece.
 		

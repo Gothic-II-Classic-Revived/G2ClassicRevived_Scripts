@@ -40,13 +40,6 @@ const int	REV_Prot_Point_KNIGHT				=	100;
 const int	REV_Prot_Fire_KNIGHT				=	50;
 const int	REV_Prot_Magic_KNIGHT				=	25;
 //******************************************************************//
-/* const int	REV_Value_IDKYET				=	12000;
-const int	REV_Prot_Edge_IDKYET			=	150;
-const int	REV_Prot_Blunt_IDKYET			=	150;
-const int	REV_Prot_Point_IDKYET			=	150;
-const int	REV_Prot_Fire_IDKYET			=	100;
-const int	REV_Prot_Magic_IDKYET			=	50; */
-//******************************************************************//
 const int	REV_Value_CRAWLER					=	1500;
 const int	REV_Prot_Edge_CRAWLER				=	80;
 const int	REV_Prot_Blunt_CRAWLER				=	80;
@@ -54,26 +47,26 @@ const int	REV_Prot_Point_CRAWLER				=	80;
 const int	REV_Prot_Fire_CRAWLER				=	30;
 const int	REV_Prot_Magic_CRAWLER				=	5;
 //******************************************************************//
-const int	REV_Value_DEMONHUNTER_L			=   8000;
-const int	REV_Prot_Edge_DEMONHUNTER_L		=   100;
-const int	REV_Prot_Blunt_DEMONHUNTER_L	=   100;
-const int	REV_Prot_Point_DEMONHUNTER_L	=   100;
-const int	REV_Prot_Fire_DEMONHUNTER_L		=   60;
-const int	REV_Prot_Magic_DEMONHUNTER_L	=   30;
+const int	REV_Value_DHT_L			=   8000;
+const int	REV_Prot_Edge_DHT_L		=   100;
+const int	REV_Prot_Blunt_DHT_L	=   100;
+const int	REV_Prot_Point_DHT_L	=   100;
+const int	REV_Prot_Fire_DHT_L		=   60;
+const int	REV_Prot_Magic_DHT_L	=   30;
 //******************************************************************//
-const int	REV_Value_DEMONHUNTER_M			=   12000;
-const int	REV_Prot_Edge_DEMONHUNTER_M		=   120;
-const int	REV_Prot_Blunt_DEMONHUNTER_M	=   120;
-const int	REV_Prot_Point_DEMONHUNTER_M	=   120;
-const int	REV_Prot_Fire_DEMONHUNTER_M		=   75;
-const int	REV_Prot_Magic_DEMONHUNTER_M	=   35;
+const int	REV_Value_DHT_M			=   12000;
+const int	REV_Prot_Edge_DHT_M		=   120;
+const int	REV_Prot_Blunt_DHT_M	=   120;
+const int	REV_Prot_Point_DHT_M	=   120;
+const int	REV_Prot_Fire_DHT_M		=   75;
+const int	REV_Prot_Magic_DHT_M	=   35;
 //******************************************************************//
-const int	REV_Value_DEMONHUNTER_H				=	16000;
-const int	REV_Prot_Edge_DEMONHUNTER_H			=	135;
-const int	REV_Prot_Blunt_DEMONHUNTER_H		=	135;
-const int	REV_Prot_Point_DEMONHUNTER_H		=	135;
-const int	REV_Prot_Fire_DEMONHUNTER_H			=	90;
-const int	REV_Prot_Magic_DEMONHUNTER_H		=	45;
+const int	REV_Value_DHT_H				=	16000;
+const int	REV_Prot_Edge_DHT_H			=	135;
+const int	REV_Prot_Blunt_DHT_H		=	135;
+const int	REV_Prot_Point_DHT_H		=	135;
+const int	REV_Prot_Fire_DHT_H			=	90;
+const int	REV_Prot_Magic_DHT_H		=	45;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_SFB_L						=	50;
@@ -135,33 +128,33 @@ const int	REV_Prot_Fire_ORG_H					=	20;
 const int	REV_Prot_Magic_ORG_H				=	0;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_GRD_L						=	1000;
-const int	REV_Prot_Edge_GRD_L					=	45;
-const int	REV_Prot_Blunt_GRD_L				=	45;
-const int	REV_Prot_Point_GRD_L				=	45;
-const int	REV_Prot_Fire_GRD_L					=	20;
-const int	REV_Prot_Magic_GRD_L				=	0;
+const int	REV_Value_MIL_L						=	1000;
+const int	REV_Prot_Edge_MIL_L					=	45;
+const int	REV_Prot_Blunt_MIL_L				=	45;
+const int	REV_Prot_Point_MIL_L				=	45;
+const int	REV_Prot_Fire_MIL_L					=	20;
+const int	REV_Prot_Magic_MIL_L				=	0;
 //******************************************************************//
-const int	REV_Value_GRD_M						=	1600;
-const int	REV_Prot_Edge_GRD_M					=	55;
-const int	REV_Prot_Blunt_GRD_M				=	55;
-const int	REV_Prot_Point_GRD_M				=	55;
-const int	REV_Prot_Fire_GRD_M					=	25;
-const int	REV_Prot_Magic_GRD_M				=	0;
+const int	REV_Value_MIL_M						=	1600;
+const int	REV_Prot_Edge_MIL_M					=	55;
+const int	REV_Prot_Blunt_MIL_M				=	55;
+const int	REV_Prot_Point_MIL_M				=	55;
+const int	REV_Prot_Fire_MIL_M					=	25;
+const int	REV_Prot_Magic_MIL_M				=	0;
 //******************************************************************//
-const int	REV_Value_GRD_H						=	2500;
-const int	REV_Prot_Edge_GRD_H					=	70;
-const int	REV_Prot_Blunt_GRD_H				=	70;
-const int	REV_Prot_Point_GRD_H				=	70;
-const int	REV_Prot_Fire_GRD_H					=	35;
-const int	REV_Prot_Magic_GRD_H				=	0;
+const int	REV_Value_MIL_H						=	2500;
+const int	REV_Prot_Edge_MIL_H					=	70;
+const int	REV_Prot_Blunt_MIL_H				=	70;
+const int	REV_Prot_Point_MIL_H				=	70;
+const int	REV_Prot_Fire_MIL_H					=	35;
+const int	REV_Prot_Magic_MIL_H				=	0;
 //******************************************************************//
-const int	REV_Value_GRD_S						=	3000;
-const int	REV_Prot_Edge_GRD_S					=	80;
-const int	REV_Prot_Blunt_GRD_S				=	80;
-const int	REV_Prot_Point_GRD_S				=	80;
-const int	REV_Prot_Fire_GRD_S					=	40;
-const int	REV_Prot_Magic_GRD_S				=	5;
+const int	REV_Value_MIL_S						=	3000;
+const int	REV_Prot_Edge_MIL_S					=	80;
+const int	REV_Prot_Blunt_MIL_S				=	80;
+const int	REV_Prot_Point_MIL_S				=	80;
+const int	REV_Prot_Fire_MIL_S					=	40;
+const int	REV_Prot_Magic_MIL_S				=	5;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_EBR_L						=	800;
@@ -354,10 +347,10 @@ const int	REV_Prot_Magic_TPL_H				=	0;
 //******************************************************************//
 const int	REV_Value_TPL_SKELETON				=	2500;
 const int	REV_Prot_Edge_TPL_SKELETON			=	70;
-const int	REV_Prot_Blunt_TPL_SKELETON		=	70;
-const int	REV_Prot_Point_TPL_SKELETON		=	70;
+const int	REV_Prot_Blunt_TPL_SKELETON			=	70;
+const int	REV_Prot_Point_TPL_SKELETON			=	70;
 const int	REV_Prot_Fire_TPL_SKELETON			=	35;
-const int	REV_Prot_Magic_TPL_SKELETON		=	0;
+const int	REV_Prot_Magic_TPL_SKELETON			=	0;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Value_DMT_L						=	800;
@@ -452,6 +445,71 @@ INSTANCE ITAR_REVIVED_BEGGAR (C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 /******************************************************************************************/
+INSTANCE ITAR_REVIVED_ARCHER (C_Item)
+{
+	name 					=	"Archer's Suit";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_LEATHER;
+
+	value 					=	REV_Value_ARCHER;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_ARCHER;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_ARCHER;
+	protection [PROT_POINT] = 	REV_Prot_Point_ARCHER;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_ARCHER;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_ARCHER;
+
+	visual 					=	"REV_DLC.3ds";
+	visual_change 			=	"REV_ARMOR_DLC.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	on_equip				=	Equip_ARCHER_ARMOR;
+	on_unequip				=	UnEquip_ARCHER_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+FUNC VOID Equip_ARCHER_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		ArcherArmor_Equipped = TRUE;	
+	
+		if (ArcherBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_01;
+		};
+	};
+};
+FUNC VOID UnEquip_ARCHER_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		ArcherArmor_Equipped = FALSE;	
+	
+		if (ArcherBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_01;
+		};
+	};
+};
+/******************************************************************************************/
 INSTANCE ITAR_REVIVED_LEATHER_L (C_Item)
 {
 	name 					=	"Light Leather Armor";
@@ -501,7 +559,7 @@ INSTANCE ITAR_REVIVED_LEATHER_M (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_LEATHER_M;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_LEATHER_M;
 
-	visual 					=	"Itar_Leather_L.3ds";
+	visual 					=	"REV_LEATHER_M.3ds";
 	visual_change 			=	"REV_ARMOR_LEATHER_M.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
@@ -555,14 +613,14 @@ FUNC VOID Equip_LEATHER_ARMOR()
 	if Npc_IsPlayer (self)
 	{
 		LeatherArmor_Equipped = TRUE;	
-	
-		if (Leather01_Equipped == TRUE) //Ledergürtel
+
+		if (LeatherBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_01;
 		};
 	};
 };
@@ -570,142 +628,17 @@ FUNC VOID UnEquip_LEATHER_ARMOR()
 {
 	if Npc_IsPlayer (self)
 	{
-		LeatherArmor_Equipped = FALSE;	
-	
-		if (Leather01_Equipped == TRUE) //Ledergürtel
+		LeatherArmor_Equipped = TRUE;	
+
+		if (LeatherBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_01;
 		};
 	};
-};
-/******************************************************************************************/
-INSTANCE ITAR_REVIVED_ARCHER (C_Item)
-{
-	name 					=	"Archer's Suit";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-	material 				=	MAT_LEATHER;
-
-	value 					=	REV_Value_ARCHER;
-
-	protection [PROT_EDGE]	=	REV_Prot_Edge_ARCHER;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_ARCHER;
-	protection [PROT_POINT] = 	REV_Prot_Point_ARCHER;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_ARCHER;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_ARCHER;
-
-	visual 					=	"REV_DLC.3ds";
-	visual_change 			=	"REV_ARMOR_DLC.asc";
-	visual_skin 			=	0;
-	wear 					=	WEAR_TORSO;
-
-	on_equip				=	Equip_ARCHER_ARMOR;
-	on_unequip				=	UnEquip_ARCHER_ARMOR;
-
-	description				=	name;
-	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
-	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
-};
-FUNC VOID Equip_ARCHER_ARMOR()
-{
-	if Npc_IsPlayer (self)
-	{
-		ArcherArmor_Equipped = TRUE;	
-	
-		if (ArcherBelt_Equipped == TRUE)
-		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
-		};
-	};
-};
-FUNC VOID UnEquip_ARCHER_ARMOR()
-{
-	if Npc_IsPlayer (self)
-	{
-		ArcherArmor_Equipped = FALSE;	
-	
-		if (ArcherBelt_Equipped == TRUE)
-		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
-		};
-	};
-};
-//******************************************************************//
-INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
-{
-	name 					=	"Old Knight's Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-	material 				=	MAT_METAL;
-
-	value 					=	REV_Value_KNIGHT;
-
-	protection [PROT_EDGE]	=	REV_Prot_Edge_KNIGHT;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_KNIGHT;
-	protection [PROT_POINT] = 	REV_Prot_Point_KNIGHT;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_KNIGHT;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_KNIGHT;
-
-	visual 					=	"REV_RITTER_OLD.3ds";
-	visual_change 			=	"Armor_Pal_Skeleton.asc";
-	visual_skin 			=	0;
-	wear 					=	WEAR_TORSO;
-
-	description				=	name;
-	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
-	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
-};
-
-INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
-{
-	name 					=	"Old Knight's Armor"; //(without helmet)
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-	material 				=	MAT_METAL;
-
-	value 					=	REV_Value_KNIGHT;
-
-	protection [PROT_EDGE]	=	REV_Prot_Edge_KNIGHT;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_KNIGHT;
-	protection [PROT_POINT] = 	REV_Prot_Point_KNIGHT;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_KNIGHT;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_KNIGHT;
-
-	visual 					=	"REV_RITTER_OLD.3ds";
-	visual_change 			=	"REV_ARMOR_RITTER_OLD.asc";
-	visual_skin 			=	0;
-	wear 					=	WEAR_TORSO;
-
-	description				=	name;
-	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
-	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 /******************************************************************************************/
 INSTANCE ITAR_REVIVED_CRAWLER (C_Item)
@@ -744,15 +677,15 @@ FUNC VOID Equip_CRAWLER_ARMOR()
 {
 	if Npc_IsPlayer (self)
 	{
-		MCArmor_Equipped = TRUE;
+		CrawlerArmor_Equipped = TRUE;
 	
-		if (MC_Equipped == TRUE)	
+		if (CrawlerBe_Equipped == TRUE)	
 		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_01;
 		};
 	};			
 };
@@ -760,140 +693,18 @@ FUNC VOID UnEquip_CRAWLER_ARMOR()
 {
 	if Npc_IsPlayer (self)
 	{
-		MCArmor_Equipped = FALSE;
+		CrawlerArmor_Equipped = FALSE;
 		
-		if (MC_Equipped == TRUE)	
+		if (CrawlerBe_Equipped == TRUE)	
 		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_01;
 		};
 	};			
 };
-/******************************************************************************************/
-INSTANCE ITAR_REVIVED_DEMONHUNTER_L (C_Item)
-{
-    name                    = "Light Demon Hunter Armor";
-
-    mainflag                = ITEM_KAT_ARMOR;
-    flags                   = 0;
-    material                = MAT_METAL;
-
-    value                   = REV_Value_DEMONHUNTER_L;
-
-    protection [PROT_EDGE]  = REV_Prot_Edge_DEMONHUNTER_L;
-    protection [PROT_BLUNT] = REV_Prot_Blunt_DEMONHUNTER_L;
-    protection [PROT_POINT] = REV_Prot_Point_DEMONHUNTER_L;
-    protection [PROT_FIRE]  = REV_Prot_Fire_DEMONHUNTER_L;
-    protection [PROT_MAGIC] = REV_Prot_Magic_DEMONHUNTER_L;
-
-    visual                  = "REV_DHTL.3ds";
-    visual_change           = "REV_ARMOR_DHT_L.asc";
-    visual_skin             = 0;
-    wear                    = WEAR_TORSO;
-
-    description             = name;
-    TEXT[0]                 = NAME_Prot_Edge;         COUNT[0] = protection[PROT_EDGE];
-    TEXT[1]                 = NAME_Prot_Blunt;        COUNT[1] = protection[PROT_BLUNT];
-    TEXT[2]                 = NAME_Prot_Point;        COUNT[2] = protection[PROT_POINT];
-    TEXT[3]                 = NAME_Prot_Fire;         COUNT[3] = protection[PROT_FIRE];
-    TEXT[4]                 = NAME_Prot_Magic;        COUNT[4] = protection[PROT_MAGIC];
-    TEXT[5]                 = NAME_Value;             COUNT[5] = value;
-};
-
-INSTANCE ITAR_REVIVED_DEMONHUNTER_M (C_Item)
-{
-    name                    = "Medium Demon Hunter Armor";
-
-    mainflag                = ITEM_KAT_ARMOR;
-    flags                   = 0;
-    material                = MAT_METAL;
-
-    value                   = REV_Value_DEMONHUNTER_M;
-
-    protection [PROT_EDGE]  = REV_Prot_Edge_DEMONHUNTER_M;
-    protection [PROT_BLUNT] = REV_Prot_Blunt_DEMONHUNTER_M;
-    protection [PROT_POINT] = REV_Prot_Point_DEMONHUNTER_M;
-    protection [PROT_FIRE]  = REV_Prot_Fire_DEMONHUNTER_M;
-    protection [PROT_MAGIC] = REV_Prot_Magic_DEMONHUNTER_M;
-
-    visual                  = "REV_DHTM.3ds";
-    visual_change           = "REV_ARMOR_DHT_M.asc";
-    visual_skin             = 0;
-    wear                    = WEAR_TORSO;
-
-    description             = name;
-    TEXT[0]                 = NAME_Prot_Edge;         COUNT[0] = protection[PROT_EDGE];
-    TEXT[1]                 = NAME_Prot_Blunt;        COUNT[1] = protection[PROT_BLUNT];
-    TEXT[2]                 = NAME_Prot_Point;        COUNT[2] = protection[PROT_POINT];
-    TEXT[3]                 = NAME_Prot_Fire;         COUNT[3] = protection[PROT_FIRE];
-    TEXT[4]                 = NAME_Prot_Magic;        COUNT[4] = protection[PROT_MAGIC];
-    TEXT[5]                 = NAME_Value;             COUNT[5] = value;
-};
-
-/******************************************************************************************/
-INSTANCE ITAR_REVIVED_DEMONHUNTER_H (C_Item)
-{
-	name 					=	"Demon Hunter Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-	material 				=	MAT_METAL;
-
-	value 					=	REV_Value_DEMONHUNTER_H;
-
-	protection [PROT_EDGE] 	=	REV_Prot_Edge_DEMONHUNTER_H;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DEMONHUNTER_H;
-	protection [PROT_POINT] = 	REV_Prot_Point_DEMONHUNTER_H;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DEMONHUNTER_H;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_DEMONHUNTER_H;
-
-	visual 					=	"REV_DHTH.3ds";
-	visual_change 			=	"REV_ARMOR_DHT_H.asc";
-	visual_skin 			=	0;
-	wear 					=	WEAR_TORSO;
-
-	description				=	name;
-	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
-	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
-};
-
-INSTANCE ITAR_REVIVED_DEMONHUNTER_S (C_Item)
-{
-	name 					=	"Demonhunter Armor"; //(without helmet)
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-	material 				=	MAT_METAL;
-
-	value 					=	REV_Value_DEMONHUNTER_H;
-
-	protection [PROT_EDGE] 	=	REV_Prot_Edge_DEMONHUNTER_H;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DEMONHUNTER_H;
-	protection [PROT_POINT] = 	REV_Prot_Point_DEMONHUNTER_H;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DEMONHUNTER_H;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_DEMONHUNTER_H;
-
-	visual 					=	"REV_DHTS.3ds";
-	visual_change 			=	"REV_ARMOR_DHT_S.asc";
-	visual_skin 			=	0;
-	wear 					=	WEAR_TORSO;
-
-	description				=	name;
-	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
-	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
-};
-
 
 
 //****************************************************************************
@@ -915,10 +726,13 @@ INSTANCE ITAR_REVIVED_SFB_L (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_SFB_L;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_SFB_L;
 
-	visual 					=	"REV_VLKL.3ds";
-	visual_change 			=	"REV_ARMOR_VLK_L.asc";
+	visual 					=	"REV_SFBL.3ds";
+	visual_change 			=	"REV_ARMOR_SFB_L.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_SFB_ARMOR;
+	on_unequip				=	UnEquip_SFB_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -944,10 +758,13 @@ INSTANCE ITAR_REVIVED_SFB_M (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_SFB_M;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_SFB_M;
 
-	visual 					=	"REV_VLKM.3ds";
-	visual_change 			=	"REV_ARMOR_VLK_M.asc";
+	visual 					=	"REV_SFBM.3ds";
+	visual_change 			=	"REV_ARMOR_SFB_M.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_SFB_ARMOR;
+	on_unequip				=	UnEquip_SFB_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -973,10 +790,13 @@ INSTANCE ITAR_REVIVED_SFB_H (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_SFB_H;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_SFB_H;
 
-	visual 					=	"REV_SFBL.3ds";
-	visual_change 			=	"REV_ARMOR_SFB_L.asc";
+	visual 					=	"REV_SFBH.3ds";
+	visual_change 			=	"REV_ARMOR_SFB_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_SFB_ARMOR;
+	on_unequip				=	UnEquip_SFB_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -985,6 +805,39 @@ INSTANCE ITAR_REVIVED_SFB_H (C_Item)
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+FUNC VOID Equip_SFB_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		SFBArmor_Equipped = TRUE;
+		
+		if (SFBBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_01;
+		};
+	};
+};
+FUNC VOID UnEquip_SFB_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		SFBArmor_Equipped = FALSE;
+		
+		if (SFBBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_01;
+		};
+	};
 };
 
 
@@ -1152,7 +1005,7 @@ INSTANCE ITAR_REVIVED_ORG_H (C_Item)
 //****************************************************************************
 //			MILITIA
 //****************************************************************************
-INSTANCE ITAR_REVIVED_GRD_L (C_Item)
+INSTANCE ITAR_REVIVED_MIL_L (C_Item)
 {
 	name 					=	"Light Guard's Armor";
 
@@ -1160,21 +1013,21 @@ INSTANCE ITAR_REVIVED_GRD_L (C_Item)
 	flags 					=	0;
 	material 				=	MAT_LEATHER;
 
-	value 					=	REV_Value_GRD_L;
+	value 					=	REV_Value_MIL_L;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_L;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_L;
-	protection [PROT_POINT] = 	REV_Prot_Point_GRD_L;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_L;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_L;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_MIL_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_MIL_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_MIL_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_MIL_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_L;
 
 	visual 					=	"REV_GRDL.3ds";
-	visual_change 			=	"REV_ARMOR_GRD_L.asc";
+	visual_change 			=	"REV_ARMOR_MIL_L.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_MIL_ARMOR;
+	on_unequip				=	UnEquip_MIL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1184,7 +1037,7 @@ INSTANCE ITAR_REVIVED_GRD_L (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
-INSTANCE ITAR_REVIVED_GRD_M (C_Item)
+INSTANCE ITAR_REVIVED_MIL_M (C_Item)
 {
 	name 					=	"Guard's Armor";
 
@@ -1192,21 +1045,21 @@ INSTANCE ITAR_REVIVED_GRD_M (C_Item)
 	flags 					=	0;
 	material 				=	MAT_LEATHER;
 
-	value 					=	REV_Value_GRD_M;
+	value 					=	REV_Value_MIL_M;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_M;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_M;
-	protection [PROT_POINT] = 	REV_Prot_Point_GRD_M;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_M;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_M;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_MIL_M;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_MIL_M;
+	protection [PROT_POINT] = 	REV_Prot_Point_MIL_M;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_MIL_M;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_M;
 
 	visual 					=	"REV_GRDM.3ds";
-	visual_change 			=	"REV_ARMOR_GRD_M.asc";
+	visual_change 			=	"REV_ARMOR_MIL_M.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_MIL_ARMOR;
+	on_unequip				=	UnEquip_MIL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1216,7 +1069,7 @@ INSTANCE ITAR_REVIVED_GRD_M (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
-INSTANCE ITAR_REVIVED_GRD_H (C_Item)
+INSTANCE ITAR_REVIVED_MIL_H (C_Item)
 {
 	name 					=	"Heavy Guard's Armor";
 
@@ -1224,21 +1077,21 @@ INSTANCE ITAR_REVIVED_GRD_H (C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	REV_Value_GRD_H;
+	value 					=	REV_Value_MIL_H;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_H;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_H;
-	protection [PROT_POINT] = 	REV_Prot_Point_GRD_H;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_H;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_H;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_MIL_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_MIL_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_MIL_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_MIL_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_H;
  
 	visual 					=	"REV_GRDH.3ds";
-	visual_change 			=	"REV_ARMOR_GRD_H.asc";
+	visual_change 			=	"REV_ARMOR_MIL_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_MIL_ARMOR;
+	on_unequip				=	UnEquip_MIL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1248,7 +1101,7 @@ INSTANCE ITAR_REVIVED_GRD_H (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
-INSTANCE ITAR_REVIVED_GRD_S (C_Item)
+INSTANCE ITAR_REVIVED_MIL_S (C_Item)
 {
 	name 					=	"Guardsman Armor";
 
@@ -1256,21 +1109,21 @@ INSTANCE ITAR_REVIVED_GRD_S (C_Item)
 	flags 					=	0;
 	material 				=	MAT_LEATHER;
 
-	value 					=	REV_Value_GRD_S;
+	value 					=	REV_Value_MIL_S;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_S;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_S;
-	protection [PROT_POINT] = 	REV_Prot_Point_GRD_S;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_S;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_S;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_MIL_S;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_MIL_S;
+	protection [PROT_POINT] = 	REV_Prot_Point_MIL_S;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_MIL_S;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_S;
 
 	visual 					=	"REV_GRDS.3ds";
-	visual_change 			=	"REV_ARMOR_GRD_S.asc";
+	visual_change 			=	"REV_ARMOR_MIL_S.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_MIL_ARMOR;
+	on_unequip				=	UnEquip_MIL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1281,35 +1134,35 @@ INSTANCE ITAR_REVIVED_GRD_S (C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 
-FUNC VOID Equip_GRD_ARMOR()
+FUNC VOID Equip_MIL_ARMOR()
 {
 	if Npc_IsPlayer (self)
 	{
 		MILArmor_Equipped = TRUE;
 		
-		if (MIL01_Equipped == TRUE)
+		if (MILBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_01;
 		};
 	};
 };
-FUNC VOID UnEquip_GRD_ARMOR()
+FUNC VOID UnEquip_MIL_ARMOR()
 {
 	if Npc_IsPlayer (self)
 	{
 		MILArmor_Equipped = FALSE;
 		
-		if (MIL01_Equipped == TRUE)
+		if (MILBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_01;
 		};
 	};
 };
@@ -1377,7 +1230,7 @@ INSTANCE ITAR_REVIVED_STT_H_02 (C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 
-INSTANCE ITAR_REVIVED_GRD_L_02 (C_Item)
+INSTANCE ITAR_REVIVED_MIL_L_02 (C_Item)
 {
 	name 					=	"Old Light Guard's Armor";
 
@@ -1385,21 +1238,21 @@ INSTANCE ITAR_REVIVED_GRD_L_02 (C_Item)
 	flags 					=	0;
 	material 				=	MAT_LEATHER;
 
-	value 					=	REV_Value_GRD_L;
+	value 					=	REV_Value_MIL_L;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_L;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_L;
-	protection [PROT_POINT] = 	REV_Prot_Point_GRD_L;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_L;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_L;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_MIL_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_MIL_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_MIL_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_MIL_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_L;
 
 	visual 					=	"REV_GRDL_02.3ds";
-	visual_change 			=	"REV_ARMOR_GRD_L_02.asc";
+	visual_change 			=	"REV_ARMOR_MIL_L_02.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_MIL_ARMOR;
+	on_unequip				=	UnEquip_MIL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1409,7 +1262,7 @@ INSTANCE ITAR_REVIVED_GRD_L_02 (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
-INSTANCE ITAR_REVIVED_GRD_M_02 (C_Item)
+INSTANCE ITAR_REVIVED_MIL_M_02 (C_Item)
 {
 	name 					=	"Old Guard's Armor";
 
@@ -1417,21 +1270,21 @@ INSTANCE ITAR_REVIVED_GRD_M_02 (C_Item)
 	flags 					=	0;
 	material 				=	MAT_LEATHER;
 
-	value 					=	REV_Value_GRD_M;
+	value 					=	REV_Value_MIL_M;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_M;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_M;
-	protection [PROT_POINT] = 	REV_Prot_Point_GRD_M;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_M;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_M;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_MIL_M;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_MIL_M;
+	protection [PROT_POINT] = 	REV_Prot_Point_MIL_M;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_MIL_M;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_M;
 
 	visual 					=	"REV_GRDM_02.3ds";
-	visual_change 			=	"REV_ARMOR_GRD_M_02.asc";
+	visual_change 			=	"REV_ARMOR_MIL_M_02.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_MIL_ARMOR;
+	on_unequip				=	UnEquip_MIL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1441,7 +1294,7 @@ INSTANCE ITAR_REVIVED_GRD_M_02 (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
-INSTANCE ITAR_REVIVED_GRD_H_02 (C_Item)
+INSTANCE ITAR_REVIVED_MIL_H_02 (C_Item)
 {
 	name 					=	"Old Heavy Guard's Armor";
 
@@ -1449,21 +1302,21 @@ INSTANCE ITAR_REVIVED_GRD_H_02 (C_Item)
 	flags 					=	0;
 	material 				=	MAT_METAL;
 
-	value 					=	REV_Value_GRD_H;
+	value 					=	REV_Value_MIL_H;
 
-	protection [PROT_EDGE]	=	REV_Prot_Edge_GRD_H;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_GRD_H;
-	protection [PROT_POINT] = 	REV_Prot_Point_GRD_H;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_GRD_H;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_GRD_H;
+	protection [PROT_EDGE]	=	REV_Prot_Edge_MIL_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_MIL_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_MIL_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_MIL_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_H;
  
 	visual 					=	"REV_GRDH_02.3ds";
-	visual_change 			=	"REV_ARMOR_GRD_H_02.asc";
+	visual_change 			=	"REV_ARMOR_MIL_H_02.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
+	on_equip				=	Equip_MIL_ARMOR;
+	on_unequip				=	UnEquip_MIL_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1542,7 +1395,7 @@ INSTANCE ITAR_REVIVED_EBR_H (C_Item)
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	value 					=	REV_Value_EBR_H;
 
@@ -1592,8 +1445,8 @@ INSTANCE ITAR_REVIVED_PAL_L (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_PAL_ARMOR;
-	on_unequip				=	UnEquip_PAL_ARMOR;
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1624,8 +1477,8 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
-	on_equip				=	Equip_PAL_ARMOR;
-	on_unequip				=	UnEquip_PAL_ARMOR;
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1635,6 +1488,40 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
+
+FUNC VOID Equip_GRD_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		GRDArmor_Equipped = TRUE;
+		
+		if (GRDBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_02;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_02;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_02;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_02;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_02;
+		};
+	};
+};
+FUNC VOID UnEquip_GRD_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		GRDArmor_Equipped = FALSE;
+		
+		if (GRDBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_02;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_02;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_02;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_02;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_02;
+		};
+	};
+};
+
 INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 {
 	name 					=	"Paladin's Armor";
@@ -1704,15 +1591,15 @@ FUNC VOID Equip_PAL_ARMOR()
 {
 	if Npc_IsPlayer (self)
 	{
-		MILArmor_Equipped = TRUE;
+		PALArmor_Equipped = TRUE;
 		
-		if (MIL01_Equipped == TRUE)
+		if (PALBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_03;
 		};
 	};
 };
@@ -1720,19 +1607,109 @@ FUNC VOID UnEquip_PAL_ARMOR()
 {
 	if Npc_IsPlayer (self)
 	{
-		MILArmor_Equipped = FALSE;
+		PALArmor_Equipped = FALSE;
 		
-		if (MIL01_Equipped == TRUE)
+		if (PALBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_03;
 		};
 	};
 };
 
+//******************************************************************//
+INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
+{
+	name 					=	"Old Knight's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_KNIGHT;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_KNIGHT;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_KNIGHT;
+	protection [PROT_POINT] = 	REV_Prot_Point_KNIGHT;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_KNIGHT;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_KNIGHT;
+
+	visual 					=	"REV_RITTER_OLD.3ds";
+	visual_change 			=	"Armor_Pal_Skeleton.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
+{
+	name 					=	"Old Knight's Armor"; //(without helmet)
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_KNIGHT;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_KNIGHT;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_KNIGHT;
+	protection [PROT_POINT] = 	REV_Prot_Point_KNIGHT;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_KNIGHT;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_KNIGHT;
+
+	visual 					=	"REV_RITTER_OLD.3ds";
+	visual_change 			=	"REV_ARMOR_RITTER_OLD.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_KNIGHT_03 (C_Item)
+{
+	name 					=	"Traditional Knight's Armor"; // (G2 paladin armor)
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_KNIGHT;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_KNIGHT;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_KNIGHT;
+	protection [PROT_POINT] = 	REV_Prot_Point_KNIGHT;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_KNIGHT;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_KNIGHT;
+
+	visual 					=	"ItAr_Pal_H.3ds";
+	visual_change 			=	"Armor_Pal_H.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
 
 
 //****************************************************************************
@@ -1874,13 +1851,13 @@ FUNC VOID Equip_SLD_ARMOR()
 	{
 		SLDArmor_Equipped = TRUE;
 		
-		if (SLD01_Equipped == TRUE)
+		if (SLDBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_01;
 		};
 	};			
 };
@@ -1890,13 +1867,13 @@ FUNC VOID UnEquip_SLD_ARMOR()
 	{
 		SLDArmor_Equipped = FALSE;
 		
-		if (SLD01_Equipped == TRUE)
+		if (SLDBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_01;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_01;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_01;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_01;
 		};
 	};			
 };
@@ -1908,7 +1885,7 @@ FUNC VOID UnEquip_SLD_ARMOR()
 //****************************************************************************
 INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 {
-	name 					=	"Dragon Hunter's Armor";
+	name 					=	"Light Dragon Hunter's Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1926,6 +1903,9 @@ INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 	visual_change 			=	"REV_ARMOR_DJG_L.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_DJG_ARMOR;
+	on_unequip				=	UnEquip_DJG_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1937,7 +1917,7 @@ INSTANCE ITAR_REVIVED_DJG_L (C_Item)
 };
 INSTANCE ITAR_REVIVED_DJG_M (C_Item)
 {
-	name 					=	"Medium Dragon Hunter's Armor";
+	name 					=	"Dragon Hunter's Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1955,6 +1935,9 @@ INSTANCE ITAR_REVIVED_DJG_M (C_Item)
 	visual_change 			=	"REV_ARMOR_DJG_M.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_DJG_ARMOR;
+	on_unequip				=	UnEquip_DJG_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1984,6 +1967,9 @@ INSTANCE ITAR_REVIVED_DJG_H (C_Item)
 	visual_change 			=	"REV_ARMOR_DJG_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_DJG_ARMOR;
+	on_unequip				=	UnEquip_DJG_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -1994,6 +1980,203 @@ INSTANCE ITAR_REVIVED_DJG_H (C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
 
+FUNC VOID Equip_DJG_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		DJGArmor_Equipped = TRUE;
+		
+		if (DJGBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_02;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_02;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_02;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_02;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_02;
+		};
+	};			
+};
+FUNC VOID UnEquip_DJG_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		DJGArmor_Equipped = FALSE;
+		
+		if (DJGBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_02;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_02;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_02;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_02;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_02;
+		};
+	};			
+};
+/******************************************************************************************/
+INSTANCE ITAR_REVIVED_DHT_L (C_Item)
+{
+    name                    = "Light Demon Hunter Armor";
+
+    mainflag                = ITEM_KAT_ARMOR;
+    flags                   = 0;
+    material                = MAT_METAL;
+
+    value                   = REV_Value_DHT_L;
+
+    protection [PROT_EDGE]  = REV_Prot_Edge_DHT_L;
+    protection [PROT_BLUNT] = REV_Prot_Blunt_DHT_L;
+    protection [PROT_POINT] = REV_Prot_Point_DHT_L;
+    protection [PROT_FIRE]  = REV_Prot_Fire_DHT_L;
+    protection [PROT_MAGIC] = REV_Prot_Magic_DHT_L;
+
+    visual                  = "REV_DHTL.3ds";
+    visual_change           = "REV_ARMOR_DHT_L.asc";
+    visual_skin             = 0;
+    wear                    = WEAR_TORSO;
+
+	on_equip				= Equip_DHT_ARMOR;
+	on_unequip				= UnEquip_DHT_ARMOR;
+
+    description             = name;
+    TEXT[0]                 = NAME_Prot_Edge;         COUNT[0] = protection[PROT_EDGE];
+    TEXT[1]                 = NAME_Prot_Blunt;        COUNT[1] = protection[PROT_BLUNT];
+    TEXT[2]                 = NAME_Prot_Point;        COUNT[2] = protection[PROT_POINT];
+    TEXT[3]                 = NAME_Prot_Fire;         COUNT[3] = protection[PROT_FIRE];
+    TEXT[4]                 = NAME_Prot_Magic;        COUNT[4] = protection[PROT_MAGIC];
+    TEXT[5]                 = NAME_Value;             COUNT[5] = value;
+};
+
+INSTANCE ITAR_REVIVED_DHT_M (C_Item)
+{
+    name                    = "Demon Hunter Armor";
+
+    mainflag                = ITEM_KAT_ARMOR;
+    flags                   = 0;
+    material                = MAT_METAL;
+
+    value                   = REV_Value_DHT_M;
+
+    protection [PROT_EDGE]  = REV_Prot_Edge_DHT_M;
+    protection [PROT_BLUNT] = REV_Prot_Blunt_DHT_M;
+    protection [PROT_POINT] = REV_Prot_Point_DHT_M;
+    protection [PROT_FIRE]  = REV_Prot_Fire_DHT_M;
+    protection [PROT_MAGIC] = REV_Prot_Magic_DHT_M;
+
+    visual                  = "REV_DHTM.3ds";
+    visual_change           = "REV_ARMOR_DHT_M.asc";
+    visual_skin             = 0;
+    wear                    = WEAR_TORSO;
+
+	on_equip				= Equip_DHT_ARMOR;
+	on_unequip				= UnEquip_DHT_ARMOR;
+
+    description             = name;
+    TEXT[0]                 = NAME_Prot_Edge;         COUNT[0] = protection[PROT_EDGE];
+    TEXT[1]                 = NAME_Prot_Blunt;        COUNT[1] = protection[PROT_BLUNT];
+    TEXT[2]                 = NAME_Prot_Point;        COUNT[2] = protection[PROT_POINT];
+    TEXT[3]                 = NAME_Prot_Fire;         COUNT[3] = protection[PROT_FIRE];
+    TEXT[4]                 = NAME_Prot_Magic;        COUNT[4] = protection[PROT_MAGIC];
+    TEXT[5]                 = NAME_Value;             COUNT[5] = value;
+};
+
+INSTANCE ITAR_REVIVED_DHT_H (C_Item)
+{
+	name 					=	"Heavy Demon Hunter Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_DHT_H;
+
+	protection [PROT_EDGE] 	=	REV_Prot_Edge_DHT_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DHT_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_DHT_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DHT_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_DHT_H;
+
+	visual 					=	"REV_DHTH.3ds";
+	visual_change 			=	"REV_ARMOR_DHT_H.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	on_equip				= Equip_DHT_ARMOR;
+	on_unequip				= UnEquip_DHT_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_DHT_S (C_Item)
+{
+	name 					=	"Traditional Demon Hunter Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_DHT_H;
+
+	protection [PROT_EDGE] 	=	REV_Prot_Edge_DHT_H;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DHT_H;
+	protection [PROT_POINT] = 	REV_Prot_Point_DHT_H;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DHT_H;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_DHT_H;
+
+	visual 					=	"REV_DHTS.3ds";
+	visual_change 			=	"REV_ARMOR_DHT_S.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+
+	on_equip				=	Equip_DHT_ARMOR;
+	on_unequip				=	UnEquip_DHT_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+FUNC VOID Equip_DHT_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		DHTArmor_Equipped = TRUE;
+		
+		if (DHTBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_03;
+		};
+	};			
+};
+FUNC VOID UnEquip_DHT_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		DHTArmor_Equipped = FALSE;
+		
+		if (DHTBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_03;
+		};
+	};			
+};
 
 
 //****************************************************************************
@@ -2022,6 +2205,36 @@ INSTANCE ITAR_REVIVED_KDF_L (C_Item)
 
 	on_equip				=	Equip_KDF_ARMOR;
 	on_unequip				=	UnEquip_KDF_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_KDF_L_02 (C_Item)
+{
+	name 					=	"Stolen Fire Mage's Robe";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_LEATHER;
+
+	value 					=	REV_Value_KDF_L;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_KDF_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_KDF_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_KDF_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_KDF_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_KDF_L;
+ 
+	visual 					=	"REV_SHMM.3ds";
+	visual_change 			=	"REV_ARMOR_SHM_M.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -2104,13 +2317,13 @@ FUNC VOID Equip_KDF_ARMOR()
 	{
 		KDFArmor_Equipped = TRUE;
 		
-		if (KDF01_Equipped == TRUE)
+		if (KDFBe_Equipped == TRUE)
 		{
-			self.protection[PROT_EDGE] 	+= BA_Bonus01;
-			self.protection[PROT_BLUNT] += BA_Bonus01;
-			self.protection[PROT_POINT] += BA_Bonus01;
-			self.protection[PROT_MAGIC] += BA_Bonus01;
-			self.protection[PROT_FIRE] 	+= BA_Bonus01;
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_03;
 		};
 	};
 };
@@ -2120,13 +2333,13 @@ FUNC VOID UnEquip_KDF_ARMOR()
 	{
 		KDFArmor_Equipped = FALSE;
 		
-		if (KDF01_Equipped == TRUE)
+		if (KDFBe_Equipped == TRUE)
 		{	
-			self.protection[PROT_EDGE] 	-= BA_Bonus01;
-			self.protection[PROT_BLUNT] -= BA_Bonus01;
-			self.protection[PROT_POINT] -= BA_Bonus01;
-			self.protection[PROT_MAGIC] -= BA_Bonus01;
-			self.protection[PROT_FIRE] 	-= BA_Bonus01;
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_03;
 		};
 	};
 };
@@ -2157,8 +2370,8 @@ INSTANCE ITAR_REVIVED_KDW_L (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
-	//on_equip				=	Equip_KDW_ARMOR;
-	//on_unequip				=	UnEquip_KDW_ARMOR;
+	on_equip				=	Equip_KDW_ARMOR;
+	on_unequip				=	UnEquip_KDW_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -2190,8 +2403,8 @@ INSTANCE ITAR_REVIVED_KDW_M (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
-	//on_equip				=	Equip_KDW_ARMOR;
-	//on_unequip				=	UnEquip_KDW_ARMOR;
+	on_equip				=	Equip_KDW_ARMOR;
+	on_unequip				=	UnEquip_KDW_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -2223,8 +2436,8 @@ INSTANCE ITAR_REVIVED_KDW_H (C_Item)
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 
-	//on_equip				=	Equip_KDW_ARMOR;
-	//on_unequip				=	UnEquip_KDW_ARMOR;
+	on_equip				=	Equip_KDW_ARMOR;
+	on_unequip				=	UnEquip_KDW_ARMOR;
 
 	description				=	name;
 	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
@@ -2233,6 +2446,39 @@ INSTANCE ITAR_REVIVED_KDW_H (C_Item)
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+FUNC VOID Equip_KDW_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		KDWArmor_Equipped = TRUE;
+		
+		if (KDWBe_Equipped == TRUE)
+		{
+			self.protection[PROT_EDGE] 	+= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] += REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] += REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] += REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	+= REV_Bonus_BELT_03;
+		};
+	};
+};
+FUNC VOID UnEquip_KDW_ARMOR()
+{
+	if Npc_IsPlayer (self)
+	{
+		KDWArmor_Equipped = FALSE;
+		
+		if (KDWBe_Equipped == TRUE)
+		{	
+			self.protection[PROT_EDGE] 	-= REV_Bonus_BELT_03;
+			self.protection[PROT_BLUNT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_POINT] -= REV_Bonus_BELT_03;
+			self.protection[PROT_MAGIC] -= REV_Bonus_BELT_03;
+			self.protection[PROT_FIRE] 	-= REV_Bonus_BELT_03;
+		};
+	};
 };
 
 
@@ -2604,42 +2850,6 @@ INSTANCE ITAR_REVIVED_DMT_S (C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
 };
-
-
-
-//****************************************************************************
-//			SHAMAN ROBES
-//****************************************************************************
-INSTANCE ITAR_REVIVED_SHM_M (C_Item)
-{
-	name 					=	"Shaman's Robe";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-	material 				=	MAT_LEATHER;
-
-	value 					=	REV_Value_DMT_L;
-
-	protection [PROT_EDGE]	=	REV_Prot_Edge_DMT_L;
-	protection [PROT_BLUNT] = 	REV_Prot_Blunt_DMT_L;
-	protection [PROT_POINT] = 	REV_Prot_Point_DMT_L;
-	protection [PROT_FIRE] 	= 	REV_Prot_Fire_DMT_L;
-	protection [PROT_MAGIC] = 	REV_Prot_Magic_DMT_L;
- 
-	visual 					=	"REV_SHMM.3ds";
-	visual_change 			=	"REV_ARMOR_SHM_M.asc";
-	visual_skin 			=	0;
-	wear 					=	WEAR_TORSO;
-
-	description				=	name;
-	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
-	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
-};
-
 
 
 //****************************************************************************

@@ -31,21 +31,21 @@ func string REV_BuildTradeString (var int itemInstance)
 		protMagic	= IntToString(REV_Prot_Magic_LEATHER_H);
 		value		= IntToString(REV_Value_LEATHER_H);
 	}
-	else if(itemInstance == ITAR_REVIVED_GRD_M)
+	else if(itemInstance == ITAR_REVIVED_MIL_M)
 	{
 		armorName	= "Guard's Armor";
-		protEdge	= IntToString(REV_Prot_Edge_GRD_M);
-		protPoint	= IntToString(REV_Prot_Point_GRD_M);
-		protMagic	= IntToString(REV_Prot_Magic_GRD_M);
-		value		= IntToString(REV_Value_GRD_M);
+		protEdge	= IntToString(REV_Prot_Edge_MIL_M);
+		protPoint	= IntToString(REV_Prot_Point_MIL_M);
+		protMagic	= IntToString(REV_Prot_Magic_MIL_M);
+		value		= IntToString(REV_Value_MIL_M);
 	}
-	else if(itemInstance == ITAR_REVIVED_GRD_H)
+	else if(itemInstance == ITAR_REVIVED_MIL_H)
 	{
 		armorName	= "H. Guard's Armor";
-		protEdge	= IntToString(REV_Prot_Edge_GRD_H);
-		protPoint	= IntToString(REV_Prot_Point_GRD_H);
-		protMagic	= IntToString(REV_Prot_Magic_GRD_H);
-		value		= IntToString(REV_Value_GRD_H);
+		protEdge	= IntToString(REV_Prot_Edge_MIL_H);
+		protPoint	= IntToString(REV_Prot_Point_MIL_H);
+		protMagic	= IntToString(REV_Prot_Magic_MIL_H);
+		value		= IntToString(REV_Value_MIL_H);
 	}
 	else if(itemInstance == ITAR_REVIVED_SLD_M)
 	{
@@ -79,13 +79,13 @@ func string REV_BuildTradeString (var int itemInstance)
 		protMagic	= IntToString(REV_Prot_Magic_DJG_H);
 		value		= IntToString(REV_Value_DJG_H);
 	}
-	else if(itemInstance == ITAR_REVIVED_DEMONHUNTER_S)
+	else if(itemInstance == ITAR_REVIVED_DHT_S)
 	{
-		armorName	= "H. Demon Hunter Armor";
-		protEdge	= IntToString(REV_Prot_Edge_DEMONHUNTER_H);
-		protPoint	= IntToString(REV_Prot_Point_DEMONHUNTER_H);
-		protMagic	= IntToString(REV_Prot_Magic_DEMONHUNTER_H);
-		value		= IntToString(REV_Value_DEMONHUNTER_H);
+		armorName	= "Ancient Demon Hunter Armor";
+		protEdge	= IntToString(REV_Prot_Edge_DHT_H);
+		protPoint	= IntToString(REV_Prot_Point_DHT_H);
+		protMagic	= IntToString(REV_Prot_Magic_DHT_H);
+		value		= IntToString(REV_Value_DHT_H);
 	};
 	
 	concatText = ConcatStrings (ConcatStrings(armorName, " (Weapon Prot. "), protEdge);

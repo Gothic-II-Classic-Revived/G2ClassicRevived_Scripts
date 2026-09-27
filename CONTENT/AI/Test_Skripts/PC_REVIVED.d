@@ -242,6 +242,9 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAM_REVIVED_PSI, 1);
 	CreateInvItems(self, ITAM_REVIVED_KDW, 1);
 	CreateInvItems(self, ITAM_REVIVED_DEMON, 1);
+	CreateInvItems(self, ITAM_REVIVED_INNOSEYE, 1);
+	CreateInvItems(self, ITAM_REVIVED_INNOSEYE_DISCHARGED, 1);
+	CreateInvItems(self, ITAM_REVIVED_INNOSEYE_BROKEN, 1);
 
 	//******************************************************************//
 
@@ -253,11 +256,12 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_ARCHER, 1);
 	CreateInvItems(self, ITAR_REVIVED_KNIGHT, 1);
 	CreateInvItems(self, ITAR_REVIVED_KNIGHT_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_KNIGHT_03, 1);
 	CreateInvItems(self, ITAR_REVIVED_CRAWLER, 1);
-	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_L, 1);
-	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_S, 1);
+	CreateInvItems(self, ITAR_REVIVED_DHT_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_DHT_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_DHT_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_DHT_S, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_SFB_H, 1);
@@ -266,15 +270,15 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_ORG_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_ORG_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_ORG_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_L, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_S, 1);
+	CreateInvItems(self, ITAR_REVIVED_MIL_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_MIL_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_MIL_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_MIL_S, 1);
 	CreateInvItems(self, ITAR_REVIVED_STT_M_02, 1);
 	CreateInvItems(self, ITAR_REVIVED_STT_H_02, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_L_02, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_M_02, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_H_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_MIL_L_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_MIL_M_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_MIL_H_02, 1);
 	CreateInvItems(self, ITAR_REVIVED_EBR_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_EBR_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_EBR_H, 1);
@@ -307,7 +311,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_DMT_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_DMT_H, 1);
 	CreateInvItems(self, ITAR_REVIVED_DMT_S, 1);
-	CreateInvItems(self, ITAR_REVIVED_SHM_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_KDF_L_02, 1);
 	CreateInvItems(self, ITAR_REVIVED_BDT_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_BDT_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_BDT_H, 1);
@@ -317,6 +321,19 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 
 	// IT_BELTS.d
 	CreateInvItems(self, ITBE_REVIVED_ARCHER, 1);
+	CreateInvItems(self, ITBE_REVIVED_CRAWLER, 1);
+	CreateInvItems(self, ITBE_REVIVED_LEATHER, 1);
+	CreateInvItems(self, ITBE_REVIVED_SFB, 1);
+	CreateInvItems(self, ITBE_REVIVED_MIL, 1);
+	CreateInvItems(self, ITBE_REVIVED_GRD, 1);
+	CreateInvItems(self, ITBE_REVIVED_PAL, 1);
+	CreateInvItems(self, ITBE_REVIVED_SLD, 1);
+	CreateInvItems(self, ITBE_REVIVED_DJG, 1);
+	CreateInvItems(self, ITBE_REVIVED_DHT, 1);
+	CreateInvItems(self, ITBE_REVIVED_NOV, 1);
+	CreateInvItems(self, ITBE_REVIVED_KDF, 1);
+	CreateInvItems(self, ITBE_REVIVED_RANGER, 1);
+	CreateInvItems(self, ITBE_REVIVED_KDW, 1);
 
 	//******************************************************************//
 
@@ -376,15 +393,6 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	//******************************************************************//
 
 	// IT_HELMET.d
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_01, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_02, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_03, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_04, 1);
-	CreateInvItems(self, ITHE_REVIVED_KNIGHT, 1);
-	CreateInvItems(self, ITHE_REVIVED_DJG_M, 1);
-	CreateInvItems(self, ITHE_REVIVED_DJG_H, 1);
-	CreateInvItems(self, ITHE_REVIVED_PIR, 1);
-	CreateInvItems(self, ITHE_REVIVED_PAL, 1);
 	CreateInvItems(self, ITHE_REVIVED_01, 1);
 
 	//******************************************************************//
@@ -780,6 +788,11 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRW_REVIVED_BOW_WOLF, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_CAVALORN, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_BOSPER, 1);
+	CreateInvItems(self, ITRW_REVIVED_BOW_CRAFT_01, 1);
+	CreateInvItems(self, ITRW_REVIVED_BOW_CRAFT_02, 1);
+	CreateInvItems(self, ITRW_REVIVED_BOW_CRAFT_03, 1);
+	CreateInvItems(self, ITRW_REVIVED_BOW_CRAFT_04, 1);
+	CreateInvItems(self, ITRW_REVIVED_BOW_CRAFT_05, 1);
 
 	//******************************************************************//
 
@@ -799,6 +812,11 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_FIRE_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_DRAGOMIR, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_SENGRATH, 1);
+	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_CRAFT_01, 1);
+	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_CRAFT_02, 1);
+	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_CRAFT_03, 1);
+	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_CRAFT_04, 1);
+	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_CRAFT_05, 1);
 
 	//******************************************************************//
 

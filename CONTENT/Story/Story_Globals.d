@@ -58,11 +58,11 @@ var int STR_Amulett_EinRing_Bonus;
 var int STR_Artefakt_Effekt;	  
 
 //------------R�stungen---------
-var int LeatherArmor_Equipped;
-var int	SLDArmor_Equipped;
+//var int LeatherArmor_Equipped;
+//var int	SLDArmor_Equipped;
 var int NOVArmor_Equipped;
-var int KDFArmor_Equipped;
-var int	MILArmor_Equipped;
+//var int KDFArmor_Equipped;
+//var int	MILArmor_Equipped;
 var int MCArmor_Equipped;
 //----------Guertel-----------
 /*+ Specials (Diebesg�rtel --> DEX zusammen mit?)

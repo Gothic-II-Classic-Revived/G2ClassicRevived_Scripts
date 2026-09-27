@@ -201,7 +201,21 @@ const string NAME_PercentageHPMP		=	"Hitpoints and Mana percentage";
 const string NAME_Percentage_HP			=	"Hitpoint percentage";
 const string NAME_Percentage_Mana		=	"Mana percentage";
 
-const string NAME_Addon_BeArArcher		=	"Together with Archer's Suit +";
+const string NAME_BeltBonus_Archer		=	"Bonus protection with Archer's Suit";
+const string NAME_BeltBonus_Crawler		=	"Bonus protection with Crawler Plate Armor";
+const string NAME_BeltBonus_Leather		=	"Bonus protection with Leather Armors";
+const string NAME_BeltBonus_SFB			=	"Bonus protection with Miner Paints";
+const string NAME_BeltBonus_MIL			=	"Bonus protection with Guard Armors";
+const string NAME_BeltBonus_GRD			=	"Bonus protection with Royal Guard Armors";
+const string NAME_BeltBonus_PAL			=	"Bonus protection with Paladin Armors";
+const string NAME_BeltBonus_SLD			=	"Bonus protection with Mercenary Armors";
+const string NAME_BeltBonus_DJG			=	"Bonus protection with Dragon Hunter Armors";
+const string NAME_BeltBonus_DHT			=	"Bonus protection with Demon Hunter Armors";
+const string NAME_BeltBonus_NOV			=	"Bonus protection with Fire Novice Robes";
+const string NAME_BeltBonus_KDF			=	"Bonus protection with Fire Mage Robes";
+const string NAME_BeltBonus_RANGER		=	"Bonus protection with Water Circle Armor";
+const string NAME_BeltBonus_KDW			=	"Bonus protection with Water Mage Robes";
+
 
 const string PRINT_GotFood				=	"Package was filled with food";
 
@@ -1215,7 +1229,6 @@ var int BaltramPackage3;
 var int BaltramPackage4;
 var int BaltramPackage5;
 
-
 // ***************
 // Books and Notes
 // ***************
@@ -1343,10 +1356,52 @@ const int	XP_BookstandFireContest			= 50;
 // Equips
 // ***************
 
-var int ArcherBelt_Equipped;
 var int ArcherArmor_Equipped;
+var int ArcherBe_Equipped;
 var int ArcherAmulet_Equipped;
 var int ArcherRing_Equipped;
+
+var int CrawlerArmor_Equipped;
+var int CrawlerBe_Equipped;
+
+var int LeatherArmor_Equipped;
+var int LeatherBe_Equipped;
+
+var int SFBArmor_Equipped;
+var int SFBBe_Equipped;
+
+var int	MILArmor_Equipped;
+var int	MILBe_Equipped;
+
+var int	GRDArmor_Equipped;
+var int	GRDBe_Equipped;
+
+var int	PALArmor_Equipped;
+var int	PALBe_Equipped;
+
+var int	SLDArmor_Equipped;
+var int	SLDBe_Equipped;
+
+var int	DJGArmor_Equipped;
+var int	DJGBe_Equipped;
+
+var int	DHTArmor_Equipped;
+var int	DHTBe_Equipped;
+
+var int	NOVArmor_Equipped;
+var int	NOVBe_Equipped;
+
+var int	KDFArmor_Equipped;
+var int	KDFBe_Equipped;
+
+var int	RangerArmor_Equipped;
+var int	RangerBe_Equipped;
+
+var int	KDWArmor_Equipped;
+var int	KDWBe_Equipped;
+
+var int	DMTArmor_Equipped;
+var int	DMTBe_Equipped;
 // ***************
 var int ArrowProtAmulet_Equipped;
 var int ArrowProtRing_Equipped;
@@ -1607,6 +1662,9 @@ const int REV_Bonus_Mana_ArcaneStaff_02		= 	20;
 const int REV_Bonus_Mana_ArcaneStaff_03		= 	30;
 const int REV_Bonus_Mana_ArcaneStaff_04		= 	40;
 
+const int REV_Bonus_BELT_01					=	5;
+const int REV_Bonus_BELT_02					=	10;
+const int REV_Bonus_BELT_03					=	15;
 
 
 // ***************
