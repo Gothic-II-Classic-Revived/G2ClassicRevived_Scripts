@@ -17,7 +17,6 @@ instance VLK_417_Constantino (Npc_Default)
 	
 	// ------ Equippte Waffen ------
 	EquipItem (self, ITMW_REVIVED_1H_WALKINGSTICK_01);
-	EquipItem (self, ITHE_REVIVED_SPECTACLES_02);
 	
 	// ------ Inventory ------
 	// Händler

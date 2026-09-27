@@ -31,7 +31,6 @@ instance DJG_713_Biff_DI (Npc_Default)
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	EquipItem	(self, ITHE_REVIVED_DJG_M);
 
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcFullVisual (self, MALE, "Hum_Head_Bald", Face_W_Biff, Body_W_Hum_Naked, Body_White, Teeth_Rotten, ITAR_REVIVED_DJG_L);		

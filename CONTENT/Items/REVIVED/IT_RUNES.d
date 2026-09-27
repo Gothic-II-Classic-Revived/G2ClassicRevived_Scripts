@@ -245,7 +245,7 @@ INSTANCE ITRU_REVIVED_HEALOTHER (C_Item)
 
 	value 				= 	REV_Value_ZP_RUNE;
 
-	visual				= 	"ItRu_HealOther.3DS";
+	visual				= 	"ITRU_REV_HEALOTHER.3DS";
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_HealOther;
@@ -274,7 +274,7 @@ INSTANCE ITRU_REVIVED_EXPLODE (C_Item)
 
 	value 				= 	REV_Value_ZP_RUNE;
 
-	visual				= 	"ItRu_Explosion.3DS";
+	visual				= 	"ITRU_REV_EXPLOSION.3DS";
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_Explode;
@@ -332,7 +332,7 @@ INSTANCE ITRU_REVIVED_EARTHQUAKE (C_Item)
 
 	value 				= 	REV_Value_ZP_RUNE;
 
-	visual				= 	"ItRu_Quake.3DS";
+	visual				= 	"ITRU_REV_QUAKE.3DS";
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_Earthquake;
@@ -361,7 +361,7 @@ INSTANCE ITRU_REVIVED_MANARECOVERY (C_Item)
 
 	value 				= 	REV_Value_ZP_RUNE;
 
-	visual				= 	"ItRu_ManaForLife.3DS";
+	visual				= 	"ITRU_REV_MANAFORLIFE.3DS";
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_ManaRecovery;

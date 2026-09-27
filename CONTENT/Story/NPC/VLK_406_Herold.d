@@ -17,7 +17,6 @@ instance VLK_406_Herold (Npc_Default)
 	
 	// ------ Equippte Waffen ------
 	EquipItem (self,ITMW_REVIVED_1H_SWORD_06);
-	EquipItem	(self, ITHE_REVIVED_SPECTACLES_04); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

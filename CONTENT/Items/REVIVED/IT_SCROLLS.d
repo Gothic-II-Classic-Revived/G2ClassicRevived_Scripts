@@ -998,7 +998,7 @@ INSTANCE ITSC_REVIVED_HEALOTHER (C_Item)
 
 	value 				= 	REV_Value_ZP_SCROLL;
 
-	visual				= 	"ItSc_HealOther.3DS";
+	visual				= 	"ITSC_REV_HEALOTHER.3DS";
 	spell				= 	SPL_HealOther;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
 	cond_value[2]  		= 	SPL_Cost_Scroll;
@@ -1023,7 +1023,7 @@ INSTANCE ITSC_REVIVED_EXPLODE (C_Item)
 
 	value 				= 	REV_Value_ZP_SCROLL;
 
-	visual				= 	"ItSc_Explosion.3DS";
+	visual				= 	"ITSC_REV_EXPLOSION.3DS";
 	spell				= 	SPL_Explode;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
 	cond_value[2]  		= 	SPL_Cost_Scroll;
@@ -1073,7 +1073,7 @@ INSTANCE ITSC_REVIVED_EARTHQUAKE (C_Item)
 
 	value 				= 	REV_Value_ZP_SCROLL;
 
-	visual				= 	"ItSc_Quake.3DS";
+	visual				= 	"ITSC_REV_QUAKE.3DS";
 	spell				= 	SPL_Earthquake;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
 	cond_value[2]  		= 	SPL_Cost_Scroll;
@@ -1098,7 +1098,7 @@ INSTANCE ITSC_REVIVED_MANARECOVERY (C_Item)
 
 	value 				= 	REV_Value_ZP_SCROLL;
 
-	visual				= 	"ItSc_ManaForLife.3DS";
+	visual				= 	"ITSC_REV_MANAFORLIFE.3DS";
 	spell				= 	SPL_ManaRecovery;
 	cond_atr[2]   		= 	ATR_MANA_MAX;
 	cond_value[2]  		= 	1;

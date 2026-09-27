@@ -20,7 +20,6 @@ instance VLK_498_Ignaz (Npc_Default)
 	
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITMW_REVIVED_1H_CLUB_01);
-	EquipItem	(self, ITHE_REVIVED_SPECTACLES_01); 
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

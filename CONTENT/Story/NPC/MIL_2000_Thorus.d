@@ -23,7 +23,6 @@ instance MIL_2000_Thorus (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_2H_SWORD_THORUS);
-	EquipItem	(self, ITHE_REVIVED_SPECTACLES_03); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

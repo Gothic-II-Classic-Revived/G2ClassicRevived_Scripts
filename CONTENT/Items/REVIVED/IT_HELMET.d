@@ -30,88 +30,12 @@ PROTOTYPE REVIVED_HELMET (C_Item)
 };
 
 //****************************************************************************
-//			SPECTACLES
-//****************************************************************************
-
-INSTANCE ITHE_REVIVED_SPECTACLES_01(REVIVED_HELMET)
-{
-	name					=	"Spectacles";
-	visual					=	"REV_SPECTACLE_1.3ds";
-	description				=	name;
-};
-
-INSTANCE ITHE_REVIVED_SPECTACLES_02(REVIVED_HELMET)
-{
-	name					=	"Spectacles";
-	visual					=	"REV_SPECTACLE_2.3ds";
-	description				=	name;
-};
-
-INSTANCE ITHE_REVIVED_SPECTACLES_03(REVIVED_HELMET)
-{
-	name					=	"Spectacles";
-	visual					=	"REV_SPECTACLE_3.3ds";
-	description				=	name;
-};
-
-INSTANCE ITHE_REVIVED_SPECTACLES_04(REVIVED_HELMET)
-{
-	name					=	"Spectacles";
-	visual					=	"REV_SPECTACLE_4.3ds";
-	description				=	name;
-};
-
-//****************************************************************************
-//			GOTHIC II HELMETS
-//****************************************************************************
-INSTANCE ITHE_REVIVED_KNIGHT(REVIVED_HELMET)
-{
-	name					=	"Old Knight's Helmet";
-	visual					=	"REV_HAT_RITTER_OLD.3ds";
-	description				=	name;
-};
-// ******************************************************
-INSTANCE ITHE_REVIVED_DJG_M(REVIVED_HELMET)
-{
-	name					=	"Dragonhunter's Helmet";
-	visual					=	"REV_HAT_DJGM.3ds";
-	description				=	name;
-};
-
-INSTANCE ITHE_REVIVED_DJG_H(REVIVED_HELMET)
-{
-	name					=	"Dragonhunter's Helmet";
-	visual					=	"REV_HAT_DJGH.3ds";
-	description				=	name;
-};
-// ******************************************************
-INSTANCE ITHE_REVIVED_DMT_H(REVIVED_HELMET)
-{
-	name					=	"Demontunher's Helmet";
-	visual					=	"REV_HAT_DMTH.3ds";
-	description				=	name;
-};
-// ******************************************************
-INSTANCE ITHE_REVIVED_PIR(REVIVED_HELMET)
-{
-	name					=	"Captain's hat";
-	visual					=	"REV_HAT_KAPITAEN.3ds";
-	description				=	name;
-};
-
-//****************************************************************************
 //			REVIVED HELMETS
 //****************************************************************************
-INSTANCE ITHE_REVIVED_PAL(REVIVED_HELMET)
-{
-	name					=	"Paladin's Helmet";
-	visual					=	"REV_HAT_PALADIN.3ds";
-	description				=	name;
-};
 
 INSTANCE ITHE_REVIVED_01 (REVIVED_HELMET)
 {
-	name					=	"Helmet";
+	name					=	"Old Helmet";
 
 	protection [PROT_EDGE]	=	2;
 	protection [PROT_BLUNT] = 	2;
