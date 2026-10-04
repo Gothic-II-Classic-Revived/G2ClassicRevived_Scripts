@@ -3572,9 +3572,9 @@ FUNC VOID DIA_CH_Misc_Animal_allg_Info()
 	{ 
 		Info_AddChoice	(DIA_CH_Misc_Animal_allg, B_BuildLearnString ("Fell abziehen",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  CH_Training_TROPHYS_Fur);
 	};
-	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
+	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_MagicHeart] == FALSE)
 	{ 
-		Info_AddChoice	(DIA_CH_Misc_Animal_allg, B_BuildLearnString ("Herzen nehmen",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Heart)),  CH_Training_TROPHYS_Heart);
+		Info_AddChoice	(DIA_CH_Misc_Animal_allg, B_BuildLearnString ("Herzen nehmen",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_MagicHeart)),  CH_Training_TROPHYS_Heart);
 	};
 };
 
@@ -3592,7 +3592,7 @@ FUNC VOID CH_Training_TROPHYS_Fur ()
 };
 FUNC VOID CH_Training_TROPHYS_Heart ()
 {
-	B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Heart);
+	B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_MagicHeart);
 };
 //--------------------------------------------
 FUNC VOID DIA_CH_Misc_Animal_allg_BACK()

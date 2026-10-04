@@ -189,20 +189,26 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	// ------ Kosten für Animaltrophy ------
 	if (talent == NPC_TALENT_TAKEANIMALTROPHY)
 	{
-		if 		(skill == TROPHY_Teeth			) 	{	kosten = (3);	}
-		else if (skill == TROPHY_Claws			) 	{	kosten = (3);	}
+		if 		(skill == TROPHY_Teeth			) 	{	kosten = (2);	}
+		else if (skill == TROPHY_Claws			) 	{	kosten = (2);	}
 		else if (skill == TROPHY_Fur			) 	{	kosten = (5);	}
-		else if (skill == TROPHY_Heart			) 	{	kosten = (3);	}
+		else if (skill == TROPHY_MagicHeart		) 	{	kosten = (3);	}
 		else if (skill == TROPHY_ShadowHorn 	) 	{	kosten = (3);	}
 		else if (skill == TROPHY_FireTongue		) 	{	kosten = (1);	}
 		else if (skill == TROPHY_BFWing			) 	{	kosten = (1);	}
 		else if (skill == TROPHY_BFSting		) 	{	kosten = (1);	}
 		else if (skill == TROPHY_Mandibles		) 	{	kosten = (1);	}
 		else if (skill == TROPHY_CrawlerPlate	) 	{	kosten = (3);	}
-		else if (skill == TROPHY_DrgSnapperHorn	) 	{	kosten = (1);	}
+		else if (skill == TROPHY_DrgSnapperHorn	) 	{	kosten = (2);	}
 		else if (skill == TROPHY_DragonScale	) 	{	kosten = (3);	}
 		else if (skill == TROPHY_DragonBlood	) 	{	kosten = (3);	}
-		else if (skill == TROPHY_ReptileSkin	) 	{	kosten = (3);	};
+		else if (skill == TROPHY_ReptileSkin	) 	{	kosten = (5);	}
+		else if (skill == TROPHY_SwampsharkTeeth) 	{	kosten = (3);	}
+		else if (skill == TROPHY_SwampsharkSkin	) 	{	kosten = (3);	}
+		else if (skill == TROPHY_LurkerClaws	) 	{	kosten = (2);	}
+		else if (skill == TROPHY_TrollTeeth		) 	{	kosten = (2);	}
+		else if (skill == TROPHY_TrollSkin		) 	{	kosten = (2);	}
+		else if (skill == TROPHY_MantisHead		) 	{	kosten = (1);	};
 	};                                                                  
 
 	// ------ Kosten für Sprache der Erbauer ------
@@ -266,7 +272,7 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == SPL_ChargeZap			) 	{	kosten = (10);	}
 		else if (skill == SPL_SummonGolem	    ) 	{	kosten = (15);	}
 		else if (skill == SPL_DestroyUndead		) 	{	kosten = (10);	}
-		else if (skill == SPL_LargeFireStorm	    ) 	{	kosten = (10);	}
+		else if (skill == SPL_LargeFireStorm	) 	{	kosten = (10);	}
 		else if (skill == SPL_WaterFist			) 	{	kosten = (10);	}   
 		// 5                                                            
 		else if (skill == SPL_Firestorm			) 	{	kosten = (15);	}

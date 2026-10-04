@@ -777,7 +777,7 @@ var int BusterTrophyShadowbeastCounter;
 
 func void DIA_Buster_BringTrophyShadowbeast_Info ()
 {
-	if ((Kapitel >= 5))
+	if ((Kapitel >= 5) || Npc_IsDead(VLK_404_Lutero))
 	{
 		AI_Output			(self, other, "DIA_Buster_BringTrophyShadowbeast_13_00"); //My city merchant has made his farewells.
 		AI_Output			(other, self, "DIA_Buster_BringTrophyShadowbeast_15_01"); //What is that supposed to mean?

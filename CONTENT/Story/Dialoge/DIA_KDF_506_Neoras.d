@@ -185,6 +185,83 @@ func int DIA_Neoras_TEACH_Condition ()
 {	
 	return TRUE;
 };
+
+FUNC VOID DIA_Neoras_TEACH_BACK()
+{
+	Info_ClearChoices 	(DIA_Neoras_TEACH);
+};
+FUNC VOID DIA_Neoras_TEACH_Choices()
+{
+	Info_ClearChoices 	(DIA_Neoras_TEACH);
+	Info_AddChoice 		(DIA_Neoras_TEACH,DIALOG_BACK,DIA_Neoras_TEACH_BACK);
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == FALSE)
+	{
+		Info_AddChoice 		(DIA_Neoras_TEACH,B_BuildLearnString ("Essence of Healing", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Health_01)),DIA_Neoras_TEACH_HEALTH_01);
+	};
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == TRUE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_02] == FALSE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Extract of Healing", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Health_02)), DIA_Neoras_TEACH_Health_02);
+	};
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Health_02] == TRUE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_03] == FALSE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Elixir of Healing", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Health_03)), DIA_Neoras_TEACH_Health_03);
+	};
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_01] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_03] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Essence of Life", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_HEALTH_01)), DIA_Neoras_TEACH_Perm_Health01);
+	};
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_02] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_01] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Extract of Life", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_HEALTH_02)), DIA_Neoras_TEACH_Perm_Health02);
+	};
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_03] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_02] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Elixir of Life", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_HEALTH_03)), DIA_Neoras_TEACH_Perm_Health03);
+	};
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == FALSE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Mana Essence", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Mana_01)), DIA_Neoras_TEACH_Mana_01);
+	};
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_02] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Mana Extract", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Mana_02)), DIA_Neoras_TEACH_Mana_02);
+	};
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_02] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Mana Elixir", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Mana_03)), DIA_Neoras_TEACH_Mana_03);
+	};
+
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_01] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Essence of the Spirit", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MANA_01)), DIA_Neoras_TEACH_Perm_Mana01);
+	};
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_02] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_01] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Extract of the Spirit", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MANA_02)), DIA_Neoras_TEACH_Perm_Mana02);
+	};
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_03] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_02] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Elixir of the Spirit", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MANA_03)), DIA_Neoras_TEACH_Perm_Mana03);
+	};
+};
+
 func void DIA_Neoras_TEACH_Info ()
 {
 	AI_Output (other, self, "DIA_Neoras_TEACH_15_00"); //Can I learn from you?
@@ -194,137 +271,78 @@ func void DIA_Neoras_TEACH_Info ()
 	{
 		AI_Output (self, other, "DIA_Neoras_TEACH_01_01"); //I shall instruct you in the secrets of alchemy.
 		
-		Info_ClearChoices 	(DIA_Neoras_TEACH);
-		Info_AddChoice 		(DIA_Neoras_TEACH,DIALOG_BACK,DIA_Neoras_TEACH_BACK);
-	
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == FALSE)
-		{
-			Info_AddChoice 		(DIA_Neoras_TEACH,B_BuildLearnString ("Essence of Healing", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Health_01)),DIA_Neoras_TEACH_HEALTH_01);
-		};
-		
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_02] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Extract of Healing", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Health_02)), DIA_Neoras_TEACH_Health_02);
-		};
-		
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Health_02] == TRUE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_03] == FALSE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Elixir of Healing", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Health_03)), DIA_Neoras_TEACH_Health_03);
-		};
-		
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_01] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_03] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Essence of Life", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_HEALTH_01)), DIA_Neoras_TEACH_Perm_Health01);
-		};
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_02] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_01] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Extract of Life", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_HEALTH_02)), DIA_Neoras_TEACH_Perm_Health02);
-		};
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_03] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_02] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Elixir of Life", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_HEALTH_03)), DIA_Neoras_TEACH_Perm_Health03);
-		};
-		
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == FALSE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Mana Essence", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Mana_01)), DIA_Neoras_TEACH_Mana_01);
-		};
-		
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_02] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Mana Extract", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Mana_02)), DIA_Neoras_TEACH_Mana_02);
-		};
-		
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_02] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Mana Elixir", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Mana_03)), DIA_Neoras_TEACH_Mana_03);
-		};
-		
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_01] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Essence of the Spirit", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MANA_01)), DIA_Neoras_TEACH_Perm_Mana01);
-		};
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_02] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_01] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Extract of the Spirit", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MANA_02)), DIA_Neoras_TEACH_Perm_Mana02);
-		};
-		if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_03] == FALSE)
-		&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_02] == TRUE)
-		{
-			Info_AddChoice	  (DIA_Neoras_TEACH, B_BuildLearnString ("Elixir of the Spirit", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MANA_03)), DIA_Neoras_TEACH_Perm_Mana03);
-		};
-		
+		DIA_Neoras_TEACH_Choices();
 	}
 	else if (hero.guild == GIL_NOV)
 	{
 		AI_Output (self, other, "DIA_Neoras_TEACH_01_02"); //I do not instruct novices. If, some day, you are accepted into the Circle of Fire -
-		AI_Output (self, other, "DIA_Neoras_TEACH_01_03"); //then I can show you how to create powerful potions.
+		AI_Output (self, other, "DIA_Neoras_TEACH_01_03"); //Then I can show you how to create powerful potions.
 	}
 	else
 	{
 		AI_Output (self, other, "DIA_Neoras_TEACH_01_04"); //I pass on my knowledge only to members of our church.
 	};
 };
-FUNC VOID DIA_Neoras_TEACH_BACK()
-{
-	Info_ClearChoices 	(DIA_Neoras_TEACH);
-};
+
 FUNC VOID DIA_Neoras_TEACH_HEALTH_01()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Health_01);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_HEALTH_02()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Health_02);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_Health_03()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Health_03);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_Perm_Health01()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_HEALTH_01);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_Perm_Health02()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_HEALTH_02);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_Perm_Health03()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_HEALTH_03);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_MANA_01()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Mana_01);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_MANA_02()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Mana_02);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_MANA_03()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Mana_03);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_Perm_Mana01()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MANA_01);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_Perm_Mana02()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MANA_02);
+	DIA_Neoras_TEACH_Choices();
 };
 FUNC VOID DIA_Neoras_TEACH_Perm_Mana03()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MANA_03);
+	DIA_Neoras_TEACH_Choices();
 };
 
 //#####################################################################

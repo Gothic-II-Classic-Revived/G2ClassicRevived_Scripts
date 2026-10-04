@@ -1783,9 +1783,9 @@ var int PLAYER_TALENT_BOWYER[MAX_WEAPONS_RANGED];
 // ***************
 const int TROPHY_SwampsharkTeeth		= 14;
 const int TROPHY_SwampsharkSkin			= 15;
-const int TROPHY_GolemHeart				= 16;
-const int TROPHY_FireLizardTongue		= 17;
-const int TROPHY_BlackTrollSkin			= 18;
+const int TROPHY_LurkerClaws			= 16;
+const int TROPHY_TrollTeeth				= 17;
+const int TROPHY_TrollSkin				= 18;
 const int TROPHY_MantisHead				= 19;
 
 const int MAX_TROPHIES					= 20;

@@ -202,6 +202,9 @@ func void DIA_Grimbald_TEACHHUNTING_Info ()
 	if 		(
 				(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
 				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
+				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_TrollSkin] == FALSE)
+				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_TrollTeeth] == FALSE)
+				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
 				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
 				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Mandibles] == FALSE)
 				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_CrawlerPlate] == FALSE)
@@ -218,6 +221,18 @@ func void DIA_Grimbald_TEACHHUNTING_Info ()
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
 				{ 
 					Info_AddChoice	(DIA_Grimbald_TEACHHUNTING, B_BuildLearnString ("Bloodfly's wings",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Grimbald_TEACHHUNTING_BFWing	);
+				};
+				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_TrollSkin] == FALSE)
+				{ 
+					Info_AddChoice	(DIA_Grimbald_TEACHHUNTING, B_BuildLearnString ("Remove troll skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_TrollSkin)),  DIA_Grimbald_TEACHHUNTING_TrollSkin	);
+				};
+				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_TrollTeeth] == FALSE)
+				{ 
+					Info_AddChoice	(DIA_Grimbald_TEACHHUNTING, B_BuildLearnString ("Remove troll tusks",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_TrollTeeth)),  DIA_Grimbald_TEACHHUNTING_TrollTeeth	);
+				};
+				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
+				{ 
+					Info_AddChoice	(DIA_Grimbald_TEACHHUNTING, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Grimbald_TEACHHUNTING_Teeth	);
 				};
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
 				{ 
@@ -257,6 +272,30 @@ func void DIA_Grimbald_TEACHHUNTING_BFWing()
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_BFWing))
 		{
 			AI_Output			(self, other, "DIA_Grimbald_TEACHHUNTING_BFWing_07_00"); //You can either just rip off the bloodfly's wings, or detach them with a sharp knife.
+		};
+	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
+};
+
+func void DIA_Grimbald_TEACHHUNTING_TrollTeeth ()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_TrollTeeth))
+		{
+		};
+	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
+};
+
+func void DIA_Grimbald_TEACHHUNTING_TrollSkin ()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_TrollSkin))
+		{
+		};
+	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
+};
+
+func void DIA_Grimbald_TEACHHUNTING_Teeth ()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Teeth))
+		{
 		};
 	Info_ClearChoices	(DIA_Grimbald_TEACHHUNTING);
 };

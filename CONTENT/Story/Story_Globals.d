@@ -60,7 +60,7 @@ var int STR_Artefakt_Effekt;
 //------------R�stungen---------
 //var int LeatherArmor_Equipped;
 //var int	SLDArmor_Equipped;
-var int NOVArmor_Equipped;
+//var int NOVArmor_Equipped;
 //var int KDFArmor_Equipped;
 //var int	MILArmor_Equipped;
 var int MCArmor_Equipped;
@@ -1378,7 +1378,7 @@ var int Sagitta_TeachAlchemy;		//Health_01 _02 _03, Mana_01_02_03, Perm_Mana, Pe
 /*
 	TROPHY_Claws			 
  	TROPHY_Fur				
- 	TROPHY_Heart			 Golem/D�mon
+ 	TROPHY_MagicHeart			 Golem/D�mon
  	TROPHY_ShadowHorn 		
  	TROPHY_FireTongue		 
  	TROPHY_BFWing			 
@@ -1391,11 +1391,11 @@ var int Sagitta_TeachAlchemy;		//Health_01 _02 _03, Mana_01_02_03, Perm_Mana, Pe
 */
 
 var int Gaan_TeachAnimalTrophy;		//TROPHY_Claws, TROPHY_Fur, TROPHY_BFSting, TROPHY_BFWing, TROPHY_Teeth, TROPHY_DrgSnapperHorn
-var int Grom_TeachAnimalTrophy;  	//TROPHY_Fur, TROPHY_Teeth, TROPHY_Heart, TROPHY_Mandibles, TROPHY_ShadowHorn
+var int Grom_TeachAnimalTrophy;  	//TROPHY_Fur, TROPHY_Teeth, TROPHY_MagicHeart, TROPHY_Mandibles, TROPHY_ShadowHorn
 var int Grimbald_TeachAnimalTrophy; //TROPHY_BFSting, TROPHY_BFWing, TROPHY_Claws, TROPHY_Mandibles, TROPHY_CrawlerPlate
 var int Gestath_TeachAnimalTrophy; 	//TROPHY_FireTongue, TROPHY_CrawlerPlate, TROPHY_Mandibles, TROPHY_DrgSnapperHorn, TROPHY_DragonScale, TROPHY_DragonBlood
 var int Godar_TeachAnimalTrophy; 	//NPC_TALENT_SNEAK, TROPHY_Teeth, TROPHY_BFSting, TROPHY_BFWing, TROPHY_DragonScale, TROPHY_DragonBlood
-var int Talbin_TeachAnimalTrophy; 	//TROPHY_Fur, TROPHY_Claws, TROPHY_Heart, TROPHY_ShadowHorn
+var int Talbin_TeachAnimalTrophy; 	//TROPHY_Fur, TROPHY_Claws, TROPHY_MagicHeart, TROPHY_ShadowHorn
 
 //--------------------
 //Kloster ab Kapitel 1

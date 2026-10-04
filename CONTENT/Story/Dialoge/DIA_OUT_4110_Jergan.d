@@ -164,31 +164,7 @@ FUNC VOID DIA_Jergan_Mine_Info()
 	AI_Output (other, self,"DIA_Jergan_Mine_15_00");//What are you doing here?
 	AI_Output (self, other,"DIA_Jergan_Mine_13_01");//I'm a scout. I roam the country. But all those snappers haven't made it easy for me.
 	AI_Output (self, other,"DIA_Jergan_Mine_13_02");//It's a good time to land a few trophies - provided you know what you're doing.
-};
-///////////////////////////////////////////////////////////////////////
-//	Klauen reissen
-///////////////////////////////////////////////////////////////////////
-INSTANCE DIA_Jergan_Claw   (C_INFO)
-{
-	npc         = OUT_4110_JERGAN;
-	nr          = 3;
-	condition   = DIA_Jergan_Claw_Condition;
-	information = DIA_Jergan_Claw_Info;
-	permanent   = FALSE;
-	description = "Can you teach me how to do that?";
-};
-
-FUNC INT DIA_Jergan_Claw_Condition()
-{	
-	if (Npc_GetDistToWP (self, "OW_OM_ENTRANCE03_003") < 1000)
-	&& Npc_KnowsInfo (other, DIA_Jergan_Mine)
-	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] == FALSE)
-	{	
-		return TRUE;
-	};	
-};
-FUNC VOID DIA_Jergan_Claw_Info()
-{
+	
 	AI_Output (other, self,"DIA_Jergan_Claw_15_00");//Can you teach me how to do that?
 	AI_Output (self, other,"DIA_Jergan_Claw_13_01");//I can show you how to pull the claws off those things once they're dead.
 };
@@ -202,12 +178,11 @@ INSTANCE DIA_Jergan_Teach   (C_INFO)
 	condition   = DIA_Jergan_Teach_Condition;
 	information = DIA_Jergan_Teach_Info;
 	permanent   = TRUE;
-	description = "(Learn to remove claws)";
+	description = "Show me how to pull claws.";
 };
 FUNC INT DIA_Jergan_Teach_Condition()
 {	
-	if (Npc_GetDistToWP (self, "OW_OM_ENTRANCE03_003") < 1000)
-	&& Npc_KnowsInfo (other, DIA_Jergan_Claw)
+	if Npc_KnowsInfo (other, DIA_Jergan_Mine)
 	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws] == FALSE)
 	{	
 		return TRUE;
@@ -235,7 +210,7 @@ INSTANCE DIA_Jergan_Diego   (C_INFO)
 	condition   = DIA_Jergan_Diego_Condition;
 	information = DIA_Jergan_Diego_Info;
 	permanent   = FALSE;
-	description = "Do you know where Diego got to? ";
+	description = "Do you know where Diego got to?";
 };
 
 FUNC INT DIA_Jergan_Diego_Condition()
@@ -271,8 +246,7 @@ INSTANCE DIA_Jergan_Leader   (C_INFO)
 
 FUNC INT DIA_Jergan_Leader_Condition()
 {	
-	if (Npc_GetDistToWP (self, "OW_OM_ENTRANCE03_003") < 1000)
-	&& Npc_IsDead(NewMine_LeadSnapper) 
+	if Npc_IsDead (NewMine_LeadSnapper) 
 	&& Npc_KnowsInfo (other,DIA_Bilgot_KNOWSLEADSNAPPER)
 	{	
 		return TRUE;

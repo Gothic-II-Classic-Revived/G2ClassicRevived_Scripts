@@ -377,6 +377,11 @@ FUNC VOID DIA_Vatras_DI_Talente_ALCHIMIE ()
 	{
 		Info_AddChoice	  (DIA_Vatras_DI_Talente, B_BuildLearnString ("Potion of Supremacy"	, 	B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MASTER_02)), DIA_Vatras_DI_Talente_POTION_Master02);
 	};
+	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_03] == FALSE)
+	&& ( PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_02] == TRUE)
+	{
+		Info_AddChoice	  (DIA_Vatras_DI_Talente, B_BuildLearnString ("Potion of Godhood"	, 	B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_MASTER_03)), DIA_Vatras_DI_Talente_POTION_Master03);
+	};
 };
 //***************************************************************************
 // Talente Magische Kreise
@@ -424,34 +429,47 @@ FUNC VOID DIA_Vatras_DI_Talente_Circle_6()
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Health_01 ()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Health_01);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Health_02 ()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Health_02);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Health_03 ()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Health_03);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Mana_01 ()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Mana_01);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Mana_02 ()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Mana_02);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Mana_03 ()
 {
 	B_TeachPlayerTalentAlchemy (self, other, POTION_Mana_03);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Master01 ()
 {
-	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MASTER_01);	
+	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MASTER_01);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 FUNC VOID DIA_Vatras_DI_Talente_POTION_Master02 ()
 {
-	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MASTER_02);	
+	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MASTER_02);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
+};
+FUNC VOID DIA_Vatras_DI_Talente_POTION_Master03 ()
+{
+	B_TeachPlayerTalentAlchemy (self, other, POTION_Perm_MASTER_03);
+	DIA_Vatras_DI_Talente_ALCHIMIE();
 };
 
 // ------ Back ------

@@ -1329,7 +1329,7 @@ FUNC VOID UseItWr_Bestiary_Golem()
 		REV_ReadBook(BookType_Hunting);
 		RevivedBookstandRead_Hunting7 = TRUE;
 
-		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_GolemHeart] = TRUE;
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_MagicHeart] = TRUE;
 
 		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
 		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");
@@ -1385,7 +1385,7 @@ FUNC VOID UseItWr_Bestiary_FireLizard()
 		REV_ReadBook(BookType_Hunting);
 		RevivedBookstandRead_Hunting8 = TRUE;
 
-		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireLizardTongue] = TRUE;
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] = TRUE;
 
 		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
 		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");
@@ -1441,7 +1441,7 @@ FUNC VOID UseItWr_Bestiary_BlackTroll()
 		REV_ReadBook(BookType_Hunting);
 		RevivedBookstandRead_Hunting9 = TRUE;
 
-		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BlackTrollSkin] = TRUE;
+		PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollSkin] = TRUE;
 
 		Log_CreateTopic (TOPIC_TalentAnimalTrophy, LOG_NOTE);
 		B_LogEntry (TOPIC_TalentAnimalTrophy, "Now I can:");

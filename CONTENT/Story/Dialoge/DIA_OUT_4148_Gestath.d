@@ -54,22 +54,19 @@ func void DIA_Gestath_HALLO_Info ()
 	Info_AddChoice	(DIA_Gestath_HALLO, "What is there to see here?", DIA_Gestath_HALLO_waszusehen );
 	Info_AddChoice	(DIA_Gestath_HALLO, "What are you doing up here?", DIA_Gestath_HALLO_was );
 };
+
 func void DIA_Gestath_HALLO_plate ()
 {
 	AI_Output			(other, self, "DIA_Gestath_HALLO_plate_15_00"); //That's some armor you're wearing.
 	AI_Output			(self, other, "DIA_Gestath_HALLO_plate_09_01"); //Yeah. Hard to get. It's made of minecrawler plates. A guy named Wolf made it for me.
 	AI_Output			(self, other, "DIA_Gestath_HALLO_plate_09_02"); //I used to be a convict here in the colony. Gave him a couple of minecrawler plates and a few days later the thing was finished. The guy's okay.
+	AI_Output			(other, self, "DIA_Gestath_HALLO_plate_woWolf_15_00"); //Where's this Wolf now?
+	AI_Output			(self, other, "DIA_Gestath_HALLO_plate_woWolf_09_01"); //It's been a while since I've seen him. Back then he was a mercenary here in the colony.
+	AI_Output			(self, other, "DIA_Gestath_HALLO_plate_woWolf_09_02"); //I suppose he still hangs around with the boys.
 
 	Wolf_ProduceCrawlerArmor = TRUE;
 	
 	Info_AddChoice	(DIA_Gestath_HALLO, DIALOG_BACK, DIA_Gestath_HALLO_Back );
-	Info_AddChoice	(DIA_Gestath_HALLO, "Where's this Wolf now?", DIA_Gestath_HALLO_plate_woWolf );
-};
-func void DIA_Gestath_HALLO_plate_woWolf ()
-{
-	AI_Output			(other, self, "DIA_Gestath_HALLO_plate_woWolf_15_00"); //Where's this Wolf now?
-	AI_Output			(self, other, "DIA_Gestath_HALLO_plate_woWolf_09_01"); //It's been a while since I've seen him. Back then he was a mercenary here in the colony.
-	AI_Output			(self, other, "DIA_Gestath_HALLO_plate_woWolf_09_02"); //I suppose he still hangs around with the boys.
 };
 
 func void DIA_Gestath_HALLO_was ()
@@ -193,7 +190,7 @@ func void DIA_Gestath_TEACHHUNTING_Info ()
 				};
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE)
 				{ 
-					Info_AddChoice	(DIA_Gestath_TEACHHUNTING, B_BuildLearnString ("Daragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gestath_TEACHHUNTING_DrgSnapperHorn);
+					Info_AddChoice	(DIA_Gestath_TEACHHUNTING, B_BuildLearnString ("Dragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gestath_TEACHHUNTING_DrgSnapperHorn);
 				};
 				
 				if (Gestath_DragonTrophy == TRUE)

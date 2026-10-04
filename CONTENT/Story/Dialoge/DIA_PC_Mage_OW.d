@@ -393,23 +393,24 @@ INSTANCE DIA_MiltenOW_Lehren(C_INFO)
 };                       
 
 FUNC INT DIA_MiltenOW_Lehren_Condition()
-{	
-	if (other.guild == GIL_KDF)
-	&& (Kapitel == 2)
-	{
-		return TRUE;
-	};
+{
+	return TRUE;
 }; 
 FUNC VOID DIA_MiltenOW_Lehren_Info()
 {	
 	AI_Output (other,self ,"DIA_MiltenOW_Lehren_15_00");//Can you teach me something?
-	AI_Output (self ,other,"DIA_MiltenOW_Lehren_03_01");//I can instruct you in some magic from the second Circle of Magic, or I can help you to increase your magic power.
+	if (other.guild == GIL_KDF) && (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) == 1)
+	{
+		AI_Output (self ,other,"DIA_MiltenOW_Lehren_03_01");//I can instruct you in some magic from the second Circle of Magic, or I can help you to increase your magic power.
+	};
 	AI_Output (self ,other,"DIA_MiltenOW_Lehren_03_02");//If you feel ready to increase your power, then I can instruct you.
 };	
 
 // ************************************************************
-// 		Teach zweiter Kreis
+// 		Teach next circle
 // ************************************************************
+var int MiltenOW_TaughtCircle;
+
 INSTANCE DIA_MiltenOW_TeachCircle2(C_INFO)
 {
 	npc			= PC_Mage_OW;
@@ -417,28 +418,44 @@ INSTANCE DIA_MiltenOW_TeachCircle2(C_INFO)
 	condition	= DIA_MiltenOW_TeachCircle2_Condition;
 	information	= DIA_MiltenOW_TeachCircle2_Info;
 	permanent	= TRUE;
-	description = "Teach me the second Circle of Magic!";
+	description = "Teach me the next Circle of Magic!";
 };                       
 
 FUNC INT DIA_MiltenOW_TeachCircle2_Condition()
 {	
 	if (other.guild == GIL_KDF)
 	&& (Npc_KnowsInfo (other,DIA_MiltenOW_Lehren))
-	&& (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) == 1)
+	&& (MiltenOW_TaughtCircle == FALSE)
+	&& (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
+	&& (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) < 6)
 	{
 		return TRUE;
 	};
 }; 
 FUNC VOID DIA_MiltenOW_TeachCircle2_Info()
-{	
-	AI_Output (other, self, "DIA_Milten_Add_15_00"); //Teach me the second Circle of Magic!
+{
+	var int currentCircle;
+	currentCircle = Npc_GetTalentSkill (other, NPC_TALENT_MAGE);
+
+	if (currentCircle == 1)
+	{
+		AI_Output (other, self, "DIA_Milten_Add_15_00"); //Teach me the second Circle of Magic!
+	}
+	else
+	{
+		AI_Output (other, self, "DIA_MiltenOW_Lehren_15_00"); //Can you teach me something?
+	};
 	AI_Output (self, other, "DIA_Milten_Add_03_01"); //This is normally the privilege of the teachers of our order.
 	AI_Output (self, other, "DIA_Milten_Add_03_02"); //But I think that, in this case, we can make an exception...
 	
-	if (B_TeachMagicCircle (self, other, 2))
+	if (B_TeachMagicCircle (self, other, currentCircle + 1))
 	{
+		MiltenOW_TaughtCircle = TRUE;
 		AI_Output (self, other, "DIA_Milten_Add_03_03"); //I don't know if I quite remember the official words...
-		AI_Output (self, other, "DIA_Milten_Add_03_04"); //Enter now the second Circle. Er... It will show you the way - but your deeds form the path - or something along those lines...
+		if (currentCircle == 1)
+		{
+			AI_Output (self, other, "DIA_Milten_Add_03_04"); //Enter now the second Circle. Er... It will show you the way - but your deeds form the path - or something along those lines...
+		};
 		AI_Output (self, other, "DIA_Milten_Add_03_05"); //I think you understand what this is about...
 	};
 };
@@ -459,30 +476,53 @@ INSTANCE DIA_MiltenOW_Teach(C_INFO)
 
 FUNC INT DIA_MiltenOW_Teach_Condition()
 {	
-	if (other.guild == GIL_KDF)
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
 	&& Npc_KnowsInfo (other,DIA_MiltenOW_Lehren)
-	&& (Kapitel == 2)
 	{
 		return TRUE;
 	};
 }; 
 FUNC VOID DIA_MiltenOW_Teach_Info()
 {	
-	AI_Output (other,self ,"DIA_MiltenOW_Teach_15_00");//I want to learn some new spells.
-	
+	AI_Output (other,self ,"DIA_MiltenOW_Teach_15_00"); //I want to learn some new spells.
+
+	Info_ClearChoices (DIA_MiltenOW_Teach);
+	Info_AddChoice (DIA_MiltenOW_Teach,DIALOG_BACK,DIA_MiltenOW_Teach_BACK);
+
+	if  (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
+	{
+		if (PLAYER_TALENT_RUNES [SPL_Firebolt] == FALSE) 
+		{
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+		};
+
+		if (PLAYER_TALENT_RUNES [SPL_LightHeal] == FALSE) 
+		{
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+		};
+
+		if (PLAYER_TALENT_RUNES [SPL_Light] == FALSE) 
+		{
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_Light, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+		};
+	};
+		
 	if  (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
 	{
-		Info_ClearChoices (DIA_MiltenOW_Teach);
-		Info_AddChoice (DIA_MiltenOW_Teach,DIALOG_BACK,DIA_MiltenOW_Teach_BACK);
-		
 		if (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 		{
 			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
 		};
-	}
-	else
-	{
-		AI_Output (self ,other,"DIA_MiltenOW_Teach_03_01");//You have not yet reached the second Circle of Magic. I can't teach you anything.
+
+		if (PLAYER_TALENT_RUNES [SPL_ConcussionBolt] == FALSE) 
+		{
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_ConcussionBolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+		};
+
+		if (PLAYER_TALENT_RUNES [SPL_MediumHeal] == FALSE) 
+		{
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+		};
 	};
 };	
 FUNC VOID DIA_MiltenOW_Teach_BACK()

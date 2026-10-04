@@ -32,10 +32,6 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_BLACKWOLF)		{	CreateInvItems (slf, ItAt_Teeth		, 2);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCDOG)			{	CreateInvItems (slf, ItAt_Teeth		, 2);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_HELLHOUND)		{	CreateInvItems (slf, ItAt_Teeth		, 2);	};
-		
-		
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL)			{	CreateInvItems (slf, ItAt_TrollTooth, 2);	};
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL_BLACK)	{	CreateInvItems (slf, ItAt_TrollTooth, 4);	};
 	};
 	
 	// ------ Swampshark teeth ------
@@ -56,9 +52,12 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_BLOODHOUND)		{	CreateInvItems (slf, ItAt_Claw		, 4);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_PANTHER)		{	CreateInvItems (slf, ItAt_Claw		, 4);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_HELLHOUND)		{	CreateInvItems (slf, ItAt_Claw		, 2);	};
-		
-		
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_LURKER)			{	CreateInvItems (slf, ItAt_LurkerClaw, 1);	};		
+	};
+	
+	// ------ Lurker claws ------
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_LurkerClaws] == TRUE)
+	{
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_LURKER)			{	CreateInvItems (slf, ItAt_LurkerClaw, 1);	};	
 	};
 	
 	// ------ Fell und Häute verteilen ------
@@ -69,7 +68,6 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEWOLF)		{	CreateInvItems (slf, ITAT_REVIVED_FUR_ICEWOLF	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_WARG)			{	CreateInvItems (slf, ItAt_WargFur	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SHADOWBEAST)	{	CreateInvItems (slf, ItAt_ShadowFur	, 1);	};
-		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL)			{	CreateInvItems (slf, ItAt_TrollFur	, 1);	};
 		// ---------------------------------------------------------------------------------------------------
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_Keiler)			{	CreateInvItems (slf, ItAt_Addon_KeilerFur, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_PANTHER)		{	CreateInvItems (slf, ITAT_REVIVED_FUR_PANTHER, 1);	};
@@ -79,10 +77,18 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_HELLHOUND)		{	CreateInvItems (slf, ITAT_REVIVED_FUR_HELLHOUND	, 1);	};	
 	};
 	
-	// ------ Black troll skin ------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BlackTrollSkin] == TRUE)
+	// ------ Troll skin ------
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollSkin] == TRUE)
 	{
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL)			{	CreateInvItems (slf, ItAt_TrollFur, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL_BLACK)	{	CreateInvItems (slf, ItAt_TrollBlackFur	, 1);	};
+	};
+	
+	// ------ Troll teeth ------
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollTeeth] == TRUE)
+	{
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL)			{	CreateInvItems (slf, ItAt_TrollTooth, 2);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL_BLACK)	{	CreateInvItems (slf, ItAt_TrollTooth, 4);	};
 	};
 	
 	// ------ Fell und Häute verteilen ------
@@ -106,16 +112,12 @@ func void B_GiveDeathInv (var C_NPC slf)
 	};
 
 	// ------ Herzen verteilen ------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] == TRUE)
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_MagicHeart] == TRUE)
 	{
 		
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_DEMON)			{	CreateInvItems (slf, ITAT_REVIVED_DEMONHEART, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_DEMON_LORD)		{	CreateInvItems (slf, ITAT_REVIVED_DEMONLORDHEART, 1);	};
-	};
 
-	// ------ Golem hearts ------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_GolemHeart] == TRUE)
-	{
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_STONEGOLEM)		{	CreateInvItems (slf, ITAT_REVIVED_GOLEMHEART_ROCK	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_FIREGOLEM)		{	CreateInvItems (slf, ITAT_REVIVED_GOLEMHEART_FIRE	, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_ICEGOLEM)		{	CreateInvItems (slf, ITAT_REVIVED_GOLEMHEART_ICE	, 1);	};
@@ -129,7 +131,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 	};
 	
 	// ------ Zunge eines Feuerwarans ------
-	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireLizardTongue] == TRUE)
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] == TRUE)
 	{
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_FIREWARAN)		{	CreateInvItems (slf, ItAt_WaranFiretongue, 1);	};
 	};

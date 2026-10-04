@@ -137,8 +137,9 @@ FUNC VOID DIA_Godar_ComeFrom_Understand ()
 	AI_Output (self ,other,"DIA_Godar_ComeFrom_Understand_13_01"); //See! You understand!
 	AI_Output (self ,other,"DIA_Godar_ComeFrom_Understand_13_02"); //Here, have a swig!
 	
-	CreateInvItems (self,ItFo_Beer,1);
+	CreateInvItems (self,ItFo_Beer,2);
 	B_GiveInvItems (self,other,ItFo_Beer,1);
+	B_UseItem (self,ItFo_Beer);
 	B_UseItem (other,ItFo_Beer);
 	Info_ClearChoices (DIA_Godar_ComeFrom);
 };
@@ -165,37 +166,12 @@ FUNC VOID DIA_Godar_Plan_Info()
 {
 	AI_Output (other,self ,"DIA_Godar_Plan_15_00"); //What are you doing here?
 	AI_Output (self ,other,"DIA_Godar_Plan_13_01"); //We heard about the dragon hunt. So we packed up our stuff and came here.
-	AI_Output (self ,other,"DIA_Godar_Plan_13_02"); //But to be honest, I don't give a shit about dragons. I just want a bit of gold.
-	AI_Output (self ,other,"DIA_Godar_Plan_13_03"); //Dragons have gold, don't they?
-	AI_Output (other,self ,"DIA_Godar_Plan_15_04"); //Certainly.
-};
-
-//*********************************************************************
-//	Wisst ihr was über die Drachen? 
-//*********************************************************************
-INSTANCE DIA_Godar_DragonLore   (C_INFO)
-{
-	npc         = DJG_711_Godar;
-	nr          = 5;
-	condition   = DIA_Godar_DragonLore_Condition;
-	information = DIA_Godar_DragonLore_Info;
-	permanent   = FALSE;
-	description	= "What do you know about the dragons?";
-};
-
-FUNC INT DIA_Godar_DragonLore_Condition()
-{
-	if (Npc_KnowsInfo (other,DIA_Godar_Plan))
-	{
-		return TRUE;
-	};	
-};
-
-FUNC VOID DIA_Godar_DragonLore_Info()
-{
 	AI_Output (other,self ,"DIA_Godar_DragonLore_15_00"); //What do you know about the dragons?
 	AI_Output (self ,other,"DIA_Godar_DragonLore_13_01"); //I only know the stories they tell the children.
 	AI_Output (self ,other,"DIA_Godar_DragonLore_13_02"); //You know, virgins, gold, fire breathing, that kind of thing.
+	AI_Output (self ,other,"DIA_Godar_Plan_13_02"); //But to be honest, I don't give a shit about dragons. I just want a bit of gold.
+	AI_Output (self ,other,"DIA_Godar_Plan_13_03"); //Dragons have gold, don't they?
+	AI_Output (other,self ,"DIA_Godar_Plan_15_04"); //Certainly.
 };
 
 //*********************************************************************
@@ -230,31 +206,7 @@ FUNC VOID DIA_Godar_Destination_Info()
 			AI_Output (self ,other,"DIA_Godar_Destination_13_03"); //Wild horses couldn't drag me there. Not to the paladins.
 			AI_Output (self ,other,"DIA_Godar_Destination_13_04"); //I'm not going back to jail. I was there once and that was enough for me.
 		};
-};
 
-//*********************************************************************
-//	Was ist mit den Orks?
-//*********************************************************************
-INSTANCE DIA_Godar_Orks   (C_INFO)
-{
-	npc         = DJG_711_Godar;
-	nr          = 5;
-	condition   = DIA_Godar_Orks_Condition;
-	information = DIA_Godar_Orks_Info;
-	permanent   = FALSE;
-	description	= "What about the orcs?";
-};
-
-FUNC INT DIA_Godar_Orks_Condition()
-{
-	if (Npc_KnowsInfo (other,DIA_Godar_Destination))
-	{
-		return TRUE;
-	};	
-};
-
-FUNC VOID DIA_Godar_Orks_Info()
-{
 	AI_Output (other,self ,"DIA_Godar_Orks_15_00"); //What about the orcs?
 	AI_Output (self ,other,"DIA_Godar_Orks_13_01"); //The whole castle is surrounded. There aren't any gaps.
 	AI_Output (self ,other,"DIA_Godar_Orks_13_02"); //Trying to sneak through there is insane. If you try to fight, you're a dead man.
@@ -343,8 +295,7 @@ INSTANCE DIA_Godar_Hunting   (C_INFO)
 
 FUNC INT DIA_Godar_Hunting_Condition()
 {
-	if (Npc_KnowsInfo (other,DIA_Godar_Prison))
-	&& ((hero.guild != GIL_MIL) && (hero.guild != GIL_PAL) && (hero.guild != GIL_KDF))
+	if (Npc_KnowsInfo (other, DIA_Godar_Prison))
 	{
 		return TRUE;
 	};	
@@ -379,12 +330,13 @@ INSTANCE DIA_Godar_Dragonstuff   (C_INFO)
 	permanent   = TRUE;
 	description	= "Show me how to gut a dragon.";
 };
+
 var int Godar_TeachDragonStuff;
 FUNC INT DIA_Godar_Dragonstuff_Condition()
 {
 	if (Godar_TeachAnimalTrophy == TRUE)
 	&& ((hero.guild != GIL_MIL) && (hero.guild != GIL_PAL))
-	&& ((PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonScale] == FALSE) || (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonBlood] == FALSE))
+	&& (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonScale] == FALSE)
 	&& (Godar_TeachDragonStuff == FALSE)
 	{
 		return TRUE;
@@ -458,7 +410,6 @@ FUNC VOID DIA_Godar_Teach_Info()
 			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
 			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
 			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonScale] == FALSE)
-			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonBlood] == FALSE)
 		)
 		{
 			Info_AddChoice (DIA_Godar_Teach,Dialog_Back,DIA_Godar_Teach_Back);
@@ -484,10 +435,6 @@ FUNC VOID DIA_Godar_Teach_Info()
 				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonScale] == FALSE)
 				{ 
 					Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Remove dragon scales",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DragonScale)),  DIA_Godar_Teach_TROPHYS_DragonScale);
-				};
-				if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DragonBlood] == FALSE)
-				{ 
-					Info_AddChoice	(DIA_Godar_Teach, B_BuildLearnString ("Collect dragon blood",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DragonBlood)), DIA_Godar_Teach_TROPHYS_DragonBlood);
 				};
 			};
 		}
@@ -543,15 +490,6 @@ FUNC VOID DIA_Godar_Teach_TROPHYS_DragonScale ()
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_DragonScale))
 		{
 			AI_Output			(self, other, "DIA_Godar_TEACHHUNTING_DragonScale_13_00"); //You need a lot of strength to get the scales off a dragon. But you can handle that.
-		};
-	Info_ClearChoices 	(DIA_Godar_Teach);
-};
-
-FUNC VOID DIA_Godar_Teach_TROPHYS_DragonBlood()
-{
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_DragonBlood))
-		{
-			AI_Output			(self, other, "DIA_Godar_TEACHHUNTING_DragonBlood_13_00"); //Look for a soft spot on the dragon's belly. That's where it's easiest to get dragon blood.
 		};
 	Info_ClearChoices 	(DIA_Godar_Teach);
 };

@@ -330,8 +330,7 @@ func void DIA_Talbin_TEACHHUNTING_Info ()
 		if 	(
 				(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
 				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
-				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
-				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
+				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_LurkerClaws] == FALSE)
 			)
 		{
 			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_07_01"); //What do you want to know?
@@ -345,15 +344,11 @@ func void DIA_Talbin_TEACHHUNTING_Info ()
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Talbin_TEACHHUNTING_Fur);
+				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Remove hide",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Talbin_TEACHHUNTING_Fur);
 			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
+			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_LurkerClaws] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Shadowbeast horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ShadowHorn)),  DIA_Talbin_TEACHHUNTING_ShadowHorn);
-			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
-			{ 
-				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Remove heart",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Heart)),  DIA_Talbin_TEACHHUNTING_Heart);
+				Info_AddChoice	(DIA_Talbin_TEACHHUNTING, B_BuildLearnString ("Lurker claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_LurkerClaws)),  DIA_Talbin_TEACHHUNTING_LurkerClaws);
 			};
 
 		}
@@ -391,21 +386,16 @@ func void DIA_Talbin_TEACHHUNTING_Fur()
 	Info_ClearChoices	(DIA_Talbin_TEACHHUNTING);
 };
 
-func void DIA_Talbin_TEACHHUNTING_Shadowhorn ()
+// ------ Klauen hacken ------
+func void DIA_Talbin_TEACHHUNTING_LurkerClaws()
 {
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_ShadowHorn))
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_LurkerClaws))
 		{
-			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_ShadowHorn_07_00"); //Shadowbeast horns are very hard and can be used to create statues or tools.
+			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_Claws_07_00"); //Chopping off claws is quite simple. You just grab the claw directly at the joint and press it down to the ground.
+			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_Claws_07_01"); //Then you take your knife and carefully cut off the claw.
 		};
-	Info_ClearChoices	(DIA_Talbin_TEACHHUNTING);
-};
-func void DIA_Talbin_TEACHHUNTING_Heart ()
-{
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Heart))
-		{
-			AI_Output			(self, other, "DIA_Talbin_TEACHHUNTING_Heart_07_00"); //Hearts of magical beings are very rare and hard to obtain. Be careful when you try that, especially with any kind of golem.
-		};
-	Info_ClearChoices	(DIA_Talbin_TEACHHUNTING);
+
+		Info_ClearChoices	(DIA_Talbin_TEACHHUNTING);
 };
 
 

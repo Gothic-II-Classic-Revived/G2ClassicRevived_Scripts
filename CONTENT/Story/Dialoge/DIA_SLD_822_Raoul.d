@@ -468,7 +468,7 @@ func void DIA_Raoul_TROLL_rechnung_noProb ()
 };
 	
 ///////////////////////////////////////////////////////////////////////
-//	Info TrophyFur
+//	Info Troll skin
 ///////////////////////////////////////////////////////////////////////
 
 instance DIA_Raoul_TrophyFur		(C_INFO)
@@ -478,13 +478,12 @@ instance DIA_Raoul_TrophyFur		(C_INFO)
 	condition	 = 	DIA_Raoul_TrophyFur_Condition;
 	information	 = 	DIA_Raoul_TrophyFur_Info;
 	permanent	 = 	TRUE;
-
 	description	 = 	"First tell me how to get the hide off the troll.";
 };
 
 func int DIA_Raoul_TrophyFur_Condition ()
 {
-	if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)		
+	if (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollSkin] == FALSE)
 	&& (MIS_Raoul_KillTrollBlack == LOG_RUNNING)
 		{
 				return TRUE;
@@ -494,13 +493,11 @@ func int DIA_Raoul_TrophyFur_Condition ()
 func void DIA_Raoul_TrophyFur_Info ()
 {
 	AI_Output			(other, self, "DIA_Raoul_TrophyFur_15_00"); //First tell me how to get the hide off the troll.
+	AI_Output			(self, other, "DIA_Raoul_TrophyFur_01_01"); //Then open your ears. This tip is for free.
+	AI_Output			(self, other, "DIA_Raoul_TrophyFur_01_02"); //You grab the beast and cut a slit in each of his legs.
+	AI_Output			(self, other, "DIA_Raoul_TrophyFur_01_03"); //Then you pull the thing's skin over its ears. Is that difficult or what?
 
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Fur))
-	{
-		AI_Output			(self, other, "DIA_Raoul_TrophyFur_01_01"); //Then open your ears. This tip is for free.
-		AI_Output			(self, other, "DIA_Raoul_TrophyFur_01_02"); //You grab the beast and cut a slit in each of his legs.
-		AI_Output			(self, other, "DIA_Raoul_TrophyFur_01_03"); //Then you pull the thing's skin over its ears. Is that difficult or what?
-	};	
+	B_TeachPlayerTalentTakeAnimalTrophyFree (self, other, TROPHY_TrollSkin);
 };
 
 ///////////////////////////////////////////////////////////////////////

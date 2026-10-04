@@ -163,9 +163,9 @@ func void DIA_Grom_TEACHHUNTING_Info ()
 		if 	(
 				(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
 				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
-				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
+				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_MagicHeart] == FALSE)
 				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Mandibles] == FALSE)
-				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
+				||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_MantisHead] == FALSE)
 			)
 		{
 			AI_Output			(self, other, "DIA_Grom_TEACHHUNTING_08_01"); //What do you want to learn?
@@ -181,17 +181,17 @@ func void DIA_Grom_TEACHHUNTING_Info ()
 			{ 
 				Info_AddChoice	(DIA_Grom_TEACHHUNTING, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Grom_TEACHHUNTING_Teeth);
 			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Heart] == FALSE)
+			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_MagicHeart] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Grom_TEACHHUNTING, B_BuildLearnString ("Remove heart",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Heart)),  DIA_Grom_TEACHHUNTING_Heart);
+				Info_AddChoice	(DIA_Grom_TEACHHUNTING, B_BuildLearnString ("Remove heart",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_MagicHeart)),  DIA_Grom_TEACHHUNTING_Heart);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Mandibles] == FALSE)
 			{ 
 				Info_AddChoice	(DIA_Grom_TEACHHUNTING, B_BuildLearnString ("Remove mandibles",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Mandibles)),  DIA_Grom_TEACHHUNTING_Mandibles	);
 			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ShadowHorn] == FALSE)
+			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_MantisHead] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Grom_TEACHHUNTING, B_BuildLearnString ("Shadowbeast horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ShadowHorn)),  DIA_Grom_TEACHHUNTING_ShadowHorn	);
+				Info_AddChoice	(DIA_Grom_TEACHHUNTING, B_BuildLearnString ("Remove mantis head",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_MantisHead)),  DIA_Grom_TEACHHUNTING_MantisHead	);
 			};
 		}
 		else
@@ -228,7 +228,7 @@ func void DIA_Grom_TEACHHUNTING_Teeth ()
 // ------ Fell abziehen ------
 func void DIA_Grom_TEACHHUNTING_Heart ()
 {
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Heart))
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_MagicHeart))
 		{
 			AI_Output			(self, other, "DIA_Grom_TEACHHUNTING_Heart_08_00"); //You remove the heart of the animal with a deft cut in the chest. But it's usually only worth it with special animals or magical beings.
 		};
@@ -246,11 +246,10 @@ func void DIA_Grom_TEACHHUNTING_Mandibles ()
 };
 
 // ------ Fell abziehen ------
-func void DIA_Grom_TEACHHUNTING_ShadowHorn ()
+func void DIA_Grom_TEACHHUNTING_MantisHead ()
 {
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_ShadowHorn))
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_MantisHead))
 		{
-			AI_Output			(self, other, "DIA_Grom_TEACHHUNTING_ShadowHorn_08_00"); //To take off a shadowbeast horn, brace yourself against the skull with all your might, pulling on the horn and cutting the thing out with a hard blade.
 		};
 	Info_ClearChoices	(DIA_Grom_TEACHHUNTING);
 };

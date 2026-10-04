@@ -191,11 +191,10 @@ func void DIA_Gaan_TEACHHUNTING_Info ()
 {
 	AI_Output			(other, self, "DIA_Gaan_TEACHHUNTING_15_00"); //What can you teach me?
 	if 	(
-			(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
-			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
-			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
-			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
-			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
+			(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ReptileSkin] == FALSE)
+			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_LurkerClaws] == FALSE)
+			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_SwampsharkTeeth] == FALSE)
+			||(PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_SwampsharkSkin] == FALSE)
 			||((PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE) && (MIS_Gaan_Snapper == LOG_SUCCESS))
 		)
 		{
@@ -207,30 +206,22 @@ func void DIA_Gaan_TEACHHUNTING_Info ()
 			{ 
 				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Reptile skins",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ReptileSkin)),  DIA_Gaan_TEACHHUNTING_ReptileSkin);
 			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
+			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_LurkerClaws] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Gaan_TEACHHUNTING_Teeth);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Remove Lurker claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_LurkerClaws)),  DIA_Gaan_TEACHHUNTING_LurkerClaws);
 			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Claws] == FALSE)
+			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_SwampsharkTeeth] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Remove claws",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Claws)),  DIA_Gaan_TEACHHUNTING_Claws);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Swampshark teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_SwampsharkTeeth)),  DIA_Gaan_TEACHHUNTING_SwampsharkTeeth);
 			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Fur] == FALSE)
+			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_SwampsharkSkin] == FALSE)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Skin",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Fur)),  DIA_Gaan_TEACHHUNTING_Fur);
-			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFSting] == FALSE)
-			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Bloodfly's stinger",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFSting)),  DIA_Gaan_TEACHHUNTING_BFSting);
-			};
-			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_BFWing] == FALSE)
-			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Bloodfly's wings",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_BFWing)),  DIA_Gaan_TEACHHUNTING_BFWing);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Swampshark skins",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_SwampsharkSkin)),  DIA_Gaan_TEACHHUNTING_SwampsharkSkin);
 			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE)
 			&& (MIS_Gaan_Snapper == LOG_SUCCESS)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Dragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Dragon Snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
 			};
 		}
 		else
@@ -244,88 +235,58 @@ func void DIA_Gaan_TEACHHUNTING_BACK()
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
 };
 
-// ------ Reptile Skin ------
+// ------ Skin ------
 func void DIA_Gaan_TEACHHUNTING_ReptileSkin()
 {
 	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_ReptileSkin))
-		{
-		};
-
-		Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-		Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
-		
-};
-
-// ------ Klauen hacken ------
-func void DIA_Gaan_TEACHHUNTING_Claws()
-{
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Claws))
-		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_00"); //Animals don't like to give up their claws. You have to place your knife very precisely.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_01"); //Your hands should be slightly crossed. Then you separate the claw with a powerful tug.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_02"); //Merchants are always eager to be paid in claws.
-		
-		};
-
-		Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-		Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
-		
-};
-
-// ------ Fell abziehen ------
-func void DIA_Gaan_TEACHHUNTING_Teeth()
-{
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Teeth))
-		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_00"); //The easiest thing to take from an animal are the teeth. You move your knife around the teeth in its mouth.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_01"); //Then you separate them from the skull with a skillful tug.
-	
-			
-		};
-
-	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
-};
-
-// ------ Fell abziehen ------
-func void DIA_Gaan_TEACHHUNTING_Fur()
-{
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_Fur))
 		{
 			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_00"); //The best way to remove the pelt is by making a deep cut along the hind legs.
 			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_01"); //After that, it should be a cinch to pull off the skin from the front to the back.
 		};
 
-	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
+		Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
+		Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
 
-// ------ Blutfliegenstachel ------
-func void DIA_Gaan_TEACHHUNTING_BFSting()
+// ------ Claws ------
+func void DIA_Gaan_TEACHHUNTING_LurkerClaws()
 {
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_BFSting))
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_LurkerClaws))
 		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFSting_03_00"); //These flies have a soft spot on their backs.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFSting_03_01"); //If you press there, the stinger will be squeezed out very far, and you can detach it with your knife.
-			
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_00"); //Animals don't like to give up their claws. You have to place your knife very precisely.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_01"); //Your hands should be slightly crossed. Then you separate the claw with a powerful tug.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Claws_03_02"); //Merchants are always eager to be paid in claws.
+		};
+
+		Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
+		Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
+};
+
+// ------ Skin ------
+func void DIA_Gaan_TEACHHUNTING_SwampsharkSkin()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_SwampsharkSkin))
+		{
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_00"); //The best way to remove the pelt is by making a deep cut along the hind legs.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Fur_03_01"); //After that, it should be a cinch to pull off the skin from the front to the back.
+		};
+
+		Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
+		Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
+};
+// ------ Teeth ------
+func void DIA_Gaan_TEACHHUNTING_SwampsharkTeeth()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_SwampsharkTeeth))
+		{
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_00"); //The easiest thing to take from an animal are the teeth. You move your knife around the teeth in its mouth.
+			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_Teeth_03_01"); //Then you separate them from the skull with a skillful tug.
 		};
 
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
 	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 };
-// ------ Blutfliegenflügel ------
-func void DIA_Gaan_TEACHHUNTING_BFWing ()
-{
-	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_BFWing))
-		{
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFWing_03_00"); //The best way to remove the wings of a bloodfly is with a blow from a sharp knife, very close to the fly's body.
-			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_BFWing_03_01"); //You have to watch out that you don't damage the delicate tissue of the wings. They're worthless if you don't do it carefully.
 
-		};
-
-	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
-	Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
-};
 // ------ DrgSnapperHorn ------
 func void DIA_Gaan_TEACHHUNTING_DrgSnapperHorn()
 {
@@ -334,8 +295,7 @@ func void DIA_Gaan_TEACHHUNTING_DrgSnapperHorn()
 			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_00"); //Now that this slightly oversized snapper is dead, I can show you how to remove its horn.
 			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_01"); //You push your knife deep into the animal's forehead and carefully lever the thing upwards.
 			AI_Output			(self, other, "DIA_Gaan_TEACHHUNTING_DrgSnapperHorn_03_02"); //If it won't come loose from the skull, you work on it with a second knife from the other side.
-	
-			
+
 			CreateInvItems (Gaans_Snapper, ItAt_DrgSnapperHorn, 1); //falls der Snapper ihm gerade vor den Füssen liegt!!
 		};
 
@@ -453,8 +413,6 @@ func void DIA_Gaan_WASZAHLSTDU_Info ()
 {
 	AI_Output			(other, self, "DIA_Gaan_WASZAHLSTDU_15_00"); //How much would you pay me if I killed that beast for you?
 	AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_01"); //I'd give the person who killed it everything I could spare.
-	//AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_02"); //30 Goldmünzen? 
-	//Auskommentiert, weil "?" ist auch so gesprochen worden - kommt nicht gut
 	B_Say_Gold   (self,other,100);
 	MIS_Gaan_Deal = LOG_RUNNING;
 };
@@ -488,7 +446,6 @@ func void DIA_Gaan_WOHERMONSTER_Info ()
 	AI_Output			(other, self, "DIA_Gaan_WOHERMONSTER_15_00"); //Where does this scummy beast come from?
 	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_01"); //Somewhere from outside the woods. Maybe from the Valley of Mines. But I don't know for sure.
 	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_02"); //I've never been to the Valley of Mines.
- 
 };
 
 
