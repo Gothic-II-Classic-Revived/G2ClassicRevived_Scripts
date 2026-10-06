@@ -13,20 +13,21 @@ const int	REV_VALUE_CIRCLE_SIXTH		=	300;
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_01(C_Item)
 {	
-	name 					=	"The First Fire Circle";
+	name 					=	"The Circles of Fire";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIRST;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"REV_ITWR_FIRE_01.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_01;
 
 	description				=	name;
+	TEXT[1]					=	"Volume I";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_01()
@@ -42,12 +43,14 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_01()
 	Doc_PrintLines(nDocID, 0, "THE FIRST CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use.");
+	Doc_PrintLines(nDocID, 0, "The Innos Cult calls it a Spark igniting the Fire.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Innos rules over sunlight and flame. His magic gives heat and light a form that mortal will can direct, from a single burning ember to a consuming blaze.");
 	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_PrintLine(nDocID, 1, "Fire Bolt");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A missile of magic Fire.");
+	Doc_PrintLines(nDocID, 1, "Hurls a small missile of fire at a single target.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle1 == FALSE)
@@ -59,20 +62,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_01()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_02(C_Item)
 {	
-	name 					=	"The Second Fire Circle";
+	name 					=	"The Circles of Fire";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SECOND;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"REV_ITWR_FIRE_01.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_02;
 
 	description				=	name;
+	TEXT[1]					=	"Volume II";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_02()
@@ -88,14 +92,14 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_02()
 	Doc_PrintLines(nDocID, 0, "THE SECOND CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "All magic originates from the magic powers of the user. The user is called a magician.");
+	Doc_PrintLines(nDocID, 0, "I am the rising sun, the light, and the life");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
+	Doc_PrintLines(nDocID, 0, "Light and living warmth belong to Innos. The same divine fire that sustains life becomes a weapon in the hands of his magicians, gathered into flame and cast against their enemies.");
 	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_PrintLine(nDocID, 1, "Fire Ball");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Innos' second gift to the children of Fire. A ball of fire, which burns its victims.");
+	Doc_PrintLines(nDocID, 1, "Hurls a ball of flame that burns the target on impact.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle2 == FALSE)
@@ -107,20 +111,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_02()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_03 (C_Item)
 {	
-	name 					=	"The Third Fire Circle";
+	name 					=	"The Circles of Fire";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_THIRD;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"REV_ITWR_FIRE_01.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_03;
 
 	description				=	name;
+	TEXT[1]					=	"Volume III";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_03()
@@ -136,19 +141,19 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_03()
 	Doc_PrintLines(nDocID, 0, "THE THIRD CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
+	Doc_PrintLines(nDocID, 0, "Innos is the keeper of law and order. His fire is an instrument of judgment, and the wrath of the god finds expression in searing heat and violent force.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
+	Doc_PrintLines(nDocID, 0, "The Circle of Fire gives that wrath a chosen shape: a concentrated blow, a bursting flame, or a blaze that consumes all within its reach.");
 	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_PrintLine(nDocID, 1, "Small Fire Storm");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Like the fireball, this spell affects one foe, but then leaps to other foes as well.");
+	Doc_PrintLines(nDocID, 1, "A fiery missile bursts at its target, burning nearby creatures as well.");
 	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_PrintLine(nDocID, 1, "Fire Fist");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A fist of fire charged with the magician's power.");
+	Doc_PrintLines(nDocID, 1, "A blast of fire and force. Charging the spell increases the strength of the blow.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle3 == FALSE)
@@ -160,20 +165,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_03()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_04 (C_Item)
 {	
-	name 					=	"The Fourth Fire Circle";
+	name 					=	"The Circles of Fire";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FOURTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"REV_ITWR_FIRE_01.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_04;
 
 	description				=	name;
+	TEXT[1]					=	"Volume IV";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_04()
@@ -189,24 +195,24 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_04()
 	Doc_PrintLines(nDocID, 0, "THE FOURTH CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Magic is described as an Art.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Innos is the patron of the fire magician's art. His flame may be gathered before release or sustained by concentration. The will of the caster gives the burning power its shape and duration.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLine(nDocID, 0, "The Magic");
-	Doc_PrintLine(nDocID, 0, "of Teleportation");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "The special feature of these magic formulas is that, although they are bound in runes, they can be cast by anybody with magic powers. The magic of these formulas can be activated at once. There are no restrictions to the teleportation spell.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Large Fireball");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A fireball that grows stronger as the magician charges it.");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Large Fireball");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A fireball that gains destructive power as more mana is invested before release.");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_PrintLine(nDocID, 1, "Pyrokinesis");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The magician burns a victim by concentrating his power upon it.");
+	Doc_PrintLines(nDocID, 1, "Burns a living victim while the caster sustains his concentration and supplies mana.");
 	Doc_PrintLine(nDocID, 1, "");
+
 	Doc_PrintLine(nDocID, 1, "Large Fire Storm");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A powerful fire storm that burns creatures around its target.");
+	Doc_PrintLines(nDocID, 1, "A fire storm burns the target and nearby creatures. Charging the spell increases its power.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle4 == FALSE)
@@ -218,20 +224,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_04()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 {	
-	name 					=	"The Fifth Fire Circle";
+	name 					=	"The Circles of Fire";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIFTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"REV_ITWR_FIRE_01.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_05;
 
 	description				=	name;
+	TEXT[1]					=	"Volume V";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_05()
@@ -247,10 +254,19 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_05()
 	Doc_PrintLines(nDocID, 0, "THE FIFTH CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Innos embodies the fierce, active power of fire. Its heat consumes, its light drives back darkness, and its force breaks through the space around the magician.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The greater arts of his circle release that power outward. Flame need no longer be confined to a missile aimed at one foe.");
+	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_PrintLine(nDocID, 1, "Extricate");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A sudden release of fire and force.");
+	Doc_PrintLines(nDocID, 1, "Releases a sudden burst of fire and force around the caster, striking nearby creatures.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Fire Wave");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Sends an expanding wave of flame out from the caster, striking creatures in its path.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle5 == FALSE)
@@ -262,20 +278,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_05()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDF_06(C_Item)
 {	
-	name 					=	"The Sixth Fire Circle";
+	name 					=	"The Circles of Fire";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SIXTH;
 
-	visual 					=	"ItWr_Book_02_03.3ds";
+	visual 					=	"REV_ITWR_FIRE_01.3ds";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDF_06;
 
 	description				=	name;
+	TEXT[1]					=	"Volume VI";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDF_06()
@@ -291,21 +308,14 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_06()
 	Doc_PrintLines(nDocID, 0, "THE SIXTH CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-
-	Doc_PrintLine(nDocID, 0, "The Word of Innos");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "Innos gave mankind the power to hear him and speak to him. He gave mankind the power to perform great miracles, and he called them magic. With this power, the people were able to design the world after their will.");
+	Doc_PrintLines(nDocID, 0, "The consuming blaze is the most terrible face of Innos. In it, light and heat become inseparable, and the power held in a spark spreads across the ground and fills the air.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "For I am the rising sun, the light, and the life. And all that is contrary to the sun is contrary to me, and shall be banished to the shadows forever more.");
-	
+	Doc_PrintLines(nDocID, 0, "At the height of fire magic, the magician calls upon this aspect of the god through a rain of fire that descends upon the surrounding ground.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLine(nDocID, 1, "Fire Wave");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A wave of fire spreads outward from the magician.");
-	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 1, "Fire Rain");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The power of divine Fire hits every creature within range of the magician.");
+	Doc_PrintLines(nDocID, 1, "Calls down a rain of fire upon creatures within range of the caster.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle6 == FALSE)
@@ -319,20 +329,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_06()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_01(C_Item)
 {	
-	name 					=	"The First Water Circle";
+	name 					=	"The Circles of Water";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIRST;
 
-	visual 					=	"itwr_book_02_04.3DS";
+	visual 					=	"REV_ITWR_WATER_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_01;
 
 	description				=	name;
+	TEXT[1]					=	"Volume I";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_01()
@@ -348,12 +359,14 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_01()
 	Doc_PrintLines(nDocID, 0, "THE FIRST CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use.");
+	Doc_PrintLines(nDocID, 0, "Adanos is the god of balance");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Water is his element, and change belongs to its nature. His magicians command its flowing strength and its frozen stillness, shaping the cold into solid forms.");
 	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_PrintLine(nDocID, 1, "Ice Bolt");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A missile of magic energy.");
+	Doc_PrintLines(nDocID, 1, "Hurls a small missile of ice at a single target.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle7 == FALSE)
@@ -365,20 +378,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_01()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_02(C_Item)
 {	
-	name 					=	"The Second Water Circle";
+	name 					=	"The Circles of Water";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SECOND;
 
-	visual 					=	"itwr_book_02_04.3DS";
+	visual 					=	"REV_ITWR_WATER_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_02;
 
 	description				=	name;
+	TEXT[1]					=	"Volume II";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_02()
@@ -394,16 +408,14 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_02()
 	Doc_PrintLines(nDocID, 0, "THE SECOND CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "All magic originates from the magic powers of the user. The user is called a magician.");
+	Doc_PrintLines(nDocID, 0, "Blessing of Water");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
+	Doc_PrintLines(nDocID, 0, "This is the name given to the arcane gift by the followers of Adanos. His circle studies water, ice and lightning: the quiet depths and the sudden violence of a storm belong to the same art.");
 	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLines(nDocID, 1, "Adanos saw that the humans died and that it was the will of Beliar that it should be that way. And he spoke: I will not oppose the will of Beliar, but I shall give mankind the power of healing.");
-	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 1, "Zap");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A bolt of electrical energy strikes the target.");
+	Doc_PrintLines(nDocID, 1, "Strikes a single target with a bolt of electrical energy.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle8 == FALSE)
@@ -415,20 +427,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_02()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_03 (C_Item)
 {	
-	name 					=	"The Third Water Circle";
+	name 					=	"The Circles of Water";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_THIRD;
 
-	visual 					=	"itwr_book_02_04.3DS";
+	visual 					=	"REV_ITWR_WATER_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_03;
 
 	description				=	name;
+	TEXT[1]					=	"Volume III";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_03()
@@ -444,23 +457,24 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_03()
 	Doc_PrintLines(nDocID, 0, "THE THIRD CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
+	Doc_PrintLines(nDocID, 0, "Adanos is honoured through knowledge and the understanding of nature. Water answers to that understanding in many forms: flowing, striking, or hardened into ice.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLines(nDocID, 0, "Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
+	Doc_PrintLines(nDocID, 0, "His magic may wound through force or arrest movement through cold. The stillness of a frozen body is as much an expression of his element as the rush of water.");
 	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLine(nDocID, 0, "Ice Lance");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A lance of ice is hurled at the target.");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Ice Lance");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Hurls a sharp lance of ice at the target.");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_PrintLine(nDocID, 1, "Water Fist");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A concentrated blow of water strikes the target.");
+	Doc_PrintLines(nDocID, 1, "Strikes the target with a concentrated blow of water.");
 	Doc_PrintLine(nDocID, 1, "");
+
 	Doc_PrintLine(nDocID, 1, "Ice Block");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The victim is enclosed in a block of ice. A spell from the temple of the Magicians of Water.");
+	Doc_PrintLines(nDocID, 1, "Encloses a susceptible victim in ice, holding it still and causing harm while it remains frozen.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle9 == FALSE)
@@ -472,20 +486,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_03()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_04 (C_Item)
 {	
-	name 					=	"The Fourth Water Circle";
+	name 					=	"The Circles of Water";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FOURTH;
 
-	visual 					=	"itwr_book_02_04.3DS";
+	visual 					=	"REV_ITWR_WATER_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_04;
 
 	description				=	name;
+	TEXT[1]					=	"Volume IV";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_04()
@@ -501,19 +516,24 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_04()
 	Doc_PrintLines(nDocID, 0, "THE FOURTH CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-
-	Doc_PrintLine(nDocID, 0, "Geyser");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A violent eruption of water strikes the target.");
+	Doc_PrintLines(nDocID, 0, "Adanos holds the power of water in both its gentle and its violent forms. The force of a rising torrent and the lightning within a storm reveal the strength of his element.");
 	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The magician gathers that strength into a sudden eruption or a charge of crackling energy.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Geyser");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A violent eruption of water strikes the target.");
+	Doc_PrintLine(nDocID, 1, "");
 
 	Doc_PrintLine(nDocID, 1, "Ball Lightning");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A ball of magic power.");
+	Doc_PrintLines(nDocID, 1, "Hurls a sphere of electrical energy. Investing more mana strengthens it before release.");
 	Doc_PrintLine(nDocID, 1, "");
+
 	Doc_PrintLine(nDocID, 1, "Lightning");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A powerful flash of lightning strikes the target.");
+	Doc_PrintLines(nDocID, 1, "Strikes the target with a powerful flash of lightning.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle10 == FALSE)
@@ -525,20 +545,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_04()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_05(C_Item)
 {	
-	name 					=	"The Fifth Water Circle";
+	name 					=	"The Circles of Water";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIFTH;
 
-	visual 					=	"itwr_book_02_04.3DS";
+	visual 					=	"REV_ITWR_WATER_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_05;
 
 	description				=	name;
+	TEXT[1]					=	"Volume V";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_05()
@@ -554,10 +575,19 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_05()
 	Doc_PrintLines(nDocID, 0, "THE FIFTH CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Healing belongs to Adanos, whose power preserves the living body. The study of life also reveals how a body may be changed, weakened or brought out of balance.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The deeper arts of his circle also govern the passage of force: a current may strike one creature and leap onward into those around it.");
+	Doc_PrintLine(nDocID, 0, "");
 
 	Doc_PrintLine(nDocID, 1, "Inflate");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The victim swells under the force of the spell and suffers repeated damage.");
+	Doc_PrintLines(nDocID, 1, "Makes a susceptible human victim swell and suffer repeated damage while the spell lasts.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Chain Lightning");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Lightning leaps from one target to another as the spell continues. Its force may turn against the caster.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle11 == FALSE)
@@ -569,20 +599,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_05()
 
 INSTANCE ITWR_REVIVED_CIRCLE_KDW_06(C_Item)
 {	
-	name 					=	"The Sixth Water Circle";
+	name 					=	"The Circles of Water";
 
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SIXTH;
 
-	visual 					=	"itwr_book_02_04.3DS";
+	visual 					=	"REV_ITWR_WATER_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_KDW_06;
 
 	description				=	name;
+	TEXT[1]					=	"Volume VI";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_KDW_06()
@@ -598,23 +629,14 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_06()
 	Doc_PrintLines(nDocID, 0, "THE SIXTH CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-
-	Doc_PrintLine(nDocID, 0, "The Word of Adanos");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "Work and live, for the day was created so that man may work. Seek learning and knowledge so that you may pass it on, for it is for that purpose that you were created.");
+	Doc_PrintLines(nDocID, 0, "Adanos commands the stillness of deep water and the binding strength of ice. His element can surround and overwhelm, taking hold of many creatures at once.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Ice Wave");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A magic Wave of Ice extends over any foes and freezes them for a short period of time. During this period, the victims are paralyzed and damaged.");
+	Doc_PrintLines(nDocID, 0, "The highest circle of water spreads freezing cold across the earth. Movement gives way to stillness as the creatures caught within it are enclosed in ice.");
 	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLine(nDocID, 1, "The Magicians of Water");
+	Doc_PrintLine(nDocID, 1, "Ice Wave");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Those who followed Adanos were called Magicians of the Circle of Water, while the priests of Innos became known as the Magicians of the Circle of Fire.");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Thunderstorm");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A storm of lightning strikes creatures around the magician.");
+	Doc_PrintLines(nDocID, 1, "Sends out a wave of cold that freezes susceptible creatures around the caster and harms them while frozen.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle12 == FALSE)
@@ -628,20 +650,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_06()
 
 INSTANCE ITWR_REVIVED_CIRCLE_BELIAR_01(C_Item)
 {	
-	name 					=	"The Forbidden Spells - Volume I";
+	name 					=	"The Forbidden Spells";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_THIRD;
 
-	visual 					=	"itwr_book_02_05.3DS";
+	visual 					=	"REV_ITWR_BELIAR_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_BELIAR_01;
 
 	description				=	name;
+	TEXT[1]					=	"Volume I";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_BELIAR_01()
@@ -654,26 +677,23 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_01()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
 	Doc_SetFont(nDocID, 0, FONT_Book2);
-	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume I");
+	Doc_PrintLines(nDocID, 0, "FORBIDDEN SPELLS");
+	Doc_PrintLines(nDocID, 0, "SECOND CIRCLE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-
-	Doc_PrintLine(nDocID, 0, "Swarm");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A black cloud of biting insects descends on the target, worrying flesh and breaking concentration.");
+	Doc_PrintLines(nDocID, 0, "Kiss of the Night");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Root Snare");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A grasping curse that calls roots from the ground and binds the victim where he stands.");
+	Doc_PrintLines(nDocID, 0, "Such a name befits the gift of Beliar, lord of darkness and death. His forbidden magic binds the body, torments living flesh and draws power from the life it consumes.");
 	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLine(nDocID, 1, "Steal Energy");
+	Doc_PrintLine(nDocID, 1, "Swarm");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The caster tears strength from the enemy and turns the stolen force back into his own life.");
+	Doc_PrintLines(nDocID, 1, "Biting insects repeatedly harm the victim and disrupt its actions.");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Mana Recovery");
+
+	Doc_PrintLine(nDocID, 1, "Root Snare");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The caster sacrifices his own life force to restore mana.");
+	Doc_PrintLines(nDocID, 1, "Grasping roots bind a susceptible victim in place.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle13 == FALSE)
@@ -685,20 +705,21 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_01()
 
 INSTANCE ITWR_REVIVED_CIRCLE_BELIAR_02(C_Item)
 {	
-	name 					=	"The Forbidden Spells - Volume II";
+	name 					=	"The Forbidden Spells";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_FIFTH;
 
-	visual 					=	"itwr_book_02_05.3DS";
+	visual 					=	"REV_ITWR_BELIAR_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_BELIAR_02;
 
 	description				=	name;
+	TEXT[1]					=	"Volume II";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_BELIAR_02()
@@ -711,18 +732,23 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_02()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
 	Doc_SetFont(nDocID, 0, FONT_Book2);
-	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume II");
+	Doc_PrintLines(nDocID, 0, "FORBIDDEN SPELLS");
+	Doc_PrintLines(nDocID, 0, "THIRD CIRCLE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-
-	Doc_PrintLine(nDocID, 0, "Explode");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A burst of destructive magic strikes the target.");
+	Doc_PrintLines(nDocID, 0, "Beliar rules the boundary between life and death. His forbidden arts draw upon the strength of living flesh, taking from one body to sustain another.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "That power may also be turned inward. The magician spends his own vitality to feed the force of his magic, exchanging health for mana.");
 	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLine(nDocID, 1, "Plague");
+	Doc_PrintLine(nDocID, 1, "Steal Energy");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A curse of sickness and decay.");
+	Doc_PrintLines(nDocID, 1, "Drains a victim's life to restore the caster's health.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Mana Recovery");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Sacrifices the caster's own health to replenish mana.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle14 == FALSE)
@@ -734,20 +760,21 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_02()
 
 INSTANCE ITWR_REVIVED_CIRCLE_BELIAR_03(C_Item)
 {	
-	name 					=	"The Forbidden Spells - Volume III";
+	name 					=	"The Forbidden Spells";
 	
 	mainflag 				=	ITEM_KAT_DOCS;
 	flags 					=	0;
 
 	value 					=	REV_VALUE_CIRCLE_SIXTH;
 
-	visual 					=	"itwr_book_02_05.3DS";
+	visual 					=	"REV_ITWR_BELIAR_01.3DS";
 	material 				=	MAT_LEATHER;
 
 	scemeName				=	"MAP";
 	on_state[0]				=	Use_BOOK_CIRCLE_BELIAR_03;
 
 	description				=	name;
+	TEXT[1]					=	"Volume III";
 	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
 };
 FUNC VOID Use_BOOK_CIRCLE_BELIAR_03()
@@ -760,28 +787,356 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_03()
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
 	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
 	Doc_SetFont(nDocID, 0, FONT_Book2);
-	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume III");
+	Doc_PrintLines(nDocID, 0, "FORBIDDEN SPELLS");
+	Doc_PrintLines(nDocID, 0, "FOURTH CIRCLE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-
-	Doc_PrintLine(nDocID, 0, "Beliar's Wrath");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A dark missile of punishment. It carries no lesson and no warning, only Beliar's answer to defiance.");
+	Doc_PrintLines(nDocID, 0, "Beliar is associated with punishment");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "His curses give pain a lasting hold upon the body. Sickness, decay and destruction are forms of his power, wielded to break the strength of the living.");
 	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_PrintLine(nDocID, 1, "Cry of the Dead");
+	Doc_PrintLine(nDocID, 1, "Explode");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The dead answer in a single terrible cry. The spell gives no mercy to the target and little mercy to the caster.");
+	Doc_PrintLines(nDocID, 1, "Strikes the target with a sudden burst of destructive magic.");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Last Formula");
+
+	Doc_PrintLine(nDocID, 1, "Plague");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "This is not a spell for testing, threat, or display. The caster gives himself wholly to the formula before the skull is released.");
+	Doc_PrintLines(nDocID, 1, "Afflicts the victim with a curse of sickness and decay.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle15 == FALSE)
 	{
 		REV_ReadBook(BookType_MagicCircles);
 		RevivedBookstandRead_MagicCircle15 = TRUE;
+	};
+};
+
+INSTANCE ITWR_REVIVED_CIRCLE_BELIAR_04(C_Item)
+{
+	name 					=	"The Forbidden Spells";
+
+	mainflag 				=	ITEM_KAT_DOCS;
+	flags 					=	0;
+
+	value 					=	REV_VALUE_CIRCLE_FIFTH;
+
+	visual 					=	"REV_ITWR_BELIAR_01.3DS";
+	material 				=	MAT_LEATHER;
+
+	scemeName				=	"MAP";
+	on_state[0]				=	Use_BOOK_CIRCLE_BELIAR_04;
+
+	description				=	name;
+	TEXT[1]					=	"Volume IV";
+	TEXT[5]					=	NAME_Value;			COUNT[5]	= value;
+};
+FUNC VOID Use_BOOK_CIRCLE_BELIAR_04()
+{
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
+	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
+	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "FORBIDDEN SPELLS");
+	Doc_PrintLines(nDocID, 0, "FIFTH CIRCLE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The dead belong to Beliar. His realm lies beyond the warmth of the living, and those who study its secrets seek power over the boundary between body and spirit.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The greatest forbidden workings turn that power against life itself. Their force is purchased with the strength of the magician who calls it forth.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Beliar's Wrath");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Hurls a dark missile of destructive magic at a single target.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Cry of the Dead");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Releases a deadly skull at the target. Casting from the rune consumes all remaining mana.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_Show(nDocID);
+	if (RevivedBookstandRead_MagicCircle16 == FALSE)
+	{
+		REV_ReadBook(BookType_MagicCircles);
+		RevivedBookstandRead_MagicCircle16 = TRUE;
+	};
+};
+
+/******************************************************************************************/
+
+INSTANCE ITWR_REVIVED_CIRCLE_PSI_01(C_Item)
+{
+	name                    = "The Circles of Brotherhood";
+
+	mainflag                = ITEM_KAT_DOCS;
+	flags                   = 0;
+	value                   = REV_VALUE_CIRCLE_FIRST;
+
+	visual                  = "REV_ITWR_PSI_01.3ds";
+	material                = MAT_LEATHER;
+	scemeName               = "MAP";
+	on_state[0]             = Use_BOOK_CIRCLE_PSI_01;
+
+	description             = name;
+	TEXT[1]					= "Volume I";
+	TEXT[5]                 = NAME_Value;
+	COUNT[5]                = value;
+};
+FUNC VOID Use_BOOK_CIRCLE_PSI_01()
+{
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
+	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
+	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE FIRST PSIONIC CIRCLE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The Sleeper is the object of the Brotherhood's worship and the power to which its gurus attribute their magic. His presence is sought in dreams, visions and the inward senses.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Psionic magic reaches into awareness itself, quieting the waking mind or altering what it remembers.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Sleep");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Lulls a susceptible human into a temporary magical sleep. Some minds resist its influence.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Charm");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Erases the victim's memory of the caster's offences. It does not remove hostility between opposing factions.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_Show(nDocID);
+	if (RevivedBookstandRead_MagicCircle17 == FALSE)
+	{
+		REV_ReadBook(BookType_MagicCircles);
+		RevivedBookstandRead_MagicCircle17 = TRUE;
+	};
+};
+
+INSTANCE ITWR_REVIVED_CIRCLE_PSI_02(C_Item)
+{
+	name                    = "The Circles of Brotherhood";
+
+	mainflag                = ITEM_KAT_DOCS;
+	flags                   = 0;
+	value                   = REV_VALUE_CIRCLE_SECOND;
+
+	visual                  = "REV_ITWR_PSI_01.3ds";
+	material                = MAT_LEATHER;
+	scemeName               = "MAP";
+	on_state[0]             = Use_BOOK_CIRCLE_PSI_02;
+
+	description             = name;
+	TEXT[1]					= "Volume II";
+	TEXT[5]                 = NAME_Value;
+	COUNT[5]                = value;
+};
+FUNC VOID Use_BOOK_CIRCLE_PSI_02()
+{
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
+	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
+	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE SECOND PSIONIC CIRCLE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The power attributed to the Sleeper reaches beyond thought into the physical world. The psionic directs it through concentration, extending his will beyond the limits of his body.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "Objects may move without being touched, living forms may diminish, and the air itself may carry the force of his command.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Telekinesis");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Lifts and draws an object towards the caster while mana sustains the spell.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Shrink");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Reduces a living creature in size and strength. Humans and the undead cannot be shrunk.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Wind Fist");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A forceful blast of wind strikes the target. Charging the spell strengthens the blow.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_Show(nDocID);
+	if (RevivedBookstandRead_MagicCircle18 == FALSE)
+	{
+		REV_ReadBook(BookType_MagicCircles);
+		RevivedBookstandRead_MagicCircle18 = TRUE;
+	};
+};
+
+INSTANCE ITWR_REVIVED_CIRCLE_PSI_03(C_Item)
+{
+	name                    = "The Circles of Brotherhood";
+
+	mainflag                = ITEM_KAT_DOCS;
+	flags                   = 0;
+	value                   = REV_VALUE_CIRCLE_THIRD;
+
+	visual                  = "REV_ITWR_PSI_01.3ds";
+	material                = MAT_LEATHER;
+	scemeName               = "MAP";
+	on_state[0]             = Use_BOOK_CIRCLE_PSI_03;
+
+	description             = name;
+	TEXT[1]					= "Volume III";
+	TEXT[5]                 = NAME_Value;
+	COUNT[5]                = value;
+};
+FUNC VOID Use_BOOK_CIRCLE_PSI_03()
+{
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
+	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
+	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE THIRD PSIONIC CIRCLE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "To the gurus, the Sleeper's power is felt as will made active. Its effects need no visible hand: force may gather in the air and bear down upon the body.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The psionic shapes this unseen pressure into currents and violent gusts, making the surrounding air an instrument of his intent.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Whirlwind");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Catches a susceptible victim in a swirling column of air, leaving it unable to act.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Storm Fist");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Unleashes a violent gust that throws nearby creatures back.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_Show(nDocID);
+	if (RevivedBookstandRead_MagicCircle19 == FALSE)
+	{
+		REV_ReadBook(BookType_MagicCircles);
+		RevivedBookstandRead_MagicCircle19 = TRUE;
+	};
+};
+
+INSTANCE ITWR_REVIVED_CIRCLE_PSI_04(C_Item)
+{
+	name                    = "The Circles of Brotherhood";
+
+	mainflag                = ITEM_KAT_DOCS;
+	flags                   = 0;
+	value                   = REV_VALUE_CIRCLE_FOURTH;
+
+	visual                  = "REV_ITWR_PSI_01.3ds";
+	material                = MAT_LEATHER;
+	scemeName               = "MAP";
+	on_state[0]             = Use_BOOK_CIRCLE_PSI_04;
+
+	description             = name;
+	TEXT[1]					= "Volume IV";
+	TEXT[5]                 = NAME_Value;
+	COUNT[5]                = value;
+};
+FUNC VOID Use_BOOK_CIRCLE_PSI_04()
+{
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
+	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
+	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE FOURTH PSIONIC CIRCLE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The Psionic strives to awaken himself and thereby the sleeper and to awaken the sleeper and thereby himself; one through the other.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The workings attributed to the Sleeper invade another will, stirring terror or taking command of the body. The psionic reaches into the mind of his victim and imposes his own intent upon it.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Control");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Overcomes a susceptible victim's will and lets the caster take possession of its body.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Fear");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Drives susceptible creatures near the caster to flee in terror.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_Show(nDocID);
+	if (RevivedBookstandRead_MagicCircle20 == FALSE)
+	{
+		REV_ReadBook(BookType_MagicCircles);
+		RevivedBookstandRead_MagicCircle20 = TRUE;
+	};
+};
+
+INSTANCE ITWR_REVIVED_CIRCLE_PSI_05(C_Item)
+{
+	name                    = "The Circles of Brotherhood";
+
+	mainflag                = ITEM_KAT_DOCS;
+	flags                   = 0;
+	value                   = REV_VALUE_CIRCLE_FIFTH;
+
+	visual                  = "REV_ITWR_PSI_01.3ds";
+	material                = MAT_LEATHER;
+	scemeName               = "MAP";
+	on_state[0]             = Use_BOOK_CIRCLE_PSI_05;
+
+	description             = name;
+	TEXT[1]					= "Volume V";
+	TEXT[5]                 = NAME_Value;
+	COUNT[5]                = value;
+};
+FUNC VOID Use_BOOK_CIRCLE_PSI_05()
+{
+	var int nDocID;
+	nDocID = Doc_Create();
+	Doc_SetPages(nDocID, 2);
+	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
+	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
+	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE FIFTH PSIONIC CIRCLE");
+	Doc_SetFont(nDocID, -1, FONT_Book);
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The Sleeper's power is felt in the mind as an overwhelming presence. When turned against another creature, it can strip away restraint and leave only blind fury.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "The same force can pass from thought into the world around the psionic, shaking the earth beneath his enemies. Mind and matter yield to a single act of will.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Berserk");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Drives a susceptible victim into a frenzy, turning it against nearby creatures.");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Earthquake");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "Shakes the ground around the caster, striking nearby creatures with violent tremors.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_Show(nDocID);
+	if (RevivedBookstandRead_MagicCircle21 == FALSE)
+	{
+		REV_ReadBook(BookType_MagicCircles);
+		RevivedBookstandRead_MagicCircle21 = TRUE;
 	};
 };
 

@@ -1359,7 +1359,13 @@ var int		RevivedBookstandRead_MagicCircle12;
 var int		RevivedBookstandRead_MagicCircle13;
 var int		RevivedBookstandRead_MagicCircle14;
 var int		RevivedBookstandRead_MagicCircle15;
-const int	Read_BookstandMagicCircles_Max = 15;
+var int		RevivedBookstandRead_MagicCircle16;
+var int		RevivedBookstandRead_MagicCircle17;
+var int		RevivedBookstandRead_MagicCircle18;
+var int		RevivedBookstandRead_MagicCircle19;
+var int		RevivedBookstandRead_MagicCircle20;
+var int		RevivedBookstandRead_MagicCircle21;
+const int	Read_BookstandMagicCircles_Max = 21;
 
 const int 	BookType_Astronomy = 2;
 var int 	Read_BookstandAstronomy;

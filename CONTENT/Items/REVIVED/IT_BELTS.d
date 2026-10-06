@@ -77,7 +77,7 @@ INSTANCE ITBE_REVIVED_ARCHER (REVIVED_BELT)
 
 	description		=	name;
 	TEXT[0]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_ARCHER;
-	TEXT[4]			=	NAME_BeltBonus_Archer;	COUNT[3]		=	REV_Bonus_BELT_01;
+	TEXT[4]			=	NAME_BeltBonus_Archer;	COUNT[4]		=	REV_Bonus_BELT_01;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -132,7 +132,7 @@ INSTANCE ITBE_REVIVED_CRAWLER (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_CRAWLER;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_CRAWLER;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_CRAWLER;
-	TEXT[4]			=	NAME_BeltBonus_Crawler;	COUNT[3]		=	REV_Bonus_BELT_01;
+	TEXT[4]			=	NAME_BeltBonus_Crawler;	COUNT[4]		=	REV_Bonus_BELT_01;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -191,7 +191,7 @@ INSTANCE ITBE_REVIVED_LEATHER (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_LEATHER;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_LEATHER;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_LEATHER;
-	TEXT[4]			=	NAME_BeltBonus_Leather;	COUNT[3]		=	REV_Bonus_BELT_02;
+	TEXT[4]			=	NAME_BeltBonus_Leather;	COUNT[4]		=	REV_Bonus_BELT_02;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -248,7 +248,7 @@ INSTANCE ITBE_REVIVED_SFB (REVIVED_BELT)
 
 	description		=	name;
 	TEXT[0]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_SFB;
-	TEXT[4]			=	NAME_BeltBonus_SFB;		COUNT[3]		=	REV_Bonus_BELT_01;
+	TEXT[4]			=	NAME_BeltBonus_SFB;		COUNT[4]		=	REV_Bonus_BELT_01;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -306,7 +306,7 @@ INSTANCE ITBE_REVIVED_MIL (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_MIL;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_MIL;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_MIL;
-	TEXT[4]			=	NAME_BeltBonus_MIL;		COUNT[3]		=	REV_Bonus_BELT_01;
+	TEXT[4]			=	NAME_BeltBonus_MIL;		COUNT[4]		=	REV_Bonus_BELT_01;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -365,7 +365,7 @@ INSTANCE ITBE_REVIVED_GRD (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_GRD;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_GRD;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_GRD;
-	TEXT[4]			=	NAME_BeltBonus_GRD;		COUNT[3]		=	REV_Bonus_BELT_02;
+	TEXT[4]			=	NAME_BeltBonus_GRD;		COUNT[4]		=	REV_Bonus_BELT_02;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -424,7 +424,7 @@ INSTANCE ITBE_REVIVED_PAL (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_PAL;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_PAL;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_PAL;
-	TEXT[4]			=	NAME_BeltBonus_PAL;		COUNT[3]		=	REV_Bonus_BELT_03;
+	TEXT[4]			=	NAME_BeltBonus_PAL;		COUNT[4]		=	REV_Bonus_BELT_03;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -487,7 +487,7 @@ INSTANCE ITBE_REVIVED_SLD (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_SLD;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_SLD;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_SLD;
-	TEXT[4]			=	NAME_BeltBonus_SLD;		COUNT[3]		=	REV_Bonus_BELT_01;
+	TEXT[4]			=	NAME_BeltBonus_SLD;		COUNT[4]		=	REV_Bonus_BELT_01;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -546,7 +546,7 @@ INSTANCE ITBE_REVIVED_DJG (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_DJG;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_DJG;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_DJG;
-	TEXT[4]			=	NAME_BeltBonus_DJG;		COUNT[3]		=	REV_Bonus_BELT_02;
+	TEXT[4]			=	NAME_BeltBonus_DJG;		COUNT[4]		=	REV_Bonus_BELT_02;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -605,7 +605,7 @@ INSTANCE ITBE_REVIVED_DHT (REVIVED_BELT)
 	TEXT[0]			=	NAME_Prot_Edge;			COUNT[0]		= 	REV_Prot_BELT_DHT;
 	TEXT[1]			=	NAME_Prot_Blunt;		COUNT[1]		= 	REV_Prot_BELT_DHT;
 	TEXT[2]			=	NAME_Prot_Point;		COUNT[2]		= 	REV_Prot_BELT_DHT;
-	TEXT[4]			=	NAME_BeltBonus_DHT;		COUNT[3]		=	REV_Bonus_BELT_03;
+	TEXT[4]			=	NAME_BeltBonus_DHT;		COUNT[4]		=	REV_Bonus_BELT_03;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -667,7 +667,7 @@ INSTANCE ITBE_REVIVED_NOV (REVIVED_BELT)
 	description		=	name;
 	TEXT[0]			=	NAME_Prot_Magic;		COUNT[0]		= 	REV_Prot_BELT_NOV;
 	TEXT[1]			=	NAME_Prot_Fire;			COUNT[1]		= 	REV_Prot_BELT_NOV;
-	TEXT[4]			=	NAME_BeltBonus_NOV;		COUNT[3]		=	REV_Bonus_BELT_02;
+	TEXT[4]			=	NAME_BeltBonus_NOV;		COUNT[4]		=	REV_Bonus_BELT_02;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -723,7 +723,7 @@ INSTANCE ITBE_REVIVED_KDF (REVIVED_BELT)
 	description		=	name;
 	TEXT[0]			=	NAME_Prot_Magic;		COUNT[0]		= 	REV_Prot_BELT_KDF;
 	TEXT[1]			=	NAME_Prot_Fire;			COUNT[1]		= 	REV_Prot_BELT_KDF;
-	TEXT[4]			=	NAME_BeltBonus_KDF;		COUNT[3]		=	REV_Bonus_BELT_03;
+	TEXT[4]			=	NAME_BeltBonus_KDF;		COUNT[4]		=	REV_Bonus_BELT_03;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -783,7 +783,7 @@ INSTANCE ITBE_REVIVED_RANGER (REVIVED_BELT)
 	description		=	name;
 	TEXT[0]			=	NAME_Prot_Magic;		COUNT[0]		= 	REV_Prot_BELT_RANGER;
 	TEXT[1]			=	NAME_Prot_Fire;			COUNT[1]		= 	REV_Prot_BELT_RANGER;
-	TEXT[4]			=	NAME_BeltBonus_RANGER;	COUNT[3]		=	REV_Bonus_BELT_02;
+	TEXT[4]			=	NAME_BeltBonus_RANGER;	COUNT[4]		=	REV_Bonus_BELT_02;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 
@@ -839,7 +839,7 @@ INSTANCE ITBE_REVIVED_KDW (REVIVED_BELT)
 	description		=	name;
 	TEXT[0]			=	NAME_Prot_Magic;		COUNT[0]		= 	REV_Prot_BELT_KDW;
 	TEXT[1]			=	NAME_Prot_Fire;			COUNT[1]		= 	REV_Prot_BELT_KDW;
-	TEXT[4]			=	NAME_BeltBonus_KDW;		COUNT[3]		=	REV_Bonus_BELT_03;
+	TEXT[4]			=	NAME_BeltBonus_KDW;		COUNT[4]		=	REV_Bonus_BELT_03;
 	TEXT[5]			=	NAME_Value;				COUNT[5]		= 	value;
 };
 

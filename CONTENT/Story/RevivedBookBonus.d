@@ -41,7 +41,7 @@ func void REV_ReadBook(var int bookType)
 				}
 				else
 				{
-					B_RaiseAttribute(hero, ATR_MANA_MAX, 30);
+					B_RaiseAttribute(hero, ATR_MANA_MAX, 50);
 					PrintScreen(Print_LearnFromBookstand, -1, 65, FONT_Screen, 2);
 				};
 							
