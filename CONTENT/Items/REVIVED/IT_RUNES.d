@@ -131,11 +131,14 @@ INSTANCE ITRU_REVIVED_PYROKINESIS (C_Item)
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_Pyrokinesis;
+	mag_circle = 4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
 
 	description			= 	name;
+	TEXT [0] = NAME_Mag_Circle;
+	COUNT [0] = mag_circle;
 
 	TEXT	[1]			= 	NAME_DamagePerSec;
 	COUNT	[1]			= 	SPL_PYRO_DAMAGE_PER_SEC;
@@ -278,7 +281,7 @@ INSTANCE ITRU_REVIVED_EXPLODE (C_Item)
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_Explode;
-	mag_circle			= 	3;
+	mag_circle			= 	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -307,7 +310,7 @@ INSTANCE ITRU_REVIVED_EXTRICATE (C_Item)
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_Extricate;
-	mag_circle			= 	3;
+	mag_circle = 5;
 
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER_RED";
@@ -336,7 +339,7 @@ INSTANCE ITRU_REVIVED_EARTHQUAKE (C_Item)
 	material			= 	MAT_STONE;
 
 	spell				= 	SPL_Earthquake;
-	mag_circle			= 	3;
+	mag_circle			= 	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				= 	"SPELLFX_WEAKGLIMMER";
@@ -436,7 +439,7 @@ INSTANCE ITRU_REVIVED_FIREWAVE (C_Item)
     material            =   MAT_STONE;
 
     spell               =   SPL_FireWave;
-    mag_circle          =   5;
+    mag_circle = 6;
 
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER_YELLOW";
@@ -465,7 +468,7 @@ INSTANCE ITRU_REVIVED_CONCUSSIONBOLT (C_Item)
     material            =   MAT_STONE;
 
     spell               =   SPL_Concussionbolt;
-    mag_circle          =   3;
+    mag_circle = 2;
 
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER";
@@ -494,7 +497,7 @@ INSTANCE ITRU_REVIVED_INFLATE (C_Item)
     material            =   MAT_STONE;
 
     spell               =   SPL_Inflate;
-    mag_circle          =   4;
+    mag_circle          =   5;
 
     wear                =   WEAR_EFFECT;
     effect              =   "SPELLFX_WEAKGLIMMER_BLUE";
@@ -533,6 +536,36 @@ INSTANCE ITRU_REVIVED_SUMMONSKELETONS (C_Item)
     COUNT   [0]         =   mag_circle;
     TEXT    [1]         =   NAME_Manakosten;
     COUNT   [1]         =   SPL_Cost_SummonSkeletons;
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+// Additional craftable runes
+const int REV_Value_CHARM_RUNE = 1000;
+
+INSTANCE ITRU_REVIVED_CHARM (C_Item)
+{
+    name                =   NAME_SPL_Charm;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   0;
+
+    value               =   REV_Value_CHARM_RUNE;
+
+    visual              =   "ItRu_Sleep.3DS";
+    material            =   MAT_STONE;
+
+    spell               =   SPL_Charm;
+    mag_circle          =   1;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   NAME_Mag_Circle;
+    COUNT   [0]         =   mag_circle;
+    TEXT    [1]         =   NAME_Manakosten;
+    COUNT   [1]         =   SPL_Cost_Charm;
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;
 };

@@ -334,7 +334,7 @@ func void DIA_Gaan_JAGD_Info ()
 		AI_Output			(self, other, "DIA_Gaan_JAGD_03_02"); //For several days now, some kind of snorting beast has been roaming the area.
 		AI_Output			(self, other, "DIA_Gaan_JAGD_03_03"); //It not only kills everything that moves, it also interferes with my work.
 		
-		Wld_InsertNpc(Gaans_Snapper, "NW_FARM3_VALLEY_000");
+		Wld_InsertNpc(Gaans_Snapper, "NW_GREATPEASANT_TO_PASS");
 		GaanSnapperOnce = TRUE;
 
 		Log_CreateTopic (TOPIC_GaanSchnaubi, LOG_MISSION);

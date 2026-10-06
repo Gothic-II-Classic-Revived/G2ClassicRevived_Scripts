@@ -36,30 +36,19 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_01()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "THE FIRST CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "Light");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "Innos' first gift to mankind. A shining ball appears over the magician.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLine(nDocID, 1, "Fire Bolt");
 	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "A missile of magic Fire.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle1 == FALSE)
 	{
@@ -93,26 +82,21 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_02()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "THE SECOND CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "All magic originates from the magic powers of the user. The user is called a magician.");
-	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "Fireball");
+	Doc_PrintLine(nDocID, 1, "Fire Ball");
 	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "Innos' second gift to the children of Fire. A ball of fire, which burns its victims.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle2 == FALSE)
 	{
@@ -146,25 +130,26 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_03()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "THE THIRD CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
-	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "Storm of Fire");
+	Doc_PrintLine(nDocID, 1, "Small Fire Storm");
 	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "Like the fireball, this spell affects one foe, but then leaps to other foes as well.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 1, "Fire Fist");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A fist of fire charged with the magician's power.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle3 == FALSE)
 	{
@@ -198,25 +183,31 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_04()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "THE FOURTH CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
+
 	Doc_PrintLine(nDocID, 0, "The Magic");
 	Doc_PrintLine(nDocID, 0, "of Teleportation");
 	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "The special feature of these magic formulas is that, although they are bound in runes, they can be cast by anybody with magic powers. The magic of these formulas can be activated at once. There are no restrictions to the teleportation spell.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "Large Fireball");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A fireball that grows stronger as the magician charges it.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "Death to the Undead");
+	Doc_PrintLine(nDocID, 1, "Pyrokinesis");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "This spell banishes undead creatures of darkness.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLines(nDocID, 1, "The magician burns a victim by concentrating his power upon it.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Large Fire Storm");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A powerful fire storm that burns creatures around its target.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle4 == FALSE)
 	{
@@ -250,21 +241,17 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_05()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "THE FIFTH CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "Rain of Fire");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "The power of divine Fire hits every creature within range of the magician.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "Extricate");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A sudden release of fire and force.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle5 == FALSE)
 	{
@@ -298,22 +285,28 @@ FUNC VOID Use_BOOK_CIRCLE_KDF_06()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "THE SIXTH CIRCLE OF FIRE");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 0, "The Word of Innos");
+	Doc_PrintLine(nDocID, 0, "---------------");
 	Doc_PrintLines(nDocID, 0, "Innos gave mankind the power to hear him and speak to him. He gave mankind the power to perform great miracles, and he called them magic. With this power, the people were able to design the world after their will.");
 	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 0, "For I am the rising sun, the light, and the life. And all that is contrary to the sun is contrary to me, and shall be banished to the shadows forever more.");
+	
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "The Word of Innos");
+	Doc_PrintLine(nDocID, 1, "Fire Wave");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "For I am the rising sun, the light, and the life. And all that is contrary to the sun is contrary to me, and shall be banished to the shadows forever more.");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLines(nDocID, 1, "A wave of fire spreads outward from the magician.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Fire Rain");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "The power of divine Fire hits every creature within range of the magician.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle6 == FALSE)
 	{
@@ -349,23 +342,19 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_01()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE FIRST CIRCLE OF WATER");
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE FIRST CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use.");
-
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
 	Doc_PrintLine(nDocID, 0, "");
+
 	Doc_PrintLine(nDocID, 1, "Ice Bolt");
 	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "A missile of magic energy.");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle7 == FALSE)
 	{
@@ -399,22 +388,23 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_02()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE SECOND CIRCLE OF WATER");
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE SECOND CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "All magic originates from the magic powers of the user. The user is called a magician.");
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "Healing");
-	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "Adanos saw that the humans died and that it was the will of Beliar that it should be that way. And he spoke: I will not oppose the will of Beliar, but I shall give mankind the power of healing.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "This spell has the power of healing the magician.");
+	Doc_PrintLine(nDocID, 1, "Zap");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A bolt of electrical energy strikes the target.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle8 == FALSE)
 	{
@@ -448,16 +438,30 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_03()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE THIRD CIRCLE OF WATER");
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE THIRD CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "Some spells can be charged with a certain amount of magic power. They are also known as charging spells.");
 	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLines(nDocID, 0, "Other spells remain in force for as long as the magician lets his mana flow into them. These spells are referred to as investment spells.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
+	Doc_PrintLine(nDocID, 0, "Ice Lance");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A lance of ice is hurled at the target.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Water Fist");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A concentrated blow of water strikes the target.");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Ice Block");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "The victim is enclosed in a block of ice. A spell from the temple of the Magicians of Water.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle9 == FALSE)
 	{
@@ -491,29 +495,25 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_04()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE FOURTH CIRCLE OF WATER");
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE FOURTH CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "Chain Lightning");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "The spell is leaping to more targets, the longer it is working. The power of lightning is hard to control. Thus, the caster himself may become a target.");
-	Doc_PrintLine(nDocID, 1, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Ice Block");
-	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "The victim is enclosed in a block of ice. A spell from the temple of the Magicians of Water.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 0, "Geyser");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A violent eruption of water strikes the target.");
+	Doc_PrintLine(nDocID, 0, "");
+
 	Doc_PrintLine(nDocID, 1, "Ball Lightning");
 	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "A ball of magic power.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Lightning");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A powerful flash of lightning strikes the target.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle10 == FALSE)
@@ -548,26 +548,16 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_05()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE FIFTH CIRCLE OF WATER");
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE FIFTH CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "Wave of Ice");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A magic Wave of Ice extends over any foes and freezes them for a short period of time. During this period, the victims are paralyzed and damaged.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Temple of Water");
+	Doc_PrintLine(nDocID, 1, "Inflate");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A spell from the temple of the Magicians of Water.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLines(nDocID, 1, "The victim swells under the force of the spell and suffers repeated damage.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle11 == FALSE)
@@ -602,23 +592,29 @@ FUNC VOID Use_BOOK_CIRCLE_KDW_06()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
-	Doc_PrintLine(nDocID, 0, "THE SIXTH CIRCLE OF WATER");
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
+	Doc_PrintLines(nDocID, 0, "THE SIXTH CIRCLE OF WATER");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
+
 	Doc_PrintLine(nDocID, 0, "The Word of Adanos");
 	Doc_PrintLine(nDocID, 0, "---------------");
 	Doc_PrintLines(nDocID, 0, "Work and live, for the day was created so that man may work. Seek learning and knowledge so that you may pass it on, for it is for that purpose that you were created.");
+	Doc_PrintLine(nDocID, 0, "");
+	Doc_PrintLine(nDocID, 0, "Ice Wave");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A magic Wave of Ice extends over any foes and freezes them for a short period of time. During this period, the victims are paralyzed and damaged.");
+	Doc_PrintLine(nDocID, 0, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 1, "The Magicians of Water");
 	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "Those who followed Adanos were called Magicians of the Circle of Water, while the priests of Innos became known as the Magicians of the Circle of Fire.");
 	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Thunderstorm");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "A storm of lightning strikes creatures around the magician.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle12 == FALSE)
@@ -655,32 +651,29 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_01()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume I");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
+
+	Doc_PrintLine(nDocID, 0, "Swarm");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A black cloud of biting insects descends on the target, worrying flesh and breaking concentration.");
+	Doc_PrintLine(nDocID, 0, "");
 	Doc_PrintLine(nDocID, 0, "Root Snare");
 	Doc_PrintLine(nDocID, 0, "---------------");
 	Doc_PrintLines(nDocID, 0, "A grasping curse that calls roots from the ground and binds the victim where he stands.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "Steal Energy");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "The caster tears strength from the enemy and turns the stolen force back into his own life.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Beliar's Wrath");
+	Doc_PrintLine(nDocID, 1, "Steal Energy");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A dark missile of punishment. It carries no lesson and no warning, only Beliar's answer to defiance.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLines(nDocID, 1, "The caster tears strength from the enemy and turns the stolen force back into his own life.");
 	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 1, "Mana Recovery");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "The caster sacrifices his own life force to restore mana.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle13 == FALSE)
@@ -715,32 +708,22 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_02()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume II");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "Create Guardian");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "This formula calls a stone guardian into service. The creature obeys the summoner, but not out of loyalty.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "Insect Swarm");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "A black cloud of biting insects descends on the target, worrying flesh and breaking concentration.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "Create Zombie");
+	Doc_PrintLine(nDocID, 0, "Explode");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A burst of destructive magic strikes the target.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Plague");
 	Doc_PrintLine(nDocID, 1, "---------------");
-	Doc_PrintLines(nDocID, 1, "A dead servant is raised and bound to the caster's will. Such obedience ends only with destruction.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
+	Doc_PrintLines(nDocID, 1, "A curse of sickness and decay.");
+	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle14 == FALSE)
 	{
@@ -774,30 +757,25 @@ FUNC VOID Use_BOOK_CIRCLE_BELIAR_03()
 	Doc_SetPages(nDocID, 2);
 	Doc_SetPage(nDocID, 0, "Book_Mage_L.tga", 0);
 	Doc_SetPage(nDocID, 1, "Book_Mage_R.tga", 0);
-	Doc_SetFont(nDocID, -1, FONT_Book2);
 	Doc_SetMargins(nDocID, 0, 275, 20, 30, 20, 1);
+	Doc_SetMargins(nDocID, 1, 30, 20, 275, 20, 1);
+	Doc_SetFont(nDocID, 0, FONT_Book2);
 	Doc_PrintLines(nDocID, 0, "Forbidden Spells - Volume III");
 	Doc_SetFont(nDocID, -1, FONT_Book);
 	Doc_PrintLine(nDocID, 0, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 0, "Cry of the Dead");
-	Doc_PrintLine(nDocID, 0, "---------------");
-	Doc_PrintLines(nDocID, 0, "The dead answer in a single terrible cry. The spell gives no mercy to the target and little mercy to the caster.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
 
-	Doc_SetMargins(nDocID, -1, 30, 20, 275, 20, 1);
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
+	Doc_PrintLine(nDocID, 0, "Beliar's Wrath");
+	Doc_PrintLine(nDocID, 0, "---------------");
+	Doc_PrintLines(nDocID, 0, "A dark missile of punishment. It carries no lesson and no warning, only Beliar's answer to defiance.");
+	Doc_PrintLine(nDocID, 0, "");
+
+	Doc_PrintLine(nDocID, 1, "Cry of the Dead");
+	Doc_PrintLine(nDocID, 1, "---------------");
+	Doc_PrintLines(nDocID, 1, "The dead answer in a single terrible cry. The spell gives no mercy to the target and little mercy to the caster.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_PrintLine(nDocID, 1, "Last Formula");
 	Doc_PrintLine(nDocID, 1, "---------------");
 	Doc_PrintLines(nDocID, 1, "This is not a spell for testing, threat, or display. The caster gives himself wholly to the formula before the skull is released.");
-	Doc_PrintLine(nDocID, 1, "MANAKOST");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLine(nDocID, 1, "");
-	Doc_PrintLines(nDocID, 1, "No sixth-circle Beliar rune is preserved in these records.");
 	Doc_PrintLine(nDocID, 1, "");
 	Doc_Show(nDocID);
 	if (RevivedBookstandRead_MagicCircle15 == FALSE)

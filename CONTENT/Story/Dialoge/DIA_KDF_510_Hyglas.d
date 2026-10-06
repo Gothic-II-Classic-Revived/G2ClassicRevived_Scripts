@@ -270,62 +270,71 @@ func int DIA_Hyglas_TEACH_Condition ()
 		return TRUE;
 	};
 };
-func void DIA_Hyglas_TEACH_Info ()
+FUNC VOID DIA_Hyglas_TEACH_Choices()
 {
-
 	var int abletolearn;
-	
 	abletolearn = 0;
-	AI_Output (other, self, "DIA_Hyglas_TEACH_15_00"); //Teach me.
-	
-	
 	Info_ClearChoices (DIA_Hyglas_TEACH);
-	Info_AddChoice 	  (DIA_Hyglas_TEACH, DIALOG_BACK,DIA_Hyglas_TEACH_BACK);	
-	
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2) 
-	&& (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
+	Info_AddChoice (DIA_Hyglas_TEACH, DIALOG_BACK, DIA_Hyglas_TEACH_BACK);
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 1)
+	&& (PLAYER_TALENT_RUNES[SPL_Firebolt] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_Hyglas_TEACH_InstantFireball);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firebolt)), DIA_Hyglas_TEACH_Firebolt);
+		abletolearn = (abletolearn + 1);
 	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3) 
-	&& (PLAYER_TALENT_RUNES [SPL_Firestorm] == FALSE)
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 2)
+	&& (PLAYER_TALENT_RUNES[SPL_InstantFireball] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)) ,DIA_Hyglas_TEACH_Firestorm);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)), DIA_Hyglas_TEACH_InstantFireball);
+		abletolearn = (abletolearn + 1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
-	&& (PLAYER_TALENT_RUNES [SPL_FireFist] == FALSE)
+	&& (PLAYER_TALENT_RUNES[SPL_Firestorm] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_FireFist, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireFist)) ,DIA_Hyglas_TEACH_FireFist);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firestorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firestorm)), DIA_Hyglas_TEACH_Firestorm);
+		abletolearn = (abletolearn + 1);
 	};
-	
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4) 
-	&& (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 3)
+	&& (PLAYER_TALENT_RUNES[SPL_FireFist] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,DIA_Hyglas_TEACH_ChargeFireball);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_FireFist, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireFist)), DIA_Hyglas_TEACH_FireFist);
+		abletolearn = (abletolearn + 1);
 	};
-	
-	
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5) 
-	&& (PLAYER_TALENT_RUNES [SPL_LargeFireStorm] == FALSE)
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
+	&& (PLAYER_TALENT_RUNES[SPL_ChargeFireball] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)) ,DIA_Hyglas_TEACH_LargeFireStorm);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)), DIA_Hyglas_TEACH_ChargeFireball);
+		abletolearn = (abletolearn + 1);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
+	&& (PLAYER_TALENT_RUNES[SPL_Pyrokinesis] == FALSE)
+	{
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)), DIA_Hyglas_TEACH_Pyrokinesis);
+		abletolearn = (abletolearn + 1);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
+	&& (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == FALSE)
+	{
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)), DIA_Hyglas_TEACH_LargeFireStorm);
+		abletolearn = (abletolearn + 1);
 	};
 	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
-	&& (PLAYER_TALENT_RUNES [SPL_FireWave] == FALSE)
+	&& (PLAYER_TALENT_RUNES[SPL_Extricate] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_FireWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireWave)) ,DIA_Hyglas_TEACH_FireWave);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Extricate, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Extricate)), DIA_Hyglas_TEACH_Extricate);
+		abletolearn = (abletolearn + 1);
 	};
-	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6) 
-	&& (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6)
+	&& (PLAYER_TALENT_RUNES[SPL_FireWave] == FALSE)
 	{
-		Info_AddChoice	(DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Hyglas_TEACH_Firerain);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_FireWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireWave)), DIA_Hyglas_TEACH_FireWave);
+		abletolearn = (abletolearn + 1);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6)
+	&& (PLAYER_TALENT_RUNES[SPL_Firerain] == FALSE)
+	{
+		Info_AddChoice (DIA_Hyglas_TEACH, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)), DIA_Hyglas_TEACH_Firerain);
+		abletolearn = (abletolearn + 1);
 	};
 	if (abletolearn < 1)
 	{
@@ -333,39 +342,85 @@ func void DIA_Hyglas_TEACH_Info ()
 		Info_ClearChoices (DIA_Hyglas_TEACH);
 	};
 };
-FUNC VOID DIA_Hyglas_TEACH_BACK ()
+func void DIA_Hyglas_TEACH_Info ()
+{
+	AI_Output (other, self, "DIA_Hyglas_TEACH_15_00"); //Teach me.
+	DIA_Hyglas_TEACH_Choices();
+};
+FUNC VOID DIA_Hyglas_TEACH_BACK()
 {
 	Info_ClearChoices (DIA_Hyglas_TEACH);
 };
+FUNC VOID DIA_Hyglas_TEACH_Firebolt()
+{
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Firebolt))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
+};
 FUNC VOID DIA_Hyglas_TEACH_InstantFireball()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
-};
-FUNC VOID DIA_Hyglas_TEACH_ChargeFireball()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball);	
-};
-FUNC VOID DIA_Hyglas_TEACH_LargeFireStorm()
-{	
-	B_TeachPlayerTalentRunes (self, other, SPL_LargeFireStorm);
+	if (B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
 };
 FUNC VOID DIA_Hyglas_TEACH_Firestorm()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Firestorm);	
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Firestorm))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
 };
 FUNC VOID DIA_Hyglas_TEACH_FireFist()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_FireFist);
+	if (B_TeachPlayerTalentRunes (self, other, SPL_FireFist))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
+};
+FUNC VOID DIA_Hyglas_TEACH_ChargeFireball()
+{
+	if (B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
+};
+FUNC VOID DIA_Hyglas_TEACH_Pyrokinesis()
+{
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
+};
+FUNC VOID DIA_Hyglas_TEACH_LargeFireStorm()
+{
+	if (B_TeachPlayerTalentRunes (self, other, SPL_LargeFireStorm))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
+};
+FUNC VOID DIA_Hyglas_TEACH_Extricate()
+{
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Extricate))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
 };
 FUNC VOID DIA_Hyglas_TEACH_FireWave()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_FireWave);
+	if (B_TeachPlayerTalentRunes (self, other, SPL_FireWave))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
 };
 FUNC VOID DIA_Hyglas_TEACH_Firerain()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Firerain))
+	{
+		DIA_Hyglas_TEACH_Choices();
+	};
 };
-
 //#######################################
 //##
 //##	Kapitel 2

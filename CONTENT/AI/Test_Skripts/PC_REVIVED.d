@@ -865,6 +865,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRU_REVIVED_CONCUSSIONBOLT, 1);
 	CreateInvItems(self, ITRU_REVIVED_INFLATE, 1);
 	CreateInvItems(self, ITRU_REVIVED_SUMMONSKELETONS, 1);
+	CreateInvItems(self, ITRU_REVIVED_CHARM, 1);
 
 	//******************************************************************//
 
@@ -919,6 +920,13 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITSC_REVIVED_CONCUSSIONBOLT, 10);
 	CreateInvItems(self, ITSC_REVIVED_INFLATE, 10);
 	CreateInvItems(self, ITSC_REVIVED_SUMMONSKELETONS, 10);
+	CreateInvItems(self, ITSC_REVIVED_SWARM, 10);
+	CreateInvItems(self, ITSC_REVIVED_ROOTSNARE, 10);
+	CreateInvItems(self, ITSC_REVIVED_STEALENERGY, 10);
+	CreateInvItems(self, ITSC_REVIVED_BELIARSWRATH, 10);
+	CreateInvItems(self, ITSC_REVIVED_CRYOFTHEDEAD, 10);
+	CreateInvItems(self, ITSC_REVIVED_ZOMBIE, 10);
+	CreateInvItems(self, ITSC_REVIVED_GUARDIAN, 10);
 
 	//******************************************************************//
 

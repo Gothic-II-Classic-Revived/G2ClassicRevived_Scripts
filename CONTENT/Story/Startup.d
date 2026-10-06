@@ -3309,8 +3309,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 
 //Jägerlager
 
-	Wld_InsertNpc 	(OUT_983_DRAGOMIR,	"NW_CITY_TO_LIGHTHOUSE_13_MONSTER5"); 
-	//Wld_InsertItem	(ItRw_DragomirsArmbrust_MIS , "FP_NW_ITEM_TROLL_06"); 
+	Wld_InsertNpc 	(OUT_983_DRAGOMIR,	"NW_CITY_TO_LIGHTHOUSE_13_MONSTER5");  
 	Wld_InsertNpc 	(OUT_984_NICLAS,	"NW_TAVERNE_TROLLAREA_MONSTER_02_01"); 
 	
 
@@ -3529,11 +3528,6 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
  	Wld_InsertNpc 	(Scavenger, 			"NW_FARM3_BIGWOOD_02");
  	Wld_InsertNpc 	(Scavenger, 			"NW_FARM3_BIGWOOD_02");
  
- 	//PATCH M.F. 
- 	Wld_InsertNpc 	(Keiler, 			"NW_FARM3_BIGWOOD_03");
- 	Wld_InsertNpc 	(Keiler, 			"NW_FARM3_BIGWOOD_03");
- 	Wld_InsertNpc 	(Keiler, 			"NW_FARM3_BIGWOOD_03");
- 
  	Wld_InsertNpc 	(Lurker, 			"NW_FARM3_PATH_11_SMALLRIVER_02");
  	Wld_InsertNpc 	(Lurker, 			"NW_FARM3_PATH_11_SMALLRIVER_02");
 
@@ -3585,26 +3579,89 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
  
 	//****************************************************************************************
 
-	// Second Pass
- 		Wld_InsertNpc 	(Molerat, 			"NW_FARM3_BIGWOOD_04");
- 		Wld_InsertNpc 	(Molerat, 			"NW_FARM3_BIGWOOD_04");
+	// Pass to Valley
+		Wld_InsertNpc 	(PAL_297_Ritter, "NW_PASS_01");
+		Wld_InsertNpc 	(PAL_298_Ritter, "NW_PASS_01");
 
- 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_WALL");
- 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_WALL");
- 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_HILL");
- 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_HILL");
+		Wld_InsertNpc	(WolfJuvenile,"NW_FARM3_VALLEY_002_WALL");
+		Wld_InsertNpc	(WolfJuvenile,"NW_FARM3_VALLEY_002_WALL");
+		Wld_InsertNpc	(WolfJuvenile,"NW_FARM3_VALLEY_002_WALL");
 
- 		Wld_InsertNpc 	(Bloodfly, 	"NW_FARM3_VALLEY_002");
- 		Wld_InsertNpc 	(Bloodfly, 	"NW_FARM3_VALLEY_002");
+ 		Wld_InsertNpc 	(Bloodfly, 		"NW_FARM3_VALLEY_002");
+ 		Wld_InsertNpc 	(Bloodfly, 		"NW_FARM3_VALLEY_002");
 
- 		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");
- 		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");
+ 		Wld_InsertNpc 	(Bloodfly, 		"NW_FARM3_VALLEY_005_TREE");
+ 		Wld_InsertNpc 	(Bloodfly, 		"NW_FARM3_VALLEY_005_TREE");
 
- 		Wld_InsertNpc 	(Gobbo_Elite, 		"NW_FARM3_VALLEY_011");
- 		Wld_InsertNpc 	(Gobbo_Elite, 		"NW_FARM3_VALLEY_011");
+ 		Wld_InsertNpc 	(Gobbo_Elite, 	"NW_FARM3_VALLEY_011");
+ 		Wld_InsertNpc 	(Gobbo_Elite, 	"NW_FARM3_VALLEY_011");
 
- 		Wld_InsertNpc 	(Hellhound, 		"NW_FARM3_VALLEY_015_MOVEMENT");
- 		Wld_InsertNpc 	(Hellhound, 		"NW_FARM3_VALLEY_015_MOVEMENT");
+ 		Wld_InsertNpc 	(Hellhound, 	"NW_FARM3_VALLEY_015_MOVEMENT");
+ 		Wld_InsertNpc 	(Hellhound, 	"NW_FARM3_VALLEY_015_MOVEMENT");
+
+	// Old Pass (G2)
+ 		Wld_InsertNpc 	(Wolf, 		"NW_GREATPEASANT_TO_PASS");
+ 		Wld_InsertNpc 	(Wolf, 		"NW_GREATPEASANT_TO_PASS");
+
+ 		Wld_InsertNpc 	(Wolf, 		"NW_PASS_01");
+ 		Wld_InsertNpc 	(Wolf, 		"NW_PASS_01");
+
+ 		Wld_InsertNpc 	(Snapper, 		"NW_PASS_06");
+ 		Wld_InsertNpc 	(Snapper, 		"NW_PASS_06");
+		
+		Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_15");
+		Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_16");
+		Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_16");
+		Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_17");
+		
+		Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_05");
+		Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_06");
+		Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_07");
+		Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_08");
+		
+		Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_04");
+		Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_05");
+		Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_05");
+		Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_06");
+		Wld_InsertNpc	(Gobbo_Black,"NW_PASS_GRAT_06");
+		
+		Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_07");
+		Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_02");
+		Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_02_B");
+		
+		Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_13");
+		Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_04_B");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_13");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_14");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_07");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_06");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_06");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_01");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_01");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_01");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_04");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_04");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_04");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_08");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_08");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_03");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_03");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_03");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_09");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_10");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_10");
+		
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_11");
+		Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_12");
 };
 
 	FUNC VOID INIT_SUB_NewWorld_Part_GreatPeasant_01()
@@ -3643,11 +3700,11 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	
 
 	// Second Pass	
-		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_01");
-		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_02");
-		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_03");
-		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_04");
-		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_05");
+		REV_SetObjectRoutine_Fire ("NW_PASS_FIRE_01");
+		REV_SetObjectRoutine_Fire ("NW_PASS_FIRE_02");
+		REV_SetObjectRoutine_Fire ("NW_PASS_FIRE_03");
+		REV_SetObjectRoutine_Fire ("NW_PASS_FIRE_04");
+		REV_SetObjectRoutine_Fire ("NW_PASS_FIRE_05");
 	
 	// Landowner
 		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_01");
@@ -3670,86 +3727,6 @@ FUNC VOID INIT_NewWorld_Part_GreatPeasant_01 ()
 	B_InitNpcGlobals ();	
 	
 	INIT_SUB_NewWorld_Part_GreatPeasant_01();
-};
-//--------------------------- PASS -------------------------------------------------------
-FUNC VOID STARTUP_NewWorld_Part_Pass_To_OW_01 ()
-{
-	// ------NSCs --------
-	
-	Wld_InsertNpc 	(PAL_297_Ritter, "NW_PASS_01");
-	Wld_InsertNpc 	(PAL_298_Ritter, "NW_PASS_01");
-
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_06");
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_06");
-	
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_11");
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_11");
-	
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_15");
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_16");
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_16");
-	Wld_InsertNpc	(WolfJuvenile,"NW_PASS_SECRET_17");
-	
-	Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_05");
-	Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_06");
-	Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_07");
-	Wld_InsertNpc	(Giant_Rat,"NW_PASS_SECRET_08");
-	
-	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_04");
-	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_05");
-	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_05");
-	Wld_InsertNpc	(Gobbo_Green,"NW_PASS_GRAT_06");
-	Wld_InsertNpc	(Gobbo_Black,"NW_PASS_GRAT_06");
-	
-	Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_07");
-	Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_02");
-	Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_02_B");
-	
-	Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_13");
-	Wld_InsertNpc	(OrcShaman_Sit,"NW_PASS_ORKS_04_B");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_13");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_14");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_07");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_06");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_06");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_01");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_01");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_01");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_04");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_04");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_04");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_08");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_08");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_03");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_03");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_03");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_09");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_10");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_10");
-	
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_11");
-	Wld_InsertNpc	(OrcWarrior_Roam,"NW_PASS_ORKS_12");
-};
-FUNC VOID INIT_SUB_NewWorld_Part_Pass_To_OW_01 ()
-{
-
-};
-FUNC VOID INIT_NewWorld_Part_Pass_To_OW_01 ()
-{
-	B_InitMonsterAttitudes (); 
-	B_InitGuildAttitudes();
-	B_InitNpcGlobals ();	
-	
-	INIT_SUB_NewWorld_Part_Pass_To_OW_01();
 };
 //---Medium Forest--------
 
@@ -4420,7 +4397,6 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_GreatPeasant_01();
 	STARTUP_NewWorld_Part_TrollArea_01();
 	STARTUP_NewWorld_Part_Forest_01();
-	STARTUP_NewWorld_Part_Pass_To_OW_01();
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
 	PlayVideo("INTRO.BIK");
@@ -4461,7 +4437,6 @@ FUNC VOID INIT_NewWorld()
 	INIT_SUB_NewWorld_Part_GreatPeasant_01();
 	INIT_SUB_NewWorld_Part_TrollArea_01();
 	INIT_SUB_NewWorld_Part_Forest_01();
-	INIT_SUB_NewWorld_Part_Pass_To_OW_01();
 	
 	if (MIS_ReadyForChapter3  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter3_OneTime == FALSE)

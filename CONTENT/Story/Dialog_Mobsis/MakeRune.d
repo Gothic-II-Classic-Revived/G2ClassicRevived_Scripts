@@ -48,6 +48,7 @@ FUNC VOID PC_MakeRune_End_Info()
 // Runen- Erschaffung Dialoge
 //---------------------------
 //*******************************************************
+// Circle 1
 INSTANCE PC_Circle_01 (C_Info)
 {
 	npc				= PC_Hero;
@@ -56,52 +57,60 @@ INSTANCE PC_Circle_01 (C_Info)
 	permanent		= TRUE;
 	description		= "Create 1st Circle runes"; 
 };
-
 FUNC INT PC_Circle_01_Condition ()
 {
-	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE)
-	&& ((PLAYER_TALENT_RUNES[SPL_LIGHT] == TRUE)
-	||  (PLAYER_TALENT_RUNES[SPL_Firebolt] == TRUE)
-	||  (PLAYER_TALENT_RUNES[SPL_LightHeal] == TRUE)
-	||  (PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] == TRUE)
-	||  (PLAYER_TALENT_RUNES[SPL_Zap] == TRUE) ) )
-	{	
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_MAKERUNE)
+	&& (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 1)
+	&& ((PLAYER_TALENT_RUNES[SPL_Firebolt] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Icebolt] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Sleep] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Charm] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Light] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_LightHeal] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] == TRUE))
+	{
 		return TRUE;
 	};
 };
-
-FUNC VOID PC_Circle_01_Info()
+FUNC VOID PC_Circle_01_Info ()
 {
 	Info_ClearChoices (PC_Circle_01);
-	
-	Info_AddChoice 	  (PC_Circle_01,DIALOG_BACK,PC_Circle_01_BACK);
-	if (PLAYER_TALENT_RUNES[SPL_LIGHT] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_LIGHT,PC_ItRu_Light_Info);
-	};
+	Info_AddChoice (PC_Circle_01, DIALOG_BACK, PC_Circle_01_BACK);
 	if (PLAYER_TALENT_RUNES[SPL_Firebolt] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_Firebolt,PC_ItRu_Firebolt_Info);
+		Info_AddChoice (PC_Circle_01, "Fire Bolt", PC_ItRu_Firebolt_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Zap] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_Icebolt] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_Zap,PC_ItRu_Zap_Info); 
+		Info_AddChoice (PC_Circle_01, "Ice Bolt", PC_ItRu_Icebolt_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Sleep] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_01, "Sleep", PC_ItRu_Sleep_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Charm] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_01, "Charm", PC_RevivedRune_Charm_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Light] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_01, "Light", PC_ItRu_Light_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_LightHeal] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_LightHeal,PC_ItRu_LightHeal_Info);
+		Info_AddChoice (PC_Circle_01, "Heal Light Wounds", PC_ItRu_LightHeal_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_01,NAME_SPL_SummonGoblinSkeleton,PC_ItRu_SumGobSkel_Info);
+		Info_AddChoice (PC_Circle_01, "Goblin Skeleton", PC_ItRu_SumGobSkel_Info);
 	};
-	
 };
-FUNC VOID PC_Circle_01_BACK()
+FUNC VOID PC_Circle_01_BACK ()
 {
 	Info_ClearChoices (PC_Circle_01);
 };
-//*******************************************************
+
+// Circle 2
 INSTANCE PC_Circle_02 (C_Info)
 {
 	npc				= PC_Hero;
@@ -112,53 +121,78 @@ INSTANCE PC_Circle_02 (C_Info)
 };
 FUNC INT PC_Circle_02_Condition ()
 {
-	if ( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE)
-	&&  ( (PLAYER_TALENT_RUNES[SPL_InstantFireball] == TRUE)
-	||    (PLAYER_TALENT_RUNES[SPL_Icebolt] == TRUE)
-	||    (PLAYER_TALENT_RUNES[SPL_SummonWolf] == TRUE)
-	||    (PLAYER_TALENT_RUNES[SPL_WINDFIST] == TRUE)
-	||    (PLAYER_TALENT_RUNES[SPL_Sleep] == TRUE) 
-	||    (PLAYER_TALENT_RUNES[SPL_Whirlwind] == TRUE)
-	||    (PLAYER_TALENT_RUNES[SPL_Icelance] == TRUE)) )
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_MAKERUNE)
+	&& (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 2)
+	&& ((PLAYER_TALENT_RUNES[SPL_InstantFireball] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Zap] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Telekinesis] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_WindFist] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Swarm] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_GreenTentacle] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_MediumHeal] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_ConcussionBolt] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonWolf] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonSkeleton] == TRUE))
 	{
 		return TRUE;
 	};
 };
-FUNC VOID PC_Circle_02_Info()
+FUNC VOID PC_Circle_02_Info ()
 {
 	Info_ClearChoices (PC_Circle_02);
-	
-	Info_AddChoice 	  (PC_Circle_02,DIALOG_BACK,PC_Circle_02_BACK);
+	Info_AddChoice (PC_Circle_02, DIALOG_BACK, PC_Circle_02_BACK);
 	if (PLAYER_TALENT_RUNES[SPL_InstantFireball] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_InstantFireball,PC_ItRu_InstFireball_Info);
+		Info_AddChoice (PC_Circle_02, "Fire Ball", PC_ItRu_InstFireball_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Icebolt] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_Zap] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_Icebolt,PC_ItRu_Icebolt_Info);
+		Info_AddChoice (PC_Circle_02, "Zap", PC_ItRu_Zap_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_WINDFIST] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_Telekinesis] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_WINDFIST,PC_ItRu_Windfist_Info);
+		Info_AddChoice (PC_Circle_02, "Telekinesis", PC_RevivedRune_Telekinesis_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Sleep] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_Sleep,PC_ItRu_Sleep_Info);
+		Info_AddChoice (PC_Circle_02, "Shrink", PC_ItRu_Shrink_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Whirlwind] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_WindFist] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_Whirlwind,PC_ItRu_Whirlwind_Info);
+		Info_AddChoice (PC_Circle_02, "Wind Fist", PC_ItRu_Windfist_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_IceLance] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_Swarm] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_IceLance,PC_ItRu_Icelance_Info);
+		Info_AddChoice (PC_Circle_02, "Swarm", PC_RevivedRune_Swarm_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_GreenTentacle] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_02, "Root Snare", PC_RevivedRune_GreenTentacle_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_MediumHeal] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_02, "Heal Medium Wounds", PC_ItRu_MediumHeal_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_ConcussionBolt] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_02, "Concussion Bolt", PC_ItRu_ConcussionBolt_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_SummonWolf] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_02, "Wolf Skeleton", PC_RevivedRune_SummonWolf_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_SummonSkeleton] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_02, "Skeleton", PC_ItRu_SumSkel_Info);
 	};
 };
-FUNC VOID PC_Circle_02_BACK()
+FUNC VOID PC_Circle_02_BACK ()
 {
 	Info_ClearChoices (PC_Circle_02);
 };
-//*******************************************************
+
+// Circle 3
 INSTANCE PC_Circle_03 (C_Info)
 {
 	npc				= PC_Hero;
@@ -168,75 +202,79 @@ INSTANCE PC_Circle_03 (C_Info)
 	description		= "Create 3rd Circle runes"; 
 };
 FUNC INT PC_Circle_03_Condition ()
-{	
-	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE)
-	&& ( (PLAYER_TALENT_RUNES[SPL_MediumHeal] == TRUE)
-	
-	||   (PLAYER_TALENT_RUNES[SPL_SummonSkeleton] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_Fear] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_IceCube] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_ChargeZap] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_ConcussionBolt] == TRUE)
-	||	 (PLAYER_TALENT_RUNES[SPL_Firestorm] == TRUE)
-	||	 (PLAYER_TALENT_RUNES[SPL_FireFist] == TRUE)
-	||	 (PLAYER_TALENT_RUNES[SPL_Geyser] == TRUE)
-	||	 (PLAYER_TALENT_RUNES[SPL_Thunderstorm] == TRUE)) )
+{
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_MAKERUNE)
+	&& (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 3)
+	&& ((PLAYER_TALENT_RUNES[SPL_Firestorm] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_FireFist] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_IceLance] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_WaterFist] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_IceCube] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Whirlwind] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SuckEnergy] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_ManaRecovery] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonZombie] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonSkeletons] == TRUE))
 	{
 		return TRUE;
 	};
 };
-FUNC VOID PC_Circle_03_Info()
+FUNC VOID PC_Circle_03_Info ()
 {
 	Info_ClearChoices (PC_Circle_03);
-	
-	Info_AddChoice 	  (PC_Circle_03,DIALOG_BACK,PC_Circle_03_BACK);
-	if (PLAYER_TALENT_RUNES[SPL_MediumHeal] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_MediumHeal,PC_ItRu_MediumHeal_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_SummonSkeleton] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_SummonSkeleton,PC_ItRu_SumSkel_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_Fear] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_Fear,PC_ItRu_Fear_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_IceCube] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_IceCube,PC_ItRu_IceCube_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_ChargeZap] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_ChargeZap,PC_ItRu_ThunderBall_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_ConcussionBolt] == TRUE)
-	{
-		Info_AddChoice     (PC_Circle_03,NAME_SPL_ConcussionBolt,PC_ItRu_ConcussionBolt_Info);
-	};
+	Info_AddChoice (PC_Circle_03, DIALOG_BACK, PC_Circle_03_BACK);
 	if (PLAYER_TALENT_RUNES[SPL_Firestorm] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_Firestorm,PC_ItRu_Firestorm_Info);
+		Info_AddChoice (PC_Circle_03, "Small Fire Storm", PC_ItRu_Firestorm_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_FireFist] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_FireFist,PC_ItRu_FireFist_Info);
+		Info_AddChoice (PC_Circle_03, "Fire Fist", PC_ItRu_FireFist_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Geyser] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_IceLance] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_Geyser,PC_ItRu_Geyser_Info);
+		Info_AddChoice (PC_Circle_03, "Ice Lance", PC_ItRu_Icelance_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Thunderstorm] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_WaterFist] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_03,NAME_SPL_Thunderstorm,PC_ItRu_thunderstorm_Info);
+		Info_AddChoice (PC_Circle_03, "Water Fist", PC_ItRu_Waterfist_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_IceCube] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_03, "Ice Block", PC_ItRu_IceCube_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Whirlwind] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_03, "Whirlwind", PC_ItRu_Whirlwind_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_SuckEnergy] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_03, "Steal Energy", PC_RevivedRune_SuckEnergy_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_ManaRecovery] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_03, "Mana Recovery", PC_RevivedRune_ManaRecovery_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_03, "Destroy Undead", PC_ItRu_HarmUndead_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_SummonZombie] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_03, "Zombie", PC_RevivedRune_SummonZombie_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_SummonSkeletons] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_03, "Skeletons", PC_RevivedRune_SummonSkeletons_Info);
 	};
 };
-	
-FUNC VOID PC_Circle_03_BACK()
+FUNC VOID PC_Circle_03_BACK ()
 {
 	Info_ClearChoices (PC_Circle_03);
 };
-//*******************************************************
+
+// Circle 4
 INSTANCE PC_Circle_04 (C_Info)
 {
 	npc				= PC_Hero;
@@ -246,49 +284,89 @@ INSTANCE PC_Circle_04 (C_Info)
 	description		= "Create 4th Circle runes"; 
 };
 FUNC INT PC_Circle_04_Condition ()
-{	
-	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
-	&& ( (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
-	|| 	 (PLAYER_TALENT_RUNES[SPL_LightningFlash] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_ChargeFireball] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_SummonGolem] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_Waterfist] == TRUE) ) )
+{
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_MAKERUNE)
+	&& (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 4)
+	&& ((PLAYER_TALENT_RUNES[SPL_ChargeFireball] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Pyrokinesis] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Geyser] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_ChargeZap] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_LightningFlash] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Control] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Fear] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Berserk] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Earthquake] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Explode] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_FullHeal] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonGolem] == TRUE))
 	{
 		return TRUE;
 	};
 };
-FUNC VOID PC_Circle_04_Info()
+FUNC VOID PC_Circle_04_Info ()
 {
 	Info_ClearChoices (PC_Circle_04);
-	
-	Info_AddChoice 	  (PC_Circle_04,DIALOG_BACK,PC_Circle_04_BACK);
-	
-	if (PLAYER_TALENT_RUNES[SPL_SummonGolem] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_SummonGolem,PC_ItRu_SumGol_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_DestroyUndead] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_DestroyUndead,PC_ItRu_HarmUndead_Info);
-	};
+	Info_AddChoice (PC_Circle_04, DIALOG_BACK, PC_Circle_04_BACK);
 	if (PLAYER_TALENT_RUNES[SPL_ChargeFireball] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_ChargeFireball,PC_ItRu_ChargeFireball_Info);
+		Info_AddChoice (PC_Circle_04, "Large Fireball", PC_ItRu_ChargeFireball_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Pyrokinesis] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Pyrokinesis", PC_ItRu_Pyrokinesis_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Large Fire Storm", PC_ItRu_LargeFireStorm_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Geyser] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Geyser", PC_ItRu_Geyser_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_ChargeZap] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Ball Lightning", PC_ItRu_ThunderBall_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_LightningFlash] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_LightningFlash,PC_ItRu_LightningFlash_Info);
+		Info_AddChoice (PC_Circle_04, "Lightning", PC_ItRu_LightningFlash_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Waterfist] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_Control] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_04,NAME_SPL_Waterfist,PC_ItRu_Waterfist_Info);
-	};	
+		Info_AddChoice (PC_Circle_04, "Control", PC_RevivedRune_Control_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Fear] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Fear", PC_ItRu_Fear_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Berserk] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Berserk", PC_RevivedRune_Berserk_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Earthquake] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Earthquake", PC_RevivedRune_Earthquake_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Explode] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Explode", PC_RevivedRune_Explode_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_FullHeal] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Heal Heavy Wounds", PC_ItRu_FullHeal_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_SummonGolem] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_04, "Golem", PC_ItRu_SumGol_Info);
+	};
 };
-FUNC VOID PC_Circle_04_BACK()
+FUNC VOID PC_Circle_04_BACK ()
 {
 	Info_ClearChoices (PC_Circle_04);
 };
-//*******************************************************
+
+// Circle 5
 INSTANCE PC_Circle_05 (C_Info)
 {
 	npc				= PC_Hero;
@@ -299,49 +377,48 @@ INSTANCE PC_Circle_05 (C_Info)
 };
 FUNC INT PC_Circle_05_Condition ()
 {
-	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
-	&& ( (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_FireWave] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_SummonDemon] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_FullHeal] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == TRUE) ) )
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_MAKERUNE)
+	&& (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 5)
+	&& ((PLAYER_TALENT_RUNES[SPL_Extricate] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Inflate] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Energyball] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonGuardian] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_SummonDemon] == TRUE))
 	{
 		return TRUE;
 	};
 };
-FUNC VOID PC_Circle_05_Info()
+FUNC VOID PC_Circle_05_Info ()
 {
 	Info_ClearChoices (PC_Circle_05);
-	
-	Info_AddChoice 	  (PC_Circle_05,DIALOG_BACK,PC_Circle_05_BACK);
-	
-	if (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
+	Info_AddChoice (PC_Circle_05, DIALOG_BACK, PC_Circle_05_BACK);
+	if (PLAYER_TALENT_RUNES[SPL_Extricate] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_IceWave,PC_ItRu_IceWave_Info);
+		Info_AddChoice (PC_Circle_05, "Extricate", PC_ItRu_Extricate_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_FireWave] == TRUE)
+	if (PLAYER_TALENT_RUNES[SPL_Inflate] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_FireWave,PC_ItRu_FireWave_Info);
+		Info_AddChoice (PC_Circle_05, "Inflate", PC_RevivedRune_Inflate_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Energyball] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_05, "Beliar's Wrath", PC_RevivedRune_Energyball_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_SummonGuardian] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_05, "Guardian", PC_RevivedRune_SummonGuardian_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_SummonDemon] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_SummonDemon,PC_ItRu_SumDemon_Info);
+		Info_AddChoice (PC_Circle_05, "Demon", PC_ItRu_SumDemon_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_FullHeal] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_FullHeal,PC_ItRu_FullHeal_Info);
-	};
-	if (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_05,NAME_SPL_LargeFireStorm,PC_ItRu_LargeFireStorm_Info);
-	};
-};			
-FUNC VOID PC_Circle_05_BACK()
+};
+FUNC VOID PC_Circle_05_BACK ()
 {
 	Info_ClearChoices (PC_Circle_05);
 };
 
-//*******************************************************
+// Circle 6
 INSTANCE PC_Circle_06 (C_Info)
 {
 	npc				= PC_Hero;
@@ -351,82 +428,66 @@ INSTANCE PC_Circle_06 (C_Info)
 	description		= "Create 6th Circle runes"; 
 };
 FUNC INT PC_Circle_06_Condition ()
-{	
-	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
-	&& ( (PLAYER_TALENT_RUNES[SPL_Firerain] == TRUE)
-	|| 	 (PLAYER_TALENT_RUNES[SPL_BreathOfDeath] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_MassDeath] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] == TRUE)
-	||   (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE) ) )
+{
+	if (PLAYER_MOBSI_PRODUCTION == MOBSI_MAKERUNE)
+	&& (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) >= 6)
+	&& ((PLAYER_TALENT_RUNES[SPL_FireWave] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Firerain] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Thunderstorm] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_Skull] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_BreathOfDeath] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_MassDeath] == TRUE)
+	|| (PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] == TRUE))
 	{
 		return TRUE;
 	};
 };
-FUNC VOID PC_Circle_06_Info()
+FUNC VOID PC_Circle_06_Info ()
 {
 	Info_ClearChoices (PC_Circle_06);
-	
-	Info_AddChoice 	  (PC_Circle_06,DIALOG_BACK,PC_Circle_06_BACK);
+	Info_AddChoice (PC_Circle_06, DIALOG_BACK, PC_Circle_06_BACK);
+	if (PLAYER_TALENT_RUNES[SPL_FireWave] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_06, "Fire Wave", PC_ItRu_FireWave_Info);
+	};
 	if (PLAYER_TALENT_RUNES[SPL_Firerain] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_Firerain,PC_ItRu_Firerain_Info);
+		Info_AddChoice (PC_Circle_06, "Fire Rain", PC_ItRu_Firerain_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_IceWave] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_06, "Ice Wave", PC_ItRu_IceWave_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Thunderstorm] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_06, "Thunderstorm", PC_ItRu_Thunderstorm_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Skull] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_06, "Cry of the Dead", PC_RevivedRune_Skull_Info);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] == TRUE)
+	{
+		Info_AddChoice (PC_Circle_06, "Holy Missile", PC_SPL_MasterOfDisaster_Create);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_BreathOfDeath] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_BreathOfDeath,PC_ItRu_BreathOfDeath_Info);
+		Info_AddChoice (PC_Circle_06, "Breath of Death", PC_ItRu_BreathOfDeath_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_MassDeath] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_MassDeath,PC_ItRu_MassDeath_Info);
+		Info_AddChoice (PC_Circle_06, "Wave of Death", PC_ItRu_MassDeath_Info);
 	};
 	if (PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] == TRUE)
 	{
-		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_ArmyOfDarkness,PC_ItRu_ArmyOfDarkness_Info);
+		Info_AddChoice (PC_Circle_06, "Army of Darkness", PC_ItRu_ArmyOfDarkness_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_Shrink] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_06,NAME_SPL_Shrink,PC_ItRu_Shrink_Info);
-	};
-};	
-FUNC VOID PC_Circle_06_BACK()
+};
+FUNC VOID PC_Circle_06_BACK ()
 {
 	Info_ClearChoices (PC_Circle_06);
-};
-
-
-//*******************************************************
-INSTANCE PC_SPL_MasterOfDisaster (C_Info)
-{
-	npc				= PC_Hero;
-	condition		= PC_SPL_MasterOfDisaster_Condition;
-	information		= PC_SPL_MasterOfDisaster_Info;
-	permanent		= TRUE;
-	description		= "The secret of the library!"; 
-};
-FUNC INT PC_SPL_MasterOfDisaster_Condition ()
-{	
-	if( (PLAYER_MOBSI_PRODUCTION	==	MOBSI_MAKERUNE) 
-	&& (PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] == TRUE  ))
-	{
-		return TRUE;
-	};
-};
-FUNC VOID PC_SPL_MasterOfDisaster_Info()
-
-{
-	Info_ClearChoices (PC_SPL_MasterOfDisaster);
-	
-	Info_AddChoice 	  (PC_SPL_MasterOfDisaster,DIALOG_BACK,PC_SPL_MasterOfDisaster_BACK);
-	if (PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] == TRUE)
-	{
-		Info_AddChoice 	  (PC_SPL_MasterOfDisaster,"The secret of the library!",PC_SPL_MasterOfDisaster_Create);
-	};
-	
-};	
-
-FUNC VOID PC_SPL_MasterOfDisaster_BACK()
-{
-	Info_ClearChoices (PC_SPL_MasterOfDisaster);
 };
 
 FUNC VOID PC_SPL_MasterOfDisaster_Create()
@@ -1022,7 +1083,6 @@ FUNC VOID PC_ItRu_Firerain_Info ()
 {
 	if (Npc_HasItems (hero, ItSc_Firerain)  >= 1)
 	&& (Npc_HasItems (hero, ItMi_Pitch) 	>= 1)
-	&& (Npc_HasItems (hero, ItMi_Sulfur) 	>= 1)		
 	&& (Npc_HasItems (hero, ItAt_WaranFiretongue) >= 1)
 	{
 		Npc_RemoveInvItems  (hero,ItSc_Firerain, 1);
@@ -1230,4 +1290,148 @@ FUNC VOID PC_ItRu_Waterfist_Info ()
 		CreateInvItems (self, ItMi_RuneBlank,1);
 	};	
 	B_ENDPRODUCTIONDIALOG ();	
+};
+
+FUNC VOID PC_ItRu_Pyrokinesis_Info ()
+{
+	if (Npc_HasItems (hero, ITSC_REVIVED_PYROKINESIS) >= 1)
+	&& (Npc_HasItems (hero, ItMi_Coal) >= 1)
+	&& (Npc_HasItems (hero, ItMi_Sulfur) >= 1)
+	{
+		Npc_RemoveInvItems (hero, ITSC_REVIVED_PYROKINESIS, 1);
+		Npc_RemoveInvItems (hero, ItMi_Coal, 1);
+		Npc_RemoveInvItems (hero, ItMi_Sulfur, 1);
+		CreateInvItems (hero, ITRU_REVIVED_PYROKINESIS, 1);
+		Print (PRINT_RuneSuccess);
+	}
+	else
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_RuneBlank, 1);
+	};
+	B_ENDPRODUCTIONDIALOG ();
+};
+
+FUNC VOID PC_ItRu_Extricate_Info ()
+{
+	if (Npc_HasItems (hero, ITSC_REVIVED_EXTRICATE) >= 1)
+	&& (Npc_HasItems (hero, ItMi_Pitch) >= 1)
+	&& (Npc_HasItems (hero, ItAt_WaranFiretongue) >= 1)
+	{
+		Npc_RemoveInvItems (hero, ITSC_REVIVED_EXTRICATE, 1);
+		Npc_RemoveInvItems (hero, ItMi_Pitch, 1);
+		Npc_RemoveInvItems (hero, ItAt_WaranFiretongue, 1);
+		CreateInvItems (hero, ITRU_REVIVED_EXTRICATE, 1);
+		Print (PRINT_RuneSuccess);
+	}
+	else
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_RuneBlank, 1);
+	};
+	B_ENDPRODUCTIONDIALOG ();
+};
+
+// Provisional single-ingredient recipes for spells without a vanilla rune formula.
+FUNC VOID PC_RevivedRune_CraftSimple (var int scrollItem, var int ingredientItem, var int runeItem)
+{
+	if (Npc_HasItems (hero, scrollItem) >= 1)
+	&& (Npc_HasItems (hero, ingredientItem) >= 1)
+	{
+		Npc_RemoveInvItems (hero, scrollItem, 1);
+		Npc_RemoveInvItems (hero, ingredientItem, 1);
+		CreateInvItems (hero, runeItem, 1);
+		Print (PRINT_RuneSuccess);
+	}
+	else
+	{
+		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_RuneBlank, 1);
+	};
+	B_ENDPRODUCTIONDIALOG ();
+};
+
+FUNC VOID PC_RevivedRune_Inflate_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_INFLATE, ItMi_Rockcrystal, ITRU_REVIVED_INFLATE);
+};
+
+FUNC VOID PC_RevivedRune_Charm_Info ()
+{
+	PC_RevivedRune_CraftSimple (ItSc_Charm, ItMi_Coal, ITRU_REVIVED_CHARM);
+};
+
+FUNC VOID PC_RevivedRune_Telekinesis_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_TELEKINESIS, ItMi_Coal, ITRU_REVIVED_TELEKINESIS);
+};
+
+FUNC VOID PC_RevivedRune_Control_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_CONTROL, ItMi_Coal, ITRU_REVIVED_CONTROL);
+};
+
+FUNC VOID PC_RevivedRune_Berserk_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_BERSERK, ItMi_Coal, ITRU_REVIVED_BERSERK);
+};
+
+FUNC VOID PC_RevivedRune_Earthquake_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_EARTHQUAKE, ItMi_Coal, ITRU_REVIVED_EARTHQUAKE);
+};
+
+FUNC VOID PC_RevivedRune_Swarm_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_SWARM, ItMi_DarkPearl, ItRu_Swarm);
+};
+
+FUNC VOID PC_RevivedRune_GreenTentacle_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_ROOTSNARE, ItMi_DarkPearl, ItRu_GreenTentacle);
+};
+
+FUNC VOID PC_RevivedRune_SuckEnergy_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_STEALENERGY, ItMi_DarkPearl, ItRu_SuckEnergy);
+};
+
+FUNC VOID PC_RevivedRune_ManaRecovery_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_MANARECOVERY, ItMi_DarkPearl, ITRU_REVIVED_MANARECOVERY);
+};
+
+FUNC VOID PC_RevivedRune_Explode_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_EXPLODE, ItMi_DarkPearl, ITRU_REVIVED_EXPLODE);
+};
+
+FUNC VOID PC_RevivedRune_Energyball_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_BELIARSWRATH, ItMi_DarkPearl, ItRu_BeliarsRage);
+};
+
+FUNC VOID PC_RevivedRune_Skull_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_CRYOFTHEDEAD, ItMi_DarkPearl, ItRu_Skull);
+};
+
+FUNC VOID PC_RevivedRune_SummonWolf_Info ()
+{
+	PC_RevivedRune_CraftSimple (ItSc_SumWolf, ItAt_WolfFur, ItRu_SumWolf);
+};
+
+FUNC VOID PC_RevivedRune_SummonZombie_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_ZOMBIE, ItAt_SkeletonBone, ItRu_SummonZombie);
+};
+
+FUNC VOID PC_RevivedRune_SummonSkeletons_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_SUMMONSKELETONS, ItAt_SkeletonBone, ITRU_REVIVED_SUMMONSKELETONS);
+};
+
+FUNC VOID PC_RevivedRune_SummonGuardian_Info ()
+{
+	PC_RevivedRune_CraftSimple (ITSC_REVIVED_GUARDIAN, ItAt_StoneGolemHeart, ItRu_SummonGuardian);
 };

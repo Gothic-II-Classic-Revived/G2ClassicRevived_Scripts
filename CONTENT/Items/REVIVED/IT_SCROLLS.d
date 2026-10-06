@@ -1265,3 +1265,194 @@ INSTANCE ITSC_REVIVED_SUMMONSKELETONS (C_Item)
     TEXT    [5]         =   NAME_Value;
     COUNT   [5]         =   value;
 };
+
+// Additional scrolls for craftable runes
+const int REV_Value_SWARM_SCROLL = 200;
+const int REV_Value_ROOTSNARE_SCROLL = 200;
+const int REV_Value_STEALENERGY_SCROLL = 200;
+const int REV_Value_BELIARSWRATH_SCROLL = 200;
+const int REV_Value_CRYOFTHEDEAD_SCROLL = 200;
+const int REV_Value_ZOMBIE_SCROLL = 200;
+const int REV_Value_GUARDIAN_SCROLL = 200;
+
+INSTANCE ITSC_REVIVED_SWARM (C_Item)
+{
+    name                =   NAME_SPL_Swarm;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_SWARM_SCROLL;
+
+    visual              =   "ItSc_Sleep.3DS";
+    spell               =   SPL_Swarm;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_ROOTSNARE (C_Item)
+{
+    name                =   NAME_SPL_GreenTentacle;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_ROOTSNARE_SCROLL;
+
+    visual              =   "ItSc_Sleep.3DS";
+    spell               =   SPL_GreenTentacle;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_STEALENERGY (C_Item)
+{
+    name                =   NAME_SPL_SuckEnergy;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_STEALENERGY_SCROLL;
+
+    visual              =   "ItSc_Sleep.3DS";
+    spell               =   SPL_SuckEnergy;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_BELIARSWRATH (C_Item)
+{
+    name                =   NAME_SPL_BeliarsRage;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_BELIARSWRATH_SCROLL;
+
+    visual              =   "ItSc_Sleep.3DS";
+    spell               =   SPL_Energyball;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_CRYOFTHEDEAD (C_Item)
+{
+    name                =   NAME_SPL_Skull;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_CRYOFTHEDEAD_SCROLL;
+
+    visual              =   "ItSc_Sleep.3DS";
+    spell               =   SPL_Skull;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_ZOMBIE (C_Item)
+{
+    name                =   NAME_SPL_SummonZombie;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_ZOMBIE_SCROLL;
+
+    visual              =   "ItSc_Sleep.3DS";
+    spell               =   SPL_SummonZombie;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};
+
+INSTANCE ITSC_REVIVED_GUARDIAN (C_Item)
+{
+    name                =   NAME_SPL_SummonGuardian;
+
+    mainflag            =   ITEM_KAT_RUNE;
+    flags               =   ITEM_MULTI;
+    material            =   MAT_LEATHER;
+
+    value               =   REV_Value_GUARDIAN_SCROLL;
+
+    visual              =   "ItSc_Sleep.3DS";
+    spell               =   SPL_SummonGuardian;
+    cond_atr[2]         =   ATR_MANA_MAX;
+    cond_value[2]       =   SPL_Cost_Scroll;
+
+    wear                =   WEAR_EFFECT;
+    effect              =   "SPELLFX_WEAKGLIMMER";
+
+    description         =   name;
+    TEXT    [0]         =   Name_MageScroll;
+    TEXT    [1]         =   NAME_Mana_needed;
+    COUNT   [1]         =   cond_value[2];
+    TEXT    [5]         =   NAME_Value;
+    COUNT   [5]         =   value;
+};

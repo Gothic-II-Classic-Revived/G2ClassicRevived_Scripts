@@ -51,21 +51,28 @@ func void B_SetVisuals_Wolf()
 {
 	Mdl_SetVisual			(self,"Wolf.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Wol_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"REV_WOLF_BODY_BIG",DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
+func void B_SetVisuals_WolfJuvenile()
+{
+	Mdl_SetVisual			(self,"Wolf.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"REV_WOLF_BODY",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 func void B_SetVisuals_UndeadWolf()
 {
 	Mdl_SetVisual			(self,"Wolf.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Wol_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"REV_WOLF_BODY_ICE", DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 func void B_SetVisuals_BlackWolf()
 {
 	Mdl_SetVisual			(self, "Wolf.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Warg_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"REV_WOLF_BODY_BLACK",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 
@@ -193,7 +200,7 @@ INSTANCE WolfJuvenile	(Mst_Default_Wolf)
 	//----- Kampf-Taktik ----
 	fight_tactic					= FAI_MONSTER_COWARD;
 	
-	B_SetVisuals_Wolf();
+	B_SetVisuals_WolfJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
@@ -223,7 +230,7 @@ INSTANCE PEPES_WolfJuvenile1	(Mst_Default_Wolf)
 	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	10;
 	
-	B_SetVisuals_Wolf();
+	B_SetVisuals_WolfJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
@@ -247,7 +254,7 @@ INSTANCE PEPES_WolfJuvenile2	(Mst_Default_Wolf)
 	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	10;
 	
-	B_SetVisuals_Wolf();
+	B_SetVisuals_WolfJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
@@ -271,7 +278,7 @@ INSTANCE PEPES_WolfJuvenile3	(Mst_Default_Wolf)
 	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	10;
 	
-	B_SetVisuals_Wolf();
+	B_SetVisuals_WolfJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
@@ -295,7 +302,7 @@ INSTANCE PEPES_WolfJuvenile4	(Mst_Default_Wolf)
 	protection	[PROT_FIRE]			=	10;
 	protection	[PROT_FLY]			=	10;
 	
-	B_SetVisuals_Wolf();
+	B_SetVisuals_WolfJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);

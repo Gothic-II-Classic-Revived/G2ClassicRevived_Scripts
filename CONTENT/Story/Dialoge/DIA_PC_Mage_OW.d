@@ -493,17 +493,17 @@ FUNC VOID DIA_MiltenOW_Teach_Info()
 	{
 		if (PLAYER_TALENT_RUNES [SPL_Firebolt] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_Firebolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firebolt)) ,DIA_MiltenOW_Teach_Firebolt);
 		};
 
 		if (PLAYER_TALENT_RUNES [SPL_LightHeal] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_LightHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LightHeal)) ,DIA_MiltenOW_Teach_LightHeal);
 		};
 
 		if (PLAYER_TALENT_RUNES [SPL_Light] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_Light, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_Light, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Light)) ,DIA_MiltenOW_Teach_Light);
 		};
 	};
 		
@@ -511,17 +511,17 @@ FUNC VOID DIA_MiltenOW_Teach_Info()
 	{
 		if (PLAYER_TALENT_RUNES [SPL_InstantFireball] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_InstantFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_InstantFireball);
 		};
 
 		if (PLAYER_TALENT_RUNES [SPL_ConcussionBolt] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_ConcussionBolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_ConcussionBolt, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ConcussionBolt)) ,DIA_MiltenOW_Teach_ConcussionBolt);
 		};
 
 		if (PLAYER_TALENT_RUNES [SPL_MediumHeal] == FALSE) 
 		{
-			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_InstantFireball)) ,DIA_MiltenOW_Teach_Feuerball);
+			Info_AddChoice	(DIA_MiltenOW_Teach, B_BuildLearnString (NAME_SPL_MediumHeal, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_MediumHeal)) ,DIA_MiltenOW_Teach_MediumHeal);
 		};
 	};
 };	
@@ -529,17 +529,29 @@ FUNC VOID DIA_MiltenOW_Teach_BACK()
 {
 	Info_ClearChoices (DIA_MiltenOW_Teach);
 };
-FUNC VOID DIA_MiltenOW_Teach_WINDFIST()
+FUNC VOID DIA_MiltenOW_Teach_Firebolt()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_WINDFIST);	
+	B_TeachPlayerTalentRunes (self, other, SPL_Firebolt);
 };
-FUNC VOID DIA_MiltenOW_Teach_Feuerball()
+FUNC VOID DIA_MiltenOW_Teach_LightHeal()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);	
+	B_TeachPlayerTalentRunes (self, other, SPL_LightHeal);
 };
-FUNC VOID DIA_MiltenOW_Teach_Eispfeil()
+FUNC VOID DIA_MiltenOW_Teach_Light()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Icebolt);	
+	B_TeachPlayerTalentRunes (self, other, SPL_Light);
+};
+FUNC VOID DIA_MiltenOW_Teach_InstantFireball()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_InstantFireball);
+};
+FUNC VOID DIA_MiltenOW_Teach_ConcussionBolt()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_ConcussionBolt);
+};
+FUNC VOID DIA_MiltenOW_Teach_MediumHeal()
+{
+	B_TeachPlayerTalentRunes (self, other, SPL_MediumHeal);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info TEACH

@@ -69,6 +69,7 @@ const string PRINT_Eat_HPMushroom3		=	"Your body feels more resilient!";
 
 
 // Log Entries
+// Alchemy recipes
 const string LOGENTRY_RECIPE_HEALTH_01			= "Ingredients for 'Essence of Healing':\n2 Healing Plant\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_HEALTH_02			= "Ingredients for 'Extract of Healing':\n2 Healing Herb\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_HEALTH_03			= "Ingredients for 'Elixir of Healing':\n2 Healing Root\n1 Meadow Knotweed";
@@ -97,6 +98,7 @@ const string LOGENTRY_RECIPE_SPEED_01			= "Ingredients for 'Potion of Swiftness'
 const string LOGENTRY_RECIPE_SPEED_02			= "Ingredients for 'Potion of Velocity':\n2 Snapperweed\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_SPEED_03			= "Ingredients for 'Potion of Haste':\n3 Snapperweed\n1 Meadow Knotweed";
 
+// Booze recipes
 const string LOGENTRY_RECIPE_LOUHAMMER			= "Ingredients for 'Lou's Hammer':\n2 Turnip\n1 Swampweed\n1 Swampshark tooth\n1 White Rum";
 const string LOGENTRY_RECIPE_LOUHAMMERDOUBLE	= "Ingredients for 'Lou's Double Hammer':\n2 Turnip\n1 Swampweed\n1 Swampshark tooth\n1 Lou's Hammer";
 const string LOGENTRY_RECIPE_FASTHERRING		= "Ingredients for 'Hasty Herring':\n1 Fish\n1 Snapperweed\n1 White Rum";
@@ -107,6 +109,7 @@ const string LOGENTRY_RECIPE_MAGEWINE			= "Ingredients for 'Monastery Wine':\n4 
 const string LOGENTRY_RECIPE_RICESCHNAPS		= "Ingredients for 'Rice Schnapps':\n4 Riceplant\n1 Lurker claws";
 const string LOGENTRY_RECIPE_MEAD				= "Ingredients for 'Mead':\n2 Honey comb\n1 Field Raider mandibles";
 
+// Cooking recipes
 const string LOGENTRY_RECIPE_MEATSTEW        	= "Ingredients for 'Full Meat Stew':\n2 Meat\n1 Clam Meat\n1 Sausage\n1 Bacon";
 const string LOGENTRY_RECIPE_FISHSOUP        	= "Ingredients for 'Fish Soup':\n2 Fish\n1 Water";
 const string LOGENTRY_RECIPE_MEATBUGRAGOUT  	= "Ingredients for 'Meatbug Ragout':\n5 Dark Mushroom\n3 Meatbug Meat\n2 Rice plants";
@@ -117,6 +120,7 @@ const string LOGENTRY_RECIPE_BERRYMARMALADE  	= "Ingredients for 'Berry Marmalad
 const string LOGENTRY_RECIPE_FRUITSALAD      	= "Ingredients for 'Fruit salad':\n1 Apple\n1 Pear\n1 Berry\n1 Grape\n1 Milk bottle";
 const string LOGENTRY_RECIPE_CONVICTSTEW    	= "Ingredients for 'Convict's Stew':\n1 Hard Bread\n1 Stinky Cheese\n1 Old Beer\n1 Stale Water";
 
+// Bowmaking recipes
 const string LOGENTRY_RECIPE_REVIVED_BOW_01		= "Ingredients for 'Short Bow':\n2 Cut Wood\n1 Leather\n2 Teeth";
 const string LOGENTRY_RECIPE_REVIVED_BOW_02		= "Ingredients for 'Long Bow':\n3 Cut Wood\n2 Leather\n2 Claws";
 const string LOGENTRY_RECIPE_REVIVED_BOW_03		= "Ingredients for 'Composite Bow':\n4 Cut Wood\n2 Leather\n2 Lurker Claws";
@@ -133,7 +137,7 @@ const string LOGENTRY_RECIPE_AMMO				= "Ingredients for 'Arrows and Bolts':\n10 
 const string LOGENTRY_RECIPE_MAGICAMMO			= "Ingredients for 'Magic Arrows and Bolts':\n10 Sticks\n2 Steel Bars\n5 Ore Nuggets";
 const string LOGENTRY_RECIPE_FIREAMMO			= "Ingredients for 'Fire Arrows and Bolts':\n10 Sticks\n5 Pitch\n5 Sulfur";
 
-// Revived smithing recipes
+// Smithing recipes
 const string LOGENTRY_RECIPE_REVIVED_1H_COMMON_01	= "Ingredients for 'Crude Sword (One-Handed)':\n1 Red Hot Steel";
 const string LOGENTRY_RECIPE_REVIVED_1H_01	= "Ingredients for 'Short Sword (One-Handed)':\n1 Red Hot Steel";
 const string LOGENTRY_RECIPE_REVIVED_1H_02	= "Ingredients for 'Long Sword (One-Handed)':\n1 Red Hot Steel";
@@ -156,6 +160,102 @@ const string LOGENTRY_RECIPE_REVIVED_2H_ORE_03	= "Ingredients for 'Ore Battle Sw
 const string LOGENTRY_RECIPE_REVIVED_2H_ORE_04	= "Ingredients for 'Heavy Ore Dragon Slayer (Two-Handed)':\n1 Red Hot Steel\n5 Ore Nuggets\n5 Dragon Blood";
 const string LOGENTRY_RECIPE_REVIVED_2H_ORE_05	= "Ingredients for 'Ore Bastard Sword (Two-Handed)':\n1 Red Hot Steel\n6 Ore Nuggets";
 
+// Runemaking recipes
+// Circle 1
+const string LOGENTRY_RECIPE_RUNE_FIREBOLT = "Ingredients for 'Fire Bolt':\n1 Sulfur";
+const string LOGENTRY_RECIPE_RUNE_ICEBOLT = "Ingredients for 'Ice Bolt':\n1 Glacier Quartz";
+const string LOGENTRY_RECIPE_RUNE_SLEEP = "Ingredients for 'Sleep':\n1 Swamp Herb";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_CHARM = "Ingredients for 'Charm' (placeholder):\n1 Coal";
+const string LOGENTRY_RECIPE_RUNE_LIGHT = "Ingredients for 'Light':\n1 Gold Coin";
+const string LOGENTRY_RECIPE_RUNE_LIGHTHEAL = "Ingredients for 'Heal Light Wounds':\n1 Healing Plant";
+const string LOGENTRY_RECIPE_RUNE_SUMMONGOBLINSKELETON = "Ingredients for 'Goblin Skeleton':\n1 Goblin Bone";
+// Placeholder: spell or rune item is not implemented; this recipe is not craftable yet.
+const string LOGENTRY_RECIPE_RUNE_SUMMONWISP = "Ingredients for 'Wisp' (placeholder):\n1 Wing";
+
+// Circle 2
+const string LOGENTRY_RECIPE_RUNE_INSTANTFIREBALL = "Ingredients for 'Fire Ball':\n1 Pitch";
+const string LOGENTRY_RECIPE_RUNE_ZAP = "Ingredients for 'Zap':\n1 Rock Crystal";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_TELEKINESIS = "Ingredients for 'Telekinesis' (placeholder):\n1 Coal";
+const string LOGENTRY_RECIPE_RUNE_SHRINK = "Ingredients for 'Shrink':\n1 Goblin Bone\n1 Troll Tooth";
+const string LOGENTRY_RECIPE_RUNE_WINDFIST = "Ingredients for 'Wind Fist':\n1 Coal";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_SWARM = "Ingredients for 'Swarm' (placeholder):\n1 Black Pearl";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_GREENTENTACLE = "Ingredients for 'Root Snare' (placeholder):\n1 Black Pearl";
+const string LOGENTRY_RECIPE_RUNE_MEDIUMHEAL = "Ingredients for 'Heal Medium Wounds':\n1 Healing Herb";
+const string LOGENTRY_RECIPE_RUNE_CONCUSSIONBOLT = "Ingredients for 'Concussion Bolt':\n1 Rock Crystal\n1 Sulfur";
+const string LOGENTRY_RECIPE_RUNE_SUMMONWOLF = "Ingredients for 'Wolf Skeleton':\n1 Wolf Skin";
+const string LOGENTRY_RECIPE_RUNE_SUMMONSKELETON = "Ingredients for 'Skeleton':\n1 Skeleton Bone";
+
+// Circle 3
+const string LOGENTRY_RECIPE_RUNE_FIRESTORM = "Ingredients for 'Small Fire Storm':\n1 Pitch\n1 Sulfur";
+const string LOGENTRY_RECIPE_RUNE_FIREFIST = "Ingredients for 'Fire Fist':\n1 Coal\n1 Pitch";
+const string LOGENTRY_RECIPE_RUNE_ICELANCE = "Ingredients for 'Ice Lance':\n1 Glacier Quartz";
+const string LOGENTRY_RECIPE_RUNE_WATERFIST = "Ingredients for 'Water Fist':\n1 Aquamarine\n1 Rock Crystal";
+const string LOGENTRY_RECIPE_RUNE_ICECUBE = "Ingredients for 'Ice Block':\n1 Glacier Quartz\n1 Aquamarine";
+const string LOGENTRY_RECIPE_RUNE_WHIRLWIND = "Ingredients for 'Whirlwind':\n1 Wing";
+// Placeholder: spell or rune item is not implemented; this recipe is not craftable yet.
+const string LOGENTRY_RECIPE_RUNE_STORMFIST = "Ingredients for 'Storm Fist' (placeholder):\n1 Coal";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_SUCKENERGY = "Ingredients for 'Steal Energy' (placeholder):\n1 Black Pearl";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_MANARECOVERY = "Ingredients for 'Mana Recovery' (placeholder):\n1 Black Pearl";
+const string LOGENTRY_RECIPE_RUNE_DESTROYUNDEAD = "Ingredients for 'Destroy Undead':\n1 Holy Water";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_SUMMONZOMBIE = "Ingredients for 'Zombie' (placeholder):\n1 Skeleton Bone";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_SUMMONSKELETONS = "Ingredients for 'Skeletons' (placeholder):\n1 Skeleton Bone";
+
+// Circle 4
+const string LOGENTRY_RECIPE_RUNE_CHARGEFIREBALL = "Ingredients for 'Large Fireball':\n1 Sulfur\n1 Pitch";
+const string LOGENTRY_RECIPE_RUNE_PYROKINESIS = "Ingredients for 'Pyrokinesis':\n1 Coal\n1 Sulfur";
+const string LOGENTRY_RECIPE_RUNE_LARGEFIRESTORM = "Ingredients for 'Large Fire Storm':\n1 Sulfur\n1 Fire Lizard Tongue";
+const string LOGENTRY_RECIPE_RUNE_GEYSER = "Ingredients for 'Geyser':\n1 Aquamarine";
+const string LOGENTRY_RECIPE_RUNE_CHARGEZAP = "Ingredients for 'Ball Lightning':\n1 Rock Crystal\n1 Sulfur";
+const string LOGENTRY_RECIPE_RUNE_LIGHTNINGFLASH = "Ingredients for 'Lightning':\n1 Rock Crystal\n1 Glacier Quartz";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_CONTROL = "Ingredients for 'Control' (placeholder):\n1 Coal";
+const string LOGENTRY_RECIPE_RUNE_FEAR = "Ingredients for 'Fear':\n1 Black Pearl";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_BERSERK = "Ingredients for 'Berserk' (placeholder):\n1 Coal";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_EARTHQUAKE = "Ingredients for 'Earthquake' (placeholder):\n1 Coal";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_EXPLODE = "Ingredients for 'Explode' (placeholder):\n1 Black Pearl";
+// Placeholder: spell or rune item is not implemented; this recipe is not craftable yet.
+const string LOGENTRY_RECIPE_RUNE_PLAGUE = "Ingredients for 'Plague' (placeholder):\n1 Black Pearl";
+const string LOGENTRY_RECIPE_RUNE_FULLHEAL = "Ingredients for 'Heal Heavy Wounds':\n1 Healing Root";
+// Placeholder: spell or rune item is not implemented; this recipe is not craftable yet.
+const string LOGENTRY_RECIPE_RUNE_BANISHUNDEAD = "Ingredients for 'Banish Undead' (placeholder):\n1 Holy Water";
+const string LOGENTRY_RECIPE_RUNE_SUMMONGOLEM = "Ingredients for 'Golem':\n1 Stone Golem Heart";
+// Placeholder: spell or rune item is not implemented; this recipe is not craftable yet.
+const string LOGENTRY_RECIPE_RUNE_SUMMONSTONEPUMA = "Ingredients for 'Stonepuma' (placeholder):\n1 Stone Golem Heart";
+
+// Circle 5
+const string LOGENTRY_RECIPE_RUNE_EXTRICATE = "Ingredients for 'Extricate':\n1 Pitch\n1 Fire Lizard Tongue";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_INFLATE = "Ingredients for 'Inflate' (placeholder):\n1 Rock Crystal";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_ENERGYBALL = "Ingredients for 'Beliar's Wrath' (placeholder):\n1 Black Pearl";
+// Placeholder: spell or rune item is not implemented; this recipe is not craftable yet.
+const string LOGENTRY_RECIPE_RUNE_CHAINLIGHTNING = "Ingredients for 'Chain Lightning' (placeholder):\n1 Holy Water";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_SUMMONGUARDIAN = "Ingredients for 'Guardian' (placeholder):\n1 Stone Golem Heart";
+const string LOGENTRY_RECIPE_RUNE_SUMMONDEMON = "Ingredients for 'Demon':\n1 Demon Heart";
+
+// Circle 6
+const string LOGENTRY_RECIPE_RUNE_FIREWAVE = "Ingredients for 'Fire Wave':\n1 Sulfur\n1 Fire Lizard Tongue";
+const string LOGENTRY_RECIPE_RUNE_FIRERAIN = "Ingredients for 'Fire Rain':\n1 Pitch\n1 Fire Lizard Tongue";
+const string LOGENTRY_RECIPE_RUNE_ICEWAVE = "Ingredients for 'Ice Wave':\n1 Glacier Quartz\n1 Aquamarine";
+const string LOGENTRY_RECIPE_RUNE_THUNDERSTORM = "Ingredients for 'Thunderstorm':\n1 Glacier Quartz\n1 Wing";
+// Placeholder: ingredient choice is provisional.
+const string LOGENTRY_RECIPE_RUNE_SKULL = "Ingredients for 'Cry of the Dead' (placeholder):\n1 Black Pearl";
+const string LOGENTRY_RECIPE_RUNE_MASTEROFDISASTER = "Ingredients for 'Holy Missile':\n1 Holy Water";
+const string LOGENTRY_RECIPE_RUNE_BREATHOFDEATH = "Ingredients for 'Breath of Death':\n1 Coal\n1 Black Pearl";
+const string LOGENTRY_RECIPE_RUNE_MASSDEATH = "Ingredients for 'Wave of Death':\n1 Skeleton Bone\n1 Black Pearl";
+const string LOGENTRY_RECIPE_RUNE_ARMYOFDARKNESS = "Ingredients for 'Army of Darkness':\n1 Skeleton Bone\n1 Black Pearl\n1 Stone Golem Heart\n1 Demon Heart";
 
 // Items
 const string NAME_OrcWeapon				=	"Orc Weapon";

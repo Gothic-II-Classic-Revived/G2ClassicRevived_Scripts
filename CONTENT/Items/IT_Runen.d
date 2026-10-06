@@ -628,7 +628,7 @@ INSTANCE ItRu_Light (C_Item)
 	description			=	NAME_SPL_LIGHT;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_Manakosten;		
 	COUNT	[1]			=	SPL_COST_LIGHT;
@@ -685,7 +685,7 @@ INSTANCE ItRu_Zap (C_Item)
 	visual				=	"ItRu_Zap.3DS";
 	material			=	MAT_STONE;
 	
-	mag_circle			=	1;
+	mag_circle			=	2;
 	spell				= 	SPL_Zap;
 	
 
@@ -727,7 +727,7 @@ INSTANCE ItRu_LightHeal (C_Item)
 	description			=	NAME_SPL_LightHeal;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_Manakosten;		
 	COUNT	[1]			=	SPL_Cost_LightHeal;
@@ -796,7 +796,7 @@ INSTANCE ItRu_InstantFireball (C_Item)
 	description			= 	NAME_SPL_InstantFireball;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_Manakosten;							
 	COUNT	[1]			=	SPL_COST_InstantFireball;
@@ -821,7 +821,7 @@ INSTANCE ItRu_Icebolt (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Icebolt;
-	mag_circle 			=	2;
+	mag_circle 			=	1;
 
 
 	wear				= 	WEAR_EFFECT;
@@ -865,7 +865,7 @@ INSTANCE ItRu_SumWolf (C_Item)
 	description			=	NAME_SPL_SummonWolf;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;		
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_Manakosten;			
 	COUNT	[1]			=	SPL_Cost_SummonWolf;
@@ -895,7 +895,7 @@ INSTANCE ItRu_Windfist (C_Item)
 	description			=	NAME_SPL_WINDFIST;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_MinManakosten;							
 	COUNT	[1]			=	STEP_WindFist;
@@ -927,7 +927,7 @@ INSTANCE ItRu_Sleep (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SLEEP;
-	mag_circle 			=	2;
+	mag_circle 			=	1;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -960,7 +960,7 @@ INSTANCE ItRu_MediumHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_MediumHeal;
-	mag_circle			=	3;
+	mag_circle = 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1036,7 +1036,7 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 	
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_MinManakosten;							
 	COUNT	[1]			=	STEP_ChargeFireball;
@@ -1067,7 +1067,7 @@ INSTANCE ItRu_SumSkel (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SUMMONSKELETON;
-	mag_circle			= 	3;
+	mag_circle			= 	2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1095,7 +1095,7 @@ INSTANCE ItRu_Fear (C_Item)
 
 	visual				=	"ItRu_Fear.3DS";
 	material			=	MAT_STONE;
-	mag_circle			= 	3;
+	mag_circle			= 	4;
 	
 	spell				= 	SPL_FEAR;
 
@@ -1170,7 +1170,7 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_ChargeZap;
-	mag_circle 			=	3;		
+	mag_circle 			=	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1179,7 +1179,7 @@ INSTANCE ItRu_ThunderBall (C_Item)
 	
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_MinManakosten;							
 	COUNT	[1]			=	STEP_ChargeZap;
@@ -1242,7 +1242,7 @@ INSTANCE ItRu_HarmUndead (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_DESTROYUNDEAD;
-	mag_circle			= 	4;
+	mag_circle = 3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1275,7 +1275,7 @@ INSTANCE ItRu_LargeFireStorm (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_LargeFireStorm;
-	mag_circle 			=	5;
+	mag_circle = 4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_YELLOW";
@@ -1283,7 +1283,7 @@ INSTANCE ItRu_LargeFireStorm (C_Item)
 	description			=	NAME_SPL_LargeFireStorm;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;			
-	COUNT	[0]			=	mag_circle;						
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_MinManakosten;							
 	COUNT	[1]			=	STEP_Firestorm;
@@ -1349,7 +1349,7 @@ INSTANCE ItRu_IceWave (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_ICEWAVE;
-	mag_circle 			=	5;
+	mag_circle 			=	6;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -1418,7 +1418,7 @@ INSTANCE ItRu_FullHeal (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_FullHeal;
-	mag_circle			=	5;
+	mag_circle = 4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1426,7 +1426,7 @@ INSTANCE ItRu_FullHeal (C_Item)
 	description			=	NAME_SPL_FullHeal;
 	
 	TEXT	[0]			=	NAME_Mag_Circle;
-	COUNT	[0]			=	mag_circle;	
+	COUNT	[0]			=	mag_circle;
 	
 	TEXT	[1]			=	NAME_Manakosten;		
 	COUNT	[1]			=	SPL_Cost_FullHeal;
@@ -1615,7 +1615,7 @@ INSTANCE ItRu_Shrink (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SHRINK;
-	mag_circle			=	6;
+	mag_circle			=	2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
@@ -1716,7 +1716,7 @@ INSTANCE ItRu_Concussionbolt	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Concussionbolt;
-	mag_circle 			=	6;
+	mag_circle = 2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";

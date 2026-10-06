@@ -294,30 +294,25 @@ func void DIA_Milten_DI_TeachMagic_MANA_5()
 FUNC VOID DIA_Milten_DI_TeachMagic_RUNES ()
 {
 	Info_ClearChoices (DIA_Milten_DI_TeachMagic);
-	Info_AddChoice	  (DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
-	
-	AI_Output (self ,other,"DIA_Milten_DI_TeachMagic_RUNES_03_00"); //Oh, no! That's really not my specialty, but we'll manage somehow.
-
-
-	if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 4)
-
+	Info_AddChoice (DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
+	AI_Output (self, other, "DIA_Milten_DI_TeachMagic_RUNES_03_00"); //Oh, no! That's really not my specialty, but we'll manage somehow.
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 4)
 	{
-		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic," Fourth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_4);
-	}
-	else if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 5)
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, "Fourth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_4);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 5)
 	{
-		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic," Fifth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_5);
-	}
-	else if (Npc_GetTalentSkill (hero, NPC_TALENT_MAGE) == 6) 
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, "Fifth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_5);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6)
 	{
-		Info_AddChoice 	  (DIA_Milten_DI_TeachMagic," Sixth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_6);
-	}
-	else
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, "Sixth Circle", DIA_Milten_DI_TeachMagic_Runen_Circle_6);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) < 4)
 	{
-		AI_Output (self ,other,"DIA_Milten_DI_TeachMagic_RUNES_03_01"); //Oh. You still aren't quite ready. First learn the higher circles, then I can help you.
+		AI_Output (self, other, "DIA_Milten_DI_TeachMagic_RUNES_03_01"); //Oh. You still aren't quite ready. First learn the higher circles, then I can help you.
 	};
 };
-
 //***************************************************************************
 // Talente Runen
 //----------------------
@@ -366,106 +361,87 @@ FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Paladin_SPL_PalDestroyEvil()
 	
 };
 
-//**********************************************************
-// Vierter Kreis 
-//--------------------------
-//**********************************************************
 FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4()
 {
 	Info_ClearChoices (DIA_Milten_DI_TeachMagic);
-	Info_AddChoice	(DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
-	
-	
-	if (PLAYER_TALENT_RUNES [SPL_ChargeFireball] == FALSE) 
+	Info_AddChoice (DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
+	if (PLAYER_TALENT_RUNES[SPL_ChargeFireball] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_ChargeFireball);
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_ChargeFireball, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_ChargeFireball)), DIA_Milten_DI_TeachMagic_Runen_Circle_4_ChargeFireball);
 	};
-	
+	if (PLAYER_TALENT_RUNES[SPL_Pyrokinesis] == FALSE)
+	{
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Pyrokinesis, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Pyrokinesis)), DIA_Milten_DI_TeachMagic_Runen_Circle_4_Pyrokinesis);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_LargeFireStorm] == FALSE)
+	{
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)), DIA_Milten_DI_TeachMagic_Runen_Circle_4_LargeFireStorm);
+	};
 };
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_ChargeFireball()
+FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_ChargeFireball()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball);		
+	if (B_TeachPlayerTalentRunes (self, other, SPL_ChargeFireball))
+	{
+		DIA_Milten_DI_TeachMagic_Runen_Circle_4();
+	};
 };
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_SummonGolem()
+FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_Pyrokinesis()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonGolem);		
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Pyrokinesis))
+	{
+		DIA_Milten_DI_TeachMagic_Runen_Circle_4();
+	};
 };
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_DestroyUndead()
+FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_LargeFireStorm()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_DestroyUndead);		
+	if (B_TeachPlayerTalentRunes (self, other, SPL_LargeFireStorm))
+	{
+		DIA_Milten_DI_TeachMagic_Runen_Circle_4();
+	};
 };
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_4_SPL_LightningFlash()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_LightningFlash);		
-};
-//**********************************************************
-// Fünfter Kreis 
-//--------------------------
-//**********************************************************
 FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5()
 {
 	Info_ClearChoices (DIA_Milten_DI_TeachMagic);
-	Info_AddChoice	(DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
-	
-	
-	if (PLAYER_TALENT_RUNES [SPL_LargeFireStorm] == FALSE)
+	Info_AddChoice (DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
+	if (PLAYER_TALENT_RUNES[SPL_Extricate] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_LargeFireStorm, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_LargeFireStorm)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_LargeFireStorm);
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Extricate, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Extricate)), DIA_Milten_DI_TeachMagic_Runen_Circle_5_Extricate);
 	};
 };
-
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_LargeFireStorm()
+FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_Extricate()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_LargeFireStorm);
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Extricate))
+	{
+		DIA_Milten_DI_TeachMagic_Runen_Circle_5();
+	};
 };
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_IceWave()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_IceWave);	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_SummonDemon()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_SummonDemon);	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_5_SPL_FullHeal()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_FullHeal);	
-};
-//**********************************************************
-// Sechster Kreis 
-//--------------------------
-//**********************************************************
 FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6()
 {
 	Info_ClearChoices (DIA_Milten_DI_TeachMagic);
-	Info_AddChoice	(DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
-
-	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
+	Info_AddChoice (DIA_Milten_DI_TeachMagic, DIALOG_BACK, DIA_Milten_DI_TeachMagic_BACK);
+	if (PLAYER_TALENT_RUNES[SPL_FireWave] == FALSE)
 	{
-		Info_AddChoice	(DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_Firerain);
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_FireWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireWave)), DIA_Milten_DI_TeachMagic_Runen_Circle_6_FireWave);
+	};
+	if (PLAYER_TALENT_RUNES[SPL_Firerain] == FALSE)
+	{
+		Info_AddChoice (DIA_Milten_DI_TeachMagic, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)), DIA_Milten_DI_TeachMagic_Runen_Circle_6_Firerain);
 	};
 };
-
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_Firerain()
+FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_FireWave()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
+	if (B_TeachPlayerTalentRunes (self, other, SPL_FireWave))
+	{
+		DIA_Milten_DI_TeachMagic_Runen_Circle_6();
+	};
 };
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_BreathOfDeath()
+FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_Firerain()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_BreathOfDeath);	
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Firerain))
+	{
+		DIA_Milten_DI_TeachMagic_Runen_Circle_6();
+	};
 };
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_MassDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MassDeath);	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_ArmyOfDarkness()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_ArmyOfDarkness);	
-};
-FUNC VOID DIA_Milten_DI_TeachMagic_Runen_Circle_6_SPL_Shrink()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);	
-};
-
 FUNC VOID DIA_Milten_DI_TeachMagic_BACK()
 {
 	Info_ClearChoices	(DIA_Milten_DI_TeachMagic);

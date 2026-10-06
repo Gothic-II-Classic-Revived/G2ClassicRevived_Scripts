@@ -43,7 +43,7 @@ INSTANCE ItRu_Thunderstorm (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Thunderstorm;
-	mag_circle			=	3;
+	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -77,7 +77,7 @@ INSTANCE ItRu_Whirlwind (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Whirlwind;
-	mag_circle			=	2;
+	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -111,7 +111,7 @@ INSTANCE ItRu_Geyser (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Geyser;
-	mag_circle			=	3;
+	mag_circle			=	4;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -144,7 +144,7 @@ INSTANCE ItRu_Waterfist	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Waterfist;
-	mag_circle			=	4;
+	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -178,7 +178,7 @@ INSTANCE ItRu_Icelance	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Icelance;
-	mag_circle			=	2;
+	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_BLUE";
@@ -217,7 +217,7 @@ INSTANCE ItRu_BeliarsRage	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Energyball;
-	mag_circle			=	3;
+	mag_circle			=	5;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -251,7 +251,7 @@ INSTANCE ItRu_SuckEnergy	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SuckEnergy;
-	mag_circle			=	2;
+	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -288,7 +288,7 @@ INSTANCE ItRu_GreenTentacle (C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Greententacle;
-	mag_circle			=	1;
+	mag_circle			=	2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -322,7 +322,7 @@ INSTANCE ItRu_Swarm	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Swarm;
-	mag_circle			=	4;
+	mag_circle			=	2;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -359,7 +359,7 @@ INSTANCE ItRu_Skull	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_Skull;
-	mag_circle			=	5;
+	mag_circle			=	6;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -396,7 +396,7 @@ INSTANCE ItRu_SummonZombie	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SummonZombie;
-	mag_circle			=	4;
+	mag_circle			=	3;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";
@@ -427,7 +427,7 @@ INSTANCE ItRu_SummonGuardian	(C_Item)
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_SummonGuardian;
-	mag_circle			=	3;
+	mag_circle			=	5;
 
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER_RED";

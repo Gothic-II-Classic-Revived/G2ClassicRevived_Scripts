@@ -65,80 +65,348 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	if (spell == SPL_TeleportPassOW)		{	PLAYER_TALENT_RUNES[SPL_TeleportPassOW] 		= TRUE;	};		
 	if (spell == SPL_TeleportOC)			{	PLAYER_TALENT_RUNES[SPL_TeleportOC] 			= TRUE;	};		
 	// Teleport-Joker fehlen
-	if (spell == SPL_LIGHT)					{	PLAYER_TALENT_RUNES[SPL_LIGHT] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_LIGHT, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´light´: 1 gold piece.");	};		
-	if (spell == SPL_Firebolt)				{	PLAYER_TALENT_RUNES[SPL_Firebolt] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firebolt, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Fire Arrow´: 1 Sulfur.");	};		
-	if (spell == SPL_Icebolt)				{	PLAYER_TALENT_RUNES[SPL_Icebolt] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Icebolt, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Ice Arrow´: 1 Glacier Quartz");};		
-	if (spell == SPL_LightHeal)				{	PLAYER_TALENT_RUNES[SPL_LightHeal] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_LightHeal, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Heal Light Wounds´:1 Healing Plant.");	};		
-	if (spell == SPL_SummonGoblinSkeleton)	{	PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] 	= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumGobSkel, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Create Goblin Skeleton´:1 Goblinbone.");	};		
-	if (spell == SPL_InstantFireball)		{	PLAYER_TALENT_RUNES[SPL_InstantFireball] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_InstantFireball, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Fireball ´: 1 Pitch");	};	
-	if (spell == SPL_Zap)					{	PLAYER_TALENT_RUNES[SPL_Zap] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Zap, 1);						
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Small Lightning`:1 Rock Crystal.");	};		
-	if (spell == SPL_WINDFIST)				{	PLAYER_TALENT_RUNES[SPL_WINDFIST] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_WINDFIST, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Wind Fist´:1 Coal.");	};		
-	if (spell == SPL_Sleep)					{	PLAYER_TALENT_RUNES[SPL_Sleep] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Sleep, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Sleep`: 1 Swamp Herb.");	};		
-	if (spell == SPL_MediumHeal)			{	PLAYER_TALENT_RUNES[SPL_MediumHeal] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_MediumHeal, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Heal Medium Wounds´:1 Healing Herb.");	};		
-	if (spell == SPL_LightningFlash)		{	PLAYER_TALENT_RUNES[SPL_LightningFlash] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_LightningFlash, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Lightning´: 1 Rock Crystal and 1 Glacier Quartz.");	};	
-	if (spell == SPL_ChargeFireball)		{	PLAYER_TALENT_RUNES[SPL_ChargeFireball] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_ChargeFireball, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Large Fireball´: 1 Sulfur and 1 Pitch.");	};
-	if (spell == SPL_FireFist)			{	PLAYER_TALENT_RUNES[SPL_FireFist] 			= TRUE;	CreateInvItems (ScrollTrader, ITSC_REVIVED_FIREFIST, 1);
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune Fire Fist: 1 Coal and 1 Pitch.");	};
-	if (spell == SPL_SummonSkeleton)		{	PLAYER_TALENT_RUNES[SPL_SummonSkeleton] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumSkel, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Create Skeleton´: 1 Skeletonbone.");	};		
-	if (spell == SPL_Fear)					{	PLAYER_TALENT_RUNES[SPL_Fear] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Fear, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Fear´: 1 Black Perl.");	};		
-	if (spell == SPL_IceCube)				{	PLAYER_TALENT_RUNES[SPL_IceCube] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_IceCube, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Ice Block´: 1 Glacier Quartz and 1 Aquamarine.");	};		
-	if (spell == SPL_ChargeZap)				{	PLAYER_TALENT_RUNES[SPL_ChargeZap] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_ThunderBall, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Ball Lightning´: 1 Sulfur and 1 Rock Crystal.");	};		
-	if (spell == SPL_SummonGolem)			{	PLAYER_TALENT_RUNES[SPL_SummonGolem] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumGol, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune `Awaken Golem`:1 Heart of a Stonegolem.");	};	
-	if (spell == SPL_DestroyUndead)			{	PLAYER_TALENT_RUNES[SPL_DestroyUndead] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_HarmUndead, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Destroy Undead´:1 Holy Water .");	};		
-	if (spell == SPL_LargeFireStorm)			{	PLAYER_TALENT_RUNES[SPL_LargeFireStorm] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_LargeFireStorm, 1);
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune `Large Fire Storm´: 1 Sulfur and 1 Tongue of a Fire Lizard.");	};		
-	if (spell == SPL_Firestorm)				{	PLAYER_TALENT_RUNES[SPL_Firestorm] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firestorm, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Small Fire Storm´: 1 Sulfur and 1 Pitch.");	};		
-	if (spell == SPL_IceWave)				{	PLAYER_TALENT_RUNES[SPL_IceWave] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_IceWave, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Wave of Ice´: 1 Glacier Quartz and 1 Aquamarin");	};
-	if (spell == SPL_FireWave)			{	PLAYER_TALENT_RUNES[SPL_FireWave] 			= TRUE;	CreateInvItems (ScrollTrader, ITSC_REVIVED_FIREWAVE, 1);
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune Fire Wave: 1 Sulfur and 1 Tongue of a Fire Lizard.");	};
-	if (spell == SPL_SummonDemon)			{	PLAYER_TALENT_RUNES[SPL_SummonDemon] 			= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumDemon, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Summon Demon´: 1 Heart of a Demon");	};		
-	if (spell == SPL_FullHeal)				{	PLAYER_TALENT_RUNES[SPL_FullHeal] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_FullHeal, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Heal Heavy Wounds´ 1 Heilwurzel");	};	
-	if (spell == SPL_Firerain)				{	PLAYER_TALENT_RUNES[SPL_Firerain] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Firerain, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Rain of Fire´: 1 Pitch and 1 Tongue of a Fire Lizard.");	};		
-	if (spell == SPL_BreathOfDeath)			{	PLAYER_TALENT_RUNES[SPL_BreathOfDeath]			= TRUE;	CreateInvItems (ScrollTrader, ItSc_BreathOfDeath, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Breath of Death´: 1 Coal and 1 Black Perl");	};		
-	if (spell == SPL_MassDeath)				{	PLAYER_TALENT_RUNES[SPL_MassDeath] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_MassDeath, 1);				
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Wave of Death´: 1 Skeletonbone and 1 Black Perl");	};		
-	if (spell == SPL_ArmyOfDarkness)		{	PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] 		= TRUE;	CreateInvItems (ScrollTrader, ItSc_ArmyOfDarkness, 1);			
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Army of Darkness´: 1 Skeletonbone, 1 Black Perl, 1 Heart of a Stonegolem and 1 Heart of a Demon. ");	};		
-	if (spell == SPL_Shrink)				{	PLAYER_TALENT_RUNES[SPL_Shrink] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_Shrink, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Shrink Monster´: 1 Goblinbone and 1 Trolltooth");	};		
-	
-	//Addon
-	
-	if (spell == SPL_Whirlwind)				{	PLAYER_TALENT_RUNES[SPL_Whirlwind]				= TRUE; CreateInvItems (ScrollTrader, ItSc_Whirlwind, 1);				
-	B_LogEntry (TOPIC_TalentRunes,Log_Text_Addon_TalentRune_Whirlwind);	};
-	if (spell == SPL_WaterFist)				{	PLAYER_TALENT_RUNES[SPL_WaterFist]				= TRUE; CreateInvItems (ScrollTrader, ItSc_Waterfist, 1);				
-	B_LogEntry (TOPIC_TalentRunes,Log_Text_Addon_TalentRune_Waterfist);	};
-	if (spell == SPL_IceLance)				{	PLAYER_TALENT_RUNES[SPL_IceLance]				= TRUE; CreateInvItems (ScrollTrader, ItSc_Icelance, 1);				
-	B_LogEntry (TOPIC_TalentRunes,Log_Text_Addon_TalentRune_Icelance);	};
-	if (spell == SPL_Geyser)				{	PLAYER_TALENT_RUNES[SPL_Geyser]					= TRUE; CreateInvItems (ScrollTrader, ItSc_Geyser, 1);					
-	B_LogEntry (TOPIC_TalentRunes,Log_Text_Addon_TalentRune_Geyser);	};
-	if (spell == SPL_Thunderstorm)			{	PLAYER_TALENT_RUNES[SPL_Thunderstorm]			= TRUE; CreateInvItems (ScrollTrader, ItSc_Thunderstorm, 1);			
-	B_LogEntry (TOPIC_TalentRunes,Log_Text_Addon_TalentRune_Thunderstorm);	};
-	
+	// Circle 1
+	if (spell == SPL_Firebolt)
+	{
+		PLAYER_TALENT_RUNES[SPL_Firebolt] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Firebolt, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_FIREBOLT);
+	};
+	if (spell == SPL_Icebolt)
+	{
+		PLAYER_TALENT_RUNES[SPL_Icebolt] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Icebolt, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_ICEBOLT);
+	};
+	if (spell == SPL_Sleep)
+	{
+		PLAYER_TALENT_RUNES[SPL_Sleep] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Sleep, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SLEEP);
+	};
+	if (spell == SPL_Charm)
+	{
+		PLAYER_TALENT_RUNES[SPL_Charm] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Charm, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_CHARM);
+	};
+	if (spell == SPL_Light)
+	{
+		PLAYER_TALENT_RUNES[SPL_Light] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Light, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_LIGHT);
+	};
+	if (spell == SPL_LightHeal)
+	{
+		PLAYER_TALENT_RUNES[SPL_LightHeal] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_LightHeal, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_LIGHTHEAL);
+	};
+	if (spell == SPL_SummonGoblinSkeleton)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonGoblinSkeleton] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_SumGobSkel, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONGOBLINSKELETON);
+	};
+	// Circle 2
+	if (spell == SPL_InstantFireball)
+	{
+		PLAYER_TALENT_RUNES[SPL_InstantFireball] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_InstantFireball, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_INSTANTFIREBALL);
+	};
+	if (spell == SPL_Zap)
+	{
+		PLAYER_TALENT_RUNES[SPL_Zap] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Zap, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_ZAP);
+	};
+	if (spell == SPL_Telekinesis)
+	{
+		PLAYER_TALENT_RUNES[SPL_Telekinesis] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_TELEKINESIS, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_TELEKINESIS);
+	};
+	if (spell == SPL_Shrink)
+	{
+		PLAYER_TALENT_RUNES[SPL_Shrink] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Shrink, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SHRINK);
+	};
+	if (spell == SPL_WindFist)
+	{
+		PLAYER_TALENT_RUNES[SPL_WindFist] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Windfist, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_WINDFIST);
+	};
+	if (spell == SPL_Swarm)
+	{
+		PLAYER_TALENT_RUNES[SPL_Swarm] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_SWARM, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SWARM);
+	};
+	if (spell == SPL_GreenTentacle)
+	{
+		PLAYER_TALENT_RUNES[SPL_GreenTentacle] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_ROOTSNARE, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_GREENTENTACLE);
+	};
+	if (spell == SPL_MediumHeal)
+	{
+		PLAYER_TALENT_RUNES[SPL_MediumHeal] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_MediumHeal, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_MEDIUMHEAL);
+	};
+	if (spell == SPL_ConcussionBolt)
+	{
+		PLAYER_TALENT_RUNES[SPL_ConcussionBolt] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_CONCUSSIONBOLT, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_CONCUSSIONBOLT);
+	};
+	if (spell == SPL_SummonWolf)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonWolf] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_SumWolf, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONWOLF);
+	};
+	if (spell == SPL_SummonSkeleton)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonSkeleton] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_SumSkel, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONSKELETON);
+	};
+	// Circle 3
+	if (spell == SPL_Firestorm)
+	{
+		PLAYER_TALENT_RUNES[SPL_Firestorm] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Firestorm, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_FIRESTORM);
+	};
+	if (spell == SPL_FireFist)
+	{
+		PLAYER_TALENT_RUNES[SPL_FireFist] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_FIREFIST, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_FIREFIST);
+	};
+	if (spell == SPL_IceLance)
+	{
+		PLAYER_TALENT_RUNES[SPL_IceLance] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Icelance, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_ICELANCE);
+	};
+	if (spell == SPL_WaterFist)
+	{
+		PLAYER_TALENT_RUNES[SPL_WaterFist] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Waterfist, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_WATERFIST);
+	};
+	if (spell == SPL_IceCube)
+	{
+		PLAYER_TALENT_RUNES[SPL_IceCube] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_IceCube, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_ICECUBE);
+	};
+	if (spell == SPL_Whirlwind)
+	{
+		PLAYER_TALENT_RUNES[SPL_Whirlwind] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Whirlwind, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_WHIRLWIND);
+	};
+	if (spell == SPL_SuckEnergy)
+	{
+		PLAYER_TALENT_RUNES[SPL_SuckEnergy] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_STEALENERGY, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUCKENERGY);
+	};
+	if (spell == SPL_ManaRecovery)
+	{
+		PLAYER_TALENT_RUNES[SPL_ManaRecovery] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_MANARECOVERY, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_MANARECOVERY);
+	};
+	if (spell == SPL_DestroyUndead)
+	{
+		PLAYER_TALENT_RUNES[SPL_DestroyUndead] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_HarmUndead, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_DESTROYUNDEAD);
+	};
+	if (spell == SPL_SummonZombie)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonZombie] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_ZOMBIE, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONZOMBIE);
+	};
+	if (spell == SPL_SummonSkeletons)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonSkeletons] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_SUMMONSKELETONS, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONSKELETONS);
+	};
+	// Circle 4
+	if (spell == SPL_ChargeFireball)
+	{
+		PLAYER_TALENT_RUNES[SPL_ChargeFireball] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_ChargeFireball, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_CHARGEFIREBALL);
+	};
+	if (spell == SPL_Pyrokinesis)
+	{
+		PLAYER_TALENT_RUNES[SPL_Pyrokinesis] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_PYROKINESIS, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_PYROKINESIS);
+	};
+	if (spell == SPL_LargeFireStorm)
+	{
+		PLAYER_TALENT_RUNES[SPL_LargeFireStorm] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_LargeFireStorm, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_LARGEFIRESTORM);
+	};
+	if (spell == SPL_Geyser)
+	{
+		PLAYER_TALENT_RUNES[SPL_Geyser] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Geyser, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_GEYSER);
+	};
+	if (spell == SPL_ChargeZap)
+	{
+		PLAYER_TALENT_RUNES[SPL_ChargeZap] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_ThunderBall, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_CHARGEZAP);
+	};
+	if (spell == SPL_LightningFlash)
+	{
+		PLAYER_TALENT_RUNES[SPL_LightningFlash] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_LightningFlash, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_LIGHTNINGFLASH);
+	};
+	if (spell == SPL_Control)
+	{
+		PLAYER_TALENT_RUNES[SPL_Control] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_CONTROL, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_CONTROL);
+	};
+	if (spell == SPL_Fear)
+	{
+		PLAYER_TALENT_RUNES[SPL_Fear] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Fear, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_FEAR);
+	};
+	if (spell == SPL_Berserk)
+	{
+		PLAYER_TALENT_RUNES[SPL_Berserk] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_BERSERK, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_BERSERK);
+	};
+	if (spell == SPL_Earthquake)
+	{
+		PLAYER_TALENT_RUNES[SPL_Earthquake] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_EARTHQUAKE, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_EARTHQUAKE);
+	};
+	if (spell == SPL_Explode)
+	{
+		PLAYER_TALENT_RUNES[SPL_Explode] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_EXPLODE, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_EXPLODE);
+	};
+	if (spell == SPL_FullHeal)
+	{
+		PLAYER_TALENT_RUNES[SPL_FullHeal] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_FullHeal, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_FULLHEAL);
+	};
+	if (spell == SPL_SummonGolem)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonGolem] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_SumGol, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONGOLEM);
+	};
+	// Circle 5
+	if (spell == SPL_Extricate)
+	{
+		PLAYER_TALENT_RUNES[SPL_Extricate] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_EXTRICATE, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_EXTRICATE);
+	};
+	if (spell == SPL_Inflate)
+	{
+		PLAYER_TALENT_RUNES[SPL_Inflate] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_INFLATE, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_INFLATE);
+	};
+	if (spell == SPL_Energyball)
+	{
+		PLAYER_TALENT_RUNES[SPL_Energyball] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_BELIARSWRATH, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_ENERGYBALL);
+	};
+	if (spell == SPL_SummonGuardian)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonGuardian] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_GUARDIAN, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONGUARDIAN);
+	};
+	if (spell == SPL_SummonDemon)
+	{
+		PLAYER_TALENT_RUNES[SPL_SummonDemon] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_SumDemon, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SUMMONDEMON);
+	};
+	// Circle 6
+	if (spell == SPL_FireWave)
+	{
+		PLAYER_TALENT_RUNES[SPL_FireWave] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_FIREWAVE, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_FIREWAVE);
+	};
+	if (spell == SPL_Firerain)
+	{
+		PLAYER_TALENT_RUNES[SPL_Firerain] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Firerain, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_FIRERAIN);
+	};
+	if (spell == SPL_IceWave)
+	{
+		PLAYER_TALENT_RUNES[SPL_IceWave] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_IceWave, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_ICEWAVE);
+	};
+	if (spell == SPL_Thunderstorm)
+	{
+		PLAYER_TALENT_RUNES[SPL_Thunderstorm] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_Thunderstorm, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_THUNDERSTORM);
+	};
+	if (spell == SPL_Skull)
+	{
+		PLAYER_TALENT_RUNES[SPL_Skull] = TRUE;
+		CreateInvItems (ScrollTrader, ITSC_REVIVED_CRYOFTHEDEAD, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_SKULL);
+	};
+	if (spell == SPL_MasterOfDisaster)
+	{
+		PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] = TRUE;
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_MASTEROFDISASTER);
+	};
+	if (spell == SPL_BreathOfDeath)
+	{
+		PLAYER_TALENT_RUNES[SPL_BreathOfDeath] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_BreathOfDeath, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_BREATHOFDEATH);
+	};
+	if (spell == SPL_MassDeath)
+	{
+		PLAYER_TALENT_RUNES[SPL_MassDeath] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_MassDeath, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_MASSDEATH);
+	};
+	if (spell == SPL_ArmyOfDarkness)
+	{
+		PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] = TRUE;
+		CreateInvItems (ScrollTrader, ItSc_ArmyOfDarkness, 1);
+		B_LogEntry (TOPIC_TalentRunes, LOGENTRY_RECIPE_RUNE_ARMYOFDARKNESS);
+	};
+
 	// Scrolls und Runen-Joker fehlen
 							
 	PrintScreen			(PRINT_LearnRunes, -1, -1, FONT_Screen, 2);

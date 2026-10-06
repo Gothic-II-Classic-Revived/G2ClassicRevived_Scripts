@@ -748,44 +748,51 @@ func int DIA_Pyrokar_SPELLS_Condition ()
 		return TRUE;
 	};
 };
-func void DIA_Pyrokar_SPELLS_Info ()
+FUNC VOID DIA_Pyrokar_SPELLS_Choices()
 {
 	var int abletolearn;
 	abletolearn = 0;
-	AI_Output (other, self, "DIA_Pyrokar_SPELLS_15_00"); //Instruct me.
-	
-	Info_ClearChoices 	(DIA_Pyrokar_SPELLS);
-	Info_AddChoice		(DIA_Pyrokar_SPELLS, DIALOG_BACK, DIA_Pyrokar_SPELLS_BACK);
-	
-	if (PLAYER_TALENT_RUNES [SPL_Firerain] == FALSE)
+	Info_ClearChoices (DIA_Pyrokar_SPELLS);
+	Info_AddChoice (DIA_Pyrokar_SPELLS, DIALOG_BACK, DIA_Pyrokar_SPELLS_BACK);
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6)
+	&& (PLAYER_TALENT_RUNES[SPL_FireWave] == FALSE)
 	{
-		Info_AddChoice	(DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)) ,DIA_Pyrokar_SPELLS_Firerain);
-		abletolearn = (abletolearn +1);
+		Info_AddChoice (DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_FireWave, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_FireWave)), DIA_Pyrokar_SPELLS_FireWave);
+		abletolearn = (abletolearn + 1);
+	};
+	if (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) >= 6)
+	&& (PLAYER_TALENT_RUNES[SPL_Firerain] == FALSE)
+	{
+		Info_AddChoice (DIA_Pyrokar_SPELLS, B_BuildLearnString (NAME_SPL_Firerain, B_GetLearnCostTalent (other, NPC_TALENT_RUNES, SPL_Firerain)), DIA_Pyrokar_SPELLS_Firerain);
+		abletolearn = (abletolearn + 1);
 	};
 	if (abletolearn < 1)
 	{
 		AI_Output (self, other, "DIA_Pyrokar_SPELLS_11_01"); //There is nothing more that I could teach you.
 	};
 };
+func void DIA_Pyrokar_SPELLS_Info ()
+{
+	AI_Output (other, self, "DIA_Pyrokar_SPELLS_15_00"); //Instruct me.
+	DIA_Pyrokar_SPELLS_Choices();
+};
 FUNC VOID DIA_Pyrokar_SPELLS_BACK()
 {
-	Info_ClearChoices 	(DIA_Pyrokar_SPELLS);
+	Info_ClearChoices (DIA_Pyrokar_SPELLS);
+};
+FUNC VOID DIA_Pyrokar_SPELLS_FireWave()
+{
+	if (B_TeachPlayerTalentRunes (self, other, SPL_FireWave))
+	{
+		DIA_Pyrokar_SPELLS_Choices();
+	};
 };
 FUNC VOID DIA_Pyrokar_SPELLS_Firerain()
 {
-	B_TeachPlayerTalentRunes (self, other, SPL_Firerain);	
-};
-FUNC VOID DIA_Pyrokar_SPELLS_BreathOfDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_BreathOfDeath);	
-};
-FUNC VOID DIA_Pyrokar_SPELLS_MassDeath()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_MassDeath);	
-};
-FUNC VOID DIA_Pyrokar_SPELLS_Shrink()
-{
-	B_TeachPlayerTalentRunes (self, other, SPL_Shrink);	
+	if (B_TeachPlayerTalentRunes (self, other, SPL_Firerain))
+	{
+		DIA_Pyrokar_SPELLS_Choices();
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Parlan
