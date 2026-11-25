@@ -150,3 +150,108 @@ func int REV_IsRequiredKillTarget (var C_NPC slf)
 
 	return FALSE;
 };
+
+// Older saves can know a recipe without its status-screen talent being set.
+func void REV_RestoreCraftStatus()
+{
+	if (!Hlp_IsValidNpc(hero))
+	{
+		return;
+	};
+
+	if (PlayerGetsFinalDJGArmor)
+	{
+		PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_04] = TRUE;
+		PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] = TRUE;
+	};
+
+	if (Read_BookstandAlchemy == Read_BookstandAlchemy_Max)
+	&& (Npc_GetTalentSkill(hero, NPC_TALENT_ALCHEMY) == 0)
+	&& (PLAYER_TALENT_ALCHEMY[POTION_Health_04] && PLAYER_TALENT_ALCHEMY[POTION_Mana_04])
+	{
+		Log_CreateTopic(TOPIC_TalentAlchemy, LOG_NOTE);
+		Log_AddEntry(TOPIC_TalentAlchemy, LOGENTRY_RECIPE_HEALTH_04);
+		Log_AddEntry(TOPIC_TalentAlchemy, LOGENTRY_RECIPE_MANA_04);
+		Npc_SetTalentSkill(hero, NPC_TALENT_ALCHEMY, 1);
+	};
+
+	if (Green_Extrem)
+	{
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_GreenNovice] = TRUE;
+	};
+	if (Knows_LousHammer)
+	{
+		PLAYER_TALENT_BOOZE[BOOZE_LouHammer] = TRUE;
+	};
+	if (Knows_Schlafhammer)
+	{
+		PLAYER_TALENT_BOOZE[BOOZE_LouHammerDouble] = TRUE;
+	};
+	if (Knows_SchnellerHering)
+	{
+		PLAYER_TALENT_BOOZE[BOOZE_FastHerring] = TRUE;
+	};
+
+	if (Npc_GetTalentSkill(hero, NPC_TALENT_BOWMAKING) == 0)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_01]
+	|| PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_02]
+	|| PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_03]
+	|| PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_04]
+	|| PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_05]
+	|| PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_01]
+	|| PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_02]
+	|| PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_03]
+	|| PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_04]
+	|| PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_05]
+	|| PLAYER_TALENT_BOWYER[WEAPON_RANGED_AMMUNITION])
+	{
+		Npc_SetTalentSkill(hero, NPC_TALENT_BOWMAKING, 1);
+	};
+
+	if (Npc_GetTalentSkill(hero, NPC_TALENT_COOKING) == 0)
+	&& (PLAYER_TALENT_COOKING[COOKING_MeatStew]
+	|| PLAYER_TALENT_COOKING[COOKING_FishSoup]
+	|| PLAYER_TALENT_COOKING[COOKING_MeatbugRagout]
+	|| PLAYER_TALENT_COOKING[COOKING_RootSoup]
+	|| PLAYER_TALENT_COOKING[COOKING_MinecrawlerSoup]
+	|| PLAYER_TALENT_COOKING[COOKING_Marmalade]
+	|| PLAYER_TALENT_COOKING[COOKING_RiceBowl]
+	|| PLAYER_TALENT_COOKING[COOKING_FruitSalad]
+	|| PLAYER_TALENT_COOKING[COOKING_ConvictStew])
+	{
+		Npc_SetTalentSkill(hero, NPC_TALENT_COOKING, 1);
+	};
+
+	if (Npc_GetTalentSkill(hero, NPC_TALENT_BOOZE) == 0)
+	&& (PLAYER_TALENT_BOOZE[BOOZE_LouHammer]
+	|| PLAYER_TALENT_BOOZE[BOOZE_LouHammerDouble]
+	|| PLAYER_TALENT_BOOZE[BOOZE_FastHerring]
+	|| PLAYER_TALENT_BOOZE[BOOZE_TurnipBooze]
+	|| PLAYER_TALENT_BOOZE[BOOZE_VinoBooze]
+	|| PLAYER_TALENT_BOOZE[BOOZE_MonsterDrink]
+	|| PLAYER_TALENT_BOOZE[BOOZE_MageWine]
+	|| PLAYER_TALENT_BOOZE[BOOZE_RiceSchnaps]
+	|| PLAYER_TALENT_BOOZE[BOOZE_Mead])
+	{
+		Npc_SetTalentSkill(hero, NPC_TALENT_BOOZE, 1);
+	};
+
+	if (Npc_GetTalentSkill(hero, NPC_TALENT_TOBACCO) == 0)
+	&& (PLAYER_TALENT_TOBACCO[TOBACCO_Apple]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_AppleDouble]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Honey]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Swampweed]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Mushroom]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Regular]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Apple]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_AppleDouble]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Honey]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Mushroom]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_GreenNovice]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_NorthernDark]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Dreamcall]
+	|| PLAYER_TALENT_TOBACCO[TOBACCO_Weed_DreamcallStrong])
+	{
+		Npc_SetTalentSkill(hero, NPC_TALENT_TOBACCO, 1);
+	};
+};

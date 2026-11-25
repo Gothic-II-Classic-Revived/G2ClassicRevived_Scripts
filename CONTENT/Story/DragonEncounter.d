@@ -278,7 +278,6 @@ func void B_DragonFight_ScreamImpact(var C_NPC dragon, var C_NPC target)
 {
 	var int screamDamage;
 
-	Wld_PlayEffect("SFX_Circle", dragon, dragon, 0, 0, 0, FALSE);
 	Wld_PlayEffect("spellFX_Windfist_Cast", dragon, dragon, 0, 0, 0, FALSE);
 	B_DragonFight_PlayElementEffect(dragon);
 

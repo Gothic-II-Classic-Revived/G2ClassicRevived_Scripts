@@ -381,7 +381,7 @@ FUNC VOID DIA_Oric_NeedStuff_Health ()
 	AI_Output (other,self ,"DIA_Oric_NeedStuff_Health_15_00"); //I'll take the healing potions.
 	AI_Output (self ,other,"DIA_Oric_NeedStuff_Health_11_01"); //A good choice. May it be of benefit to you.
 	
-	CreateInvItems (self,ItPo_Health_03,3);
+	CreateInvItems (self,ITPO_REVIVED_HEALTH_03,3);
 	B_GiveInvItems (self ,other,ITPO_REVIVED_HEALTH_03,3);
 	
 	Info_ClearChoices (DIA_Oric_NeedStuff);

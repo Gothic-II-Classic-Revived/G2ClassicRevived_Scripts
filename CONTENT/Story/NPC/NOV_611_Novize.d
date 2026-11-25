@@ -33,8 +33,8 @@ INSTANCE NOV_611_Novize (Npc_Default)
 FUNC VOID Rtn_Start_611 ()
 {	
 	TA_Pray_Innos_FP	(08,00,09,00,"NW_MONASTERY_CHURCH_03");
-    TA_Smalltalk		(09,00,23,05,"NW_MONASTERY_GRASS_01");
-    TA_Sleep			(23,05,08,00,"NW_MONASTERY_NOVICE02_04");
+    TA_Smalltalk		(09,00,22,04,"NW_MONASTERY_GRASS_01");
+    TA_Sleep			(22,04,08,00,"NW_MONASTERY_NOVICE02_04");
 };
 FUNC VOID Rtn_Fegen_611 ()
 {	

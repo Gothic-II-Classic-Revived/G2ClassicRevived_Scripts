@@ -5,12 +5,9 @@
 // (also auch aus ZS_Attack, AR kann sich allerdings NICHT ändern!)
 // ****************************************************************
 
-func void B_AssessDamage ()
+// Respond to the attacker after damage has been applied.
+func void B_ReactToDamage()
 {
-	B_BeliarsWeaponSpecialDamage (other, self);
-	REV_PalWeaponUndeadDamage (other, self);
-	REV_OrcWeaponCreatureDamage (other, self);
-
 	// AIVARS
 
 	if (self.aivar[AIV_ArenaFight] == AF_AFTER)
@@ -98,6 +95,14 @@ func void B_AssessDamage ()
 	
 	B_Attack (self, other, AR_ReactToDamage, 0);		//angreifen oder fliehen
 	return;
+};
+
+func void B_AssessDamage ()
+{
+	B_BeliarsWeaponSpecialDamage (other, self);
+	REV_PalWeaponUndeadDamage (other, self);
+	REV_OrcWeaponCreatureDamage (other, self);
+	B_ReactToDamage();
 };
 
 

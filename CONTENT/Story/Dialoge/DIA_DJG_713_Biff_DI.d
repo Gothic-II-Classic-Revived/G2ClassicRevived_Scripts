@@ -171,7 +171,7 @@ instance DIA_Biff_DI_plunder		(C_INFO)
 func int DIA_Biff_DI_plunder_Condition ()
 {
 	if (Npc_IsInState (self,ZS_Talk))
-	&& (Npc_KnowsInfo(other, DIA_Biff_DI_plunder))
+	&& (Npc_KnowsInfo(other, DIA_Biff_DI_UNDEADDRGDEAD))
 	&& (Npc_IsDead(UndeadDragon))
 		{
 				return TRUE;

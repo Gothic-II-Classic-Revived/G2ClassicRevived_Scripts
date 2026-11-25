@@ -87,7 +87,7 @@ FUNC VOID DIA_Wegelagerer_Novice_Info()
 	AI_Output (other,self ,"DIA_1051_Wegelagerer_Novice_15_00"); //I'm looking for a novice.
 	AI_Output (self ,other,"DIA_1051_Wegelagerer_Novice_07_01"); //That's very interesting. We're looking for someone, too.
 
-	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
+	Info_ClearChoices (DIA_1051_Wegelagerer_Novice);
 	Info_AddChoice (DIA_1051_Wegelagerer_Novice,"Who are you looking for?",DIA_1051_Wegelagerer_Question_Novice_Who);
 	
 };
@@ -146,6 +146,7 @@ FUNC VOID DIA_1051_Wegelagerer_Question_Novice_Who ()
 	AI_Output (self ,other,"DIA_1051_Wegelagerer_Question_Novice_Who_07_01"); //You!
 	BDT_1051_Wegelagerer_Angriff = TRUE;
 	Npc_SetRefuseTalk (self,40);
+	Info_ClearChoices (DIA_1051_Wegelagerer_Novice);
 	Info_ClearChoices (DIA_1051_Wegelagerer_Question);
 
 };

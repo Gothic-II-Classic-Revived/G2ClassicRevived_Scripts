@@ -166,13 +166,13 @@ FUNC VOID STARTUP_NEWWORLD_PART_DRAGON_UNDEAD_01 ()
 	Wld_InsertNpc	(Zombie03,				"WP_UNDEAD_SPAWN_POINT_07");
 	Wld_InsertNpc	(Zombie04,				"WP_UNDEAD_SPAWN_POINT_08");
 	
-	Wld_InsertNpc	(Skeleton,				"DRAGONISLAND_UNDEAD_04_01");
-	Wld_InsertNpc	(Skeleton,				"DRAGONISLAND_UNDEAD_04_02");
+	Wld_InsertNpc	(Skeleton,				"WP_DRAGONISLAND_UNDEAD_04_01");
+	Wld_InsertNpc	(Skeleton,				"WP_DRAGONISLAND_UNDEAD_04_02");
 	
-	Wld_InsertNpc	(Skeleton,				"DRAGONISLAND_UNDEAD_08_01");
-	Wld_InsertNpc	(Skeleton_Lord,			"DRAGONISLAND_UNDEAD_08_02");
-	Wld_InsertNpc	(Skeleton_Lord,			"DRAGONISLAND_UNDEAD_08_03");
-	Wld_InsertNpc	(Skeleton,				"DRAGONISLAND_UNDEAD_08_04");
+	Wld_InsertNpc	(Skeleton,				"WP_DRAGONISLAND_UNDEAD_08_01");
+	Wld_InsertNpc	(Skeleton_Lord,			"WP_DRAGONISLAND_UNDEAD_08_02");
+	Wld_InsertNpc	(Skeleton_Lord,			"WP_DRAGONISLAND_UNDEAD_08_03");
+	Wld_InsertNpc	(Skeleton,				"WP_DRAGONISLAND_UNDEAD_08_04");
 };
 
 FUNC VOID INIT_NEWWORLD_PART_DRAGON_UNDEAD_01 ()

@@ -77,7 +77,7 @@ const string LOGENTRY_RECIPE_HEALTH_04			= "Ingredients for 'Pure Life Energy':\
 const string LOGENTRY_RECIPE_MANA_01			= "Ingredients for 'Essence of Magic Energy':\n2 Fire Nettle\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_MANA_02			= "Ingredients for 'Extract of Magic Energy':\n2 Fireweed\n1 Meadow Knotweed";
 const string LOGENTRY_RECIPE_MANA_03			= "Ingredients for 'Elixir of Magic Energy':\n2 Fire Root\n1 Meadow Knotweed";
-const string LOGENTRY_RECIPE_MANA_04			= "Ingredients for 'Pure Life Energy':\n3 Essence of Magic Energy\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_MANA_04			= "Ingredients for 'Pure Mana':\n3 Essence of Magic Energy\n1 Meadow Knotweed";
 
 const string LOGENTRY_RECIPE_PERM_HEALTH_01		= "Ingredients for 'Essence of Life':\n2 Essence of Healing\n1 King's Sorrel\n1 Healing Root";
 const string LOGENTRY_RECIPE_PERM_HEALTH_02		= "Ingredients for 'Extract of Life':\n2 Extract of Healing\n1 King's Sorrel\n1 Healing Root";

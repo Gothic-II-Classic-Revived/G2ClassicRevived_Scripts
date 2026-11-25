@@ -77,20 +77,20 @@ func void EVT_CRYPT_FINAL ()
 };
 
 //****************************
-// 	EVT_CRYPT_ROOM_01_TRIGGERENTRANCE 
+// Crypt room entrance triggers
 //****************************
 
-func void EVT_CRYPT_ROOM_01_TRIGGERENTRANCE ()
+func void EVT_CRYPT_01_ENTRANCE ()
 {
 	Crypt_Skeleton_Room_01.aivar[AIV_EnemyOverride] = FALSE;
 };
 
-func void EVT_CRYPT_ROOM_02_TRIGGERENTRANCE ()
+func void EVT_CRYPT_02_ENTRANCE ()
 {
 	Crypt_Skeleton_Room_02.aivar[AIV_EnemyOverride] = FALSE;
 };
 
-func void EVT_CRYPT_ROOM_03_TRIGGERENTRANCE ()
+func void EVT_CRYPT_03_ENTRANCE ()
 {
 	Crypt_Skeleton_Room_03.aivar[AIV_EnemyOverride] = FALSE;
 };

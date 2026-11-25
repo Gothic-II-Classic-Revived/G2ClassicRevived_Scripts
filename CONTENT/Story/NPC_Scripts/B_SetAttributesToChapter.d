@@ -139,6 +139,6 @@ func void B_SetAttributesToChapter (var C_NPC slf, var int kap)
 	};
 	
 	// ------ XP für NSCs ------
-	slf.exp				= (500*((slf.level+1)/2)*(slf.level+1));
-	slf.exp_next		= (500*((slf.level+2)/2)*(slf.level+1));
+	slf.exp				= 250 * slf.level * (slf.level + 1);
+	slf.exp_next		= slf.exp + 500 * (slf.level + 1);
 };

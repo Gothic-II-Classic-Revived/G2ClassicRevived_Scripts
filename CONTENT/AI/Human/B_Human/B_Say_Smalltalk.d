@@ -3,7 +3,7 @@ func void B_Say_Smalltalk()
     var int random;	random = Hlp_Random (120);
 	
 	var int Choice;
-	Choice = Hlp_Random(1);
+	Choice = Hlp_Random(2);
 
 	if 		(random <   5)
 	{
@@ -195,4 +195,81 @@ func void B_Say_Smalltalk()
 		};	
 			
 	};
+};
+
+const int SmallTalkFreq = 4;
+
+// Wld_DetectNpc sets other. Check that this actor has reached the meeting place.
+func int C_SmalltalkPartnerReady()
+{
+	if (Npc_GetDistToNpc(self, other) >= PERC_DIST_DIALOG)
+	{
+		return FALSE;
+	};
+	if (!Npc_IsOnFP(other, "SMALLTALK"))
+	{
+		if (Npc_GetDistToWP(other, other.wp) > TA_DIST_SELFWP_MAX)
+		{
+			return FALSE;
+		};
+	};
+	return Npc_CanSeeNpcFreeLOS(self, other);
+};
+
+func int B_SmalltalkLoop()
+{
+	if (!Npc_IsOnFP(self, "SMALLTALK"))
+	{
+		if (Wld_IsFPAvailable(self, "SMALLTALK"))
+		{
+			AI_GotoFP(self, "SMALLTALK");
+			AI_StandUp(self);
+			AI_AlignToFP(self);
+			return LOOP_CONTINUE;
+		};
+	};
+
+	if (Npc_GetStateTime(self) < (SmallTalkFreq * 2))
+	{
+		return LOOP_CONTINUE;
+	};
+
+	Npc_SetStateTime(self, 0);
+	Npc_PerceiveAll(self);
+	var int hasPartner;
+	hasPartner = FALSE;
+	if (Wld_DetectNpc(self, -1, ZS_Smalltalk, -1))
+	{
+		hasPartner = C_SmalltalkPartnerReady();
+	};
+	if (!hasPartner)
+	{
+		if (Wld_DetectNpc(self, -1, ZS_Bandit, -1))
+		{
+			if (other.aivar[AIV_TAPOSITION] == BANDIT_POS_SMALLTALK)
+			{
+				hasPartner = C_SmalltalkPartnerReady();
+			};
+		};
+	};
+	if (hasPartner)
+	{
+		Npc_SetStateTime(other, SmallTalkFreq);
+		B_TurnToNpc(self, other);
+		B_Say_Smalltalk();
+		return LOOP_CONTINUE;
+	};
+
+	// Wait at the meeting place until a partner arrives.
+	var int idle;
+	idle = Hlp_Random(6);
+	if (idle == 0)
+	{
+		AI_PlayAni(self, "T_SEARCH");
+	}
+	else if (idle == 1)
+	{
+		AI_PlayAni(self, "R_SCRATCHHEAD");
+	};
+	return LOOP_CONTINUE;
 };

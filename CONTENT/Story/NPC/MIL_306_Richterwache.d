@@ -33,5 +33,5 @@ instance MIL_306_RICHTERWACHE (Npc_Default)
 FUNC VOID Rtn_Start_306 ()
 {	
 	TA_Stand_Guarding	(08,00,18,45,"NW_CITY_RICHTER");
-    TA_Stand_Guarding	(22,00,08,00,"NW_CITY_RICHTER");
+    TA_Stand_Guarding	(18,45,08,00,"NW_CITY_RICHTER");
 };

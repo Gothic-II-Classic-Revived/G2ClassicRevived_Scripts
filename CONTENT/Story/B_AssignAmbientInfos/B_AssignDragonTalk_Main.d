@@ -153,6 +153,8 @@ FUNC VOID DIA_DragonTalk_Main_3_Info()
 // *************************************************************************
 // 									Drachenfrage 4
 // *************************************************************************
+var int DragonHunterReturnCheckPending;
+
 INSTANCE DIA_DragonTalk_Main_4(C_INFO)
 {
 	
@@ -185,7 +187,15 @@ FUNC VOID DIA_DragonTalk_Main_4_Info()
 	Log_SetTopicStatus(TOPIC_BuchHallenVonIrdorath, LOG_RUNNING);
 	B_LogEntry (TOPIC_BuchHallenVonIrdorath,"The dragons' master is said to have taken refuge in the strong rock of the sacred Halls of Irdorath. Mmh. Sounds familiar. Now where did I read that?"); 
 
-	B_NPC_IsAliveCheck (OLDWORLD_ZEN);  //Joly: bringt Angar und Gorn in die NW.
+	if (CurrentLevel == OLDWORLD_ZEN)
+	{
+		B_NPC_IsAliveCheck (OLDWORLD_ZEN);
+	}
+	else
+	{
+		// The ice dragon can reveal Irdorath while Gorn and Angar are in the Valley.
+		DragonHunterReturnCheckPending = TRUE;
+	};
 	DragonTalk_Exit_Free = TRUE;
 };
 

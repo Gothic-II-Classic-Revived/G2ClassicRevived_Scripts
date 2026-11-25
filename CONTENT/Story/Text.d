@@ -564,7 +564,7 @@ CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 	"Magic",					//NPC_TALENT_MAGE				= 7;	// Magiekreis
 	"Sneak",				//NPC_TALENT_SNEAK				= 8;
 	"",							//raus //NPC_TALENT_REGENERATE	= 9;
-	"",							//raus //NPC_TALENT_FIREMASTER	= 10;
+	"Bowmaking",					// NPC_TALENT_BOWMAKING = 10;
 	"Acrobatics",				//NPC_TALENT_ACROBAT			= 11;
 	"Pickpocket",			//NPC_TALENT_PICKPOCKET			= 12;	//NEUES	Pickpocket
 	"Forge Weapons",				//NPC_TALENT_SMITH				= 13;
@@ -573,9 +573,9 @@ CONST STRING TXT_TALENTS [NPC_TALENT_MAX] =
 	"Take Trophies",			//NPC_TALENT_TAKEANIMALTROPHY	= 16;
 	"Read foreign language",		//NPC_TALENT_FOREIGNLANGUAGE	= 17;
 	"Will-o'-the-wisp abilities",		//NPC_TALENT_WISPDETECTOR		= 18;
-	"",							//NPC_TALENT_C					= 19;
-	"",							//NPC_TALENT_D					= 20;
-	""							//NPC_TALENT_E					= 21;
+	"Cooking",					// NPC_TALENT_COOKING = 19;
+	"Distilling",					// NPC_TALENT_BOOZE = 20;
+	"Tobacco Mixing"					// NPC_TALENT_TOBACCO = 21;
 };
 
 
@@ -591,7 +591,7 @@ CONST STRING TXT_TALENTS_SKILLS	[NPC_TALENT_MAX] =
 	"0|1|2|3|4|5|6",											//NPC_TALENT_MAGE				= 7;	// Magiekreis
 	"-|Learned",												//NPC_TALENT_SNEAK				= 8;
 	"-|-",														//raus //NPC_TALENT_REGENERATE	= 9;
-	"-|-",														//raus //NPC_TALENT_FIREMASTER	= 10;
+	"-|Learned",												// NPC_TALENT_BOWMAKING = 10;
 	"-|Learned",												//NPC_TALENT_ACROBAT			= 11;
 	"-|Learned",												//NPC_TALENT_PICKPOCKET			= 12;	//NEUES	Pickpocket
 	"-|Learned",												//NPC_TALENT_SMITH				= 13;

@@ -413,7 +413,7 @@ func void DIA_Lehmar_PICKPOCKET_DoIt()
 	
 func void DIA_Lehmar_PICKPOCKET_BACK()
 {
-	Info_ClearChoices (DIA_Canthar_PICKPOCKET);
+	Info_ClearChoices (DIA_Lehmar_PICKPOCKET);
 };
 
 // ************************************************************

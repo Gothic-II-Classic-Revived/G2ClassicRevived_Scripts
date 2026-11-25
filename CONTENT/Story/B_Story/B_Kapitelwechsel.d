@@ -22,10 +22,6 @@ FUNC VOID B_Kapitelwechsel (VAR INT neues_Kapitel, VAR INT aktuelles_Level_Zen)
 	//***************************************************************************
 	else if	(neues_Kapitel == 2)
 	{
-		// ------ Immortals aufheben -----
-		Sekob.flags = 0;
-		Bengar.flags = 0;
-		
 		// ------ Tagebucheintrag ------
 		
 		

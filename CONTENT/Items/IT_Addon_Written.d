@@ -71,10 +71,13 @@ func void Use_Heilrezept_04 ()
 		if Npc_IsPlayer (self)
 		{
 			if (PLAYER_TALENT_ALCHEMY[POTION_Health_03] == TRUE)
+			&& (PLAYER_TALENT_ALCHEMY[POTION_Health_04] == FALSE)
 			{
 				PLAYER_TALENT_ALCHEMY[POTION_Health_04] = TRUE;
 				Snd_Play ("LevelUP");
-				B_LogEntry (TOPIC_TalentAlchemy,"To make a healing potion, I need 1 meadow knotweed and 3 essences of healing.");
+				Log_CreateTopic (TOPIC_TalentAlchemy, LOG_NOTE);
+				Npc_SetTalentSkill (self, NPC_TALENT_ALCHEMY, 1);
+				B_LogEntry (TOPIC_TalentAlchemy, LOGENTRY_RECIPE_HEALTH_04);
 			};
 		};
 		nDocID = 	Doc_Create		()			  ;							// DocManager
@@ -129,10 +132,13 @@ func void Use_Manarezept_04 ()
 		if Npc_IsPlayer (self)
 		{
 			if (PLAYER_TALENT_ALCHEMY[POTION_Mana_03] == TRUE)
+			&& (PLAYER_TALENT_ALCHEMY[POTION_Mana_04] == FALSE)
 			{
 				PLAYER_TALENT_ALCHEMY[POTION_Mana_04] = TRUE;
 				Snd_Play ("LevelUP");
-				B_LogEntry (TOPIC_TalentAlchemy,"To create a mana potion, I need 1 meadow knotweed and 3 mana essences.");
+				Log_CreateTopic (TOPIC_TalentAlchemy, LOG_NOTE);
+				Npc_SetTalentSkill (self, NPC_TALENT_ALCHEMY, 1);
+				B_LogEntry (TOPIC_TalentAlchemy, LOGENTRY_RECIPE_MANA_04);
 			};
 		};
 		nDocID = 	Doc_Create		()			  ;							// DocManager
@@ -348,7 +354,12 @@ func void Use_Joint_Rezept_01 ()
 {
 		var int nDocID;
 	
-		Green_Extrem = TRUE;
+		if (Npc_IsPlayer(self))
+		{
+			Green_Extrem = TRUE;
+			PLAYER_TALENT_TOBACCO[TOBACCO_Weed_GreenNovice] = TRUE;
+			Npc_SetTalentSkill(hero, NPC_TALENT_TOBACCO, 1);
+		};
 		
 		
 		nDocID = 	Doc_Create		()			  ;							// DocManager
@@ -391,6 +402,8 @@ INSTANCE ITWr_Addon_Lou_Rezept		(C_Item)
 func void UseLouRezept ()
 {
 		Knows_LousHammer = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_LouHammer] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 		
 		
 		var int nDocID;
@@ -438,6 +451,8 @@ INSTANCE ITWr_Addon_Lou_Rezept2		(C_Item)
 func void UseLouRezept2 ()
 {
 		Knows_SchlafHammer = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_LouHammerDouble] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 		
 		var int nDocID;
 
@@ -481,6 +496,8 @@ INSTANCE ITWr_Addon_Piratentod		(C_Item)
 func void UseRezeptPiratentod ()
 {
 		Knows_SchnellerHering = TRUE;
+		PLAYER_TALENT_BOOZE[BOOZE_FastHerring] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 		
 		
 		var int nDocID;

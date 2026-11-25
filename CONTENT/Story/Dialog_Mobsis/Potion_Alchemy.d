@@ -11,6 +11,19 @@ FUNC VOID POTIONALCHEMY_S1 ()
 	
 	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
 	{	
+		HealthStart = FALSE;
+		ManaStart = FALSE;
+		SpecialStart = FALSE;
+		SpecialHealth = FALSE;
+		SpecialMana = FALSE;
+		SpecialStr = FALSE;
+		SpecialDex = FALSE;
+		SpecialSpeed = FALSE;
+		MixingStart = FALSE;
+		BoozeStart = FALSE;
+		TabakStart = FALSE;
+		PotionMixMultiple = FALSE;
+		PotionMakeMultiple = FALSE;
 		self.aivar[AIV_INVINCIBLE]=TRUE;
 		PLAYER_MOBSI_PRODUCTION	=	MOBSI_POTIONALCHEMY;
 		Ai_ProcessInfos (her);
@@ -171,7 +184,7 @@ func void AlchemyMixMultiple_Logic(var int amount)
 		};	
 	}
 
-	else if(PotionInstance == POTION_Speed_01)
+	else if(PotionInstance == POTION_Speed_02)
 	{
 		if (Npc_HasItems (hero, ITPO_REVIVED_SPEED_01) 	  		>= amount * 2) 
 		{
@@ -185,7 +198,7 @@ func void AlchemyMixMultiple_Logic(var int amount)
 			AlchemyCraft_NoIngredients();
 		};	
 	}
-	else if(PotionInstance == POTION_Speed_02)
+	else if(PotionInstance == POTION_Speed_03)
 	{
 		if (Npc_HasItems (hero, ITPO_REVIVED_SPEED_02) 	  		>= amount * 2) 
 		{
@@ -228,12 +241,69 @@ func void AlchemyCraftMultiple_Input(var int dialogue, var int item_instance)
 	PotionInstance = item_instance;
 	PotionDialogue = dialogue;
 	PotionMakeMultiple = TRUE;
+	Info_ClearChoices (PotionDialogue);
 
 	Info_AddChoice	(PotionDialogue, DIALOG_BACK, 		PC_PotionAlchemy_Stop_Info);
 	Info_AddChoice	(PotionDialogue,"Make 10",			AlchemyCraftMultiple_Make10);
 	Info_AddChoice	(PotionDialogue,"Make 5",			AlchemyCraftMultiple_Make5);
 	Info_AddChoice	(PotionDialogue,"Make 2",			AlchemyCraftMultiple_Make2);
 	Info_AddChoice	(PotionDialogue,"Make 1",			AlchemyCraftMultiple_Make1);
+};
+
+func void LearnTobaccoBlend_AppleDouble()
+{
+	if (PLAYER_TALENT_TOBACCO[TOBACCO_AppleDouble] == FALSE)
+	{
+		PLAYER_TALENT_TOBACCO[TOBACCO_AppleDouble] = TRUE;
+
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_AppleDouble] = TRUE;
+		Log_CreateTopic (TOPIC_Tobacco, LOG_NOTE);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TOBACCO, 1);
+		Log_AddEntry(TOPIC_Tobacco,"Double apple tobacco, which can be used to roll stronger apple-taste reefers.\nRecipes:\n\n'Stronger apple Joint': 1 Swampweed and 1 Double apple tobacco.");
+	};
+};
+
+func void LearnTobaccoBlend_Honey()
+{
+	if (PLAYER_TALENT_TOBACCO[TOBACCO_Honey] == FALSE)
+	{
+		PLAYER_TALENT_TOBACCO[TOBACCO_Honey] = TRUE;
+
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Honey] = TRUE;
+		Log_CreateTopic (TOPIC_Tobacco, LOG_NOTE);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TOBACCO, 1);
+		Log_AddEntry(TOPIC_Tobacco,"Honey tobacco, which can be used to roll honey-taste reefers.\nRecipes:\n\n'Honey Joint': 1 Swampweed and 1 Honey tobacco.");
+	};
+};
+
+func void LearnTobaccoBlend_Swampherb()
+{
+	if (PLAYER_TALENT_TOBACCO[TOBACCO_Swampweed] == FALSE)
+	{
+		PLAYER_TALENT_TOBACCO[TOBACCO_Swampweed] = TRUE;
+
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Regular] = TRUE;
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_GreenNovice] = TRUE;
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_NorthernDark] = TRUE;
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Dreamcall] = TRUE;
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_DreamcallStrong] = TRUE;
+		Log_CreateTopic (TOPIC_Tobacco, LOG_NOTE);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TOBACCO, 1);
+		Log_AddEntry(TOPIC_Tobacco,"Swampweed tobacco, which can be used to roll swampweed reefers.\nRecipes:\n\n'Joint': 1 Swampweed and 1 Swampweed tobacco.\n\n'Green Novice': 2 Swampweed, 1 Meadow Knotweed and 1 Swampweed tobacco.\n\n'Northern Dark': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Prepared Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.");
+	};
+};
+
+func void LearnTobaccoBlend_Mushroom_01()
+{
+	if (PLAYER_TALENT_TOBACCO[TOBACCO_Mushroom] == FALSE)
+	{
+		PLAYER_TALENT_TOBACCO[TOBACCO_Mushroom] = TRUE;
+
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Mushroom] = TRUE;
+		Log_CreateTopic (TOPIC_Tobacco, LOG_NOTE);
+		Npc_SetTalentSkill (hero, NPC_TALENT_TOBACCO, 1);
+		Log_AddEntry(TOPIC_Tobacco,"Mushroom tobacco, which can be used to roll mushroom-taste reefers.\nRecipes:\n\n'Mushroom Joint': 1 Swampweed and 1 Mushroom tobacco.");
+	};
 };
 
 func void AlchemyCraftMultiple_Logic(var int amount)
@@ -280,7 +350,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 				Npc_RemoveInvItems (hero,ItPl_Health_Herb_03,	amount * 2);
 				Npc_RemoveInvItems (hero,ItPl_Temp_Herb, 		amount);
 				
-				CreateInvItems	   (hero,ITPO_REVIVED_HEALTH_02,amount);  
+				CreateInvItems	   (hero,ITPO_REVIVED_HEALTH_03,amount);
 				Print (PRINT_AlchemySuccess);
 			}
 				else 
@@ -818,7 +888,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			&& (Npc_HasItems (self, ITFO_REVIVED_PEAR)				>= amount * 2)
 			&& (Npc_HasItems (self, ItAt_Wing) 						>= amount)
 			{
-				Npc_RemoveInvItems (self, ITPL_REVIVED_BERRIES,		amount * 2);
+				Npc_RemoveInvItems (self, ITPL_REVIVED_BERRIES,		amount * 4);
 				Npc_RemoveInvItems (self, ItFo_Apple,				amount * 2);
 				Npc_RemoveInvItems (self, ITFO_REVIVED_PEAR,		amount * 2);
 				Npc_RemoveInvItems (self, ItAt_Wing,				amount);
@@ -985,15 +1055,14 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == TOBACCO_Weed_GreenNovice)
 		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItMi_SumpfTabak) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Mushroom_01)		>= amount)
+			if (Npc_HasItems (hero, ItPl_SwampHerb) >= amount * 2)
+			&& (Npc_HasItems (self, ItMi_SumpfTabak)>= amount)
+			&& (Npc_HasItems (hero, ItPl_Temp_Herb) >= amount)
 			{
-				Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			amount);
-				Npc_RemoveInvItems (hero,ItMi_SumpfTabak, 			amount);
-				Npc_RemoveInvItems (hero,ItPl_Mushroom_01, 	amount);
-				
-				CreateInvItems	   (hero,ITMI_REVIVED_JOINT_GREENNOVICE,amount);  
+				Npc_RemoveInvItems (hero, ItPl_SwampHerb, amount * 2);
+				Npc_RemoveInvItems (hero, ItMi_SumpfTabak,amount);
+				Npc_RemoveInvItems (hero, ItPl_Temp_Herb, amount);
+				CreateInvItems (hero, ITMI_REVIVED_JOINT_GREENNOVICE, amount);
 				Print (PRINT_TabakSuccessREVIVED);
 			}
 				else 
@@ -1054,12 +1123,8 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			{
 				AlchemyCraft_NoIngredients();
 			};	
-		};
-	}
-//****************************************************************************
-	else if (TabakBlend == TRUE)
-	{
-		if(PotionInstance == TOBACCO_AppleDouble)
+		}
+		else if(PotionInstance == TOBACCO_AppleDouble)
 		{
 			if (Npc_HasItems (self, ITFO_REVIVED_APPLE_01) 			>= amount)
 			&& (Npc_HasItems (self, ItMi_ApfelTabak) 				>= amount)
@@ -1067,7 +1132,8 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 				Npc_RemoveInvItems (hero,ITFO_REVIVED_APPLE_01, 		amount);
 				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 				amount);
 				
-				CreateInvItems	   (hero,ItMi_DoppelTabak,amount);  
+				CreateInvItems	   (hero,ItMi_DoppelTabak,amount);
+				LearnTobaccoBlend_AppleDouble();
 				Print (PRINT_TabakSuccess);
 			}
 				else 
@@ -1083,7 +1149,8 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 				Npc_RemoveInvItems (hero,ITFO_REVIVED_HONEY, 		amount);
 				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 			amount);
 				
-				CreateInvItems	   (hero,ItMi_Honigtabak,amount);  
+				CreateInvItems	   (hero,ItMi_Honigtabak,amount);
+				LearnTobaccoBlend_Honey();
 				Print (PRINT_TabakSuccess);
 			}
 				else 
@@ -1099,7 +1166,8 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 				Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			amount);
 				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 			amount);
 				
-				CreateInvItems	   (hero,ItMi_SumpfTabak,amount);  
+				CreateInvItems	   (hero,ItMi_SumpfTabak,amount);
+				LearnTobaccoBlend_Swampherb();
 				Print (PRINT_TabakSuccess);
 			}
 				else 
@@ -1115,7 +1183,8 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 				Npc_RemoveInvItems (hero,ItPl_Mushroom_01, amount);
 				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 			amount);
 				
-				CreateInvItems	   (hero,ItMi_PilzTabak,amount);  
+				CreateInvItems	   (hero,ItMi_PilzTabak,amount);
+				LearnTobaccoBlend_Mushroom_01();
 				Print (PRINT_TabakSuccess);
 			}
 				else 
@@ -2867,7 +2936,7 @@ FUNC INT PC_Tabak_Stop_Condition ()
 FUNC VOID PC_Tabak_Stop_Info()
 {
 	TabakStart = FALSE;
-	TabakBlend = FALSE;
+
 };
 
 //*******************************************************
@@ -2899,6 +2968,90 @@ FUNC VOID PC_ITMI_REVIVED_JOINT_REGULAR_Info ()
 
 //*******************************************************
 
+INSTANCE PC_Weed_Apple (C_INFO)
+{
+	npc = PC_Hero;
+	nr = 12;
+	condition = PC_Weed_Apple_Condition;
+	information = PC_Weed_Apple_Info;
+	permanent = TRUE;
+	description = "Apple Joint";
+};
+
+func int PC_Weed_Apple_Condition()
+{
+	return ((PLAYER_MOBSI_PRODUCTION == MOBSI_POTIONALCHEMY) && TabakStart
+		&& PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Apple]);
+};
+
+func void PC_Weed_Apple_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Weed_Apple, TOBACCO_Weed_Apple);
+};
+
+INSTANCE PC_Weed_AppleDouble (C_INFO)
+{
+	npc = PC_Hero;
+	nr = 13;
+	condition = PC_Weed_AppleDouble_Condition;
+	information = PC_Weed_AppleDouble_Info;
+	permanent = TRUE;
+	description = "Stronger Apple Joint";
+};
+
+func int PC_Weed_AppleDouble_Condition()
+{
+	return ((PLAYER_MOBSI_PRODUCTION == MOBSI_POTIONALCHEMY) && TabakStart
+		&& PLAYER_TALENT_TOBACCO[TOBACCO_Weed_AppleDouble]);
+};
+
+func void PC_Weed_AppleDouble_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Weed_AppleDouble, TOBACCO_Weed_AppleDouble);
+};
+
+INSTANCE PC_Weed_Honey (C_INFO)
+{
+	npc = PC_Hero;
+	nr = 14;
+	condition = PC_Weed_Honey_Condition;
+	information = PC_Weed_Honey_Info;
+	permanent = TRUE;
+	description = "Honey Joint";
+};
+
+func int PC_Weed_Honey_Condition()
+{
+	return ((PLAYER_MOBSI_PRODUCTION == MOBSI_POTIONALCHEMY) && TabakStart
+		&& PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Honey]);
+};
+
+func void PC_Weed_Honey_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Weed_Honey, TOBACCO_Weed_Honey);
+};
+
+INSTANCE PC_Weed_Mushroom (C_INFO)
+{
+	npc = PC_Hero;
+	nr = 15;
+	condition = PC_Weed_Mushroom_Condition;
+	information = PC_Weed_Mushroom_Info;
+	permanent = TRUE;
+	description = "Mushroom Joint";
+};
+
+func int PC_Weed_Mushroom_Condition()
+{
+	return ((PLAYER_MOBSI_PRODUCTION == MOBSI_POTIONALCHEMY) && TabakStart
+		&& PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Mushroom]);
+};
+
+func void PC_Weed_Mushroom_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Weed_Mushroom, TOBACCO_Weed_Mushroom);
+};
+
 INSTANCE PC_ItMi_Addon_Joint_01 (C_INFO)
 {
 	nr       		= 11;
@@ -2920,7 +3073,7 @@ FUNC INT PC_ItMi_Addon_Joint_01_Condition()
 };
 FUNC VOID PC_ItMi_Addon_Joint_01_Info ()
 {
-	AlchemyCraftMultiple_Input(ITMI_REVIVED_JOINT_GREENNOVICE, TOBACCO_Weed_GreenNovice);
+	AlchemyCraftMultiple_Input(PC_ItMi_Addon_Joint_01, TOBACCO_Weed_GreenNovice);
 };
 
 //*******************************************************
@@ -2946,7 +3099,7 @@ FUNC INT PC_Weed_NorthernDark_Condition()
 };
 FUNC VOID PC_Weed_NorthernDark_Info ()
 {
-	AlchemyCraftMultiple_Input(ITMI_REVIVED_JOINT_NORTHDARK, TOBACCO_Weed_NorthernDark);
+	AlchemyCraftMultiple_Input(PC_Weed_NorthernDark, TOBACCO_Weed_NorthernDark);
 };
 
 //*******************************************************
@@ -2972,7 +3125,7 @@ FUNC INT PC_Weed_Dreamcall_Condition()
 };
 FUNC VOID PC_Weed_Dreamcall_Info ()
 {
-	AlchemyCraftMultiple_Input(ITMI_REVIVED_JOINT_DREAMCALL, TOBACCO_Weed_Dreamcall);
+	AlchemyCraftMultiple_Input(PC_Weed_Dreamcall, TOBACCO_Weed_Dreamcall);
 };
 
 //*******************************************************
@@ -2998,7 +3151,7 @@ FUNC INT PC_Weed_DreamcallStrong_Condition()
 };
 FUNC VOID PC_Weed_DreamcallStrong_Info ()
 {
-	AlchemyCraftMultiple_Input(ITMI_REVIVED_JOINT_DREAMCALL_02, TOBACCO_Weed_DreamcallStrong);
+	AlchemyCraftMultiple_Input(PC_Weed_DreamcallStrong, TOBACCO_Weed_DreamcallStrong);
 };
 
 
@@ -3028,8 +3181,6 @@ FUNC INT PC_ItMi_Tabak_Condition()
 
 FUNC VOID PC_ItMi_Tabak_Info ()
 {
-	Npc_RemoveInvItems (hero,ItMi_ApfelTabak ,1);
-	
 	Info_ClearChoices (PC_ItMi_Tabak);
 	
 	Info_AddChoice 	(PC_ItMi_Tabak,DIALOG_BACK,PC_ItMi_Tabak_BACK);	
@@ -3038,7 +3189,7 @@ FUNC VOID PC_ItMi_Tabak_Info ()
 	{
 		Info_AddChoice 	(PC_ItMi_Tabak,"...with dark mushroom",PC_ItMi_Tabak_Mushroom_01);
 	};
-	if (Npc_HasItems (hero, ItFo_Honey) >=1)
+	if (Npc_HasItems (hero, ITFO_REVIVED_HONEY) >=1)
 	{
 		Info_AddChoice 	(PC_ItMi_Tabak,"...with honey",PC_ItMi_Tabak_Honey);
 	};
@@ -3051,7 +3202,6 @@ FUNC VOID PC_ItMi_Tabak_Info ()
 		Info_AddChoice 	(PC_ItMi_Tabak,"...with sour apple",PC_ItMi_Tabak_AppleDouble);
 	};	
 
-	TabakBlend = TRUE;
 	
 };
 FUNC VOID PC_ItMi_Tabak_BACK()
@@ -3061,62 +3211,18 @@ FUNC VOID PC_ItMi_Tabak_BACK()
 FUNC VOID PC_ItMi_Tabak_AppleDouble()
 {
 	AlchemyCraftMultiple_Input(PC_ItMi_Tabak, TOBACCO_AppleDouble);
-
-	if (PLAYER_TALENT_TOBACCO[TOBACCO_AppleDouble] == FALSE)
-	{
-		PLAYER_TALENT_TOBACCO[TOBACCO_AppleDouble] = TRUE;
-		
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_AppleDouble] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Double apple tobacco, which can be used to roll stronger apple-taste reefers.\nRecipes:\n\n'Stronger apple Joint': 1 Swampweed and 1 Double apple tobacco.");
-	};
-	
-	//B_ENDPRODUCTIONDIALOG ();		
 };
 FUNC VOID PC_ItMi_Tabak_Honey()
 {
 	AlchemyCraftMultiple_Input(PC_ItMi_Tabak, TOBACCO_Honey);
-
-	if (PLAYER_TALENT_TOBACCO[TOBACCO_Honey] == FALSE)
-	{
-		PLAYER_TALENT_TOBACCO[TOBACCO_Honey] = TRUE;
-
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Honey] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Honey tobacco, which can be used to roll honey-taste reefers.\nRecipes:\n\n'Honey Joint': 1 Swampweed and 1 Honey tobacco.");
-	};
-	
-	//B_ENDPRODUCTIONDIALOG ();		
 };
 FUNC VOID PC_ItMi_Tabak_Swampherb()
 {
 	AlchemyCraftMultiple_Input(PC_ItMi_Tabak, TOBACCO_Swampweed);
-
-	if (PLAYER_TALENT_TOBACCO[TOBACCO_Swampweed] == FALSE)
-	{
-		PLAYER_TALENT_TOBACCO[TOBACCO_Swampweed] = TRUE;
-		
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Regular] = TRUE;
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_GreenNovice] = TRUE;
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_NorthernDark] = TRUE;
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Dreamcall] = TRUE;
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_DreamcallStrong] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Swampweed tobacco, which can be used to roll swampweed reefers.\nRecipes:\n\n'Joint': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Green Novice': 2 Swampweed, 1 Meadow Knotweed and 1 Swampweed tobacco.\n\n'Northern Dark': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Prepared Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.");
-	};
-	
-	//B_ENDPRODUCTIONDIALOG ();		
 };
 FUNC VOID PC_ItMi_Tabak_Mushroom_01()
 {
 	AlchemyCraftMultiple_Input(PC_ItMi_Tabak, TOBACCO_Mushroom);
-
-	if (PLAYER_TALENT_TOBACCO[TOBACCO_Mushroom] == FALSE)
-	{
-		PLAYER_TALENT_TOBACCO[TOBACCO_Mushroom] = TRUE;
-		
-		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Mushroom] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Mushroom tobacco, which can be used to roll mushroom-taste reefers.\nRecipes:\n\n'Mushroom Joint': 1 Swampweed and 1 Mushroom tobacco."); 
-	};
-	
-	//B_ENDPRODUCTIONDIALOG ();		
 };
 
 
@@ -3198,7 +3304,7 @@ INSTANCE PC_Mixing_Health_02 (C_Info)
 	condition		= PC_Mixing_Health_02_Condition;
 	information		= PC_Mixing_Health_02_Info;
 	permanent		= TRUE;
-	description		= "Mix Essence of Life (x2) into Extract of Life (x1)"; 
+	description		= "Mix Essence of Healing (x2) into Extract of Healing (x1)";
 };
 
 FUNC INT PC_Mixing_Health_02_Condition ()
@@ -3213,7 +3319,7 @@ FUNC INT PC_Mixing_Health_02_Condition ()
 
 FUNC VOID PC_Mixing_Health_02_Info()
 {
-	AlchemyCraftMultiple_Input(PC_Mixing_Health_02, POTION_HEALTH_02);	
+	AlchemyMixMultiple_Input(PC_Mixing_Health_02, POTION_HEALTH_02);
 };
 INSTANCE PC_Mixing_Health_03 (C_Info)
 {
@@ -3222,7 +3328,7 @@ INSTANCE PC_Mixing_Health_03 (C_Info)
 	condition		= PC_Mixing_Health_03_Condition;
 	information		= PC_Mixing_Health_03_Info;
 	permanent		= TRUE;
-	description		= "Mix Extract of Life (x2) into Elixir of Life (x1)"; 
+	description		= "Mix Extract of Healing (x2) into Elixir of Healing (x1)";
 };
 
 FUNC INT PC_Mixing_Health_03_Condition ()
@@ -3237,7 +3343,7 @@ FUNC INT PC_Mixing_Health_03_Condition ()
 
 FUNC VOID PC_Mixing_Health_03_Info()
 {
-	AlchemyCraftMultiple_Input(PC_Mixing_Health_03, POTION_HEALTH_03);	
+	AlchemyMixMultiple_Input(PC_Mixing_Health_03, POTION_HEALTH_03);
 };
 //*******************************************************
 
@@ -3263,7 +3369,7 @@ FUNC INT PC_Mixing_Mana_02_Condition ()
 
 FUNC VOID PC_Mixing_Mana_02_Info()
 {
-	AlchemyCraftMultiple_Input(PC_Mixing_Mana_02, POTION_MANA_02);	
+	AlchemyMixMultiple_Input(PC_Mixing_Mana_02, POTION_MANA_02);
 };
 INSTANCE PC_Mixing_Mana_03 (C_Info)
 {
@@ -3287,7 +3393,7 @@ FUNC INT PC_Mixing_Mana_03_Condition ()
 
 FUNC VOID PC_Mixing_Mana_03_Info()
 {
-	AlchemyCraftMultiple_Input(PC_Mixing_Mana_03, POTION_MANA_03);	
+	AlchemyMixMultiple_Input(PC_Mixing_Mana_03, POTION_MANA_03);
 };
 //*******************************************************
 
@@ -3313,7 +3419,7 @@ FUNC INT PC_Mixing_Speed_02_Condition ()
 
 FUNC VOID PC_Mixing_Speed_02_Info()
 {
-	AlchemyCraftMultiple_Input(PC_Mixing_Speed_02, POTION_SPEED_02);	
+	AlchemyMixMultiple_Input(PC_Mixing_Speed_02, POTION_SPEED_02);
 };
 INSTANCE PC_Mixing_Speed_03 (C_Info)
 {
@@ -3337,5 +3443,5 @@ FUNC INT PC_Mixing_Speed_03_Condition ()
 
 FUNC VOID PC_Mixing_Speed_03_Info()
 {
-	AlchemyCraftMultiple_Input(PC_Mixing_Speed_03, POTION_SPEED_03);	
+	AlchemyMixMultiple_Input(PC_Mixing_Speed_03, POTION_SPEED_03);
 };

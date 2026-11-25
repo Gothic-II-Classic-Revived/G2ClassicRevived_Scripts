@@ -2072,6 +2072,7 @@ func void UseRecipe_TurnipBooze ()
 
 		KnowsRecipe_TurnipBooze = TRUE;
 		PLAYER_TALENT_BOOZE[BOOZE_TurnipBooze] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 	};
 };
 
@@ -2132,6 +2133,7 @@ func void UseRecipe_VinoSpecial ()
 
 		KnowsRecipe_VinoBooze = TRUE;
 		PLAYER_TALENT_BOOZE[BOOZE_VinoBooze] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 	};
 };
 
@@ -2192,6 +2194,7 @@ func void UseRecipe_MonsterDrink ()
 
 		KnowsRecipe_MonsterDrink = TRUE;
 		PLAYER_TALENT_BOOZE[BOOZE_MonsterDrink] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 	};
 };
 
@@ -2251,6 +2254,7 @@ func void UseRecipe_MageWine ()
 
 		KnowsRecipe_MageWine = TRUE;
 		PLAYER_TALENT_BOOZE[BOOZE_MageWine] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 	};
 };
 
@@ -2310,6 +2314,7 @@ func void UseRecipe_RiceBooze ()
 
 		KnowsRecipe_RiceSchnaps = TRUE;
 		PLAYER_TALENT_BOOZE[BOOZE_RiceSchnaps] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 	};
 };
 
@@ -2369,6 +2374,7 @@ func void UseRecipe_Mead ()
 
 		KnowsRecipe_Mead = TRUE;
 		PLAYER_TALENT_BOOZE[BOOZE_Mead] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_BOOZE, 1);
 	};
 };
 
@@ -2424,6 +2430,7 @@ func void UseRecipe_MeatStew ()
 
 		KnowsRecipe_MeatSoup = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_MeatStew] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2477,6 +2484,7 @@ func void UseRecipe_FishSoup ()
 
 		KnowsRecipe_FishSoup = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_FishSoup] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2530,6 +2538,7 @@ func void UseRecipe_BugSoup ()
 
 		KnowsRecipe_BugSoup = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_MeatbugRagout] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2583,6 +2592,7 @@ func void UseRecipe_RootSoup ()
 
 		KnowsRecipe_RootSoup = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_RootSoup] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2636,6 +2646,7 @@ func void UseRecipe_CrawlerSoup ()
 
 		KnowsRecipe_CrawlerSoup = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_MinecrawlerSoup] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2689,6 +2700,7 @@ func void UseRecipe_RiceBowl ()
 
 		KnowsRecipe_Rice = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_RiceBowl] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2742,6 +2754,7 @@ func void UseRecipe_Marmalade ()
 
 		KnowsRecipe_Marmalade = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_Marmalade] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2796,6 +2809,7 @@ func void UseRecipe_FruitSalad ()
 
 		KnowsRecipe_FruitSalad = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_FruitSalad] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 /******************************************************************************************/
@@ -2849,6 +2863,7 @@ func void UseRecipe_OldStew ()
 
 		KnowsRecipe_OldStew = TRUE;
 		PLAYER_TALENT_COOKING[COOKING_ConvictStew] = TRUE;
+		Npc_SetTalentSkill (hero, NPC_TALENT_COOKING, 1);
 	};
 };
 

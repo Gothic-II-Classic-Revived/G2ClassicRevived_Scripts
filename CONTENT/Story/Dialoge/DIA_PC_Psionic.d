@@ -830,9 +830,9 @@ func void DIA_PC_Psionic_PICKPOCKET_DoIt()
 		B_GiveInvItems (self, other, ITKE_REVIVED_STONEFORTRESS, 1);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
 		B_GivePlayerXP (XP_Ambient);
-		Info_ClearChoices (DIA_Psionic_DI_PICKPOCKET);
+		Info_ClearChoices (DIA_PC_Psionic_PICKPOCKET);
 
-		LesterKeyStolen == TRUE;
+		LesterKeyStolen = TRUE;
 	}
 	else
 	{

@@ -36,5 +36,5 @@ INSTANCE KDF_503_Karras (Npc_Default)
 FUNC VOID Rtn_Start_503 ()
 {	
 	TA_Read_Bookstand 		(08,00,23,00,"NW_MONASTERY_RUNEMAKER_02");
-	TA_Read_Bookstand 		(08,00,23,00,"NW_MONASTERY_RUNEMAKER_02");
+	TA_Read_Bookstand 		(23,00,08,00,"NW_MONASTERY_RUNEMAKER_02");
 };

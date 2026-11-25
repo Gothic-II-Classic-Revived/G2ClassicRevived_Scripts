@@ -29,6 +29,32 @@ func void B_AssessMagic_Berzerk()
 	};
 };
 
+var int SuckEnergyLastActorId;
+
+func int B_BindSuckEnergyCaster()
+{
+	if (!Hlp_IsValidNpc(other))
+	{
+		return FALSE;
+	};
+	if (Npc_IsDead(other))
+	{
+		return FALSE;
+	};
+
+	// Keep the actual NPC as target. Spawned copies can share a script instance ID.
+	if (other.aivar[AIV_SuckEnergyActorId] == 0)
+	{
+		SuckEnergyLastActorId += 1;
+		other.aivar[AIV_SuckEnergyActorId] = SuckEnergyLastActorId;
+	};
+	self.aivar[AIV_SuckEnergyCasterId] = other.aivar[AIV_SuckEnergyActorId];
+	self.aivar[AIV_SuckEnergyStartDist] = Npc_GetDistToNpc(self, other);
+	self.aivar[AIV_SuckEnergyStateTime] = -1;
+	Npc_SetTarget(self, other);
+	return TRUE;
+};
+
 func void B_AssessMagic ()
 {
 	// ------ Bei ALLEN Spells. Damit andere NSCs den Angriff wahrnehmen können ------
@@ -54,6 +80,10 @@ func void B_AssessMagic ()
 	// ---- SuckEnergy ----
 	if (Npc_GetLastHitSpellID(self) == SPL_SuckEnergy)
 	{
+		if (!B_BindSuckEnergyCaster())
+		{
+			return;
+		};
 		Npc_ClearAIQueue	(self);
 		B_ClearPerceptions	(self);
 		AI_StartState		(self, ZS_SuckEnergy, 0, "");

@@ -33,11 +33,11 @@ instance VLK_455_Buerger (Npc_Default)
 FUNC VOID Rtn_Start_455()
 {	
 	TA_Stand_ArmsCrossed	(05,20,20,20,"NW_CITY_MERCHANT_PATH_14_C");
-    TA_Smalltalk			(20,20,05,20,"NW_CITY_MERCHANT_SHOP03_FRONT_03");
+    TA_Smalltalk			(20,20,05,20,"NW_CITY_MERCHANT_SHOP03_FRONT_03_B");
 };
 
 FUNC VOID Rtn_VatrasAway_455()
 {	
 	TA_Sit_Bench				(07,20,20,20,"NW_CITY_MERCHANT_TAVERN01_FRONT");
-    TA_Smalltalk			(20,20,07,20,"NW_CITY_MERCHANT_SHOP03_FRONT_03");
+    TA_Smalltalk			(20,20,07,20,"NW_CITY_MERCHANT_SHOP03_FRONT_03_B");
 };

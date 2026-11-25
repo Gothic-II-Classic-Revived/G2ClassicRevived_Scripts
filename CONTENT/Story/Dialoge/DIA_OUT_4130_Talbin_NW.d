@@ -14,8 +14,8 @@ INSTANCE DIA_Talbin_NW_EXIT   (C_INFO)
 {
 	npc         = OUT_4130_TALBIN_NW;
 	nr          = 999;
-	condition   = DIA_Talbin_EXIT_Condition;
-	information = DIA_Talbin_EXIT_Info;
+	condition   = DIA_Talbin_NW_EXIT_Condition;
+	information = DIA_Talbin_NW_EXIT_Info;
 	permanent   = TRUE;
 	description = DIALOG_ENDE;
 };

@@ -142,7 +142,6 @@ func void DIA_Dragon_Undead_Hello_attack ()
 {
 	Wld_PlayEffect("spellFX_INCOVATION_GRAY",  self, self, 0, 0, 0, FALSE );
 	Wld_PlayEffect("spellFX_MasterOfDisaster",  self, self, 0, 0, 0, FALSE );
-	Wld_PlayEffect("SFX_Circle",  self, self, 0, 0, 0, FALSE ); 
 
 	AI_Output			(other, self, "DIA_Dragon_Undead_Hello_attack_15_00"); //Enough said. I shall chase you back under the rock from whence you crept, you monster.
 	AI_Output			(self, other, "DIA_Dragon_Undead_Hello_attack_20_01"); //(laughs) You are not yet ready to defeat me. Only one brief moment and I shall have reached my goal.

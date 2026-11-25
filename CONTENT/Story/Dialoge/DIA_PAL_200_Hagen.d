@@ -1155,7 +1155,7 @@ FUNC VOID DIA_Lord_Hagen_Cornelius_Info ()
 	{
 		AI_Output			(other,self , "DIA_Lord_Hagen_Cornelius_15_10"); //He's made himself scarce.
 		AI_Output			(self ,other, "DIA_Lord_Hagen_Cornelius_04_11"); //Sooner or later, he will turn up. Then we shall arrest him.
-		B_StartOtherRoutine (Cornelius,"FLED");
+		B_StartOtherRoutine (Cornelius,"FLEE");
 	}
 	else 
 	{

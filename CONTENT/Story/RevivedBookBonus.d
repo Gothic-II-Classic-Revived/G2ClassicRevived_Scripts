@@ -8,6 +8,12 @@ func void REV_ReadBook(var int bookType)
 
 			if(Read_BookstandAlchemy == Read_BookstandAlchemy_Max)
 			{
+				if (Npc_GetTalentSkill(hero, NPC_TALENT_ALCHEMY) == 0)
+				{
+					Log_CreateTopic(TOPIC_TalentAlchemy, LOG_NOTE);
+					Npc_SetTalentSkill(hero, NPC_TALENT_ALCHEMY, 1);
+				};
+
 				PLAYER_TALENT_ALCHEMY[POTION_Health_04] = TRUE;
 				B_LogEntry(TOPIC_TalentAlchemy, LOGENTRY_RECIPE_HEALTH_04);
 				

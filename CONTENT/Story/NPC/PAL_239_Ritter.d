@@ -33,6 +33,6 @@ instance Pal_239_Ritter (Npc_Default)
 FUNC VOID Rtn_Start_239 ()
 {
 	TA_Smalltalk	(08,00,23,00,"NW_CITY_PALCAMP_03");
-    TA_Stand_WP	(23,00,08,00,"NW_CITY_PALCAMP_10");	
+    TA_Stand_WP	(23,00,08,00,"NW_CITY_PALCAMP_06");
 };
 

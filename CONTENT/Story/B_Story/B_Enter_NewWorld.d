@@ -17,6 +17,21 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_1 ()
 			
 };
 
+func void B_CheckJacksLighthouse()
+{
+	if (MIS_Jack_KillLighthouseBandits != LOG_SUCCESS)
+	|| (zDExt_Hlp_IsValidVob("NW_JACKLIGHTHOUSE_CLEANED"))
+	{
+		return;
+	};
+
+	Ext_RemoveVobTree("NW_JACKLIGHTHOUSE_BANDITS");
+	Ext_InsertVobTree("VOBTREE/NW_JACKLIGHTHOUSE_CLEANED.ZEN");
+	REV_SetObjectRoutine_Fire("FIREPLACE_LIGHTHOUSE_01");
+	REV_SetObjectRoutine_Fire("FIREPLACE_LIGHTHOUSE_02");
+	REV_SetObjectRoutine_Fire("FIREPLACE_LIGHTHOUSE_03");
+};
+
 // B_ENTER_NEWWORLD_Kapitel_2
 //****************************************************
 	var int EnterNW_Kapitel2;
@@ -28,6 +43,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_2 ()
 		// ------ Gilden-Attitüden ändern ------
 
 		// ------ Immortal-Flags löschen ------
+		Sekob.flags = 0;
+		Bengar.flags = 0;
 		//Joly: NOV_600_Pedro bleibt erst noch immortel -> Pedro klaut das Auge Innos im Kapitel 3 
 		
 		// ------ TAs ändern ------
@@ -379,14 +396,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 			IntroduceChapter (KapWechsel_3,KapWechsel_3_Text,"chapter3_SLD.tga","chapter_01.wav", 6000);
 		};
 
-		// ------ VOBTREES ------
-		Ext_RemoveVobTree("NW_JACKLIGHTHOUSE_BANDITS");
-		Ext_InsertVobTree("VOBTREE/NW_JACKLIGHTHOUSE_CLEANED.ZEN");
- 
-		REV_SetObjectRoutine_Fire ("FIREPLACE_LIGHTHOUSE_01");
-		REV_SetObjectRoutine_Fire ("FIREPLACE_LIGHTHOUSE_02");
-		REV_SetObjectRoutine_Fire ("FIREPLACE_LIGHTHOUSE_03");
- 
+		B_CheckJacksLighthouse();
+
 		EnterNW_Kapitel3 = TRUE;
 	};
 };
@@ -685,8 +696,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		Wld_InsertNpc		(DMT_DementorAmbientWalker7, "CITY1");
 		
 		CreateInvItems 		(Randolph,ITWR_DementorObsessionBook_MIS,1);
-		B_StartOtherRoutine	(Randolph,"Obsessed");
 		};
+		B_CheckJacksLighthouse();
 		EnterNW_Kapitel4 = TRUE;
 	};
 
@@ -861,6 +872,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 		IntroduceChapter (KapWechsel_5,KapWechsel_5_Text,"chapter5_DJG.tga","chapter_01.wav", 6000);
 	};
 
+	B_CheckJacksLighthouse();
 	EnterNW_Kapitel5 = TRUE;
 	};
 	
@@ -906,7 +918,6 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_6 ()
 FUNC VOID B_ENTER_NEWWORLD ()	
 {
 	B_InitNpcGlobals (); 
-	if (Kapitel >= 1)	{B_ENTER_NEWWORLD_Kapitel_1 ();	};
 	if (Kapitel >= 2)	{B_ENTER_NEWWORLD_Kapitel_2 ();	};
 	if (Kapitel >= 3)	{B_ENTER_NEWWORLD_Kapitel_3 ();	};
 	if (Kapitel >= 4)	{B_ENTER_NEWWORLD_Kapitel_4 ();	};

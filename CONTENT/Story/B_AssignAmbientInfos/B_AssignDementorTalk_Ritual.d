@@ -15,14 +15,10 @@ func void B_AssignDementorTalk_Ritual ()
 		AI_Output			(self ,other, "DIA_RitualDementor_19_01"); //We have destroyed the Eye of Innos, so that it can never regain its power.
 		AI_Output			(self ,other, "DIA_RitualDementor_19_02"); //We shall now demonstrate the futility of your attempt to challenge the Master.
 
-		DMT_1201_Dementor.flags = 0;
 		DMT_1202_Dementor.flags = 0;
-		DMT_1203_Dementor.flags = 0;
 		DMT_1204_Dementor.flags = 0;
-		DMT_1205_Dementor.flags = 0;
 		DMT_1206_Dementor.flags = 0;
 		DMT_1207_Dementor.flags = 0;
-		DMT_1208_Dementor.flags = 0;
 		DMT_1209_Dementor.flags = 0;
 		DMT_1210_Dementor.flags = 0;
 		DMT_1211_Dementor.flags = 0;

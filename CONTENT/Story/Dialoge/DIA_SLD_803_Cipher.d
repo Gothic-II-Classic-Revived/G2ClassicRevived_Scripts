@@ -549,12 +549,12 @@ FUNC VOID DIA_CipherSLD_PICKPOCKET_Info()
 func void DIA_CipherSLD_PICKPOCKET_DoIt()
 {
 	B_Beklauen ();
-	Info_ClearChoices (DIA_Cipher_PICKPOCKET);
+	Info_ClearChoices (DIA_CipherSLD_PICKPOCKET);
 };
 	
 func void DIA_CipherSLD_PICKPOCKET_BACK()
 {
-	Info_ClearChoices (DIA_Cipher_PICKPOCKET);
+	Info_ClearChoices (DIA_CipherSLD_PICKPOCKET);
 };
 
 

@@ -46,7 +46,7 @@ FUNC VOID Rtn_Lighthouse_444()
 FUNC VOID Rtn_WaitForShipCaptain_444 ()
 {
 	TA_Sit_Bench 			(08,00,20,00,"NW_WAITFOR_SHIP_CAPTAIN"); 
-    TA_Sit_Bench 				(0,00,08,00,"NW_WAITFOR_SHIP_CAPTAIN");		
+    TA_Sit_Bench 				(20,00,08,00,"NW_WAITFOR_SHIP_CAPTAIN");
 };
 
 FUNC VOID Rtn_AllOnBoard_444 ()

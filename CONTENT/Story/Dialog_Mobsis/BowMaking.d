@@ -93,6 +93,7 @@ FUNC INT PC_BowMaking_Ammunition_Condition ()
 	&& (BowMakingBows == FALSE)
 	&& (BowMakingCrossbows == FALSE)
 	&& (BowMakingAmmo == FALSE)
+	&& (PLAYER_TALENT_BOWYER[WEAPON_RANGED_AMMUNITION] == TRUE)
 	{
 		return TRUE;
 	};

@@ -872,6 +872,7 @@ FUNC VOID PC_ItRu_IceCube_Info ()
 	else 
 	{
 		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_RuneBlank,1);
 	};
 	B_ENDPRODUCTIONDIALOG ();	
 };
@@ -953,6 +954,7 @@ FUNC VOID PC_ItRu_HarmUndead_Info ()
 	else 
 	{
 		Print (PRINT_ProdItemsMissing);
+		CreateInvItems (self, ItMi_RuneBlank,1);
 	};	
 	B_ENDPRODUCTIONDIALOG ();
 };

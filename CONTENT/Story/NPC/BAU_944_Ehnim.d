@@ -35,6 +35,7 @@ instance BAU_944_Ehnim (Npc_Default)
 FUNC VOID Rtn_Start_944 ()
 {
 	TA_Pick_FP			(05,00,12,00,"NW_FARM2_FIELD_03");
+	TA_Sit_Campfire		(12,00,14,00,"NW_FARM2_FIELD_03_B");
 	TA_Pick_FP			(14,00,20,55,"NW_FARM2_FIELD_02");
     TA_Stand_Drinking	(20,55,00,00,"NW_FARM2_OUT_09");
     TA_Sit_Campfire		(00,00,02,00,"NW_FARM2_OUT_06");

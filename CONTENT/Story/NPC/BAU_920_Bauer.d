@@ -32,6 +32,6 @@ instance BAU_920_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_920 ()
 {	
-	TA_Rake_FP			(07,50,21,50,"NW_FARM4_FIELD_05");
-    TA_Smalltalk		(21,50,07,50,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_01");
+	TA_Rake_FP			(07,45,22,00,"NW_FARM4_FIELD_05");
+    TA_Smalltalk		(22,00,07,45,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_02");
 };

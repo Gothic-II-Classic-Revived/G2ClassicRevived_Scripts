@@ -579,7 +579,7 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 			B_Addon_Diego_WillWaitOutside();
 			AI_StopProcessInfos (self);
 			self.aivar[AIV_PARTYMEMBER] = FALSE;
-			Npc_ExchangeRoutine	(self,"XARDAS");
+			Npc_ExchangeRoutine	(self,"DEMONTOWER");
 		};
 	}
 	else if (C_DiegoTooFar(1000) == LOC_FAJETHMINE)

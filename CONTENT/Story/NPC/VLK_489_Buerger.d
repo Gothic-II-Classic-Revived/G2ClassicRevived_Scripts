@@ -37,7 +37,7 @@ instance VLK_489_Buerger (Npc_Default)
 FUNC VOID Rtn_Start_489()
 {	
 	TA_Smoke_Joint			(11,20,19,15,"NW_CITY_WATCH_FIGHT_02");
-    TA_Stand_Drinking 		(19,15,02,30,"NW_CITY_HABOUR_03");
+    TA_Stand_Drinking 		(19,15,21,00,"NW_CITY_HABOUR_03");
     TA_Pee					(21,00,21,05,"NW_CITY_HABOUR_PUFF_02_01");
     TA_Stand_Drinking 		(21,05,02,30,"NW_CITY_HABOUR_03");
     TA_Stand_Drinking 		(02,30,05,20,"NW_CITY_HABOUR_PUFF_IN_07");

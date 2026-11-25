@@ -1561,10 +1561,10 @@ instance spellFX_ChargeFireball_COLLIDE		(CFx_Base_Proto)
 		lightPresetname   	= "FIRESMALL";
 };
 
-INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_1	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide";		sfxid	= "MFX_Fireball_Collide1";		};
-INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_2	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide";		sfxid	= "MFX_Fireball_Collide2";		};
-INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_3	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide";		sfxid	= "MFX_Fireball_Collide3";		};
-INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_4	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide";		sfxid	= "MFX_Fireball_Collide4";		};
+INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_1	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide1";		sfxid	= "MFX_Fireball_Collide1";		};
+INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_2	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide2";		sfxid	= "MFX_Fireball_Collide2";		};
+INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_3	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide3";		sfxid	= "MFX_Fireball_Collide3";		};
+INSTANCE spellFX_ChargeFireball_COLLIDE_KEY_INVEST_4	(C_ParticleFXEmitKey)  {	visname_S 	= "MFX_Fireball_Collide4";		sfxid	= "MFX_Fireball_Collide4";		};
 
 instance spellFX_ChargeFireball_COLLIDEDYNFX (CFx_Base_Proto)
 {
@@ -2550,7 +2550,7 @@ instance spellFX_Zap_COLLIDE	(CFx_Base_Proto)
 
 instance spellFX_Zap_COLLIDEDYNFX		(CFx_Base_Proto)
 {
-		visname_S 		= "MFX_Thunderbolt_Collide";
+		visname_S 		= "MFX_Icebolt_Collide";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
 		sfxid			= "Torch_Enlight";
@@ -2682,7 +2682,7 @@ instance spellFX_Icebolt_COLLIDE	(CFx_Base_Proto)
 
 instance spellFX_Icebolt_COLLIDEDYNFX		(CFx_Base_Proto)
 {
-		visname_S 		= "MFX_Thunderbolt_Collide";
+		visname_S 		= "MFX_Icebolt_Collide";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
 		sfxid			= "Torch_Enlight";
@@ -3886,7 +3886,7 @@ INSTANCE spellFX_Windfist_Invest (CFx_Base_Proto)
 INSTANCE spellFX_Windfist_INVESTBLAST	(CFX_Base_Proto)
 {
 		visname_S			= "MFX_WINDFIST_INVEST_BLAST";
-		sfxid				= "MFX_WINDFIST_INVESBLAST";
+		sfxid				= "MFX_Windfist_Investblast";
 		sfxisambient		= 1;
 };
 
@@ -3903,7 +3903,7 @@ INSTANCE spellFX_Windfist_Cast (CFx_Base_Proto)
 
 INSTANCE spellFX_Windfist_COLLIDEDYNFX (CFx_Base_Proto)	//Sendet perception
 {
-		visname_S			= "MFX_WINDFIST_COLLIDE";
+		visname_S			= "MFX_WINDFIST_TARGET";
 		sendAssessMagic	= 1;
 };
 ///                                                     XXXXXXXXXXXXXXXXXXXXXXXX
@@ -3954,7 +3954,7 @@ INSTANCE spellFX_FireFist_Invest (CFx_Base_Proto)
 INSTANCE spellFX_FireFist_INVESTBLAST (CFX_Base_Proto)
 {
         visname_S           = "MFX_FIREFIST_INVEST_BLAST";
-        sfxid               = "MFX_WINDFIST_INVESBLAST";
+        sfxid               = "MFX_Windfist_Investblast";
         sfxisambient        = 1;
 };
 
@@ -4427,7 +4427,7 @@ INSTANCE spellFX_Concussionbolt	(CFx_Base_Proto)
 				visname_S 				= "MFX_PalHolyBolt_CAST";
 				emtrjmode_s 			= "TARGET";
 		     	emtrjeasevel 			= 1600.;
-	 			sfxid					= "MFX_PalHolyBolt_Cast";
+				sfxid					= "MFX_Thunderbolt_Cast";
 	 			emCheckCollision		= 1;
 				//emCreateFXID 			= "FX_CAST2";
 		};
@@ -4878,17 +4878,17 @@ INSTANCE spellFX_Firespell_HUMANSMOKE	(CFx_Base_Proto)
 
 instance spellFX_Lightning_TARGET			(CFx_Base_Proto)
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 Head";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
 		sfxid			= "MFX_Lightning_Target";
-		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD1";
+		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD1";
 };
 
 instance spellFX_Thunderspell_SENDPERCEPTION			(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 Head";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -4901,105 +4901,105 @@ instance spellFX_Thunderspell_SENDPERCEPTION			(CFx_Base_Proto)			// gehört zu F
 
 instance spellFX_Thunderspell_SENDPERCEPTION_CHILD1		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 R UPPERARM";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD2";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD2";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD2		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 L UPPERARM";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD3";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD3";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD3		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 L HAND";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD4";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD4";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD4		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 R HAND";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD5";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD5";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD5		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 L FOOT";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD6";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD6";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD6		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 R FOOT";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD7";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD7";
 		emFXCreatedOwnTrj 	= 1;
 };
 instance spellFX_Thunderspell_TARGET_CHILD7		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 L THIGH";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD8";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD8";
 		emFXCreatedOwnTrj 	= 1;
 };
 instance spellFX_Thunderspell_TARGET_CHILD8		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 R THIGH";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD9";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD9";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD9		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 L CALF";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD10";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD10";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD10		(CFx_Base_Proto)			// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01 R CALF";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
-		emfxcreate_s	= "spellFX_Thunderspell_SENDPERCEPTION_CHILD11";
+		emfxcreate_s	= "spellFX_Thunderspell_TARGET_CHILD11";
 		emFXCreatedOwnTrj 	= 1;
 };
 
 instance spellFX_Thunderspell_TARGET_CHILD11		(CFx_Base_Proto)		// gehört zu FX-Kette. DO NOT DELETE
 {
-		visname_S 		= "MFX_Thunderball_Target";
+		visname_S 		= "HUMAN_ELECTRIC";
 		emTrjOriginNode = "BIP01";
 		visAlpha		= 1;
 		emtrjmode_s 	= "FIXED";
@@ -6206,7 +6206,7 @@ INSTANCE spellFX_Earthquake (CFx_Base_Proto)
 };
 INSTANCE spellFX_Earthquake_BUILDUP (CFX_Base_Proto)
 {
-    visName_S               = "spellFX_InvisibleProjectile"; // zSpy umgehen
+    visName_S               = "MFX_INVISIBLEPROJECTILE"; // zSpy umgehen
     sfxid                   = "MFX_EARTHQUAKE_INVEST"; // We only want the sound
 };
 // Earth Quake FX

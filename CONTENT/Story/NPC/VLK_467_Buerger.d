@@ -38,6 +38,6 @@ FUNC VOID Rtn_Start_467()
 {	
 	TA_Stand_ArmsCrossed	(11,00,19,00,"NW_CITY_WATCH_FIGHT_02");
     TA_Smalltalk			(19,00,03,00,"NW_CITY_HABOUR_03");
-    TA_Sit_Throne			(03,00,05,00,"NW_CITY_PUFF_THRONE");
+    TA_Smoke_Waterpipe		(03,00,05,00,"NW_CITY_PUFF_THRONE");
     TA_Smalltalk			(05,00,11,00,"NW_CITY_WAY_TO_SHIP_01");
 };

@@ -33,6 +33,7 @@ instance VLK_482_Buergerin (Npc_Default)
 
 FUNC VOID Rtn_Start_482 ()
 {	
+    TA_Stomp_Herb		(05,00,12,00,"NW_CITY_HABOUR_STOMPER_01");
 	TA_Smalltalk		(12,00,16,00,"NW_CITY_HABOUR_STOMPER_01");
     TA_Stomp_Herb		(16,00,20,00,"NW_CITY_HABOUR_STOMPER_01");
     TA_Smalltalk		(20,00,00,00,"NW_CITY_HABOUR_SMALLTALK_02");

@@ -123,7 +123,7 @@ FUNC INT DIA_Andre_CantharFalle_Condition()
 	};
 };
 
-FUNC INT DIA_Andre_CantharFalle_Info()
+FUNC VOID DIA_Andre_CantharFalle_Info()
 {
 	if (Andre_CantharFalle == FALSE)
 	{
@@ -155,7 +155,7 @@ FUNC INT DIA_Andre_Steckbrief_Condition()
 	};
 };
 
-FUNC INT DIA_Andre_Steckbrief_Info()
+FUNC VOID DIA_Andre_Steckbrief_Info()
 {
 	if (Andre_Steckbrief == FALSE)
 	{

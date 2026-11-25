@@ -1321,6 +1321,21 @@ func void DIA_Vatras_INNOSEYEKAPUTT_schnelleNachrichten ()
 
 };
 
+func void B_SendSeekerAfterRitual(var int npcInstance)
+{
+	var C_NPC seeker;
+	seeker = Hlp_GetNpc(npcInstance);
+	if (!Hlp_IsValidNpc(seeker))
+	{
+		return;
+	};
+	if (!Npc_IsDead(seeker))
+	{
+		seeker.aivar[AIV_EnemyOverride] = TRUE;
+		B_StartOtherRoutine(seeker, "AfterRitual");
+	};
+};
+
 func void DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_Wer_Xardas_weiter ()
 {
 	AI_Output			(other, self, "DIA_Vatras_INNOSEYEKAPUTT_weiter_15_00"); //I've got to go.
@@ -1340,29 +1355,13 @@ func void DIA_Vatras_INNOSEYEKAPUTT_Auge_Stein_Wer_Xardas_weiter ()
 	
 	//Joly: Weg mit den Ritualdementoren!!!!!
 
-	DMT_1201.aivar[AIV_EnemyOverride] = TRUE;	//Joly: Damit sie erstmal nicht die Welt entvölkern, ohne Zutun des Spielers!!!!!
-	DMT_1202.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1203.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1204.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1205.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1206.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1207.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1208.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1209.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1210.aivar[AIV_EnemyOverride] = TRUE;
-	DMT_1211.aivar[AIV_EnemyOverride] = TRUE;
-
-	B_StartOtherRoutine (DMT_1201 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1202 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1203 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1204 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1205 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1206 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1207 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1208 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1209 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1210 ,"AfterRitual");
-	B_StartOtherRoutine	(DMT_1211 ,"AfterRitual");
+	B_SendSeekerAfterRitual(DMT_1202_Dementor);
+	B_SendSeekerAfterRitual(DMT_1204_Dementor);
+	B_SendSeekerAfterRitual(DMT_1206_Dementor);
+	B_SendSeekerAfterRitual(DMT_1207_Dementor);
+	B_SendSeekerAfterRitual(DMT_1209_Dementor);
+	B_SendSeekerAfterRitual(DMT_1210_Dementor);
+	B_SendSeekerAfterRitual(DMT_1211_Dementor);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info PermKap3

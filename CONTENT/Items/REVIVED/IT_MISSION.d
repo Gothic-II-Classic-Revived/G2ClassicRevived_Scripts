@@ -216,7 +216,6 @@ FUNC VOID UseBountyLetter3()
 				Doc_SetFont 	(nDocID, -1, "font_10_book.tga");
 				Doc_PrintLine	(nDocID,  0, "");
 				Doc_PrintLine	(nDocID,  0, "");
-				Doc_PrintLines	(nDocID,  0, "TODO: Add bounty letter text here.");
 				Doc_Show		(nDocID);
 	
 	if(!Bounty3)

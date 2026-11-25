@@ -12,11 +12,6 @@ func void ENTER_DI_FIRSTTIME_TRIGGER ()
 	};
 	
 	
-	if (hero.attribute[ATR_DEXTERITY] < 15)//Joly:wegen Brückenevent
-	{
-		Wld_InsertItem	(ITPO_REVIVED_BOOST_DEX_03, "FP_ITEM_DI_ENTER_05");
-	};
-
 //###############################################
 //##
 //##	B_ENTER_DRAGONISLAND			
@@ -28,6 +23,11 @@ func void ENTER_DI_FIRSTTIME_TRIGGER ()
 	if (EnterDI_Kapitel6 == FALSE)
 		{
 		
+			if (hero.attribute[ATR_DEXTERITY] < 15)
+			{
+				Wld_InsertItem(ITPO_REVIVED_BOOST_DEX_03, "FP_ITEM_DI_ENTER_05");
+			};
+
 			if (hero.guild == GIL_PAL)
 			{
 				CreateInvItems (Archol,ItRu_PalDestroyEvil,1);

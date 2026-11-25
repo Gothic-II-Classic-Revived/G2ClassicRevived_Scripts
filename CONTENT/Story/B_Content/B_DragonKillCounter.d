@@ -1,78 +1,110 @@
-// ***************************************************
-//  	B_DragonKillCounter	(Setzt die Countervariable "MIS_KilledDragons", wieviele Drachen der SC schon getötet hat.)	
-// ***************************************************
 var int SwapDragnIsDead;
-var int RckDragnIsDead;	
-var int FreDragnIsDead; 	
-var int IcDragnIsDead; 	
-func int B_DragonKillCounter (var C_NPC current_dragon)
+var int RckDragnIsDead;
+var int FreDragnIsDead;
+var int IcDragnIsDead;
+
+// Movers and focus teleports belong to the Valley, even when a dragon dies in the Free Mine.
+var int SwampDragonUnlockPending;
+var int RockDragonUnlockPending;
+var int FireDragonUnlockPending;
+var int IceDragonUnlockPending;
+var int BiffSurvivalCheckPending;
+
+func void B_ApplyValleyDragonUnlocks ()
 {
-	if (current_dragon.guild == GIL_DRAGON) 	 
+	if (CurrentLevel != OLDWORLD_ZEN)
 	{
-		var C_NPC SwapDragn; 	SwapDragn 		= Hlp_GetNpc(Dragon_Swamp);
-		var C_NPC RckDragn; 	RckDragn 		= Hlp_GetNpc(Dragon_Rock); 
-		var C_NPC FreDragn; 	FreDragn 		= Hlp_GetNpc(Dragon_Fire); 
-		var C_NPC IcDragn; 		IcDragn 		= Hlp_GetNpc(Dragon_Ice);  
-		var C_NPC UndDragn; 	UndDragn 		= Hlp_GetNpc(Dragon_Undead);  
-
-		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (SwapDragn)))
-		&& (SwapDragnIsDead == FALSE)
-		{
-			MIS_KilledDragons = (MIS_KilledDragons + 1);
-			SwapDragnIsDead = TRUE;
-		
-			Wld_SendTrigger("FOCUSTELEPORT_CLIFF");
-			Snd_Play ("MFX_TELEKINESIS_STARTINVEST");
-		};
-		
-		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (RckDragn)))
-		&& (RckDragnIsDead == FALSE)
-		{
-			MIS_KilledDragons = (MIS_KilledDragons + 1);
-			RckDragnIsDead = TRUE;
-		
-			Wld_SendTrigger("FOCUSTELEPORT_MONASTERY");
-			Snd_Play ("MFX_TELEKINESIS_STARTINVEST");
-		};
-		
-		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (FreDragn)))
-		&& (FreDragnIsDead == FALSE)
-		{
-			MIS_KilledDragons = (MIS_KilledDragons + 1);
-			FreDragnIsDead = TRUE;
-
-			Wld_SendTrigger("EVT_TROLLSCHLUCHT_GATE");
-			Wld_SendTrigger("FOCUSTELEPORT_TROLLCANYON");
-			Snd_Play ("MFX_TELEKINESIS_STARTINVEST");
-		};
-	
-		if  ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (IcDragn)))
-		&& (IcDragnIsDead == FALSE)
-		{
-			MIS_KilledDragons = (MIS_KilledDragons + 1);
-			IcDragnIsDead = TRUE;
-
-		// Activate remaining Teleport Spots
-			Wld_SendTrigger("FOCUSTELEPORT_STONEHENGE");
-			Wld_SendTrigger("FOCUSTELEPORT_STONEFORTRESS");
-			Snd_Play ("MFX_TELEKINESIS_STARTINVEST");
-		};
+		return;
 	};
 
+	if (SwampDragonUnlockPending)
+	{
+		Wld_SendTrigger ("FOCUSTELEPORT_CLIFF");
+		SwampDragonUnlockPending = FALSE;
+	};
+	if (RockDragonUnlockPending)
+	{
+		Wld_SendTrigger ("FOCUSTELEPORT_MONASTERY");
+		RockDragonUnlockPending = FALSE;
+	};
+	if (FireDragonUnlockPending)
+	{
+		Wld_SendTrigger ("EVT_TROLLSCHLUCHT_GATE");
+		Wld_SendTrigger ("FOCUSTELEPORT_TROLLCANYON");
+		FireDragonUnlockPending = FALSE;
+	};
+	if (IceDragonUnlockPending)
+	{
+		Wld_SendTrigger ("FOCUSTELEPORT_STONEHENGE");
+		Wld_SendTrigger ("FOCUSTELEPORT_STONEFORTRESS");
+		IceDragonUnlockPending = FALSE;
+	};
+	if (BiffSurvivalCheckPending)
+	{
+		if (Hlp_IsValidNpc (Biff))
+		&& (Npc_IsDead (Biff) == FALSE)
+		{
+			DJG_BiffSurvivedLastDragon = TRUE;
+		};
+		BiffSurvivalCheckPending = FALSE;
+	};
+};
+
+func int B_RecordValleyDragonDeath (var int dragonId)
+{
+	if ((dragonId == ID_DRAGON_SWAMP) && !SwapDragnIsDead)
+	{
+		SwapDragnIsDead = TRUE;
+		SwampDragonUnlockPending = TRUE;
+	}
+	else if ((dragonId == ID_DRAGON_ROCK) && !RckDragnIsDead)
+	{
+		RckDragnIsDead = TRUE;
+		RockDragonUnlockPending = TRUE;
+	}
+	else if ((dragonId == ID_DRAGON_FIRE) && !FreDragnIsDead)
+	{
+		FreDragnIsDead = TRUE;
+		FireDragonUnlockPending = TRUE;
+	}
+	else if ((dragonId == ID_DRAGON_ICE) && !IcDragnIsDead)
+	{
+		IcDragnIsDead = TRUE;
+		IceDragonUnlockPending = TRUE;
+	}
+	else
+	{
+		return FALSE;
+	};
+
+	MIS_KilledDragons += 1;
 	if (MIS_KilledDragons == 4)
 	{
-		MIS_AllDragonsDead = TRUE; 
-
-		// Biff hat den letzten Drachenkampf überlebt.
-			
-		if (DJG_BiffParty == TRUE)
-			&& ((Npc_IsDead(Biff)) == FALSE)
-			{
-				DJG_BiffSurvivedLastDragon = TRUE;
-			};
+		MIS_AllDragonsDead = TRUE;
 	};
-	
-	if ((Hlp_GetInstanceID (current_dragon)) == (Hlp_GetInstanceID (UndDragn)))
+	return TRUE;
+};
+
+func int B_DragonKillCounter (var C_NPC current_dragon)
+{
+	if (current_dragon.guild != GIL_DRAGON)
+	{
+		return FALSE;
+	};
+
+	if (C_DragonFight_IsValleyDragon (current_dragon))
+	{
+		if (B_RecordValleyDragonDeath (current_dragon.aivar[AIV_MM_REAL_ID]))
+		{
+			Snd_Play ("MFX_TELEKINESIS_STARTINVEST");
+			if (MIS_AllDragonsDead && DJG_BiffParty)
+			{
+				BiffSurvivalCheckPending = TRUE;
+			};
+			B_ApplyValleyDragonUnlocks ();
+		};
+	}
+	else if (Hlp_GetInstanceID (current_dragon) == Hlp_GetInstanceID (Dragon_Undead))
 	&& (UndeadDragonIsDead == FALSE)
 	{
 		UndeadDragonIsDead = TRUE;
@@ -96,8 +128,5 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 			PlayVideoEx	("EXTRO_KDF.BIK", TRUE,FALSE);
 		};
 	};
+	return FALSE;
 };
-
-
-
-

@@ -26,7 +26,6 @@ FUNC VOID DIA_Dragon_Ice_Exit_Info()
 
 	Wld_PlayEffect("spellFX_INCOVATION_WHITE",  self, self, 0, 0, 0, FALSE );
 	Wld_PlayEffect("spellFX_Thunderstorm",  self, self, 0, 0, 0, FALSE );
-	Wld_PlayEffect("SFX_Circle",  self, self, 0, 0, 0, FALSE ); 
 
 	AI_Output			(self, other, "DIA_Dragon_Ice_Exit_20_00"); //The power of the Eye is extinguished, and your time has run out.
 

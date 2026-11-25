@@ -15,7 +15,7 @@ func void B_MagicHurtNpc (var C_NPC slf, var C_NPC oth, var int damage)
 		if ( Npc_IsPlayer(slf) || (slf.aivar[AIV_PARTYMEMBER]==TRUE) )
 		&& (oth.aivar[AIV_VictoryXPGiven] == FALSE)
 		{
-			B_GivePlayerXP (self.level * XP_PER_VICTORY);
+			B_GivePlayerXP (oth.level * XP_PER_VICTORY);
 			
 			oth.aivar[AIV_VictoryXPGiven] = TRUE;
 		};

@@ -21,6 +21,7 @@ func void INIT_GLOBAL()
 	// wird fuer jede Welt aufgerufen (vor INIT_<LevelName>)
 	Game_InitGerman();
 	AreaMusic_Init();
+	REV_RestoreCraftStatus();
 };
 
 
@@ -800,7 +801,7 @@ func void STARTUP_DEMONTOWER ()
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_04");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_05");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_09");
-	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_008");
+	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_08");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_08B");
 	Wld_InsertNpc				(Gobbo_Skeleton,"DT_E1_09B");
 
@@ -2287,10 +2288,12 @@ FUNC VOID INIT_OLDWORLD ()
 		B_InitNpcGlobals ();    
 
 		B_ENTER_OLDWORLD();
+		StoryHelper_FinishSkippedDragons();
 		OldWorld_CreateAreas();
 
 	if (MIS_ReadyForChapter4  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter4_OneTime == FALSE)
+	&& (Kapitel < 4)
 	{
 		B_Kapitelwechsel (4, OLDWORLD_ZEN);
 		B_Chapter4_OneTime = TRUE;
@@ -4436,6 +4439,7 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_Forest_01();
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
+	B_ENTER_NEWWORLD_Kapitel_1 ();
 	PlayVideo("INTRO.BIK");
 	//PlayVideo ("Addon_Title.BIK");
 	
@@ -4477,6 +4481,7 @@ FUNC VOID INIT_NewWorld()
 	
 	if (MIS_ReadyForChapter3  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter3_OneTime == FALSE)
+	&& (Kapitel < 3)
 	{
 		B_Kapitelwechsel (3,NEWWORLD_ZEN);
 		B_Chapter3_OneTime = TRUE;
@@ -4484,6 +4489,7 @@ FUNC VOID INIT_NewWorld()
 
 	if (MIS_AllDragonsDead  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter5_OneTime == FALSE)
+	&& (Kapitel < 5)
 	{
 		B_Kapitelwechsel (5, NEWWORLD_ZEN);
 		B_Chapter5_OneTime = TRUE;
@@ -4622,6 +4628,7 @@ FUNC VOID INIT_FREEMINE ()
 	B_InitGuildAttitudes();
 	B_InitNpcGlobals ();
 	B_Enter_FreeMine();
+	StoryHelper_FinishSkippedDragons();
 	FreeMine_CreateAreas();
 };
 

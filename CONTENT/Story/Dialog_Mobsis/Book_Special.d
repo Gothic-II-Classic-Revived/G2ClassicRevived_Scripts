@@ -83,10 +83,14 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()
 			
 		if  (hero.guild == GIL_KDF)
 		{	
-			PlayerGetsAmulettOfDeath = TRUE;
-			PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] = TRUE; 
-			B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Holy Missile': 1 holy water, no spell scroll");
-			
+			if (PlayerGetsAmulettOfDeath == FALSE)
+			{
+				PlayerGetsAmulettOfDeath = TRUE;
+				PLAYER_TALENT_RUNES[SPL_MasterOfDisaster] = TRUE;
+				Log_CreateTopic(TOPIC_TalentRunes, LOG_NOTE);
+				B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Holy Missile': 1 holy water, no spell scroll");
+			};
+
 						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 						Doc_PrintLine	( nDocID,  1, "");
 						Doc_PrintLines	( nDocID,  1, "... I followed the instructions and simply poured Innos' holy water over a blank runestone on a rune table. The runestone was destroyed. I suspect this spell really is accessible only to the One."); 
@@ -96,14 +100,17 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()
 		}
 		else if (hero.guild == GIL_PAL)
 		{
-			PAL_KnowsAbout_FINAL_BLESSING = TRUE;
-			PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] 		= TRUE; 		
-			PrintScreen	(PRINT_LearnPalTeleportSecret, -1, -1, FONT_Screen, 2);
-			
-			Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
-			B_LogEntry (TOPIC_TalentRunes,"To create a rune I need certain ingredients for each one. Using those ingredients and a blank runestone I can create the desired rune at a rune table.");
-			B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Secret teleport': 1 holy water");
-			
+			if (PAL_KnowsAbout_FINAL_BLESSING == FALSE)
+			{
+				PAL_KnowsAbout_FINAL_BLESSING = TRUE;
+				PLAYER_TALENT_RUNES[SPL_PalTeleportSecret] 		= TRUE;
+				PrintScreen	(PRINT_LearnPalTeleportSecret, -1, -1, FONT_Screen, 2);
+
+				Log_CreateTopic (TOPIC_TalentRunes,LOG_NOTE);
+				B_LogEntry (TOPIC_TalentRunes,"To create a rune I need certain ingredients for each one. Using those ingredients and a blank runestone I can create the desired rune at a rune table.");
+				B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune 'Secret teleport': 1 holy water");
+			};
+
 						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 						Doc_PrintLine	( nDocID,  1, "");
 						Doc_PrintLines	( nDocID,  1, "You have to create a teleportation rune to reach the secret place. For that you need a blank runestone and a small bottle of holy water. You can use the rune to teleport into the room."); 
@@ -114,18 +121,21 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()
 		}
 		else
 		{
-			PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;	
-			PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 	= TRUE;	
-			
-			PrintScreen			(PRINT_LearnSmith, -1, -1, FONT_Screen, 2);
-			Npc_SetTalentSkill 	(self, NPC_TALENT_SMITH, 1);
-			Log_CreateTopic (TOPIC_TalentSmith,LOG_NOTE);
-			B_LogEntry (TOPIC_TalentSmith,"To forge a weapon, first of all I need a piece of raw steel. This I must heat in the fire of a smithy until it glows red-hot and then shape it on an anvil. Special weapons often require the use of certain substances that give them special characteristics.");
-			B_LogEntry (TOPIC_TalentSmith,"If I add 4 units of ore and 5 of dragon blood, I can forge an ORE DRAGON SLAYER.");
-			B_LogEntry (TOPIC_TalentSmith,"If I add 5 units of ore and 5 of dragon blood, I can forge a LARGE ORE DRAGON SLAYER.");
-			PlayerGetsFinalDJGArmor = TRUE;
-			DJG_KnowsAbout_Purifying = TRUE;
-						
+			if (PlayerGetsFinalDJGArmor == FALSE)
+			{
+				PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_ORE_04] 	= TRUE;
+				PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_ORE_04] 	= TRUE;
+
+				PrintScreen			(PRINT_LearnSmith, -1, -1, FONT_Screen, 2);
+				Npc_SetTalentSkill 	(self, NPC_TALENT_SMITH, 1);
+				Log_CreateTopic (TOPIC_TalentSmith,LOG_NOTE);
+				B_LogEntry (TOPIC_TalentSmith,"To forge a weapon, first of all I need a piece of raw steel. This I must heat in the fire of a smithy until it glows red-hot and then shape it on an anvil. Special weapons often require the use of certain substances that give them special characteristics.");
+				B_LogEntry(TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_1H_ORE_04);
+				B_LogEntry(TOPIC_TalentSmith, LOGENTRY_RECIPE_REVIVED_2H_ORE_04);
+				PlayerGetsFinalDJGArmor = TRUE;
+				DJG_KnowsAbout_Purifying = TRUE;
+			};
+
 						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 						Doc_PrintLine	( nDocID,  1, "");
 						//Doc_PrintLines	( nDocID,  1, "From: Weapons of the Dragon Lord."); 

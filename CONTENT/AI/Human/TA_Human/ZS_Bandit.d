@@ -24,49 +24,31 @@ func int ZS_Bandit_loop()
 {
 	if (self.aivar[AIV_TAPOSITION] == NOTINPOS)
 	{
-		if (!Npc_IsOnFP (self, "CAMPFIRE"))
-		&& (Wld_IsFPAvailable(self,"CAMPFIRE"))
+		self.aivar[AIV_TAPOSITION] = ISINPOS;
+		if (Npc_IsOnFP(self, "CAMPFIRE"))
+		|| (Wld_IsFPAvailable(self, "CAMPFIRE"))
 		{
-			AI_GotoFP 		(self, "CAMPFIRE");
+			if (!Npc_IsOnFP(self, "CAMPFIRE"))
+			{
+				AI_GotoFP(self, "CAMPFIRE");
+			};
 			AI_AlignToFP 	(self);
 			AI_PlayAniBS 	(self,"T_STAND_2_SIT",BS_SIT);
 		}
-		else if (!Npc_IsOnFP (self, "STAND"))
-		&& (Wld_IsFPAvailable(self,"STAND"))
+		else if (Npc_IsOnFP(self, "STAND"))
+		|| (Wld_IsFPAvailable(self, "STAND"))
 		{
-			AI_GotoFP 		(self, "STAND");
+			if (!Npc_IsOnFP(self, "STAND"))
+			{
+				AI_GotoFP(self, "STAND");
+			};
 			AI_AlignToFP 	(self);
 			AI_PlayAni 		(self,"T_STAND_2_HGUARD");
 		}
-		else if (!Npc_IsOnFP (self, "SMALLTALK"))
-		&& (Wld_IsFPAvailable(self,"SMALLTALK"))
+		else if (Npc_IsOnFP(self, "SMALLTALK"))
+		|| (Wld_IsFPAvailable(self, "SMALLTALK"))
 		{
-			if (Npc_IsOnFP (self, "SMALLTALK"))
-			{	
-				if (Npc_GetStateTime(self) >= (SmallTalkFreq * 2) )
-				{
-					Npc_PerceiveAll (self);
-					
-					if (Wld_DetectNpc(self, -1, ZS_Smalltalk, -1)) //other = Nearest Npc (0=Spieler ignorieren!)
-					{
-						if (Npc_GetDistToNpc(self, other) < PERC_DIST_DIALOG)
-						{
-							Npc_SetStateTime (other, SmallTalkFreq);
-																
-							B_TurnToNpc (self,other);
-							B_Say_Smalltalk();
-						};
-					};
-				
-					Npc_SetStateTime (self, 0);
-				};
-			}
-			else if (Wld_IsFPAvailable(self,"SMALLTALK"))
-			{
-				AI_GotoFP 		(self, "SMALLTALK");
-				AI_StandUp (self);
-				AI_AlignToFP 	(self);
-			};
+			self.aivar[AIV_TAPOSITION] = BANDIT_POS_SMALLTALK;
 		}
 		else //kein FP gefunden, auf WP stehen
 		{
@@ -74,9 +56,13 @@ func int ZS_Bandit_loop()
 			AI_PlayAni 		(self,"T_STAND_2_HGUARD");
 		};
 		
-		self.aivar[AIV_TAPOSITION] = ISINPOS;
 	};		
 	
+	if (self.aivar[AIV_TAPOSITION] == BANDIT_POS_SMALLTALK)
+	{
+		return B_SmalltalkLoop();
+	};
+
 	if (Npc_GetStateTime(self) > 5)
 	&& (self.aivar[AIV_TAPOSITION] == ISINPOS)
 	&& (!C_BodyStateContains (self, BS_SIT))
@@ -100,7 +86,7 @@ func void ZS_Bandit_end()
 	{
 		AI_PlayAniBS(self,"T_SIT_2_STAND",BS_STAND);
 	}
-	else
+	else if (self.aivar[AIV_TAPOSITION] != BANDIT_POS_SMALLTALK)
 	{
 		AI_PlayAni (self,"T_HGUARD_2_STAND");
 	};

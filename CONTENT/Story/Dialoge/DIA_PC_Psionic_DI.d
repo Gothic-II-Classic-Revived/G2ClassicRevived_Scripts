@@ -86,7 +86,7 @@ INSTANCE DIA_Lester_DI_MarioArsch (C_INFO)
                    
 FUNC INT DIA_Lester_DI_MarioArsch_Condition()
 {	
-	if ((DIA_Lester_DI_SCGotWarning2 == TRUE) || (DIA_Lester_DI_SCGotWarning2 == TRUE))
+	if ((DIA_Lester_DI_SCGotWarning1 == TRUE) || (DIA_Lester_DI_SCGotWarning2 == TRUE))
 	&& (MIS_Mario_Ambush == LOG_SUCCESS)
 	{
 		return TRUE;
@@ -194,7 +194,7 @@ func void DIA_Psionic_DI_PICKPOCKET_DoIt()
 		B_GivePlayerXP (XP_Ambient);
 		Info_ClearChoices (DIA_Psionic_DI_PICKPOCKET);
 
-		LesterKeyStolen == TRUE;
+		LesterKeyStolen = TRUE;
 	}
 	else
 	{

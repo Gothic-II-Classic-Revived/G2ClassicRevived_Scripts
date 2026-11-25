@@ -266,11 +266,15 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 			Wld_InsertNpc		(DJG_703_Cipher, 		"OC1");
 			};
 		IF (SLD_Gorn_is_alive == TRUE)
+		&& (GornDJG_is_alive == FALSE)
 			{
 			Wld_InsertNpc		(PC_Fighter_DJG, 		"OC1");
 			};
 
-		Wld_InsertNpc		(NONE_705_ANGAR, 		"OC1"); 
+		if (DJG_Angar_is_alive == FALSE)
+		{
+			Wld_InsertNpc (NONE_705_ANGAR, "OC1");
+		};
 		Wld_InsertNpc		(DJG_708_Kurgan, 		"OC1"); 
 		Wld_InsertNpc		(DJG_709_Rethon, 		"OC1"); 
 		Wld_InsertNpc		(DJG_710_Kjorn,			"OC1"); 
@@ -715,7 +719,13 @@ FUNC VOID B_ENTER_OLDWORLD ()
 	if (Kapitel >= 5)	{B_ENTER_OLDWORLD_Kapitel_5 ();	};
 	if (Kapitel >= 6)	{B_ENTER_OLDWORLD_Kapitel_6 ();	};
 	CurrentLevel = OLDWORLD_ZEN;
-	B_InitNpcGlobals (); 
+	B_InitNpcGlobals ();
+	B_ApplyValleyDragonUnlocks ();
+	if (DragonHunterReturnCheckPending)
+	{
+		B_NPC_IsAliveCheck (OLDWORLD_ZEN);
+		DragonHunterReturnCheckPending = FALSE;
+	};
 	
 	if (DJG_BiffParty == TRUE)	//Joly:nach Load nicht nach Kohle fragen!
 	&& 	(Npc_IsDead(Biff)==FALSE)

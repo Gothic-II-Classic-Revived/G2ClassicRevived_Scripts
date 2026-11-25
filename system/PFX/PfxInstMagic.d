@@ -5066,6 +5066,37 @@ INSTANCE MFX_HEAL_INIT (C_PARTICLEFX)
      visalphastart = 140.000000000;
 };
 
+INSTANCE MFX_HEAL_START (C_PARTICLEFX)
+{
+     ppsvalue = 100.000000000;
+     ppsscalekeys_s = "1 1 1 1 1 1 1 1 1 1";
+     ppsissmooth = 1;
+     ppsfps = 2.000000000;
+     shptype_s = "SPHERE";
+     shpfor_s = "OBJECT";
+     shpoffsetvec_s = "-100 0 0";
+     shpdistribtype_s = "RAND";
+     shpdistribwalkspeed = 0.000300000;
+     shpdim_s = "50";
+     shpscalekeys_s = "2 1.5 2";
+     shpscaleislooping = 1;
+     shpscaleissmooth = 1;
+     shpscalefps = 1.000000000;
+     dirmode_s = "DIR";
+     dirfor_s = "WORLD";
+     lsppartavg = 3000.000000000;
+     flygravity_s = "0 0 0";
+     visname_s = "SIMPLEGLOW.TGA";
+     vistexisquadpoly = 1;
+     vistexcolorstart_s = "0 0 0";
+     vistexcolorend_s = "0 100 255";
+     vissizestart_s = "6 6";
+     vissizeendscale = 20.000000000;
+     visalphafunc_s = "ADD";
+     visalphastart = 255.000000000;
+     trltexture_s = "WHITE.TGA";
+};
+
 INSTANCE MFX_HEAL_CAST (C_PARTICLEFX)
 {
      ppsvalue = 10;
@@ -7882,7 +7913,7 @@ INSTANCE MFX_DESTROYUNDEAD_SOUL_CLOUD (C_PARTICLEFX)
      vissizeendscale = 50.000000000;
      visalphafunc_s = "ADD";
      visalphastart = 255.000000000;
-     trltexture_s = "JUSTWHITE.TGA";
+     trltexture_s = "WHITE.TGA";
 };
 
 
@@ -9098,7 +9129,7 @@ INSTANCE MFX_CONTROL_TARGET (C_PARTICLEFX)
      vissizeendscale = 1.000000000;
      visalphafunc_s = "ADD";
      visalphastart = 255.000000000;
-     trltexture_s = "JUSTWHITE.TGA";
+     trltexture_s = "WHITE.TGA";
 };
 
 

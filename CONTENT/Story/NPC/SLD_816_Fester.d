@@ -54,7 +54,7 @@ FUNC VOID Rtn_Start_816 ()
 	TA_Practice_Sword 		(18,00,19,00,"NW_BIGFARM_ALLEE_02");
 	TA_Practice_Sword		(19,00,20,00,"NW_BIGFARM_ALLEE_04");
 	
-	TA_Sit_Campfire 		(20,00,06,00,"NW_BIGFARM_VORPOSTEN1_01");
+	TA_Sit_Campfire 		(20,00,05,00,"NW_BIGFARM_VORPOSTEN1_01");
 };
 
 FUNC VOID Rtn_Guide_816 ()

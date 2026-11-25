@@ -41,12 +41,12 @@ FUNC VOID Rtn_Start_4110 ()
 FUNC VOID Rtn_Silvestro_4110 ()
 {
 	TA_Pray_Innos			(08,00,23,00,"OW_SILVESTROMINE_CAMP");
-	TA_Pray_Innos			(08,00,23,00,"OW_SILVESTROMINE_CAMP");
+	TA_Pray_Innos			(23,00,08,00,"OW_SILVESTROMINE_CAMP");
 };
 FUNC VOID Rtn_OldMine_4110 ()
 {
 	TA_Stand_Eating			(08,00,23,00,"OW_OM_ENTRANCE03_003");
-	TA_Stand_Drinking		(08,00,23,00,"OW_OM_ENTRANCE03_003");
+	TA_Stand_Drinking		(23,00,08,00,"OW_OM_ENTRANCE03_003");
 };
 FUNC VOID Rtn_Fajeth_4110 ()
 {	

@@ -26,7 +26,6 @@ FUNC VOID DIA_Dragon_Swamp_Exit_Info()
 
 	Wld_PlayEffect("spellFX_INCOVATION_GREEN",  self, self, 0, 0, 0, FALSE );
 	Wld_PlayEffect("spellFX_Shrink",  self, self, 0, 0, 0, FALSE );
-	Wld_PlayEffect("SFX_Circle",  self, self, 0, 0, 0, FALSE );
 
 	AI_Output			(self, other, "DIA_Dragon_Swamp_Exit_20_00"); //The power of the Eye is exhausted. Your life ends here, human.
 

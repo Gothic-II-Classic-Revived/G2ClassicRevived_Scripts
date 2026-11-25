@@ -613,6 +613,15 @@ func void UseKDWLetter ()
 					Doc_Show		( nDocID );
 		
 };
+
+// The Valley bookstand displays the same letter as the inventory item.
+func void UseKDWLetter_S1()
+{
+	if (Npc_IsPlayer(self))
+	{
+		UseKDWLetter();
+	};
+};
 //**********************************************************************************
 //	BRIEF von Gilbert
 //----------------------------------------------------------------------------------

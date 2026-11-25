@@ -50,8 +50,8 @@ func void B_SetAttributesForLevel (var C_NPC slf, var int level)
 		B_SetFightSkills (self, 100);
 	};
 
-	slf.exp				= (500*((slf.level+1)/2)*(slf.level+1));
-	slf.exp_next		= (500*((slf.level+2)/2)*(slf.level+1));
+	slf.exp				= 250 * slf.level * (slf.level + 1);
+	slf.exp_next		= slf.exp + 500 * (slf.level + 1);
 };
 
 // *************************************
@@ -77,6 +77,6 @@ func void B_SetMonsterAttributesForLevel (var C_NPC slf, var int level)
 	
 		B_SetFightSkills (self, 100);
 
-	slf.exp				= (500*((slf.level+1)/2)*(slf.level+1));
-	slf.exp_next		= (500*((slf.level+2)/2)*(slf.level+1));
+	slf.exp				= 250 * slf.level * (slf.level + 1);
+	slf.exp_next		= slf.exp + 500 * (slf.level + 1);
 };

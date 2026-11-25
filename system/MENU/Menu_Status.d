@@ -95,6 +95,21 @@ instance MENU_STATUS (C_MENU_DEF)
 	// --- TakeAnimalTrophy ------------------------------------------
 	items[56]	= "MENU_ITEM_TALENT_16_TITLE";
 	items[57]	= "MENU_ITEM_TALENT_16_SKILL";
+	// Acrobatics
+	items[58]	= "MENU_ITEM_TALENT_11_TITLE";
+	items[59]	= "MENU_ITEM_TALENT_11_SKILL";
+	// Bowmaking
+	items[60]	= "MENU_ITEM_TALENT_10_TITLE";
+	items[61]	= "MENU_ITEM_TALENT_10_SKILL";
+	// Cooking
+	items[62]	= "MENU_ITEM_TALENT_19_TITLE";
+	items[63]	= "MENU_ITEM_TALENT_19_SKILL";
+	// Distilling
+	items[64]	= "MENU_ITEM_TALENT_20_TITLE";
+	items[65]	= "MENU_ITEM_TALENT_20_SKILL";
+	// Tobacco mixing
+	items[66]	= "MENU_ITEM_TALENT_21_TITLE";
+	items[67]	= "MENU_ITEM_TALENT_21_SKILL";
 	
 
 	// ------ Eigenschaften ------
@@ -474,6 +489,86 @@ instance MENU_ITEM_TALENT_13_SKILL(C_MENU_ITEM_DEF)  { posx = STAT_B_X2;posy = S
 // ------ TakeAnimalTrophy ------ // Talent 16
 INSTANCE MENU_ITEM_TALENT_16_TITLE(C_MENU_ITEM_DEF)  { posx = STAT_B_X1;posy = STAT_TAL_Y + 13*STAT_DY;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
 instance MENU_ITEM_TALENT_16_SKILL(C_MENU_ITEM_DEF)  { posx = STAT_B_X2;posy = STAT_TAL_Y + 13*STAT_DY;	fontName = STAT_FONT_DEFAULT;flags=flags & ~IT_SELECTABLE; };
+
+INSTANCE MENU_ITEM_TALENT_11_TITLE(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X1;
+	posy = STAT_TAL_Y + 8*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_11_SKILL(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X2;
+	posy = STAT_TAL_Y + 8*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_10_TITLE(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X1;
+	posy = STAT_TAL_Y + 12*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_10_SKILL(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X2;
+	posy = STAT_TAL_Y + 12*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_19_TITLE(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X1;
+	posy = STAT_TAL_Y + 14*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_19_SKILL(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X2;
+	posy = STAT_TAL_Y + 14*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_20_TITLE(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X1;
+	posy = STAT_TAL_Y + 15*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_20_SKILL(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X2;
+	posy = STAT_TAL_Y + 15*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_21_TITLE(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X1;
+	posy = STAT_TAL_Y + 16*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
+
+INSTANCE MENU_ITEM_TALENT_21_SKILL(C_MENU_ITEM_DEF)
+{
+	posx = STAT_B_X2;
+	posy = STAT_TAL_Y + 16*STAT_DY;
+	fontName = STAT_FONT_DEFAULT;
+	flags = flags & ~IT_SELECTABLE;
+};
 
 
 

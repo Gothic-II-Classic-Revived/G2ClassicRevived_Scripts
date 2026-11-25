@@ -185,11 +185,11 @@ FUNC VOID PC_PrayAdanos_Pray_Back ()
 
 FUNC VOID PC_PrayAdanos_Pray_AltPay ()
 {
-	var int zufall; zufall = Hlp_Random(100);
-	var int heroNextExp; heroNextExp = (500*(((hero.level-1)+2)/2)*((hero.level-1)+1));
+	var int zufall; zufall = Hlp_Random(101);
+	var int currentLevelExp; currentLevelExp = 250 * hero.level * (hero.level + 1);
 
 	// ----- Heute Schon gebetet? -----	
-	if ((hero.exp - 1000) > heroNextExp)
+	if ((hero.exp - 1000) >= currentLevelExp)
 	{
 		if(zufall >= 0 && zufall <= 24)
 		&& (PLAYER_TALENT_WISPDETECTOR[WISPSKILL_FF] == FALSE)

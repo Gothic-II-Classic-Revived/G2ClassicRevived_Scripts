@@ -1539,6 +1539,7 @@ func void DIA_Pyrokar_BUCHDERBESSENEN_Info ()
 	
 		AI_Output			(self, other, "DIA_Pyrokar_BUCHDERBESSENEN_11_11"); //Do not make the mistake to try and destroy them yourself. You are not yet ready to withstand their power.
 
+		MIS_FindTheObesessed = TRUE;
 		B_LogEntry (TOPIC_DEMENTOREN,"Pyrokar wants to render the Almanacs of the Possessed harmless. He has given me a list of all those the Seekers plan to possess. There may be more names on Pyrokar's list later on."); 
 	};
 	

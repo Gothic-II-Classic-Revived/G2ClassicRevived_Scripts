@@ -1151,7 +1151,7 @@ INSTANCE IRRLICHT_DIE (C_PARTICLEFX)
      vissizeendscale = 1.000000000;
      visalphafunc_s = "ADD";
      visalphastart = 255.000000000;
-     trltexture_s = "JUSTWHITE.TGA";
+     trltexture_s = "WHITE.TGA";
 };
 
 // IRRLICHT ENDE
@@ -1190,7 +1190,7 @@ INSTANCE RUNEMAKER (C_PARTICLEFX)
      vissizeendscale = 1;
      visalphafunc_s = "ADD";
      visalphastart = 255;
-     trltexture_s = "JUSTWHITE.TGA";
+     trltexture_s = "WHITE.TGA";
 };
 
 
@@ -4713,7 +4713,7 @@ INSTANCE HUMAN_WASHSELF1 (C_PARTICLEFX)
      visalphafunc_s = "BLENND";
      visalphastart = 255.000000000;
      trlfadespeed = 1.500000000;
-     trltexture_s = "JUSTWHITE.TGA";
+     trltexture_s = "WHITE.TGA";
      trlwidth = 0.500000000;
 };
 
@@ -4755,7 +4755,7 @@ INSTANCE HUMAN_WASHSELF2 (C_PARTICLEFX)
      visalphafunc_s = "BLEND";
      visalphastart = 255.000000000;
      trlfadespeed = 1.500000000;
-     trltexture_s = "JUSTWHITE.TGA";
+     trltexture_s = "WHITE.TGA";
      trlwidth = 0.400000006;
 };
 

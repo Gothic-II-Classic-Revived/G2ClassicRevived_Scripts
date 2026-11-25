@@ -117,6 +117,12 @@ FUNC VOID PrayInnos_S1 ()
 	};
 };
 
+// The older Innos shrine in Khorinis uses this state callback.
+func void PrayShrine_S1()
+{
+	PrayInnos_S1();
+};
+
 //*******************************************************
 //	PrayShrine Dialog abbrechen
 //*******************************************************

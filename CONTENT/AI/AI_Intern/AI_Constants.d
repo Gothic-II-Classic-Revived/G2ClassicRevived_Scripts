@@ -96,6 +96,7 @@ const int AIV_TAPOSITION					= 19;
 const int		ISINPOS					= 0;
 const int		NOTINPOS				= 1;
 const int 		NOTINPOS_WALK			= 2;
+const int		BANDIT_POS_SMALLTALK		= 3;
 
 // ------ Finger weg!
 const int AIV_SelectSpell					= 20;
@@ -323,6 +324,9 @@ const int AIV_SwarmStateTime				= 78;	//added by kairo
 
 // ------ ZS_SuckEnergy	--------
 const int AIV_SuckEnergyStateTime			= 79;	//added by kairo
+const int AIV_SuckEnergyStartDist = 95;
+const int AIV_SuckEnergyActorId   = 96;
+const int AIV_SuckEnergyCasterId  = 97;
 
 // ------ Party of Pirates ------
 const int AIV_FollowDist					= 80;	

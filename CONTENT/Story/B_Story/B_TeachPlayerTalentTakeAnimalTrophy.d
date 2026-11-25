@@ -40,7 +40,7 @@ func void REV_TrophyLogEntry(var int trophy)
 	if (trophy == TROPHY_LurkerClaws) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_LurkerClaws] 		= TRUE;	
 	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove claws from dead lurkers.");}; //REVIVED
 	if (trophy == TROPHY_TrollTeeth) 	{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollTeeth] = TRUE;	
-	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove tongue of a xyz.");}; //REVIVED
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove tusks from dead trolls.");}; //REVIVED
 	if (trophy == TROPHY_TrollSkin)			{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_TrollSkin]		= TRUE;
 	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove the hide from a dead troll.");}; //REVIVED
 	if (trophy == TROPHY_MantisHead) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_MantisHead] 		= TRUE;	
