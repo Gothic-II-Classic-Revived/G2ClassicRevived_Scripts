@@ -15,7 +15,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 
 	//-------- visuals --------
 	B_SetNpcFullVisual (self, MALE, "Hum_Head_Pony", Face_Special_HeroAlt, Body_Special_Hero3, Body_Player, Teeth_Normal, NO_ARMOR);	
-	
+	Mdl_ApplyOverlayMds(self, "HUMANS_SPRINT.MDS");
+
 	Npc_SetTalentSkill	(self, NPC_TALENT_MAGE, 			6);
 	Npc_SetTalentSkill	(self, NPC_TALENT_PICKLOCK, 		1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_SNEAK, 			1);

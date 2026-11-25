@@ -1,74 +1,44 @@
-const string AREA_MUSIC_NO_THEME = "";
+// Music selection and transitions are handled by AreaManager.
+var int AreaMusic_DefaultArea;
 
-var string AreaMusic_CurrentThemeID;
-var string AreaMusic_DefaultDayThemeID;
-var string AreaMusic_DefaultNightThemeID;
-
-func int AreaMusic_IsDaytime()
+func void AreaMusic_OnTransition()
 {
-	return Wld_IsTime(5, 0, 19, 0);
 };
 
-func void AreaMusic_Play(var string themeID)
+func void AreaMusic_Register(var int area)
 {
-	if (Hlp_StrCmp(AreaMusic_CurrentThemeID, themeID) == FALSE)
-	{
-		AreaMusic_CurrentThemeID = themeID;
-		BassMusic_Play(themeID);
-	};
+	AM_Add(area, AreaMusic_OnTransition, AreaMusic_OnTransition);
 };
 
-func void AreaMusic_SetDefaultThemes(
-	var string dayThemeID,
-	var string nightThemeID
+func void AreaMusic_CreateDefault(
+	var string world,
+	var string dayStandard,
+	var string nightStandard,
+	var string dayThreat,
+	var string nightThreat,
+	var string dayFight,
+	var string nightFight
 )
 {
-	AreaMusic_DefaultDayThemeID = dayThemeID;
-	AreaMusic_DefaultNightThemeID = nightThemeID;
-};
+	AM_Destroy(AreaMusic_DefaultArea);
+	AreaMusic_DefaultArea = AM_Create(world);
 
-func void AreaMusic_PlayDayNight(
-	var string dayThemeID,
-	var string nightThemeID
-)
-{
-	if (AreaMusic_IsDaytime())
-	{
-		if (Hlp_StrCmp(dayThemeID, AREA_MUSIC_NO_THEME) == FALSE)
-		{
-			AreaMusic_Play(dayThemeID);
-		}
-		else
-		{
-			AreaMusic_Play(AreaMusic_DefaultDayThemeID);
-		};
-	}
-	else
-	{
-		if (Hlp_StrCmp(nightThemeID, AREA_MUSIC_NO_THEME) == FALSE)
-		{
-			AreaMusic_Play(nightThemeID);
-		}
-		else
-		{
-			AreaMusic_Play(AreaMusic_DefaultNightThemeID);
-		};
-	};
-};
-
-func void AreaMusic_PlayDefault()
-{
-	AreaMusic_PlayDayNight(
-		AREA_MUSIC_NO_THEME,
-		AREA_MUSIC_NO_THEME
-	);
+	// Cover the world without height limits. Local regions are created afterwards.
+	AM_AddPoint(AreaMusic_DefaultArea, -1000000.0, -1000000.0);
+	AM_AddPoint(AreaMusic_DefaultArea, 1000000.0, -1000000.0);
+	AM_AddPoint(AreaMusic_DefaultArea, 1000000.0, 1000000.0);
+	AM_AddPoint(AreaMusic_DefaultArea, -1000000.0, 1000000.0);
+	AM_SetMusic(AreaMusic_DefaultArea,
+		dayStandard, nightStandard,
+		dayThreat, nightThreat,
+		dayFight, nightFight);
+	AreaMusic_Register(AreaMusic_DefaultArea);
 };
 
 func void AreaMusic_Init()
 {
-	//AM_SetDebug(TRUE);
-	AreaMusic_CurrentThemeID = AREA_MUSIC_NO_THEME;
-	AreaMusic_DefaultDayThemeID = AREA_MUSIC_NO_THEME;
-	AreaMusic_DefaultNightThemeID = AREA_MUSIC_NO_THEME;
-	BassMusic_SetFullScriptControl(TRUE);
+	AM_ClearProcessCallback();
+	AM_Destroy(AreaMusic_DefaultArea);
+	AreaMusic_DefaultArea = 0;
+	BassMusic_SetFullScriptControl(FALSE);
 };

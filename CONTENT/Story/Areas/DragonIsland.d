@@ -1,40 +1,35 @@
-const string AREA_MUSIC_DRAGON_ISLAND_DEFAULT_DAY_ID = "INS_DAY_STD";
-const string AREA_MUSIC_DRAGON_ISLAND_DEFAULT_NIGHT_ID = "INS_DAY_STD";
-
-const string AREA_MUSIC_DRAGON_ISLAND_TEMPLE_DAY_ID = "TMP_Day_Std";
-const string AREA_MUSIC_DRAGON_ISLAND_TEMPLE_NIGHT_ID = "TMP_Day_Std";
-
-const string AREA_MUSIC_DRAGON_ISLAND_CATHEDRAL_DAY_ID = "CAT_Day_Std";
-const string AREA_MUSIC_DRAGON_ISLAND_CATHEDRAL_NIGHT_ID = "CAT_Day_Std";
-
+// Create broad regions first: the highest matching handle supplies music.
 var int IrdorathTempleArea;
 var int IrdorathCathedralArea;
 
-func void DragonIsland_UpdateAreaMusic()
-{
-	// Portal-room areas precede polygons so interiors override surrounding regions.
-	if (AM_IsHeroIn(IrdorathTempleArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_DRAGON_ISLAND_TEMPLE_DAY_ID,
-			AREA_MUSIC_DRAGON_ISLAND_TEMPLE_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(IrdorathCathedralArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_DRAGON_ISLAND_CATHEDRAL_DAY_ID,
-			AREA_MUSIC_DRAGON_ISLAND_CATHEDRAL_NIGHT_ID
-		);
-	}
-	else
-	{
-		AreaMusic_PlayDefault();
-	};
-};
-
 func void DragonIsland_CreateAreas()
 {
+	AM_Destroy(IrdorathTempleArea);
+	AM_Destroy(IrdorathCathedralArea);
+
+	AreaMusic_CreateDefault("NEWWORLD\\DRAGONISLAND.ZEN",
+		"INS_DAY_STD", "INS_DAY_STD",
+		"DEF_THR_STD", "DEF_THR_STD",
+		"DEF_FGT_STD", "DEF_FGT_STD");
+
+	IrdorathCathedralArea = AM_Create("NEWWORLD\\DRAGONISLAND.ZEN");
+
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL01");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL011");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0111");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0112");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0113");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0114");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL02");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL021");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL022");
+	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL03");
+	AM_SetMusic(IrdorathCathedralArea,
+		"CAT_DAY_STD", "CAT_DAY_STD",
+		"DEF_THR_STD", "DEF_THR_STD",
+		"DEF_FGT_STD", "DEF_FGT_STD");
+	AreaMusic_Register(IrdorathCathedralArea);
+
 	IrdorathTempleArea = AM_Create("NEWWORLD\\DRAGONISLAND.ZEN");
 
 	AM_AddPortalRoom(IrdorathTempleArea, "DRIUNDEAD01");
@@ -59,26 +54,9 @@ func void DragonIsland_CreateAreas()
 	AM_AddPortalRoom(IrdorathTempleArea, "DRIUNDEAD1001");
 	AM_AddPortalRoom(IrdorathTempleArea, "DRIUNDEAD1002");
 	AM_AddPortalRoom(IrdorathTempleArea, "DRIUNDEAD1003");
-	AM_Add(IrdorathTempleArea, DragonIsland_UpdateAreaMusic, DragonIsland_UpdateAreaMusic);
-
-	IrdorathCathedralArea = AM_Create("NEWWORLD\\DRAGONISLAND.ZEN");
-
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL01");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL011");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0111");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0112");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0113");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL0114");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL02");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL021");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL022");
-	AM_AddPortalRoom(IrdorathCathedralArea, "DRIFINAL03");
-	AM_Add(IrdorathCathedralArea, DragonIsland_UpdateAreaMusic, DragonIsland_UpdateAreaMusic);
-
-	AreaMusic_SetDefaultThemes(
-		AREA_MUSIC_DRAGON_ISLAND_DEFAULT_DAY_ID,
-		AREA_MUSIC_DRAGON_ISLAND_DEFAULT_NIGHT_ID
-	);
-	AM_SetProcessCallback(AreaMusic_PlayDefault);
-	AreaMusic_PlayDefault();
+	AM_SetMusic(IrdorathTempleArea,
+		"TMP_DAY_STD", "TMP_DAY_STD",
+		"DEF_THR_STD", "DEF_THR_STD",
+		"TMP_DAY_FGT", "TMP_DAY_FGT");
+	AreaMusic_Register(IrdorathTempleArea);
 };

@@ -1022,7 +1022,7 @@ INSTANCE ITAR_REVIVED_MIL_L (C_Item)
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_L;
 
 	visual 					=	"REV_GRDL.3ds";
-	visual_change 			=	"REV_ARMOR_MIL_L.asc";
+	visual_change 			=	"REV_ARMOR_GRD_L.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
@@ -1054,7 +1054,7 @@ INSTANCE ITAR_REVIVED_MIL_M (C_Item)
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_M;
 
 	visual 					=	"REV_GRDM.3ds";
-	visual_change 			=	"REV_ARMOR_MIL_M.asc";
+	visual_change 			=	"REV_ARMOR_GRD_M.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
@@ -1086,7 +1086,7 @@ INSTANCE ITAR_REVIVED_MIL_H (C_Item)
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_H;
  
 	visual 					=	"REV_GRDH.3ds";
-	visual_change 			=	"REV_ARMOR_MIL_H.asc";
+	visual_change 			=	"REV_ARMOR_GRD_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
@@ -1118,7 +1118,7 @@ INSTANCE ITAR_REVIVED_MIL_S (C_Item)
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_S;
 
 	visual 					=	"REV_GRDS.3ds";
-	visual_change 			=	"REV_ARMOR_MIL_S.asc";
+	visual_change 			=	"REV_ARMOR_GRD_S.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
@@ -1247,7 +1247,7 @@ INSTANCE ITAR_REVIVED_MIL_L_02 (C_Item)
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_L;
 
 	visual 					=	"REV_GRDL_02.3ds";
-	visual_change 			=	"REV_ARMOR_MIL_L_02.asc";
+	visual_change 			=	"REV_ARMOR_GRD_L_02.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
@@ -1279,7 +1279,7 @@ INSTANCE ITAR_REVIVED_MIL_M_02 (C_Item)
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_M;
 
 	visual 					=	"REV_GRDM_02.3ds";
-	visual_change 			=	"REV_ARMOR_MIL_M_02.asc";
+	visual_change 			=	"REV_ARMOR_GRD_M_02.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	
@@ -1311,7 +1311,7 @@ INSTANCE ITAR_REVIVED_MIL_H_02 (C_Item)
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_MIL_H;
  
 	visual 					=	"REV_GRDH_02.3ds";
-	visual_change 			=	"REV_ARMOR_MIL_H_02.asc";
+	visual_change 			=	"REV_ARMOR_GRD_H_02.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	

@@ -1,51 +1,4 @@
-const string AREA_MUSIC_OLDWORLD_DEFAULT_DAY_ID = "OWD_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_DEFAULT_NIGHT_ID = "OWD_NGT_STD";
-
-const string AREA_MUSIC_OLDWORLD_OLDCAMP_DAY_ID = "OC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_OLDCAMP_NIGHT_ID = "OC_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_OLDCAMP_CASTLE_DAY_ID = "OCC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_OLDCAMP_CASTLE_NIGHT_ID = "OCC_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_NEW_CAMP_DAY_ID = "NCI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_NEW_CAMP_NIGHT_ID = "NCI_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_DAY_ID = "FOR_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_NIGHT_ID = "FOR_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_TEMPLE_DAY_ID = "BMI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_STONE_FORTRESS_TEMPLE_NIGHT_ID = "BMI_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_PSICAMP_DAY_ID = "SWA_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_PSICAMP_NIGHT_ID = "SWA_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_DAY_ID = "PSI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_NIGHT_ID = "PSI_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_SILVESTRO_MINE_DAY_ID = "SIL_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_SILVESTRO_MINE_NIGHT_ID = "SIL_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_SUNKEN_XARDAS_TOWER_DAY_ID = "DT_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_SUNKEN_XARDAS_TOWER_NIGHT_ID = "DT_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_DAY_ID = "DT_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_NIGHT_ID = "DT_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_FOG_TOWER_DAY_ID = "BMI_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_FOG_TOWER_NIGHT_ID = "BMI_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_DAY_ID = "BAN_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_NIGHT_ID = "BAN_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_ORC_TERRITORY_DAY_ID = "ORC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_ORC_TERRITORY_NIGHT_ID = "ORC_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_SEA_MONASTERY_DAY_ID = "SEA_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_SEA_MONASTERY_NIGHT_ID = "SEA_DAY_STD";
-
-const string AREA_MUSIC_OLDWORLD_VOLCANO_DAY_ID = "TRC_DAY_STD";
-const string AREA_MUSIC_OLDWORLD_VOLCANO_NIGHT_ID = "TRC_DAY_STD";
-
+// Create broad regions first: the highest matching handle supplies music.
 var int OldCampArea;
 var int OldCampCastleArea;
 var int NewCampArea;
@@ -62,293 +15,28 @@ var int OrcTerritoryArea;
 var int SeaMonasteryArea;
 var int VolcanoArea;
 
-func void OldWorld_UpdateAreaMusic()
-{
-	// Portal-room areas precede polygons so interiors override surrounding regions.
-	if (AM_IsHeroIn(SilvestroMineArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_SILVESTRO_MINE_DAY_ID,
-			AREA_MUSIC_OLDWORLD_SILVESTRO_MINE_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(SunkenXardasTowerArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_SUNKEN_XARDAS_TOWER_DAY_ID,
-			AREA_MUSIC_OLDWORLD_SUNKEN_XARDAS_TOWER_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(OldXardasTowerArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_DAY_ID,
-			AREA_MUSIC_OLDWORLD_OLD_XARDAS_TOWER_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(FogTowerArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_FOG_TOWER_DAY_ID,
-			AREA_MUSIC_OLDWORLD_FOG_TOWER_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(GoblinCaveArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_DAY_ID,
-			AREA_MUSIC_OLDWORLD_GOBLIN_CAVE_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(StoneFortressTempleArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_STONE_FORTRESS_TEMPLE_DAY_ID,
-			AREA_MUSIC_OLDWORLD_STONE_FORTRESS_TEMPLE_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(StoneFortressArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_STONE_FORTRESS_DAY_ID,
-			AREA_MUSIC_OLDWORLD_STONE_FORTRESS_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(OldCampCastleArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_OLDCAMP_CASTLE_DAY_ID,
-			AREA_MUSIC_OLDWORLD_OLDCAMP_CASTLE_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(PsiCampTempleArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_DAY_ID,
-			AREA_MUSIC_OLDWORLD_PSICAMP_TEMPLE_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(SeaMonasteryArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_SEA_MONASTERY_DAY_ID,
-			AREA_MUSIC_OLDWORLD_SEA_MONASTERY_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(VolcanoArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_VOLCANO_DAY_ID,
-			AREA_MUSIC_OLDWORLD_VOLCANO_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(OldCampArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_OLDCAMP_DAY_ID,
-			AREA_MUSIC_OLDWORLD_OLDCAMP_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(NewCampArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_NEW_CAMP_DAY_ID,
-			AREA_MUSIC_OLDWORLD_NEW_CAMP_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(PsiCampArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_PSICAMP_DAY_ID,
-			AREA_MUSIC_OLDWORLD_PSICAMP_NIGHT_ID
-		);
-	}
-	else if (AM_IsHeroIn(OrcTerritoryArea))
-	{
-		AreaMusic_PlayDayNight(
-			AREA_MUSIC_OLDWORLD_ORC_TERRITORY_DAY_ID,
-			AREA_MUSIC_OLDWORLD_ORC_TERRITORY_NIGHT_ID
-		);
-	}
-	else
-	{
-		AreaMusic_PlayDefault();
-	};
-};
-
 func void OldWorld_CreateAreas()
 {
-	if (OldCampArea != 0)
-	{
-		AM_Destroy(OldCampArea);
-	};
+	AM_Destroy(OldCampArea);
+	AM_Destroy(OldCampCastleArea);
+	AM_Destroy(NewCampArea);
+	AM_Destroy(StoneFortressArea);
+	AM_Destroy(StoneFortressTempleArea);
+	AM_Destroy(PsiCampArea);
+	AM_Destroy(PsiCampTempleArea);
+	AM_Destroy(SilvestroMineArea);
+	AM_Destroy(SunkenXardasTowerArea);
+	AM_Destroy(OldXardasTowerArea);
+	AM_Destroy(FogTowerArea);
+	AM_Destroy(GoblinCaveArea);
+	AM_Destroy(OrcTerritoryArea);
+	AM_Destroy(SeaMonasteryArea);
+	AM_Destroy(VolcanoArea);
 
-	if (OldCampCastleArea != 0)
-	{
-		AM_Destroy(OldCampCastleArea);
-	};
-
-	if (NewCampArea != 0)
-	{
-		AM_Destroy(NewCampArea);
-	};
-
-	if (StoneFortressArea != 0)
-	{
-		AM_Destroy(StoneFortressArea);
-	};
-
-	if (StoneFortressTempleArea != 0)
-	{
-		AM_Destroy(StoneFortressTempleArea);
-	};
-
-	if (PsiCampArea != 0)
-	{
-		AM_Destroy(PsiCampArea);
-	};
-
-	if (PsiCampTempleArea != 0)
-	{
-		AM_Destroy(PsiCampTempleArea);
-	};
-
-	if (SilvestroMineArea != 0)
-	{
-		AM_Destroy(SilvestroMineArea);
-	};
-
-	if (SunkenXardasTowerArea != 0)
-	{
-		AM_Destroy(SunkenXardasTowerArea);
-	};
-
-	if (OldXardasTowerArea != 0)
-	{
-		AM_Destroy(OldXardasTowerArea);
-	};
-
-	if (FogTowerArea != 0)
-	{
-		AM_Destroy(FogTowerArea);
-	};
-
-	if (GoblinCaveArea != 0)
-	{
-		AM_Destroy(GoblinCaveArea);
-	};
-
-	if (OrcTerritoryArea != 0)
-	{
-		AM_Destroy(OrcTerritoryArea);
-	};
-
-	if (SeaMonasteryArea != 0)
-	{
-		AM_Destroy(SeaMonasteryArea);
-	};
-
-	if (VolcanoArea != 0)
-	{
-		AM_Destroy(VolcanoArea);
-	};
-
-	SilvestroMineArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPortalRoom(SilvestroMineArea, "SILVESTRO");
-	AM_AddPortalRoom(SilvestroMineArea, "CAVE");
-	AM_AddPortalRoom(SilvestroMineArea, "KIEDYCZAS");
-	AM_AddPortalRoom(SilvestroMineArea, "QUEEN");
-	AM_Add(SilvestroMineArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
-
-	SunkenXardasTowerArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPortalRoom(SunkenXardasTowerArea, "UTEMP01");
-	AM_Add(SunkenXardasTowerArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
-
-	OldXardasTowerArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER01");
-	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER02");
-	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER03");
-	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER04");
-	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER05");
-	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER06");
-	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER07");
-	AM_AddPoint(OldXardasTowerArea, -11605.8, -34644.5);
-	AM_AddPoint(OldXardasTowerArea, -11477.9, -34043.1);
-	AM_AddPoint(OldXardasTowerArea, -11808.5, -33521.8);
-	AM_AddPoint(OldXardasTowerArea, -11283.5, -33181.9);
-	AM_AddPoint(OldXardasTowerArea, -10989.8, -34088.6);
-	AM_AddPoint(OldXardasTowerArea, -11058.8, -34829.9);
-	AM_SetMinHeight(OldXardasTowerArea, 3603.06);
-	AM_Add(OldXardasTowerArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
-
-	FogTowerArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPortalRoom(FogTowerArea, "ND01");
-	AM_AddPortalRoom(FogTowerArea, "ND02");
-	AM_AddPortalRoom(FogTowerArea, "ND03");
-	AM_AddPortalRoom(FogTowerArea, "ND04");
-	AM_Add(FogTowerArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
-
-	GoblinCaveArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPortalRoom(GoblinCaveArea, "GOBBO01");
-	AM_Add(GoblinCaveArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
-
-	StoneFortressTempleArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPortalRoom(StoneFortressTempleArea, "BDTMINE01");
-	AM_AddPortalRoom(StoneFortressTempleArea, "TEMPLE");
-	AM_Add(StoneFortressTempleArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
-
-	StoneFortressArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPoint(StoneFortressArea, 17256.2, -32262.1);
-	AM_AddPoint(StoneFortressArea, 15341.6, -34339.0);
-	AM_AddPoint(StoneFortressArea, 15978.7, -38779.8);
-	AM_AddPoint(StoneFortressArea, 17474.4, -40331.5);
-	AM_AddPoint(StoneFortressArea, 18843.4, -40564.3);
-	AM_AddPoint(StoneFortressArea, 25124.1, -39691.6);
-	AM_AddPoint(StoneFortressArea, 24354.5, -33973.6);
-	AM_AddPoint(StoneFortressArea, 21916.1, -31150.2);
-	AM_AddPoint(StoneFortressArea, 18265.1, -31981.6);
-	AM_AddPortalRoom(StoneFortressArea, "BFG2");
-	AM_AddPortalRoom(StoneFortressArea, "GRD1");
-	AM_AddPortalRoom(StoneFortressArea, "BF1");
-	AM_AddPortalRoom(StoneFortressArea, "BFK");
-	AM_AddPortalRoom(StoneFortressArea, "BF2");
-	AM_AddPortalRoom(StoneFortressArea, "BFS");
-	AM_AddPortalRoom(StoneFortressArea, "BFM");
-	AM_AddPortalRoom(StoneFortressArea, "BFT");
-	AM_AddPortalRoom(StoneFortressArea, "BFP2");
-	AM_AddPortalRoom(StoneFortressArea, "BFP");
-	AM_Add(StoneFortressArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
-
-	NewCampArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
-
-	AM_AddPoint(NewCampArea, -34742.0, -19185.7);
-	AM_AddPoint(NewCampArea, -40899.0, -15711.2);
-	AM_AddPoint(NewCampArea, -43096.4, -13344.0);
-	AM_AddPoint(NewCampArea, -43833.3, -9394.23);
-	AM_AddPoint(NewCampArea, -43900.1, -6103.31);
-	AM_AddPoint(NewCampArea, -45906.3, -4303.39);
-	AM_AddPoint(NewCampArea, -50790.7, -1513.01);
-	AM_AddPoint(NewCampArea, -49762.3, 5485.58);
-	AM_AddPoint(NewCampArea, -44337.5, 5372.22);
-	AM_AddPoint(NewCampArea, -39088.7, 6965.0);
-	AM_AddPoint(NewCampArea, -36499.3, 10315.5);
-	AM_AddPoint(NewCampArea, -37613.9, 12156.1);
-	AM_AddPoint(NewCampArea, -49400.4, 27885.2);
-	AM_AddPoint(NewCampArea, -68010.4, 26392.0);
-	AM_AddPoint(NewCampArea, -70401.9, 17990.9);
-	AM_AddPoint(NewCampArea, -67299.8, 6100.64);
-	AM_AddPoint(NewCampArea, -67468.0, -6002.65);
-	AM_AddPoint(NewCampArea, -54464.2, -22011.1);
-	AM_AddPoint(NewCampArea, -41406.1, -24532.8);
-	AM_SetWeather(NewCampArea, 2);
-	AM_Add(NewCampArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AreaMusic_CreateDefault("VALLEYOFMINES\\OLDWORLD.ZEN",
+		"OWD_DAY_STD", "OWD_NGT_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
 
 	OrcTerritoryArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
 
@@ -400,37 +88,59 @@ func void OldWorld_CreateAreas()
 	AM_AddPoint(OrcTerritoryArea, 11891.4, 29347.0);
 	AM_AddPoint(OrcTerritoryArea, 11163.9, 22763.5);
 	AM_AddPoint(OrcTerritoryArea, 11932.4, 17680.6);
-	AM_Add(OrcTerritoryArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AM_SetMusic(OrcTerritoryArea,
+		"ORC_DAY_STD", "ORC_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(OrcTerritoryArea);
 
-	SeaMonasteryArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+	PsiCampArea = AM_Create("ValleyOfMines\\OLDWORLD.ZEN");
 
-	AM_AddPoint(SeaMonasteryArea, 20905.0, 19149.5);
-	AM_AddPoint(SeaMonasteryArea, 21489.6, 19481.5);
-	AM_AddPoint(SeaMonasteryArea, 22158.6, 19973.9);
-	AM_AddPoint(SeaMonasteryArea, 26190.1, 25067.2);
-	AM_AddPoint(SeaMonasteryArea, 27609.9, 27700.0);
-	AM_AddPoint(SeaMonasteryArea, 27931.1, 31307.1);
-	AM_AddPoint(SeaMonasteryArea, 19205.5, 34710.6);
-	AM_AddPoint(SeaMonasteryArea, 12433.4, 32107.8);
-	AM_AddPoint(SeaMonasteryArea, 15111.4, 20573.2);
-	AM_AddPoint(SeaMonasteryArea, 15710.7, 20513.3);
-	AM_AddPoint(SeaMonasteryArea, 17275.2, 20469.3);
-	AM_AddPoint(SeaMonasteryArea, 18522.5, 20308.2);
-	AM_SetMinHeight(SeaMonasteryArea, -400.0);
-	AM_SetMaxHeight(SeaMonasteryArea, 6360.0);
-	AM_Add(SeaMonasteryArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AM_AddPoint(PsiCampArea, 44248.8, -4768.57);
+	AM_AddPoint(PsiCampArea, 42330.6, -6256.46);
+	AM_AddPoint(PsiCampArea, 42059.1, -6507.81);
+	AM_AddPoint(PsiCampArea, 40033.4, -16065.0);
+	AM_AddPoint(PsiCampArea, 40130.6, -40790.8);
+	AM_AddPoint(PsiCampArea, 77034.1, -34464.2);
+	AM_AddPoint(PsiCampArea, 65559.9, 2966.63);
+	AM_AddPoint(PsiCampArea, 50297.5, 4759.91);
+	AM_AddPoint(PsiCampArea, 43111.2, 4913.57);
+	AM_AddPoint(PsiCampArea, 40128.4, 433.446);
+	AM_SetMaxHeight(PsiCampArea, -1500.0);
+	AM_SetWeather(PsiCampArea, 1);
+	AM_SetMusic(PsiCampArea,
+		"SWA_DAY_STD", "SWA_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(PsiCampArea);
 
-	VolcanoArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+	NewCampArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
 
-	AM_AddPoint(VolcanoArea, -15750.8, 32134.9);
-	AM_AddPoint(VolcanoArea, -14650.4, 34238.5);
-	AM_AddPoint(VolcanoArea, -15058.9, 35976.4);
-	AM_AddPoint(VolcanoArea, -16683.0, 38134.7);
-	AM_AddPoint(VolcanoArea, -19865.5, 37135.3);
-	AM_AddPoint(VolcanoArea, -21567.5, 34875.3);
-	AM_AddPoint(VolcanoArea, -21135.4, 32077.8);
-	AM_AddPoint(VolcanoArea, -20803.7, 27594.5);
-	AM_Add(VolcanoArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AM_AddPoint(NewCampArea, -34742.0, -19185.7);
+	AM_AddPoint(NewCampArea, -40899.0, -15711.2);
+	AM_AddPoint(NewCampArea, -43096.4, -13344.0);
+	AM_AddPoint(NewCampArea, -43833.3, -9394.23);
+	AM_AddPoint(NewCampArea, -43900.1, -6103.31);
+	AM_AddPoint(NewCampArea, -45906.3, -4303.39);
+	AM_AddPoint(NewCampArea, -50790.7, -1513.01);
+	AM_AddPoint(NewCampArea, -49762.3, 5485.58);
+	AM_AddPoint(NewCampArea, -44337.5, 5372.22);
+	AM_AddPoint(NewCampArea, -39088.7, 6965.0);
+	AM_AddPoint(NewCampArea, -36499.3, 10315.5);
+	AM_AddPoint(NewCampArea, -37613.9, 12156.1);
+	AM_AddPoint(NewCampArea, -49400.4, 27885.2);
+	AM_AddPoint(NewCampArea, -68010.4, 26392.0);
+	AM_AddPoint(NewCampArea, -70401.9, 17990.9);
+	AM_AddPoint(NewCampArea, -67299.8, 6100.64);
+	AM_AddPoint(NewCampArea, -67468.0, -6002.65);
+	AM_AddPoint(NewCampArea, -54464.2, -22011.1);
+	AM_AddPoint(NewCampArea, -41406.1, -24532.8);
+	AM_SetWeather(NewCampArea, 2);
+	AM_SetMusic(NewCampArea,
+		"NCI_DAY_STD", "NCI_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(NewCampArea);
 
 	OldCampArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
 
@@ -495,7 +205,71 @@ func void OldWorld_CreateAreas()
 	AM_AddPoint(OldCampArea, -8006.83, 4832.97);
 	AM_AddPoint(OldCampArea, -8061.12, 5186.26);
 	AM_AddPoint(OldCampArea, -7969.1, 5840.28);
-	AM_Add(OldCampArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AM_SetMusic(OldCampArea,
+		"OC_DAY_STD", "OC_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(OldCampArea);
+
+	VolcanoArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPoint(VolcanoArea, -15750.8, 32134.9);
+	AM_AddPoint(VolcanoArea, -14650.4, 34238.5);
+	AM_AddPoint(VolcanoArea, -15058.9, 35976.4);
+	AM_AddPoint(VolcanoArea, -16683.0, 38134.7);
+	AM_AddPoint(VolcanoArea, -19865.5, 37135.3);
+	AM_AddPoint(VolcanoArea, -21567.5, 34875.3);
+	AM_AddPoint(VolcanoArea, -21135.4, 32077.8);
+	AM_AddPoint(VolcanoArea, -20803.7, 27594.5);
+	AM_SetMusic(VolcanoArea,
+		"TRC_DAY_STD", "TRC_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"TRC_DAY_FGT", "TRC_DAY_FGT");
+	AreaMusic_Register(VolcanoArea);
+
+	SeaMonasteryArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPoint(SeaMonasteryArea, 20905.0, 19149.5);
+	AM_AddPoint(SeaMonasteryArea, 21489.6, 19481.5);
+	AM_AddPoint(SeaMonasteryArea, 22158.6, 19973.9);
+	AM_AddPoint(SeaMonasteryArea, 26190.1, 25067.2);
+	AM_AddPoint(SeaMonasteryArea, 27609.9, 27700.0);
+	AM_AddPoint(SeaMonasteryArea, 27931.1, 31307.1);
+	AM_AddPoint(SeaMonasteryArea, 19205.5, 34710.6);
+	AM_AddPoint(SeaMonasteryArea, 12433.4, 32107.8);
+	AM_AddPoint(SeaMonasteryArea, 15111.4, 20573.2);
+	AM_AddPoint(SeaMonasteryArea, 15710.7, 20513.3);
+	AM_AddPoint(SeaMonasteryArea, 17275.2, 20469.3);
+	AM_AddPoint(SeaMonasteryArea, 18522.5, 20308.2);
+	AM_SetMinHeight(SeaMonasteryArea, -400.0);
+	AM_SetMaxHeight(SeaMonasteryArea, 6360.0);
+	AM_SetMusic(SeaMonasteryArea,
+		"SEA_DAY_STD", "SEA_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"SEA_DAY_FGT", "SEA_DAY_FGT");
+	AreaMusic_Register(SeaMonasteryArea);
+
+	PsiCampTempleArea = AM_Create("ValleyOfMines\\OLDWORLD.ZEN");
+
+	AM_AddPoint(PsiCampTempleArea, 50044.5, -465.232);
+	AM_AddPoint(PsiCampTempleArea, 51700.9, -1097.84);
+	AM_AddPoint(PsiCampTempleArea, 52099.2, -1999.21);
+	AM_AddPoint(PsiCampTempleArea, 51399.2, -3598.88);
+	AM_AddPoint(PsiCampTempleArea, 50849.9, -4501.98);
+	AM_AddPoint(PsiCampTempleArea, 48543.7, -6539.4);
+	AM_AddPoint(PsiCampTempleArea, 47660.4, -6702.83);
+	AM_AddPoint(PsiCampTempleArea, 45949.3, -6451.57);
+	AM_AddPoint(PsiCampTempleArea, 45430.4, -4050.65);
+	AM_AddPoint(PsiCampTempleArea, 45138.2, -4366.96);
+	AM_AddPoint(PsiCampTempleArea, 45580.3, -696.749);
+	AM_AddPortalRoom(PsiCampTempleArea, "PSIT01");
+	AM_SetMaxHeight(PsiCampTempleArea, -1500.0);
+	AM_SetWeather(PsiCampTempleArea, 1);
+	AM_SetMusic(PsiCampTempleArea,
+		"PSI_DAY_STD", "PSI_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"PSI_DAY_FGT", "PSI_DAY_FGT");
+	AreaMusic_Register(PsiCampTempleArea);
 
 	OldCampCastleArea = AM_Create("ValleyOfMines\\OLDWORLD.ZEN");
 
@@ -546,46 +320,110 @@ func void OldWorld_CreateAreas()
 	AM_AddPoint(OldCampCastleArea, -4112.69, 1565.69);
 	AM_AddPoint(OldCampCastleArea, -4212.71, 1754.87);
 	AM_AddPoint(OldCampCastleArea, -3581.84, 2037.38);
-	AM_Add(OldCampCastleArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AM_SetMusic(OldCampCastleArea,
+		"OCC_DAY_STD", "OCC_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(OldCampCastleArea);
 
-	PsiCampArea = AM_Create("ValleyOfMines\\OLDWORLD.ZEN");
+	StoneFortressArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
 
-	AM_AddPoint(PsiCampArea, 44248.8, -4768.57);
-	AM_AddPoint(PsiCampArea, 42330.6, -6256.46);
-	AM_AddPoint(PsiCampArea, 42059.1, -6507.81);
-	AM_AddPoint(PsiCampArea, 40033.4, -16065.0);
-	AM_AddPoint(PsiCampArea, 40130.6, -40790.8);
-	AM_AddPoint(PsiCampArea, 77034.1, -34464.2);
-	AM_AddPoint(PsiCampArea, 65559.9, 2966.63);
-	AM_AddPoint(PsiCampArea, 50297.5, 4759.91);
-	AM_AddPoint(PsiCampArea, 43111.2, 4913.57);
-	AM_AddPoint(PsiCampArea, 40128.4, 433.446);
-	AM_SetMaxHeight(PsiCampArea, -1500.0);
-	AM_SetWeather(PsiCampArea, 1);
-	AM_Add(PsiCampArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AM_AddPoint(StoneFortressArea, 17256.2, -32262.1);
+	AM_AddPoint(StoneFortressArea, 15341.6, -34339.0);
+	AM_AddPoint(StoneFortressArea, 15978.7, -38779.8);
+	AM_AddPoint(StoneFortressArea, 17474.4, -40331.5);
+	AM_AddPoint(StoneFortressArea, 18843.4, -40564.3);
+	AM_AddPoint(StoneFortressArea, 25124.1, -39691.6);
+	AM_AddPoint(StoneFortressArea, 24354.5, -33973.6);
+	AM_AddPoint(StoneFortressArea, 21916.1, -31150.2);
+	AM_AddPoint(StoneFortressArea, 18265.1, -31981.6);
+	AM_AddPortalRoom(StoneFortressArea, "BFG2");
+	AM_AddPortalRoom(StoneFortressArea, "GRD1");
+	AM_AddPortalRoom(StoneFortressArea, "BF1");
+	AM_AddPortalRoom(StoneFortressArea, "BFK");
+	AM_AddPortalRoom(StoneFortressArea, "BF2");
+	AM_AddPortalRoom(StoneFortressArea, "BFS");
+	AM_AddPortalRoom(StoneFortressArea, "BFM");
+	AM_AddPortalRoom(StoneFortressArea, "BFT");
+	AM_AddPortalRoom(StoneFortressArea, "BFP2");
+	AM_AddPortalRoom(StoneFortressArea, "BFP");
+	AM_SetMusic(StoneFortressArea,
+		"FOR_DAY_STD", "FOR_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(StoneFortressArea);
 
-	PsiCampTempleArea = AM_Create("ValleyOfMines\\OLDWORLD.ZEN");
+	StoneFortressTempleArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
 
-	AM_AddPoint(PsiCampTempleArea, 50044.5, -465.232);
-	AM_AddPoint(PsiCampTempleArea, 51700.9, -1097.84);
-	AM_AddPoint(PsiCampTempleArea, 52099.2, -1999.21);
-	AM_AddPoint(PsiCampTempleArea, 51399.2, -3598.88);
-	AM_AddPoint(PsiCampTempleArea, 50849.9, -4501.98);
-	AM_AddPoint(PsiCampTempleArea, 48543.7, -6539.4);
-	AM_AddPoint(PsiCampTempleArea, 47660.4, -6702.83);
-	AM_AddPoint(PsiCampTempleArea, 45949.3, -6451.57);
-	AM_AddPoint(PsiCampTempleArea, 45430.4, -4050.65);
-	AM_AddPoint(PsiCampTempleArea, 45138.2, -4366.96);
-	AM_AddPoint(PsiCampTempleArea, 45580.3, -696.749);
-	AM_AddPortalRoom(PsiCampTempleArea, "PSIT01");
-	AM_SetMaxHeight(PsiCampTempleArea, -1500.0);
-	AM_SetWeather(PsiCampArea, 1);
-	AM_Add(PsiCampTempleArea, OldWorld_UpdateAreaMusic, OldWorld_UpdateAreaMusic);
+	AM_AddPortalRoom(StoneFortressTempleArea, "BDTMINE01");
+	AM_AddPortalRoom(StoneFortressTempleArea, "TEMPLE");
+	AM_SetMusic(StoneFortressTempleArea,
+		"BMI_DAY_STD", "BMI_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(StoneFortressTempleArea);
 
-	AreaMusic_SetDefaultThemes(
-		AREA_MUSIC_OLDWORLD_DEFAULT_DAY_ID,
-		AREA_MUSIC_OLDWORLD_DEFAULT_NIGHT_ID
-	);
-	AM_SetProcessCallback(OldWorld_UpdateAreaMusic);
-	OldWorld_UpdateAreaMusic();
+	GoblinCaveArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPortalRoom(GoblinCaveArea, "GOBBO01");
+	AM_SetMusic(GoblinCaveArea,
+		"BAN_DAY_STD", "BAN_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"BAN_FGT_STD", "BAN_FGT_STD");
+	AreaMusic_Register(GoblinCaveArea);
+
+	FogTowerArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPortalRoom(FogTowerArea, "ND01");
+	AM_AddPortalRoom(FogTowerArea, "ND02");
+	AM_AddPortalRoom(FogTowerArea, "ND03");
+	AM_AddPortalRoom(FogTowerArea, "ND04");
+	AM_SetMusic(FogTowerArea,
+		"BMI_DAY_STD", "BMI_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(FogTowerArea);
+
+	OldXardasTowerArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER01");
+	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER02");
+	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER03");
+	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER04");
+	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER05");
+	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER06");
+	AM_AddPortalRoom(OldXardasTowerArea, "DTOWER07");
+	AM_AddPoint(OldXardasTowerArea, -11605.8, -34644.5);
+	AM_AddPoint(OldXardasTowerArea, -11477.9, -34043.1);
+	AM_AddPoint(OldXardasTowerArea, -11808.5, -33521.8);
+	AM_AddPoint(OldXardasTowerArea, -11283.5, -33181.9);
+	AM_AddPoint(OldXardasTowerArea, -10989.8, -34088.6);
+	AM_AddPoint(OldXardasTowerArea, -11058.8, -34829.9);
+	AM_SetMinHeight(OldXardasTowerArea, 3603.06);
+	AM_SetMusic(OldXardasTowerArea,
+		"DT_DAY_STD", "DT_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(OldXardasTowerArea);
+
+	SunkenXardasTowerArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPortalRoom(SunkenXardasTowerArea, "UTEMP01");
+	AM_SetMusic(SunkenXardasTowerArea,
+		"DT_DAY_STD", "DT_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(SunkenXardasTowerArea);
+
+	SilvestroMineArea = AM_Create("VALLEYOFMINES\\OLDWORLD.ZEN");
+
+	AM_AddPortalRoom(SilvestroMineArea, "SILVESTRO");
+	AM_AddPortalRoom(SilvestroMineArea, "CAVE");
+	AM_AddPortalRoom(SilvestroMineArea, "KIEDYCZAS");
+	AM_AddPortalRoom(SilvestroMineArea, "QUEEN");
+	AM_SetMusic(SilvestroMineArea,
+		"SIL_DAY_STD", "SIL_DAY_STD",
+		"OWD_DAY_THR", "OWD_DAY_THR",
+		"OWD_DAY_FGT", "OWD_DAY_FGT");
+	AreaMusic_Register(SilvestroMineArea);
 };

@@ -197,9 +197,13 @@ INSTANCE SUN_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "SunCircle_Night.mp3";	
 INSTANCE FRI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Graveyard.mp3";			};
 
 // Passage
-INSTANCE OWP_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ValleyPass.mp3";			};
-INSTANCE OWP_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "ValleyPass_Threat.mp3";	};
-INSTANCE OWP_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ValleyPass_Fight.mp3";	};
+INSTANCE PAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ValleyPass.mp3";			};
+INSTANCE PAS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "ValleyPass_Threat.mp3";	};
+INSTANCE PAS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ValleyPass_Fight.mp3";	};
+
+// Hole
+INSTANCE HOL_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Hole.mp3";			};
+INSTANCE HOL_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ValleyPass_Fight.mp3";	};
 
 
 
@@ -225,7 +229,7 @@ INSTANCE ORC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OrcTerritory.mp3";	vol
 
 
 // Old Camp
-INSTANCE OC_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "OldCamp_Day.mp3";		};
+INSTANCE OC_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "OldCamp.mp3";		};
 
 
 // Psi Camp / Swamp
@@ -234,7 +238,7 @@ INSTANCE SWA_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Swamp.mp3";		};
 
 
 // Old Camp Castle
-INSTANCE OCC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldCamp_Castle_Day.mp3";	};
+INSTANCE OCC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldCamp_Castle.mp3";	};
 
 
 
