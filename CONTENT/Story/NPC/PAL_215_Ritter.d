@@ -34,5 +34,5 @@ FUNC VOID Rtn_Start_215 ()
 {
 	TA_Practice_Sword	(07,08,19,01,"NW_CITY_TRAIN_01");
 	TA_Smalltalk		(19,01,23,07,"NW_CITY_UPTOWN_HUT_03_01");
-    TA_Sleep			(23,07,07,08,"NW_CITY_LEOMAR_BED_03");	
+    TA_Sleep			(23,07,07,08,"NW_CITY_LEOMAR_01");
 };

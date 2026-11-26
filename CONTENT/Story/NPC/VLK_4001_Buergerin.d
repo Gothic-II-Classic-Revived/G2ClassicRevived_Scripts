@@ -38,6 +38,6 @@ FUNC VOID Rtn_Start_4001 ()
     TA_Cook_Stove		(08,00,10,00,"NW_CITY_REICH03_COOK");
     TA_Smalltalk		(10,00,14,00,"NW_CITY_UPTOWN_PATH_15_B");
     TA_Sweep_FP			(14,00,15,30,"NW_CITY_UPTOWN_HUT_02_IN");
-    TA_Cook_Stove		(15,30,17,00,"NW_CITY_REICH03_COOK");
-    TA_Smalltalk		(17,00,21,45,"NW_CITY_UPTOWN_PATH_15_B");
+    TA_Cook_Stove		(15,30,19,00,"NW_CITY_REICH03_COOK");
+    TA_Smalltalk		(19,00,21,45,"NW_CITY_UPTOWN_PATH_15_B");
 };

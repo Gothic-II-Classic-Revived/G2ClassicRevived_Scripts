@@ -34,6 +34,6 @@ instance BAU_903_Bodo (Npc_Default)
 FUNC VOID Rtn_Start_903 ()
 {	
 	TA_Smalltalk		(07,45,21,45,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_02");
-    TA_Sit_Bench		(21,45,07,45,"NW_BIGFARM_PATH_03");
+    TA_Sit_Chair		(21,45,07,45,"NW_BIGFARM_STABLE_01");
 };
 

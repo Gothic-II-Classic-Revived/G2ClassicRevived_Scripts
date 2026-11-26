@@ -55,8 +55,8 @@ FUNC VOID Rtn_XardasWeg_4()
 
 FUNC VOID Rtn_XardasTowerClear_4()
 {	
-	TA_Sit_Chair		(08,00,23,00,"NW_XARDAS_TOWER_IN1_02_002");
-    TA_Sit_Chair		(23,00,08,00,"NW_XARDAS_TOWER_IN1_02_002");
+	TA_Sit_Throne		(08,00,23,00,"NW_XARDAS_TOWER_IN1_02_002");
+    TA_Sit_Throne		(23,00,08,00,"NW_XARDAS_TOWER_IN1_02_002");
 };
 
 FUNC VOID Rtn_WaitForPlayer_4()//Übergang KAPITEL 2-3 schickt den Spieler zu Xardas 
@@ -73,8 +73,8 @@ FUNC VOID Rtn_WaitForShip_4()
 
 FUNC VOID Rtn_ShipOff_4()
 {	
-	TA_Sit_Chair		(08,00,23,00,"NW_XARDAS_TOWER_IN1_02_002");
-    TA_Sit_Chair		(23,00,08,00,"NW_XARDAS_TOWER_IN1_02_002");
+	TA_Sit_Throne		(08,00,23,00,"NW_XARDAS_TOWER_IN1_02_002");
+    TA_Sit_Throne		(23,00,08,00,"NW_XARDAS_TOWER_IN1_02_002");
 };
 
 FUNC VOID Rtn_Ship_4()

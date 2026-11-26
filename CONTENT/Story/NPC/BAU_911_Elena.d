@@ -33,7 +33,8 @@ instance BAU_911_Elena (Npc_Default)
 
 FUNC VOID Rtn_Start_911 ()
 {	
-	TA_Stand_ArmsCrossed (07,30,20,30,"NW_BIGFARM_STABLE_OUT_04");
-    TA_Sit_Throne		 (20,30,07,30,"NW_BIGFARM_HOUSE_UP1_SESSEL");
+	TA_Stand_ArmsCrossed (07,30,20,30,"NW_BIGFARM_PATH_03A");
+    TA_Sit_Chair		 (20,30,22,00,"NW_BIGFARM_HOUSE_19");
+    TA_Sit_Throne		 (22,00,07,30,"NW_BIGFARM_HOUSE_UP1_SESSEL");
 };
 

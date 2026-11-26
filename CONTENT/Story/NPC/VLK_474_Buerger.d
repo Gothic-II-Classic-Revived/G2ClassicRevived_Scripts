@@ -32,6 +32,6 @@ instance VLK_474_Buerger (Npc_Default)
 
 FUNC VOID Rtn_Start_474()
 {	
-	TA_Sit_Bench	(08,00,22,00,"NW_CITY_HABOUR_BENCH_02");
-    TA_Sit_Bench	(22,00,08,00,"NW_CITY_HABOUR_BENCH_02");
+	TA_Sit_Bench	(08,00,22,00,"NW_CITY_HABOUR_BENCH_01");
+    TA_Sit_Bench	(22,00,08,00,"NW_CITY_HABOUR_BENCH_01");
 };
