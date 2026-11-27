@@ -648,6 +648,8 @@ var int		Canthar_Sperre;
 var int 	Canthar_WiederRaus;
 var int 	Canthar_Pay;
 var int		Canthar_KilledSarah;
+var int		Canthar_LetterExpired;
+var int		Andre_CantharFalle;
 var int		Sarah_KickedOut;
 const int 	Canthar_Gold = 500;
 
@@ -674,7 +676,7 @@ var int 	MIS_Andre_FISH;
 var int 	MIS_Andre_Peck;
 var int 	MIS_AndreGotThief;			//SC hat den Dieb gefangen oder die Kohle wieder geschafft!
 var int     MIS_Baltram_ScoutAkil;   	//H�ndler Baltram schickt dich los um Akils Hof zu untersuchen!
-var int		MIS_Canthars_KomproBrief; 	//Canthar sagt SC er soll Sarah den KomproBrief unterjubeln um seine H�ndlerstand wieder zu kriegen. LOG_SUCCESS = Sarah sitzt im Knast, LOG_OBSOLETE = SC hat Canthar bei Andre verraten!
+var int		MIS_Canthars_KomproBrief;
 var int		MIS_Canthars_KomproBrief_Day;
 var int 	MIS_Meldor_BringGold;		//SC kann Geld von Meldor an Gedlverleiher abgeben
 var int 	MIS_Meldor_BringGold_Day;

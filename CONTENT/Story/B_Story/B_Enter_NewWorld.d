@@ -17,21 +17,6 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_1 ()
 			
 };
 
-func void B_CheckJacksLighthouse()
-{
-	if (MIS_Jack_KillLighthouseBandits != LOG_SUCCESS)
-	|| (zDExt_Hlp_IsValidVob("NW_JACKLIGHTHOUSE_CLEANED"))
-	{
-		return;
-	};
-
-	Ext_RemoveVobTree("NW_JACKLIGHTHOUSE_BANDITS");
-	Ext_InsertVobTree("VOBTREE/NW_JACKLIGHTHOUSE_CLEANED.ZEN");
-	REV_SetObjectRoutine_Fire("FIREPLACE_LIGHTHOUSE_01");
-	REV_SetObjectRoutine_Fire("FIREPLACE_LIGHTHOUSE_02");
-	REV_SetObjectRoutine_Fire("FIREPLACE_LIGHTHOUSE_03");
-};
-
 // B_ENTER_NEWWORLD_Kapitel_2
 //****************************************************
 	var int EnterNW_Kapitel2;
@@ -342,32 +327,6 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 			};
 		};
 		
-		//-----------------------Sarah-----------------------
-	
-			if (MIS_Canthars_KomproBrief != LOG_SUCCESS)
-			&& (MIS_Canthars_KomproBrief != FALSE)
-			&& (Canthar_Pay == FALSE)
-			&& (Npc_IsDead  (Canthar) == FALSE)
-			&& (Canthar_KilledSarah == TRUE)
-			{
-				if (Canthar_KilledSarah == TRUE)
-				{
-					B_RemoveNpc (Sarah);
-				}
-				else
-				{
-					B_StartOtherRoutine (Sarah,"TAVERNE");
-					AI_Teleport (Sarah,"NW_TAVERNE_IN_08");
-					Sarah_KickedOut = TRUE;
-				};
-
-				B_StartOtherRoutine (Canthar,"MARKTSTAND");
-				AI_Teleport (Canthar,"NW_CITY_SARAH");
-				
-				Canthar_Sperre = TRUE; 
-				Canthar_WiederRaus = TRUE;
-			};
-
 		// ------ Sonstige ------
  		CreateInvItems 	(Lester, ItMw_1h_Bau_Axe, 1);
  		
@@ -925,6 +884,7 @@ FUNC VOID B_ENTER_NEWWORLD ()
 	if (Kapitel >= 6)	{B_ENTER_NEWWORLD_Kapitel_6 ();	};
 	CurrentLevel = NEWWORLD_ZEN; 
 	B_InitNpcGlobals ();
+	B_UpdateCantharQuest();
 		
 	if (BilgotSecondPass == TRUE)
 	&& (BilgotInKhorinis == FALSE)

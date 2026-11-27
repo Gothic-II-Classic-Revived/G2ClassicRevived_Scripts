@@ -158,7 +158,8 @@ FUNC VOID DIA_Canthar_Hallo_Info()
 	var C_Item itm; itm = Npc_GetEquippedArmor(other);
 	
 	// ------ OHNE Rüstung ------
-	if (Npc_HasEquippedArmor(other) == FALSE) 
+	if (Npc_HasEquippedArmor(other) == FALSE)
+	&& (Sarah_KickedOut == FALSE)
 	{
 		AI_Output	(self, other,"DIA_Canthar_Hallo_09_00"); //Who do we have here then?
 		AI_Output	(self, other,"DIA_Canthar_Hallo_09_01"); //You are on your way to the city - am I not right?
@@ -171,8 +172,8 @@ FUNC VOID DIA_Canthar_Hallo_Info()
 	}
 	
 	// ------ Bauernkleidung ------
-	else if (Hlp_IsItem (itm, ItAr_Bau_L)) 
-	|| 		(Hlp_IsItem (itm, ItAr_Bau_M))
+	else if (Hlp_IsItem (itm, ItAr_Bau_L) || Hlp_IsItem (itm, ItAr_Bau_M))
+	&& (Sarah_KickedOut == FALSE)
 	{
 		AI_Output (self, other,"DIA_Canthar_HelloArmor_09_06");	//How goes the work, peasant?
 			
@@ -235,6 +236,7 @@ FUNC VOID DIA_Canthar_WhatOffer_Info()
 	AI_Output (other, self,"DIA_Canthar_WhatOffer_15_00"); //What do you have to offer?
 	
 	if (Canthar_GotME == TRUE)
+	&& (Sarah_KickedOut == FALSE)
 	{
 		if (Npc_HasEquippedArmor(other) == FALSE)
 		{	
@@ -339,6 +341,7 @@ instance DIA_Canthar_TRADE		(C_INFO)
 func int DIA_Canthar_TRADE_Condition ()
 {
 	if (Npc_KnowsInfo (other, DIA_Canthar_WhatOffer) || MIS_Canthars_KomproBrief != LOG_RUNNING)
+	&& ((Canthar_Ausgeliefert == FALSE) || (Canthar_WiederRaus == TRUE))
 	{
 		return TRUE;
 	};
@@ -385,6 +388,7 @@ instance DIA_Canthar_PAYPRICEINCITY		(C_INFO)
 func int DIA_Canthar_PAYPRICEINCITY_Condition ()
 {
 	if (Canthar_InStadt == TRUE)
+	&& (Kapitel < 3)
 	&& (Npc_IsDead(Sarah) == FALSE) 
 	&& (Canthar_GotMe == TRUE)
 	{
@@ -438,6 +442,7 @@ func void DIA_Canthar_PAYPRICEINCITY_Nein ()
 	MIS_Canthars_KomproBrief = LOG_OBSOLETE;
 	B_CheckLog ();
 	Info_ClearChoices (DIA_Canthar_PAYPRICEINCITY);
+	B_UpdateCantharQuest();
 	
 };
 
@@ -486,16 +491,23 @@ instance DIA_Canthar_SARAHERLEDIGT		(C_INFO)
 };
 func int DIA_Canthar_SARAHERLEDIGT_Condition ()
 {
-	if 	(MIS_Canthars_KomproBrief == LOG_RUNNING)
+	if (MIS_Canthars_KomproBrief == LOG_RUNNING)
+	&& (!C_CantharLetterExpired())
 	{
 		return TRUE;
 	};
 };
 func void DIA_Canthar_SARAHERLEDIGT_Info ()
 {
+	if (!DIA_Canthar_SARAHERLEDIGT_Condition())
+	{
+		B_UpdateCantharQuest();
+		AI_StopProcessInfos (self);
+		return;
+	};
 	if ((Npc_IsDead(Sarah)) == FALSE)
 	{
-		if (MIS_Canthars_KomproBrief_Day <= (Wld_GetDay()+ 2))
+		if (MIS_Canthars_KomproBrief_Day == Wld_GetDay())
 		{
 			AI_Output (self, other, "DIA_Canthar_SARAHERLEDIGT_09_00"); //Don't you have a job to do?
 			AI_Output (self, other, "DIA_Canthar_SARAHERLEDIGT_09_01"); //First foist the letter onto Sarah, then go to Andre and accuse her..
@@ -512,6 +524,7 @@ func void DIA_Canthar_SARAHERLEDIGT_Info ()
 			AI_Output (self, other, "DIA_Canthar_SARAHERLEDIGT_09_05"); //Really? Wonderful. Then you have completed your half of our little bargain.
 			
 			MIS_Canthars_KomproBrief = LOG_SUCCESS;
+			B_CheckLog ();
 			B_GivePlayerXP (XP_Ambient);
 			Npc_ExchangeRoutine	(self,"MARKTSTAND"); 
 	};
@@ -531,7 +544,8 @@ instance DIA_Canthar_Success		(C_INFO)
 };
 func int DIA_Canthar_Success_Condition ()
 {
-	if (MIS_Canthars_KomproBrief == LOG_SUCCESS)
+	if (Sarah_Ausgeliefert == TRUE)
+	&& (MIS_Canthars_KomproBrief == LOG_SUCCESS)
 	&& ((Npc_IsDead(Sarah)) == FALSE)
 	{
 		return TRUE;
@@ -600,15 +614,15 @@ func void DIA_Canthar_Again_Info ()
 {
 	AI_Output (self, other, "DIA_Canthar_Again_09_00"); //Oh, here you are again.
 	
-	if (MIS_Canthars_KomproBrief  == LOG_FAILED)
+	if (Canthar_Ausgeliefert == TRUE)
+	&& (Canthar_WiederRaus == TRUE)
 	{
 		AI_Output (other,self , "DIA_Canthar_Again_15_01"); //Why aren't you in jail?
 		AI_Output (self,other, "DIA_Canthar_Again_09_02"); //I have been released. As I already told you - I am an influential man in the city.
 	}
-	else if (MIS_Canthars_KomproBrief == LOG_RUNNING)
+	else if (Canthar_LetterExpired == TRUE)
 	{
 		AI_Output (self, other, "DIA_Canthar_Again_09_03"); //In the meantime, I have dealt with Sarah myself. You can forget the business with the letter.
-		Canthar_KilledSarah = TRUE;
 	}
 	else if (MIS_Canthars_KomproBrief == LOG_OBSOLETE)
 	{
@@ -698,6 +712,7 @@ instance DIA_Canthar_CANTHARANGEPISST		(C_INFO)
 func int DIA_Canthar_CANTHARANGEPISST_Condition ()
 {
 	if (Canthar_Ausgeliefert == TRUE)  //SC hat Canthar bei Andre verpfiffen!
+	&& (Canthar_WiederRaus == FALSE)
 	&& (Npc_GetDistToWP (self,"NW_CITY_HABOUR_KASERN_RENGARU") <= 1000)
 	&& Npc_IsInState  (self, ZS_Talk)
 	{

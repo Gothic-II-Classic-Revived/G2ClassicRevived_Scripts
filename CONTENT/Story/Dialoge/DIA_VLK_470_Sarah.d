@@ -199,8 +199,8 @@ instance DIA_Sarah_Trade		(C_INFO)
 
 func int DIA_Sarah_Trade_Condition ()
 {
-	if 	((Npc_KnowsInfo(other, DIA_Sarah_HALLO))
-	&& (MIS_Canthars_KomproBrief != LOG_SUCCESS))
+	if (Npc_KnowsInfo(other, DIA_Sarah_HALLO))
+	&& (Sarah_Ausgeliefert == FALSE)
 	{
 		return TRUE;
 	};
@@ -229,8 +229,8 @@ instance DIA_Sarah_IMKNAST		(C_INFO)
 
 func int DIA_Sarah_IMKNAST_Condition ()
 {
-	if (MIS_Canthars_KomproBrief == LOG_SUCCESS)	
-	&&  Npc_IsInState (self, ZS_Talk)
+	if (Sarah_Ausgeliefert == TRUE)
+	&& Npc_IsInState (self, ZS_Talk)
 	{
 		return TRUE;
 	};

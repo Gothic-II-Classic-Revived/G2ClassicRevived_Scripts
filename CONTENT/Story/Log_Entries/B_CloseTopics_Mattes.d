@@ -46,7 +46,10 @@ func void B_CloseTopics_Mattes ()
 	B_CloseTopic	(TOPIC_HaradOrk, MIS_Harad_Orc, 0, 6);
 	
 	//----------------Händler und Diebe--------------------
-	B_CloseTopic	(TOPIC_Canthar,MIS_Canthars_KomproBrief , 0, 3);
+	if (MIS_Canthars_KomproBrief != 0)
+	{
+		Log_SetTopicStatus(TOPIC_Canthar, MIS_Canthars_KomproBrief);
+	};
 	B_CloseTopic	(TOPIC_HakonBanditen, MIS_HakonBandits, 0, 6);
 	B_CloseTopic	(TOPIC_Jora, Jora_Gold, 0, 6);
 	B_CloseTopic	(TOPIC_JoraDieb, Jora_Dieb, 0, 6);

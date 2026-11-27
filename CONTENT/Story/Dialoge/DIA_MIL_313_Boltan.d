@@ -81,7 +81,7 @@ func void DIA_Boltan_ToConvicts_Info ()
 			AI_Output (self ,other, "DIA_Boltan_Add_05_06"); //We've put away the swine who murdered Lothar the paladin.
 		};
 	}
-	else if (Canthar_Ausgeliefert == FALSE)
+	else if ((Canthar_Ausgeliefert == FALSE) || (Canthar_WiederRaus == TRUE))
 	&& (Sarah_Ausgeliefert == FALSE)
 	&& (Rengaru_Ausgeliefert == FALSE)
 	&& (Nagur_Ausgeliefert == FALSE)

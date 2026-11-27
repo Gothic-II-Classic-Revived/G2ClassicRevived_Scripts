@@ -71,35 +71,6 @@ func void B_Andre_Steckbrief()
 };
 
 // ************************************************************
-// 	  				   	Canthar Falle 
-// ************************************************************
-var int Andre_CantharFalle; //damit es nur EINMAL kommt
-// ------------------------
-
-func void B_Andre_CantharFalle()
-{
-	AI_Output (self, other, "B_Andre_CantharFalle_08_00"); //The merchant Canthar was here. He said that you are an escaped convict from the mining colony.
-	AI_Output (self, other, "B_Andre_CantharFalle_08_01"); //I don't know whether that's the truth and I prefer not to ask you, but you should clear that matter up.
-	
-	B_StartOtherRoutine (Sarah,"TAVERNE");
-	AI_Teleport (Canthar,"TAVERNE");
-
-	B_StartOtherRoutine (Canthar,"MARKTSTAND");
-	AI_Teleport (Canthar,"NW_CITY_SARAH");
-					
-	if (Canthar_Sperre == FALSE)
-	&& (Canthar_Pay == FALSE)
-	{
-		Canthar_Sperre = TRUE; 
-	};
-	
-	MIS_Canthars_KomproBrief = LOG_OBSOLETE;
-	B_CheckLog();
-	
-	Andre_CantharFalle = TRUE;
-};
-
-// ************************************************************
 // 			Canthar Falle als INFO (niedrige Important)
 // ************************************************************
 
@@ -115,20 +86,15 @@ INSTANCE DIA_Andre_CantharFalle (C_INFO)
 
 FUNC INT DIA_Andre_CantharFalle_Condition()
 {
-	if (MIS_Canthars_KomproBrief == LOG_RUNNING) 
-	&& (MIS_Canthars_KomproBrief_Day <= Wld_GetDay() - 2)
-	&& (Andre_CantharFalle == FALSE)
-	{
-		return TRUE;
-	};
+	return (!Andre_CantharFalle && !Npc_IsDead(Canthar) && (Canthar_LetterExpired || C_CantharLetterExpired()));
 };
 
 FUNC VOID DIA_Andre_CantharFalle_Info()
 {
-	if (Andre_CantharFalle == FALSE)
-	{
-		B_Andre_CantharFalle();
-	};
+	B_UpdateCantharQuest();
+	AI_Output (self, other, "B_Andre_CantharFalle_08_00"); //The merchant Canthar was here. He said that you are an escaped convict from the mining colony.
+	AI_Output (self, other, "B_Andre_CantharFalle_08_01"); //I don't know whether that's the truth and I prefer not to ask you, but you should clear that matter up.
+	Andre_CantharFalle = TRUE;
 };
 
 // ************************************************************
@@ -852,10 +818,13 @@ func void DIA_Andre_Auslieferung_Info ()
 	};
 	// ------ Canthar -------
 	if (MIS_Canthars_KomproBrief == LOG_RUNNING)
-	&& (MIS_Canthars_KomproBrief_Day > (Wld_GetDay()-2))
+	&& (!C_CantharLetterExpired())
 	{
-		Info_AddChoice (DIA_Andre_Auslieferung,"Canthar is trying to get rid of Sarah!",DIA_Andre_Auslieferung_Canthar);
-		if (Npc_HasItems (Sarah, ItWr_Canthars_KomproBrief_MIS) >= 1)
+		if (!Npc_IsDead(Canthar))
+		{
+			Info_AddChoice (DIA_Andre_Auslieferung,"Canthar is trying to get rid of Sarah!",DIA_Andre_Auslieferung_Canthar);
+		};
+		if (!Npc_IsDead(Sarah) && (Npc_HasItems(Sarah, ItWr_Canthars_KomproBrief_MIS) >= 1))
 		{
 			Info_AddChoice (DIA_Andre_Auslieferung,"Sarah is selling weapons to Onar.",DIA_Andre_Auslieferung_Sarah);
 		};
@@ -1012,50 +981,55 @@ func void DIA_Andre_Auslieferung_Nagur()
 
 func void DIA_Andre_Auslieferung_Canthar()
 {
-	//Canthar in den Knast beamen
-	AI_Teleport			(Canthar,"NW_CITY_HABOUR_KASERN_RENGARU"); 
-	
+	Info_ClearChoices(DIA_Andre_Auslieferung);
+	if ((MIS_Canthars_KomproBrief != LOG_RUNNING) || C_CantharLetterExpired() || Npc_IsDead(Canthar))
+	{
+		return;
+	};
+
 	AI_Output (other, self, "DIA_Andre_Auslieferung_Canthar_15_00"); //Canthar the merchant is trying to get rid of Sarah!
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Canthar_08_01"); //Sarah? The weapons merchant in the marketplace?
 	AI_Output (other,self , "DIA_Andre_Auslieferung_Canthar_15_02"); //I was supposed to foist a letter on Sarah which claimed that she's supplying weapons to Onar.
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Canthar_08_03"); //I see. I shall gladly pay the bounty for that bastard. He is already as good as behind bars.
-	B_GiveInvItems (self, other, itmi_gold, Kopfgeld);
-	
-	
-	B_StartOtherRoutine (Canthar,"KNAST"); 
-	
-	MIS_Canthars_KomproBrief  = LOG_FAILED;
-	B_CheckLog ();
-	
+	B_GiveInvItems(self, other, itmi_gold, Kopfgeld);
+	B_GivePlayerXP(XP_Andre_Auslieferung);
+
 	Canthar_Ausgeliefert = TRUE;
-	B_GivePlayerXP (XP_Andre_Auslieferung);
-	
-	Info_ClearChoices (DIA_Andre_Auslieferung);
+	MIS_Canthars_KomproBrief = LOG_FAILED;
+	Log_SetTopicStatus(TOPIC_Canthar, LOG_FAILED);
+	if (Kapitel < 3)
+	{
+		B_StartOtherRoutine(Canthar, "KNAST");
+		AI_Teleport(Canthar, "NW_CITY_HABOUR_KASERN_RENGARU");
+	}
+	else
+	{
+		B_UpdateCantharQuest();
+	};
 };
+
 func void DIA_Andre_Auslieferung_Sarah()
 {
-	//Sarah in den Knast beamen
-	AI_Teleport			(Sarah,"NW_CITY_HABOUR_KASERN_RENGARU"); 
-	//Canthar zum markt beamen
-	AI_Teleport			(Canthar,"NW_CITY_SARAH"); 
-	
+	Info_ClearChoices(DIA_Andre_Auslieferung);
+	if ((MIS_Canthars_KomproBrief != LOG_RUNNING) || C_CantharLetterExpired()
+	|| Npc_IsDead(Sarah) || (Npc_HasItems(Sarah, ItWr_Canthars_KomproBrief_MIS) < 1))
+	{
+		return;
+	};
+
 	AI_Output (other, self, "DIA_Andre_Auslieferung_Sarah_15_00"); //Sarah is selling weapons to Onar.
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Sarah_08_01"); //Sarah? The weapons merchant in the marketplace? Do you have proof of that?
 	AI_Output (other, self, "DIA_Andre_Auslieferung_Sarah_15_02"); //She has a letter in her pocket which details the delivery of arms to him.
 	AI_Output (self, other, "DIA_Andre_Auslieferung_Sarah_08_03"); //She won't get away with that. I shall have her arrested.
-	
-	B_GiveInvItems (self, other, itmi_gold, Kopfgeld);
-	
-	B_StartOtherRoutine (Sarah,"KNAST"); 
-	
-	B_StartOtherRoutine (Canthar,"MARKTSTAND"); 
-	
+	B_GiveInvItems(self, other, itmi_gold, Kopfgeld);
+	B_GivePlayerXP(XP_Andre_Auslieferung);
+
 	Sarah_Ausgeliefert = TRUE;
-	
-	MIS_Canthars_KomproBrief  = LOG_SUCCESS;
-	B_GivePlayerXP (XP_Andre_Auslieferung);
-	
-	Info_ClearChoices (DIA_Andre_Auslieferung);
+	MIS_Canthars_KomproBrief = LOG_SUCCESS;
+	Log_SetTopicStatus(TOPIC_Canthar, LOG_SUCCESS);
+	B_StartOtherRoutine(Sarah, "KNAST");
+	AI_Teleport(Sarah, "NW_CITY_HABOUR_KASERN_RENGARU");
+	B_CantharTakesStall(FALSE);
 };
 
 // *********************************************************

@@ -248,7 +248,8 @@ FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()
 				{
 					Doc_PrintLines	( nDocID,  1, "Sarah: Sells weapons to Mercenaries"					);
 				}
-				else if(Canthar_Ausgeliefert)
+				else if (Canthar_Ausgeliefert == TRUE)
+				&& (Canthar_WiederRaus == FALSE)
 				{
 					Doc_PrintLines	( nDocID,  1, "Canthar: Wanted to frame up Sarah"					);
 				};

@@ -22,7 +22,6 @@ STORY\Text.d
 
 STORY\RevivedConstants.d
 STORY\RevivedHelpers.d
-STORY\RevivedEvents.d
 
 
 STORY\B_Story\C_NpcIsInQuarter.d
@@ -298,7 +297,11 @@ STORY\B_AssignAmbientInfos\B_AssignDementorTalk_*.d
 STORY\B_AssignAmbientInfos\B_AssignORC_AntiPaladinTalk.d
 STORY\B_AssignAmbientInfos\B_NpcObsessedByDMT.d
 
+STORY\B_Content\B_UpdateCantharQuest.d
+STORY\B_Content\B_CheckJacksLighthouse.d
+
 STORY\B_Story\B_ENTER_NEWWORLD.d
+STORY\RevivedEvents.d
 STORY\B_Story\B_ENTER_OLDWORLD.d
 STORY\B_Story\B_ENTER_ABANDONEDMINE.d
 STORY\B_Story\B_ENTER_FREEMINE.d
