@@ -1276,6 +1276,18 @@ var int OreMob_33_Amount;
 var int OreMob_34_Amount;
 var int OreMob_35_Amount;
 var int OreMob_36_Amount;
+var int OreMob_37_Amount;
+var int OreMob_38_Amount;
+var int OreMob_39_Amount;
+var int OreMob_40_Amount;
+var int OreMob_41_Amount;
+var int OreMob_42_Amount;
+var int OreMob_43_Amount;
+var int OreMob_44_Amount;
+var int OreMob_45_Amount;
+var int OreMob_46_Amount;
+var int OreMob_47_Amount;
+var int OreMob_48_Amount;
 const int OreMob_All_Amount_MAX = 3;
 
 

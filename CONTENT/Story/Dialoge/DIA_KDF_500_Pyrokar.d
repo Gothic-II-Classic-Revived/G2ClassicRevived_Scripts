@@ -1485,6 +1485,9 @@ func void DIA_Pyrokar_KAP3_READY_Info ()
 
 	MIS_ReadyforChapter4 = TRUE; //Joly: Mit dieser Varible in den Levelchange zur OW -> Kapitel 4
 	B_NPC_IsAliveCheck (NEWWORLD_ZEN);
+
+	B_Kapitelwechsel (4, NEWWORLD_ZEN);
+	B_Chapter4_OneTime = TRUE;
 		
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"Start");

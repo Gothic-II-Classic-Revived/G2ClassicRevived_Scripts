@@ -2291,13 +2291,13 @@ FUNC VOID INIT_OLDWORLD ()
 		StoryHelper_FinishSkippedDragons();
 		OldWorld_CreateAreas();
 
-	if (MIS_ReadyForChapter4  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
+	/* if (MIS_ReadyForChapter4  == TRUE )	//Joly: muß hier in der INIT ganz zum schluss stehen, nachdem alle NSCs fürs Kapitel insertet wurden!!!
 	&& (B_Chapter4_OneTime == FALSE)
 	&& (Kapitel < 4)
 	{
 		B_Kapitelwechsel (4, OLDWORLD_ZEN);
 		B_Chapter4_OneTime = TRUE;
-	};
+	}; */
 };
 
 FUNC VOID STARTUP_OLDWORLD ()

@@ -107,6 +107,54 @@ FUNC INT B_OreMob_Bestimmung()
 		return TRUE;
 	}
 
+	//	FREE MINE
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FMC_ORE_03") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_37_Amount = (OreMob_37_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FMC_ORE_07") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_38_Amount = (OreMob_38_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FMC_ORE_10") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_39_Amount = (OreMob_39_Amount +1);
+		return TRUE;
+	}
+
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FM_ORE_001") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_40_Amount = (OreMob_40_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FM_ORE_003") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_41_Amount = (OreMob_41_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FM_ORE_004") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_42_Amount = (OreMob_42_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FM_ORE_006") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_43_Amount = (OreMob_43_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FM_ORE_008") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_44_Amount = (OreMob_44_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "FM_ORE_009") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_45_Amount = (OreMob_45_Amount +1);
+		return TRUE;
+	}
+
 	//	ABANDONED MINE
 	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_000") && (OreMob_All_Amount_MAX > OreMob_22_Amount)
 	{
